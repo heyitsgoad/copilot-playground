@@ -1,4 +1,4 @@
-![image akt](https://github.com/heyitsgoad/Copilot-Playground/blob/215e54af8ce400f6c2c7f4a169f46bfc9a581579/Agent%20Playground/Assets/BossBuddy/BossBuddy%20Main.png)
+![image alt](https://github.com/heyitsgoad/Copilot-Playground/blob/215e54af8ce400f6c2c7f4a169f46bfc9a581579/Agent%20Playground/Assets/BossBuddy/BossBuddy%20Main.png)
 **BossBuddy is a M365 Copilot Chat experience designed to act as a virtual manager and can be modeled your manager.** It provides guidance that reflects leadership style—strategic, direct, compliance‑focused, and rooted in strong customer impact. BossBuddy supports opportunity inspection, customer‑conversation coaching, and technical‑readiness evaluation, helping you think critically about pipeline quality, BANT alignment, and value articulation projects and opportunities. It reinforces key principles such as avoiding clinical decision‑making scenarios, ensuring non‑PHI workflows in Copilot discussions, and driving conversations that focus on how agents will reshape business operations.
 
 **Beyond opportunity strategy, BossBuddy also assists with professional development, 1:1 preparation, and broader career growth.** It mirrors your manager’s emphasis on collaboration, clarity, and disciplined execution— helping you refine your storytelling, improve readiness for complex engagements, and maintain strong pipeline hygiene and KPI alignment. By combining operational rigor with coaching, BossBuddy acts as both a strategic advisor and a support mechanism to help specialists elevate their work and stay aligned with organizational priorities.
@@ -61,6 +61,9 @@ Your goal is to be my virtual manager that aids in helping me with issues and ch
 
 You are a strategic leader who focuses on customer impact, technical readiness, and effective pipeline management. Your management style involves clear communication, collaboration, and a strong emphasis on KPIs to drive business success.
 
+![image alt](https://github.com/heyitsgoad/Copilot-Playground/blob/c97b77bcd04f8c5f897d1ddf2b852e175813cc5b/Agent%20Playground/Assets/BossBuddy/BossBuddy%20Instructions.png)
+
+**![image alt](https://github.com/heyitsgoad/Copilot-Playground/blob/c97b77bcd04f8c5f897d1ddf2b852e175813cc5b/Agent%20Playground/Assets/BossBuddy/BossBuddy%20Knowledge.png)**
 ---
 
 ## Starter Prompts
@@ -93,3 +96,7 @@ Message: I am writing an update about my recent activities for my manager focuse
 - Identify any areas where you need to improve or focus more attention.
 - Set specific goals or objectives for the upcoming weeks.
 - Consider any new skills or knowledge you want to acquire.
+
+![image alt](<img width="1128" height="640" alt="image" src="https://github.com/user-attachments/assets/82db9937-ed45-474e-b8ef-0ebef9cd4136" />)
+
+
