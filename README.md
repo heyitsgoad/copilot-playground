@@ -23,7 +23,7 @@ This is a catalog of agents I have made since I began learning about Copilot and
 
 - BossBuddy is a virtual AI manager I created to guide you in your work, strategy, and career growth through simple conversations. It helps clarify your impact and see the bigger picture in projects and opportunities.
 
-### Professor X
+### [Professor X](./agent%20playground/professor%20x.md)
 
 - Professor X is an agent designed to coach your speaking and presentation skills. Just submit a transcript, and Professor X will analyze and provide feedback to help improve your next talk.
 
