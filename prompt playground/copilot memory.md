@@ -25,6 +25,9 @@ You can manage your memories either from the Copilot settings UI or directly in 
 5. Edit or delete individual memories as needed.  
 6. If you prefer, you can also turn memory off entirely from this page.
 
+![image alt](https://github.com/heyitsgoad/copilot-playground/blob/eaea8f1394a2312cc5a96de1ba12ae3473fac6ff/prompt%20playground/assets/copilot%20personalization/copilot%20settings%20v2.png)
+![image alt](https://github.com/heyitsgoad/copilot-playground/blob/4ae7b5526a1d06a44c1691304c5ed30f7f8ecbca/prompt%20playground/assets/copilot%20personalization/copilot%20custom%20memory.png)
+
 ### From a chat with Copilot:
 
 To see what Copilot remembers, you can ask something like:  
