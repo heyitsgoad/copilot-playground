@@ -97,6 +97,6 @@ Message: I am writing an update about my recent activities for my manager focuse
 - Set specific goals or objectives for the upcoming weeks.
 - Consider any new skills or knowledge you want to acquire.
 
-![image alt](<img width="1128" height="640" alt="image" src="https://github.com/user-attachments/assets/82db9937-ed45-474e-b8ef-0ebef9cd4136" />)
+![image alt](https://github.com/heyitsgoad/Copilot-Playground/blob/c97b77bcd04f8c5f897d1ddf2b852e175813cc5b/Agent%20Playground/Assets/BossBuddy/BossBuddy%20Capability%20and%20Starter%20Prompt.png)
 
 
