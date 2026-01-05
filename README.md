@@ -15,8 +15,7 @@ This is a catalog of agents I have made since I began learning about Copilot and
 ### Each Agent Includes
 
 - **Overview:** overview and licensing
-- **How to Build:** instructions and starter prompts  
-- **Setup:** environment, connectors, variables, permissions  
+- **Setup:** instructions,  environment, connectors, variables, permissions 
 - **Run:** starter prompts 
 - **Governance:** what’s logged, who can execute, cost guardrails  
 
