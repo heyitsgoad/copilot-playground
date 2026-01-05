@@ -1,3 +1,4 @@
+![image alt](https://github.com/heyitsgoad/copilot-playground/blob/68f9cd762c3634c4d92201c7372c7bc649a351c6/agent%20playground/assets/taskmaster/taskmaster%20main.png)
 **Taskmaster is an M365 Copilot AI assistant designed to help you stay on top of opportunities, actions, and strategy across projects, opportunities, and accounts.** The agent constantly tracks signals from meetings, emails, chats, and documents to surface what needs attention, what’s stalled, and where Copilot can accelerate momentum. It’s focus is to make sure you never lose sight of follow‑ups, customer or project movement, or internal coordination, while also pushing him with consultant‑level insights to drive projects forward.
 
 It also acts as a strategic partner—spotting patterns across accounts and projects, connecting Copilot value to customer and project initiatives, and highlighting where wins can be replicated. Beyond tracking and reminders, it challenges assumptions, recommends next moves, and helps prepare for key internal syncs. Its purpose is simple: keep you organized, proactive, and always a step ahead.
@@ -107,9 +108,14 @@ Only monitor and support the following customers:
 - Match tone: casual, consultant-like, efficient.  
 - Provide deeper insights into opportunities and focus on actionable recommendations to drive opportunities to closure.  
 
+![image alt](https://github.com/heyitsgoad/copilot-playground/blob/68f9cd762c3634c4d92201c7372c7bc649a351c6/agent%20playground/assets/taskmaster/taskmaster%20instructions.png)
+![image alt](https://github.com/heyitsgoad/copilot-playground/blob/68f9cd762c3634c4d92201c7372c7bc649a351c6/agent%20playground/assets/taskmaster/taskmaster%20knowledge.png)
+![image alt](https://github.com/heyitsgoad/copilot-playground/blob/68f9cd762c3634c4d92201c7372c7bc649a351c6/agent%20playground/assets/taskmaster/taskmaster%20capabilities.png)
 ---
 
 ### Starter Prompts
 
 - **Talk to specialist**
   - What should I talk to Brett about today?
+ 
+  ![image alt](https://github.com/heyitsgoad/copilot-playground/blob/dcaee2d0debfe4ad8bade6e72a9329c2e8e7f5f2/agent%20playground/assets/taskmaster/taskmaster%20starter%20prompts.png)
