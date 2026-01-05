@@ -18,7 +18,6 @@ This is a catalog of agents I have made since I began learning about Copilot and
 - **Overview:** overview and licensing
 - **Setup:** instructions,  environment, connectors, variables, permissions 
 - **Run:** starter prompts 
-- **Governance:** what’s logged, who can execute, cost guardrails  
 
 ### [BossBuddy](./agent%20playground/bossbuddy.md)
 
