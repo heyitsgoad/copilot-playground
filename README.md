@@ -1,3 +1,5 @@
+## Hello world and welcome to my Copilot Playground
+I am a Copilot Solution Engineer at Microsoft and since joining Microsoft, I wanted to share the things I am learning, stuff I am building, and overall insights on all the things with the community.
 
 This repository is a portfolio of my **Copilot agents**, **prompt library**, and **videos** that show how I design, manage and govern, and teach AI solutions across Microsoft 365, Copilot Studio, and Agent 365.
 
