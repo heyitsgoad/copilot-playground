@@ -46,7 +46,7 @@ This is a catalog of agents I have made since I began learning about Copilot and
 - Morning Kick‑off, Reset, and Wrap‑up  
 - Next Level (Taking prompt output to the next level)  
 - Proofread Prompt  
-- Positivity Prompts
+- [Positivity Prompts](./prompt%20playground/positivity%20prompts.md)
 
 
 **Here are examples you can use for your Copilot Personalization and adding to Copilot Memory**
