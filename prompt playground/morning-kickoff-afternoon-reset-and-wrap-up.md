@@ -77,3 +77,27 @@
 
 **Good Evening Copilot, help me close out the day.**
 
+1. **Daily Reflection**
+   - What did I **accomplish today**?
+   - Highlight a **win or moment of gratitude**.
+   - Any **open items** to carry over to tomorrow?
+
+2. **Inbox & Follow-Ups**
+   - Are there any **unread or flagged emails** I should address before EOD?
+   - Remind me of any **pending approvals or responses**.
+
+3. **Looking Ahead**
+   - What’s on my **calendar for the rest of the week and early next week**?
+   - Any **deadlines or prep work** I should start planning for?
+
+4. **Unwind Reminder**
+   - Encourage me to **disconnect from email and work**.
+   - Suggest a way to **relax or recharge** this evening.
+
+5. **Motivational Close**
+   - Share a **motivational quote or reflection** to end the day on a positive note.
+
+### Coworker Tip
+
+- Any **team wins or shoutouts** I should recognize or help bring positivity to my coworkers?
+- What should I **flag or prep** for tomorrow?
