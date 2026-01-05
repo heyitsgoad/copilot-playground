@@ -54,7 +54,7 @@ This is a catalog of agents I have made since I began learning about Copilot and
 ---
 
 
-## Copilot Management & Governance
+## Education Playground
 
 This section is built for IT admins and security teams. It features short videos and runnable guides that show how to **manage**, **govern**, and **observe** Copilot and agents at scale.
 
