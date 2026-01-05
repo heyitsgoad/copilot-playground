@@ -1,4 +1,3 @@
-![image alt](https://github.com/heyitsgoad/copilot-playground/blob/b1826059640349354527118a54b76758a28971ba/Main%20v1.png)
 ## Hello world and welcome to my Copilot Playground
 I am a Copilot Solution Engineer at Microsoft and since joining Microsoft, I wanted to share the things I am learning, stuff I am building, and overall insights on all the things with the community.
 
