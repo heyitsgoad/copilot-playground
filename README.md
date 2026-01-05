@@ -32,7 +32,7 @@ This is a catalog of agents I have made since I began learning about Copilot and
 
 - Taskmaster acts as your chief of staff who tracks your opportunities, surfaces what needs your attention, pulls out action items, and gives you strategic guidance to move opportunities and projects forward.
 
-### [Impact Check](./agent%20playground/bossbuddy.md)
+### [Impact Check](./agent%20playground/impact%20check)
 
 - Ever have trouble realizing the impact you make on everyday work and projects? Impact Check agent enables you to work more efficiently by summarizing, analyzing, creating, and linking information within your Microsoft 365 apps, using only data you can already access. This helps you understand your influence and impact on both projects and teammates.
 
