@@ -20,7 +20,7 @@ This is a catalog of agents I have made since I began learning about Copilot and
 - **Run:** quick start script or solution  
 - **Governance:** what’s logged, who can execute, cost guardrails  
 
-### [BossBuddy](./Agent%20Playground/BossBuddy.md)
+### [<u>BossBuddy</u>](./Agent%20Playground/BossBuddy.md)
 
 - BossBuddy is a virtual AI manager I created to guide you in your work, strategy, and career growth through simple conversations. It helps clarify your impact and see the bigger picture in projects and opportunities.
 
