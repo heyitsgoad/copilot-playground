@@ -56,7 +56,7 @@ This is a catalog of agents I have made since I began learning about Copilot and
 
 ## Education Playground
 
-This section is built for IT admins, executives, and anyone looking to understand how to use AI, as well as, manage and secure it. It features short videos and runnable guides that show how to **manage**, **govern**,**observe**, and **use** Copilot and agents at scale.
+This section is built for IT admins, executives, and anyone looking to understand how to use AI, as well as, manage and secure it. It features short videos and runnable guides that show how to **manage**, **govern**, **observe**, and **use** Copilot and agents at scale.
 
 ### Video Tracks
 
