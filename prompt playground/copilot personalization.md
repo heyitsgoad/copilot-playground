@@ -21,7 +21,7 @@ To edit personalization in the Copilot UI:
 3. Go to Personalization or Privacy  
 4. Select and edit “Custom instructions”  
 
-![image alt}(https://github.com/heyitsgoad/copilot-playground/blob/c474bcfd51f94504e4d8f7fc6ff69a773c61ce03/prompt%20playground/assets/copilot%20personalization/copilot%20settings%20v2.png)
+![image alt}(https://github.com/heyitsgoad/copilot-playground/blob/eaea8f1394a2312cc5a96de1ba12ae3473fac6ff/prompt%20playground/assets/copilot%20personalization/copilot%20settings%20v2.png)
 ![image alt](https://github.com/heyitsgoad/copilot-playground/blob/c474bcfd51f94504e4d8f7fc6ff69a773c61ce03/prompt%20playground/assets/copilot%20personalization/copilot%20custom%20instructions.png)
 ---
 
