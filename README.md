@@ -37,7 +37,7 @@ This is a catalog of agents I have made since I began learning about Copilot and
 
 ### [Redline Rover](./agent%20playground/readline%20rover.md)
 
-- This agent is a specialized contract auditor that performs a bidirectional gap analysis between internal quality templates and customer agreements to ensure strict SOP equivalence and regulatory compliance.
+- This agent created by Microsoft peer, [Sue Vencill](https://www.linkedin.com/in/suevencill/), that is aspecialized contract auditor that performs a bidirectional gap analysis between internal quality templates and customer agreements to ensure strict SOP equivalence and regulatory compliance.
 
 ---
 
