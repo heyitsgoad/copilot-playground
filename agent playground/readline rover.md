@@ -2,7 +2,7 @@
 
 # Redline Rover
 
-Redline Rover is a specialized contract analysis agent designed to automate the comparison between internal Quality Agreement templates and customer‑provided versions. It was created by Sue Vencill. Its goal is to make sure external documents that require signature stay aligned with internal SOP requirements. The agent performs a deep, two‑way audit of every clause to identify weaker customer language or missing internal requirements.
+Redline Rover is a specialized contract analysis agent designed to automate the comparison between internal Quality Agreement templates and customer‑provided versions. It was created by my peer at Microsft, [Sue Vencill](https://www.linkedin.com/in/suevencill/). Its goal is to make sure external documents that require signature stay aligned with internal SOP requirements. The agent performs a deep, two‑way audit of every clause to identify weaker customer language or missing internal requirements.
 
 ## How to Use
 
