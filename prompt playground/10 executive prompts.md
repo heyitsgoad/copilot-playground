@@ -10,3 +10,5 @@
 8. “What did {person or team} say about {topic}?”
 9. “Summarize this file into bullet points.”
 10. “Rewrite this for executives.”
+
+Download the full deck [here](https://github.com/heyitsgoad/copilot-playground/blob/4cc62d47fa3b7456bbe55e125ec24f1a8d13adf1/prompt%20playground/assets/copilot%20personalization/copilot%20for%20executives/Copilot%20Executive%20Briefing.pdf)
