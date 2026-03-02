@@ -1,4 +1,4 @@
-![image alt](https://github.com/heyitsgoad/copilot-playground/blob/c6e79f9a6ad0ce68afdd74e717b22076c078d24d/education%20playground/assets/copilot%20webinar/Agent%20Mode/Claude%20in%20Copilot%206.png)
+[![Claude in Copilot](https://github.com/heyitsgoad/copilot-playground/blob/c6e79f9a6ad0ce68afdd74e717b22076c078d24d/education%20playground/assets/copilot%20webinar/Agent%20Mode/Claude%20in%20Copilot%206.png?raw=true)](https://youtu.be/zkaRUDSDBwk?si=KNPnsIOLPI9amS8A)
 
 
 There’s been a lot of attention lately on Claude and how strong it is with Excel and structured data.
