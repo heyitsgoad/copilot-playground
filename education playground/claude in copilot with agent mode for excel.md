@@ -3,7 +3,7 @@ What most people don’t realize is that if you’re using Microsoft 365 Copilot
 
 This repo supports a hands on rebuild of the demo from the video. You can watch it end to end, or download the files and follow along step by step using the same prompts I use.
 
-Watch the full video on YouTube
+Watch the full video on YouTube:
 https://youtu.be/zkaRUDSDBwk?si=6EGZujNUsCmeYfIl
 
 ## How to follow along (recommended)
