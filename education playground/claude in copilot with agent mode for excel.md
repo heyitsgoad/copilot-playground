@@ -13,8 +13,8 @@ https://youtu.be/zkaRUDSDBwk?si=6EGZujNUsCmeYfIl
 If you want to rebuild this yourself, use the steps below in order.
 ### 1) Download the mock RAW data
 This demo uses synthetic data generated for education and walkthrough purposes.
-File:
-PlatteCountyMO_Q2_2025_ParamedicOvertime_RAW.xlsx
+File: https://github.com/heyitsgoad/copilot-playground/blob/01025b1e2d3f697c10dbac42fd07a7d87fc5a8a8/education%20playground/assets/copilot%20webinar/Agent%20Mode/Q2_2025_ParamedicOvertime_RAW.xlsx
+
 What’s inside (so it feels realistic):
 - Overtime_Raw (3,416 rows): Shift level records with role, station, shift, overtime hours, overtime reason, pay details, call volume, and staffing gap flags
 - Employee_Roster (74 employees): Role mix, FTE, station assignment, tenure band, base rates
