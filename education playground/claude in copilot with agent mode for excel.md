@@ -1,5 +1,6 @@
-[![Claude in Copilot – Excel on Steroids](education%20playground/assets/copilot%20webinar/Agent%20Mode/Claude%20in%20Copilot%206.png)](https://youtu.be/zkaRUDSDBwk?si=6EGZujNUsCmeYfIl)
-``
+![Claude in Copilot – Excel on Steroids](education%20playground/assets/copilot%20webinar/Agent%20Mode/Claude%20in%20Copilot%206.png)
+
+
 There’s been a lot of attention lately on Claude and how strong it is with Excel and structured data.
 What most people don’t realize is that if you’re using Microsoft 365 Copilot, you already have access to that level of capability inside Excel.
 
