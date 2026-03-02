@@ -66,13 +66,42 @@ Create a “VP Talking Points for CFO” section with five numbered highlights, 
 Prompt:
 Create a What If sheet that models staffing and policy changes and shows estimated overtime savings, intervention costs, and net impact. Present results in a clean table and a simple waterfall chart.
 ## 4) Executive Prompt Pack (after handoff)
-Once the workbook is built, the VP should focus on decisions, not analysis.
-Example prompts included:
-- CFO headline summary
-- Risk identification
-- Month over month changes
-- Decision options with tradeoffs
-- Board level speaking points
+
+Once the workbook is built, the VP should focus on **decisions**, not analysis.
+
+**Example prompts included:**
+
+- **CFO headline summary**
+  - **Prompt:**
+    - In one paragraph: summarize Q2 paramedic overtime for Platte County, MO.  
+      Include overtime cost, hours, variance to budget, and the top driver.  
+      Then give me 3 bullets that a CFO would care about.
+
+- **Risk identification**
+  - **Prompt:**
+    - Identify the top 5 risk signals in this workbook (fatigue, concentration, recurring gaps, repeated holdovers, station hotspots).  
+      For each risk, give: what it is, why it matters, and the metric that proves it.
+
+- **Month-over-month changes**
+  - **Prompt:**
+    - Compare April vs May vs June.  
+      What changed, why did it change, and what do we expect next quarter if nothing changes?  
+      Keep it to 6 bullets, each with a number.
+
+- **Decision options with tradeoffs**
+  - **Prompt:**
+    - Give me 3 decision options for the CFO to reduce overtime next quarter.  
+      For each option provide: estimated cost, estimated savings, time-to-impact, operational tradeoffs, and a confidence rating based on the data.
+
+- **Board-level speaking points**
+  - **Prompt:**
+    - Generate 90-second speaking points that explain:
+      - the overtime problem
+      - the drivers
+      - the decision needed
+      - the ROI  
+    - Use plain language and include 3 numbers I can say out loud.
+
 ## Why this demo lands
 - The CFO asks a question in plain English
 - Analysts use Agent Mode to build native Excel artifacts
