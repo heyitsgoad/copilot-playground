@@ -53,6 +53,7 @@ This is a catalog of agents I have made since I began learning about Copilot and
 - [Positivity Prompts](./prompt%20playground/positivity%20prompts.md)
 - [Start My Day](./prompt%20playground/start%20my%20day.md)
 - [10 Prompts for Executives](./prompt%20playground/10%20executive%20prompts.md)
+- [Getting Started with Copilot, learn the ropes, prompt](https://github.com/heyitsgoad/copilot-playground/blob/573ee79899b18fa52df2562a8941c3729e4b0bf8/prompt%20playground/getting%20started%20with%20copilot.md)
 
 **Here are examples you can use for your Copilot Personalization and adding to Copilot Memory**
 - [Copilot Memory](./prompt%20playground/copilot%20memory.md)
