@@ -44,21 +44,61 @@ This is a catalog of agents I have made since I began learning about Copilot and
 
 ## Prompt Playground
 
-**This is a catalog of all my favorite prompts and personal[ization for Copilot.**
-- [Future Meeting Catch Up](./prompt%20playground/future%20meeting%20catch-up.md)
-- [Worst Traits to Enhance Growth](./prompt%20playground/worst%20traits.md)
-- [Morning Kick‑off, Afternoon Reset, and Wrap‑up](prompt%20playground/morning-kickoff-afternoon-reset-and-wrap-up.md)
-- [Next Level (Taking prompt output to the next level)](./prompt%20playground/level%20up%20prompt.md)
-- [Proofread Prompt  ](./prompt%20playground/proofread%20prompt.md)
-- [Positivity Prompts](./prompt%20playground/positivity%20prompts.md)
-- [Start My Day](./prompt%20playground/start%20my%20day.md)
-- [10 Prompts for Executives](./prompt%20playground/10%20executive%20prompts.md)
-- [Getting Started with Copilot, learn the ropes, prompt](https://github.com/heyitsgoad/copilot-playground/blob/573ee79899b18fa52df2562a8941c3729e4b0bf8/prompt%20playground/getting%20started%20with%20copilot.md)
-- [Check My Calendar](https://github.com/heyitsgoad/copilot-playground/blob/6cbcb5312fcc16988a27bee5251ca712583d3a95/prompt%20playground/check%20my%20calendar.md)
+*A catalog of favorite prompts and personalizations for Microsoft Copilot.*
 
-**Here are examples you can use for your Copilot Personalization and adding to Copilot Memory**
-- [Copilot Memory](./prompt%20playground/copilot%20memory.md)
-- [Copilot Personalization](./prompt%20playground/copilot%20personalization.md)
+---
+
+### 🚀 Getting Started
+
+New to Copilot? Start here.
+
+- [Getting Started with Copilot](https://github.com/heyitsgoad/copilot-playground/blob/573ee79899b18fa52df2562a8941c3729e4b0bf8/prompt%20playground/getting%20started%20with%20copilot.md) — Learn the ropes and get comfortable with your first prompts
+
+---
+
+### ⚙️ Personalization & Memory
+
+Make Copilot feel like yours.
+
+- [Copilot Memory](./prompt%20playground/copilot%20memory.md) — Examples for adding information to Copilot's memory
+- [Copilot Personalization](./prompt%20playground/copilot%20personalization.md) — Templates for customizing how Copilot responds to you
+
+---
+
+### 📅 Daily Workflow
+
+Prompts to keep your day on track from start to finish.
+
+- [Start My Day](./prompt%20playground/start%20my%20day.md) — Kick things off with a morning overview
+- [Morning Kick-off, Afternoon Reset, and Wrap-up](prompt%20playground/morning-kickoff-afternoon-reset-and-wrap-up.md) — Three-part prompt set covering your full workday
+- [Check My Calendar](https://github.com/heyitsgoad/copilot-playground/blob/6cbcb5312fcc16988a27bee5251ca712583d3a95/prompt%20playground/check%20my%20calendar.md) — Get a quick read on what's ahead
+- [Future Meeting Catch Up](./prompt%20playground/future%20meeting%20catch-up.md) — Prep for upcoming meetings before they happen
+
+---
+
+### ✍️ Writing & Output Quality
+
+Get better, cleaner, more polished results.
+
+- [Proofread Prompt](./prompt%20playground/proofread%20prompt.md) — Run your writing through a Copilot proofreading pass
+- [Next Level](./prompt%20playground/level%20up%20prompt.md) — Take any prompt output further and sharpen the final product
+
+---
+
+### 🧠 Growth & Mindset
+
+Prompts focused on self-awareness and personal development.
+
+- [Worst Traits to Enhance Growth](./prompt%20playground/worst%20traits.md) — Use Copilot to surface blind spots and build on them
+- [Positivity Prompts](./prompt%20playground/positivity%20prompts.md) — Reframe your thinking and stay grounded
+
+---
+
+### 👔 Executive & Leadership
+
+Prompts built for higher-stakes, strategic use cases.
+
+- [10 Prompts for Executives](./prompt%20playground/10%20executive%20prompts.md) — A curated set of prompts tailored for leadership workflows
 
 ---
 
