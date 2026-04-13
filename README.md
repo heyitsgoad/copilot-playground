@@ -97,6 +97,8 @@ Prompts to keep your day on track from start to finish.
 - [Start My Day](./prompt%20playground/start%20my%20day.md) — Kick things off with a morning overview
 - [Morning Kick-off, Afternoon Reset, and Wrap-up](prompt%20playground/morning-kickoff-afternoon-reset-and-wrap-up.md) — Three-part prompt set covering your full workday
 - [Check My Calendar](https://github.com/heyitsgoad/copilot-playground/blob/6cbcb5312fcc16988a27bee5251ca712583d3a95/prompt%20playground/check%20my%20calendar.md) — Get a quick read on what's ahead
+- [Future Meeting Catch Up](./prompt%20playground/future%20meeting%20catch-up.md) — Prep for upcoming meetings before they happen
+- [Meeting Notes to Action Table](./prompt%20playground/meeting%20notes%20to%20action%20items.md) — Convert raw meeting notes into a prioritized action table and executive summary in one shot
 
 ---
 
