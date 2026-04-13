@@ -122,14 +122,26 @@ Prompts built for higher-stakes, strategic use cases.
 
 ## Education Playground
 
-This section is built for IT admins, executives, and anyone looking to understand how to use AI, as well as, manage and secure it. It features short videos and runnable guides that show how to **manage**, **govern**, **observe**, and **use** Copilot and agents at scale.
+*Short videos and runnable guides for IT admins, executives, and anyone looking to understand how to use, manage, and secure AI at scale.*
 
-### Video Tracks
+This section covers how to **manage**, **govern**, **observe**, and **use** Copilot and agents across your organization.
 
-[Getting Started Guide for Copilot Governance](./education%20playground/copilot%20governance%20getting%20started.md) 
+---
 
-- These sessions cover practical governance for Microsoft 365 Copilot and agents across the M365 Admin Center, Copilot Studio, Power Platform, Purview, and SharePoint Advanced Management, focusing on access and management controls, DLP and labeling, oversharing cleanup, connector risk, and cost management.
+### 🎬 Video Tracks
 
-[Claude in Copilot with Agent Mode for Excel](https://github.com/heyitsgoad/copilot-playground/blob/8f2b297288551b7c6db1f347578c2af1a3c0aad3/education%20playground/claude%20in%20copilot%20with%20agent%20mode%20for%20excel.md) 
+---
 
-- A hands‑on walkthrough showing how Claude‑level Excel reasoning shows up inside Microsoft 365 Copilot. This page includes the demo data, prompts, and steps so you can rebuild it yourself or follow along with the video.
+#### 🔐 Governance & Administration
+
+For IT admins and compliance teams responsible for managing Copilot at scale.
+
+- [Getting Started Guide for Copilot Governance](./education%20playground/copilot%20governance%20getting%20started.md) — Practical governance sessions covering Microsoft 365 Copilot and agents across M365 Admin Center, Copilot Studio, Power Platform, Purview, and SharePoint Advanced Management. Topics include access and management controls, DLP and labeling, oversharing cleanup, connector risk, and cost management.
+
+---
+
+#### 🧪 Hands-On Use & Demos
+
+Follow-along guides with real prompts, data, and steps you can run yourself.
+
+- [Claude in Copilot with Agent Mode for Excel](https://github.com/heyitsgoad/copilot-playground/blob/8f2b297288551b7c6db1f347578c2af1a3c0aad3/education%20playground/claude%20in%20copilot%20with%20agent%20mode%20for%20excel.md) — A hands-on walkthrough showing how Claude-level Excel reasoning works inside Microsoft 365 Copilot. Includes demo data, prompts, and step-by-step instructions so you can rebuild it yourself or follow along with the video.
