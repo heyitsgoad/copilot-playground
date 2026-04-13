@@ -129,6 +129,7 @@ Prompts built for higher-stakes, strategic use cases.
 - [10 Prompts for Executives](./prompt%20playground/10%20executive%20prompts.md) — A curated set of prompts tailored for leadership workflows
 - [Contextual Filter: Gain a New Perspective](./prompt%20playground/contextual%20filter%2C%20gain%20a%20new%20perspective%20prompt.md) — Read any document through the lens of a specific role and surface only the action items and deadlines that matter to you
 - [Devil's Advocate: Skeptical Stakeholder](./prompt%20playground/devils%20advocate%20skeptical%20stakeholder.md) — Pressure-test any proposal by having Copilot surface the three most likely failure points before you walk in the room
+- [Leadership Style & Voice Distiller](./prompt%20playground/leadership%20style%20and%20voice%20distiller.md) — Mine a full year of your communications to build a leadership style document you can feed directly into Copilot as your personal voice reference
 
 ---
 ### 🖥️ Copilot Cowork
