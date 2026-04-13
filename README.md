@@ -11,33 +11,50 @@ This repository is a portfolio of my **Copilot agents**, **prompt library**, and
 
 ## Agent Playground
 
-This is a catalog of agents I have made since I began learning about Copilot and Agent.
+## 🤖 Copilot Agent Playground
 
-### Each Agent Includes
+*A catalog of agents built while learning Copilot and Microsoft 365 Copilot Studio.*
 
-- **Overview:** overview and licensing
-- **Setup:** instructions,  environment, connectors, variables, permissions 
-- **Run:** starter prompts 
+---
 
-### [BossBuddy](./agent%20playground/bossbuddy.md)
+### 📋 Every Agent Includes
 
-- BossBuddy is a virtual AI manager I created to guide you in your work, strategy, and career growth through simple conversations. It helps clarify your impact and see the bigger picture in projects and opportunities.
+- **Overview** — Summary and licensing info
+- **Setup** — Instructions, environment, connectors, variables, and permissions
+- **Run** — Starter prompts to get going fast
 
-### [Professor X](./agent%20playground/professor%20x.md)
+---
 
-- Professor X is an agent designed to coach your speaking and presentation skills. Just submit a transcript, and Professor X will analyze and provide feedback to help improve your next talk.
+### 🧑‍💼 Productivity & Work Management
 
-### [Taskmaster](./agent%20playground/taskmaster.md)
+Agents that help you stay organized, focused, and moving forward.
 
-- Taskmaster acts as your chief of staff who tracks your opportunities, surfaces what needs your attention, pulls out action items, and gives you strategic guidance to move opportunities and projects forward.
+- [BossBuddy](./agent%20playground/bossbuddy.md) — A virtual AI manager that guides your work, strategy, and career growth through simple conversations. Helps clarify your impact and see the bigger picture in projects and opportunities.
+- [Taskmaster](./agent%20playground/taskmaster.md) — Your chief of staff. Tracks opportunities, surfaces what needs attention, pulls out action items, and gives strategic guidance to move projects forward.
 
-### [Impact Check](./agent%20playground/impact%20check.md)
+---
 
-- Ever have trouble realizing the impact you make on everyday work and projects? Impact Check agent enables you to work more efficiently by summarizing, analyzing, creating, and linking information within your Microsoft 365 apps, using only data you can already access. This helps you understand your influence and impact on both projects and teammates.
+### 📊 Impact & Self-Awareness
 
-### [Redline Rover](./agent%20playground/readline%20rover.md)
+Agents that help you understand your contribution and influence.
 
-- This agent created by Microsoft peer, [Sue Vencill](https://www.linkedin.com/in/suevencill/), that is aspecialized contract auditor that performs a bidirectional gap analysis between internal quality templates and customer agreements to ensure strict SOP equivalence and regulatory compliance.
+- [Impact Check](./agent%20playground/impact%20check.md) — Struggle to see the impact you make day to day? This agent summarizes, analyzes, and links information across your Microsoft 365 apps to help you understand your influence on projects and teammates, using only data you already have access to.
+
+---
+
+### 🎤 Communication & Presentation
+
+Agents that sharpen how you speak, present, and show up.
+
+- [Professor X](./agent%20playground/professor%20x.md) — Your personal presentation coach. Submit a transcript and Professor X will analyze it and give you actionable feedback to level up your next talk.
+
+---
+
+### 📄 Contracts & Compliance
+
+Agents built for precision work with documents and agreements.
+
+- [Redline Rover](./agent%20playground/readline%20rover.md) — A specialized contract auditor built by Microsoft peer [Sue Vencill](https://www.linkedin.com/in/suevencill/). Performs a bidirectional gap analysis between internal quality templates and customer agreements to ensure SOP equivalence and regulatory compliance.
 
 ---
 
