@@ -124,6 +124,7 @@ Prompts focused on self-awareness and personal development.
 Prompts built for higher-stakes, strategic use cases.
 
 - [10 Prompts for Executives](./prompt%20playground/10%20executive%20prompts.md) — A curated set of prompts tailored for leadership workflows
+- [Contextual Filter: Gain a New Perspective](./prompt%20playground/contextual%20filter%2C%20gain%20a%20new%20perspective%20prompt.md) — Read any document through the lens of a specific role and surface only the action items and deadlines that matter to you
 
 ---
 ### 🖥️ Copilot Cowork
