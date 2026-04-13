@@ -1,4 +1,4 @@
-# Manager 1:1 Weekly Field Impact Readout
+# Manager 1:1 Weekly Update for Copilot Cowork
 
 ## What This Is
 
