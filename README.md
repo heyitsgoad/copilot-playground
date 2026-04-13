@@ -89,7 +89,7 @@ Prompts focused on self-awareness and personal development.
 
 - [Worst Traits to Enhance Growth](./prompt%20playground/worst%20traits.md) — Use Copilot to surface blind spots and build on them
 - [Positivity Prompts](./prompt%20playground/positivity%20prompts.md) — Reframe your thinking and stay grounded
-- [Career Growth](./prompt%20playground/future%20meeting%20catch-up.md) — Prep for upcoming meetings before they happen
+- [Career Growth](./prompt%20playground/future%20meeting%20catch-up.md) — Advise on the most practical steps you can take over the next 90 days to grow in your role, strengthen coworker relationships, and drive meaningful team impact, starting this week.
 
 
 ---
