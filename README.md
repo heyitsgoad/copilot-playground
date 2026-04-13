@@ -72,8 +72,6 @@ Prompts to keep your day on track from start to finish.
 - [Start My Day](./prompt%20playground/start%20my%20day.md) — Kick things off with a morning overview
 - [Morning Kick-off, Afternoon Reset, and Wrap-up](prompt%20playground/morning-kickoff-afternoon-reset-and-wrap-up.md) — Three-part prompt set covering your full workday
 - [Check My Calendar](https://github.com/heyitsgoad/copilot-playground/blob/6cbcb5312fcc16988a27bee5251ca712583d3a95/prompt%20playground/check%20my%20calendar.md) — Get a quick read on what's ahead
-- [Future Meeting Catch Up](./prompt%20playground/future%20meeting%20catch-up.md) — Prep for upcoming meetings before they happen
-
 ---
 
 ### ✍️ Writing & Output Quality
@@ -91,6 +89,8 @@ Prompts focused on self-awareness and personal development.
 
 - [Worst Traits to Enhance Growth](./prompt%20playground/worst%20traits.md) — Use Copilot to surface blind spots and build on them
 - [Positivity Prompts](./prompt%20playground/positivity%20prompts.md) — Reframe your thinking and stay grounded
+- [Career Growth](./prompt%20playground/future%20meeting%20catch-up.md) — Prep for upcoming meetings before they happen
+
 
 ---
 
