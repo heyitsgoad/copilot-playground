@@ -4,7 +4,6 @@
 
 A deep self-analysis prompt that mines a full year of your emails, meetings, documents, and Teams chats to build a personalized leadership style document. It surfaces your top strengths, areas for growth, and a set of OKRs, all grounded in how you actually communicate and lead, not how you think you do.
 
-> The output is designed to be fed directly into Copilot as a personalization or memory reference so it can mirror your voice and style going forward.
 
 ---
 
