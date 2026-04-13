@@ -126,6 +126,13 @@ Prompts built for higher-stakes, strategic use cases.
 - [10 Prompts for Executives](./prompt%20playground/10%20executive%20prompts.md) — A curated set of prompts tailored for leadership workflows
 
 ---
+### 🖥️ Copilot Cowork
+
+Prompts built specifically for Copilot Cowork, designed to run deeper analysis and generate outputs across your Microsoft 365 activity.
+
+- [Manager 1:1 Weekly Update](./prompt%20playground/1%20on%201%20weekly%20manager%20update%20for%20copilot%20cowork.md) — Reviews your past week across meetings, emails, Teams, and tasks to generate a leadership-ready field impact readout for your manager 1:1.
+
+---
 ---
 
 # 🎓 Copilot Education Playground
