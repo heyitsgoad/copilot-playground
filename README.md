@@ -1,17 +1,25 @@
 ![image alt](https://github.com/heyitsgoad/copilot-playground/blob/9016baa134dc084f71121d9858c9e0d48e95f227/main%20wide%20and%20stretched.png)
+
 ## Hello world and welcome to my Copilot Playground
-I am a Copilot Solution Engineer at Microsoft and since joining Microsoft, I wanted to share the things I am learning, stuff I am building, and overall insights on all the things with the community.
 
-This repository is a portfolio of my **Copilot agents**, **prompt library**, and **videos** that show how I design, manage and govern, and teach AI solutions across Microsoft 365, Copilot Studio, and Agent 365.
+I am a Copilot Solution Engineer at Microsoft and since joining, I have been sharing what I am learning, building, and discovering with the community.
 
-- **Tech:** Microsoft 365 Copilot, Copilot Studio, Agent 365, Purview, Intune, Power Platform, Azure OpenAI, local/open models
+This repository is a portfolio of my **Copilot agents**, **prompt library**, and **videos** that show how I design, manage, govern, and teach AI solutions across Microsoft 365, Copilot Studio, and Agent 365.
+
+**Tech:** Microsoft 365 Copilot, Copilot Studio, Agent 365, Purview, Intune, Power Platform, Azure OpenAI, local/open models
 
 ---
 
+## 📍 Table of Contents
 
-## Agent Playground
+- [🤖 Agent Playground](#-copilot-agent-playground) — Agents I have built and documented
+- [💬 Prompt Playground](#-copilot-prompt-playground) — Favorite prompts and personalizations
+- [🎓 Education Playground](#-copilot-education-playground) — Videos and hands-on guides
 
-## 🤖 Copilot Agent Playground
+---
+---
+
+# 🤖 Copilot Agent Playground
 
 *A catalog of agents built while learning Copilot and Microsoft 365 Copilot Studio.*
 
@@ -57,9 +65,9 @@ Agents built for precision work with documents and agreements.
 - [Redline Rover](./agent%20playground/readline%20rover.md) — A specialized contract auditor built by Microsoft peer [Sue Vencill](https://www.linkedin.com/in/suevencill/). Performs a bidirectional gap analysis between internal quality templates and customer agreements to ensure SOP equivalence and regulatory compliance.
 
 ---
+---
 
-
-## Prompt Playground
+# 💬 Copilot Prompt Playground
 
 *A catalog of favorite prompts and personalizations for Microsoft Copilot.*
 
@@ -89,6 +97,7 @@ Prompts to keep your day on track from start to finish.
 - [Start My Day](./prompt%20playground/start%20my%20day.md) — Kick things off with a morning overview
 - [Morning Kick-off, Afternoon Reset, and Wrap-up](prompt%20playground/morning-kickoff-afternoon-reset-and-wrap-up.md) — Three-part prompt set covering your full workday
 - [Check My Calendar](https://github.com/heyitsgoad/copilot-playground/blob/6cbcb5312fcc16988a27bee5251ca712583d3a95/prompt%20playground/check%20my%20calendar.md) — Get a quick read on what's ahead
+
 ---
 
 ### ✍️ Writing & Output Quality
@@ -106,8 +115,7 @@ Prompts focused on self-awareness and personal development.
 
 - [Worst Traits to Enhance Growth](./prompt%20playground/worst%20traits.md) — Use Copilot to surface blind spots and build on them
 - [Positivity Prompts](./prompt%20playground/positivity%20prompts.md) — Reframe your thinking and stay grounded
-- [Career Growth](./prompt%20playground/future%20meeting%20catch-up.md) — Advise on the most practical steps you can take over the next 90 days to grow in your role, strengthen coworker relationships, and drive meaningful team impact, starting this week.
-
+- [Career Growth](./prompt%20playground/future%20meeting%20catch-up.md) — Get a 90-day action plan for growing in your role, strengthening relationships, and driving team impact
 
 ---
 
@@ -118,9 +126,9 @@ Prompts built for higher-stakes, strategic use cases.
 - [10 Prompts for Executives](./prompt%20playground/10%20executive%20prompts.md) — A curated set of prompts tailored for leadership workflows
 
 ---
+---
 
-
-## Education Playground
+# 🎓 Copilot Education Playground
 
 *Short videos and runnable guides for IT admins, executives, and anyone looking to understand how to use, manage, and secure AI at scale.*
 
@@ -128,11 +136,7 @@ This section covers how to **manage**, **govern**, **observe**, and **use** Copi
 
 ---
 
-### 🎬 Video Tracks
-
----
-
-#### 🔐 Governance & Administration
+### 🔐 Governance & Administration
 
 For IT admins and compliance teams responsible for managing Copilot at scale.
 
@@ -140,7 +144,7 @@ For IT admins and compliance teams responsible for managing Copilot at scale.
 
 ---
 
-#### 🧪 Hands-On Use & Demos
+### 🧪 Hands-On Use & Demos
 
 Follow-along guides with real prompts, data, and steps you can run yourself.
 
