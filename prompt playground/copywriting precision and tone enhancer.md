@@ -15,7 +15,6 @@ I want you to improve my writing. I will share an excerpt, and your task is to p
 
 Break down each change and share the corresponding explanation for the edit before sharing the completed revised excerpt. Group these together using headers for easy readability.
 
----
 
 ## Editing Criteria
 
@@ -32,7 +31,6 @@ Break down each change and share the corresponding explanation for the edit befo
 - Use an informal yet professional tone  
   - Contractions and casual phrasing are welcome while maintaining credibility  
 
----
 
 ## Output Format
 
