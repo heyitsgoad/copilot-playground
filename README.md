@@ -108,6 +108,7 @@ Get better, cleaner, more polished results.
 
 - [Proofread Prompt](./prompt%20playground/proofread%20prompt.md) — Run your writing through a Copilot proofreading pass
 - [Next Level](./prompt%20playground/level%20up%20prompt.md) — Take any prompt output further and sharpen the final product
+- [Copywriting Precision & Tone Enhancer](./prompt%20playground/copywriting%20precision%20and%20tone%20enhancer.md) — Submit any email, proposal, or stakeholder-facing writing and have Copilot refine it with senior-level copywriting precision while preserving your original voice, tone, and intent
 
 ---
 
