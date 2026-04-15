@@ -1,5 +1,6 @@
+Copywriting Precision & Tone Enhancer
 What This Is
-A senior‑level editing prompt designed to tighten your writing without changing your voice. It acts like a copywriter with 20+ years of experience who reviews your excerpt, explains every recommended change, and delivers a cleaner, clearer version of your text. The goal is to keep your tone, sharpen your message, and remove anything that slows the reader down.
+A senior‑level editing prompt that reviews any excerpt you provide and refines it with the precision of a copywriter with 20+ years of experience. It focuses on clarity, tone, flow, and readability while keeping your original voice intact. The goal is to produce writing that’s clean, direct, and easy for readers to absorb.
 
 Prompt
 Act as a senior copywriter with over 20 years of experience writing [end state].
