@@ -13,7 +13,7 @@ Each run produces four outputs: a structured Monthly Account Review Report, a on
 ## Prompt
 
 Act as my Account Analyst.
-Research the `{Insert projects, accounts, etc}` listed by below that I support as a [Role].
+Research the `{Insert projects, accounts, etc}` listed by below that I support as a `{Role}`.
 Use enterprise sources:
 
 Outlook emails
@@ -27,7 +27,7 @@ Meeting transcripts and notes
 Focus specifically on: M365 Copilot and Copilot Chat related work.
 
 
-PRIMARY OUTPUT: Monthly Account Review Report [!Adjust based on your prefernces and persona, below are examples to use]
+PRIMARY OUTPUT: Monthly Account Review Report `{Adjust based on your prefernces and persona, below are examples to use}`
 Deliver a single comprehensive structured report with the following sections:
 
 Activities & Scope List the concrete activities completed in the last 6–12 months:
@@ -166,4 +166,4 @@ SCHEDULE
 Run this task automatically on the first business day of each month on a recurring basis.
 
 
-ACCOUNT LIST (Optional - callout your customers, projects, etc here)
+ACCOUNT LIST `{Optional - callout your customers, projects, etc here}`
