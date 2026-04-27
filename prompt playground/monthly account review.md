@@ -6,7 +6,7 @@ A comprehensive account intelligence prompt built for Senior Solution Engineers 
 
 Each run produces four outputs: a structured Monthly Account Review Report, a one-page Executive Summary, an Executive PowerPoint, and an HTML presentation, all emailed directly to you.
 
-> This prompt is scoped to M365 Copilot and Copilot Chat activity across a defined TPID list. Swap in your own accounts and adjust the data sources to match your territory and role.
+> This prompt is scoped to M365 Copilot and Copilot Chat activity across a defined list. Swap in your own accounts and adjust the data sources to match your territory and role.
 
 ---
 
