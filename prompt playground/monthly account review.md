@@ -13,7 +13,7 @@ Each run produces four outputs: a structured Monthly Account Review Report, a on
 ## Prompt
 
 Act as my Account Analyst.
-Research the [Insert projects, accounts, etc] listed by below that I support as a [Role].
+Research the {Insert projects, accounts, etc} listed by below that I support as a [Role].
 Use enterprise sources:
 
 Outlook emails
