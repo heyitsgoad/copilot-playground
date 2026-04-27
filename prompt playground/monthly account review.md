@@ -27,7 +27,7 @@ Meeting transcripts and notes
 Focus specifically on: M365 Copilot and Copilot Chat related work.
 
 
-PRIMARY OUTPUT: Monthly Account Review Report [Adjust based on your prefernces and persona, below are examples to use]
+PRIMARY OUTPUT: Monthly Account Review Report "Adjust based on your prefernces and persona, below are examples to use"
 Deliver a single comprehensive structured report with the following sections:
 
 Activities & Scope List the concrete activities completed in the last 6–12 months:
