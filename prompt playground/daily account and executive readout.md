@@ -23,7 +23,7 @@ Review the past 24 hours across:
 - To Do / Planner tasks
 - Account-related communications
 
-Focus on customer-facing activity tied to healthcare and life sciences accounts, especially: `{replace the below with customer, project, etc}`
+Focus on customer-facing activity tied to healthcare and life sciences accounts, especially: `replace the below with customer, project, etc`
 
 | Customer Name | 
 
