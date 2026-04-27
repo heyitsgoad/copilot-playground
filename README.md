@@ -138,6 +138,7 @@ Prompts built for higher-stakes, strategic use cases.
 Prompts built specifically for Copilot Cowork, designed to run deeper analysis and generate outputs across your Microsoft 365 activity.
 
 - [Manager 1:1 Weekly Update](./prompt%20playground/1%20on%201%20weekly%20manager%20update%20for%20copilot%20cowork.md) — Reviews your past week across meetings, emails, Teams, and tasks to generate a leadership-ready field impact readout for your manager 1:1.
+- [Monthly Account Review](https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/monthly%20account%20review.md) — Automatically generates a full monthly account review across your portfolio, including an executive summary, PowerPoint, and HTML presentation, delivered to your inbox on the first business day of every month.
 
 ---
 ---
