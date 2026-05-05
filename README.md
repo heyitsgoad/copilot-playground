@@ -78,6 +78,7 @@ Agents built for precision work with documents and agreements.
 New to Copilot? Start here.
 
 - [Getting Started with Copilot](https://github.com/heyitsgoad/copilot-playground/blob/573ee79899b18fa52df2562a8941c3729e4b0bf8/prompt%20playground/getting%20started%20with%20copilot.md) — Learn the ropes and get comfortable with your first prompts
+- [10 Starter Copilot Chat Prompts](https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/10%20starter%20copilot%20chat%20prompts.md) — Ten practical Copilot Chat prompts covering summaries, rewrites, agendas, FAQs, and more — ready to run and easy to customize
 
 ---
 
