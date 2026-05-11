@@ -11,12 +11,10 @@ A daily newspaper-styled AI news brief built for Microsoft Copilot Cowork. Every
 
 ## Prompt
 
-```
+
 ---
 name: daily-news
 description: Generates "The Copilot Chronicle" — a daily newspaper-styled HTML morning brief covering external AI industry news (Microsoft Copilot, Anthropic/Claude, Google/Gemini, OpenAI/ChatGPT, broader AI industry) plus internal field updates pulled via Microsoft Graph signals from email, Teams, and Viva Engage. Output is an HTML email with masthead, two-column body, dateline, lead story with drop cap, three section banners, ticker, and footer — emailed directly to you. Every story is hyperlinked to its source.
----
-```
 
 ---
 
