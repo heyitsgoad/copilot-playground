@@ -121,6 +121,7 @@ Prompts focused on self-awareness and personal development.
 - [Positivity Prompts](./prompt%20playground/positivity%20prompts.md) — Reframe your thinking and stay grounded
 - [Career Growth](./prompt%20playground/future%20meeting%20catch-up.md) — Get a 90-day action plan for growing in your role, strengthening relationships, and driving team impact
 - [Weekly Case Study Review](./prompt%20playground/weekly%20case%20study%20review.md) — Reframe your week as a business case study with structured analysis across successes, challenges, and recommendations
+- [Career Capability Assessment & Growth Planner](https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/career%20capability%20and%20growth%20planner.md) — Get an evidence-based view of your confirmed strengths, capability gaps, and recommended next steps across short and medium-term career pathways
 
 ---
 
