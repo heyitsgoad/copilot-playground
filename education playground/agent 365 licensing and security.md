@@ -1,6 +1,8 @@
 # Microsoft Agent 365: Deep Technical Explanation, Licensing Model, and How to Explain It to Customers
 
-## Executive Summary (Customer-Ready)
+> **Audience:** This is a practitioner reference, written for SEs, technical sellers, and IT professionals who need to explain Microsoft Agent 365 accurately to customers and stakeholders. It is not a customer-facing document — it is a field enablement resource built entirely from public Microsoft documentation. Every claim links to a public source.
+
+## Executive Summary
 
 **Microsoft Agent 365 is not an agent builder and it is not the runtime for agents.** It is Microsoft's **control plane for AI agents**: the product Microsoft positions for IT/security to **observe, govern, and secure** agents across the organization, from the **Microsoft 365 admin center** and adjacent security/admin surfaces.
 
@@ -135,7 +137,7 @@ Agent 365 licensing is **not** the same as Copilot Studio runtime consumption an
 
 ### Why This Matters for Customer Explanations
 
-A common field mistake is conflating these into a single statement like "Agent 365 premium is an all-or-nothing tenant switch." It is not. The more precise explanation:
+A common misconception is conflating these into a single statement like "Agent 365 premium is an all-or-nothing tenant switch." It is not. The more precise explanation:
 
 - **Agent 365** = control plane / governance / security / observability layer
 - **Microsoft 365 Copilot / Copilot Chat / Copilot Studio** = user experience + build/runtime + consumption/licensing mechanics
@@ -167,7 +169,7 @@ The official Microsoft licensing FAQ says Agent 365 is **per user**, not per age
 
 ## 5. Table 1: Licensed Agent 365 User vs. Unlicensed User Interacting with the Same Shared Agent
 
-> **Important note:** cells marked **"public docs unclear"** mean Microsoft's public documentation did not explicitly answer that exact mixed-user shared-agent question in the sources reviewed. It does **not** automatically mean the platform lacks the capability; it means the public docs do not yet spell it out.
+> **Important note:** cells marked **"public docs unclear"** mean Microsoft's public documentation did not explicitly answer that exact mixed-user shared-agent question in the sources reviewed. It does **not** automatically mean the platform lacks the capability; it means the public docs do not yet spell it out. All gaps noted here are documentation gaps, not product gaps.
 
 | Dimension | Licensed Agent 365 User | Unlicensed User | What Microsoft Explicitly Documents |
 |---|---|---|---|
