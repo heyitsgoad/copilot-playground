@@ -153,21 +153,22 @@ One shared agent can continue to be shared. Agent 365 entitlement attaches to th
 
 ---
 
-## 5. Table 1: Licensed Agent 365 User vs. Unlicensed User on the Same Shared Agent
+## 5. What Actually Happens With a Shared Agent When Only Some Users Are Licensed
 
-> **Important note:** cells marked **"not yet documented"** mean Microsoft's public documentation does not yet explicitly answer that question in the sources reviewed. It does **not** mean the platform lacks the capability — these are documentation gaps, not product gaps.
+This is the question that comes up most in the field, and the honest answer is: Microsoft's public documentation covers most of it, but not all of it.
 
-| Dimension | Licensed Agent 365 User | Unlicensed User | What Microsoft Officially Documents |
-|---|---|---|---|
-| **Does the agent itself change?** | No. The agent does not become a "premium agent." | Same. The agent object does not change because only some users are Agent 365-licensed. | Agent 365 is the control plane; agents do not require their own licenses. |
-| **Can the user still use the shared agent?** | Yes, subject to the underlying channel/license path. | Also subject to the underlying channel/license path. | Copilot Chat and Microsoft 365 Copilot docs govern user access and metering, not Agent 365 alone. |
-| **Agent 365 entitlement** | Yes, this user is within the per-user Agent 365 license scope. | No, this user is not within the per-user Agent 365 license scope. | Agent 365 is licensed per user, not per agent. |
-| **Microsoft 365 Copilot zero-rated agent usage** | If the same user also has Microsoft 365 Copilot, certain usage in Copilot Chat / Teams / SharePoint is zero-rated. | Not unless that user also has Microsoft 365 Copilot. | Zero-rated usage is tied to the Microsoft 365 Copilot user license, not Agent 365. |
-| **Copilot Chat no-cost vs. metered behavior** | Depends on whether the agent is declarative/public-web only or accesses tenant data. | Same dependency. | Copilot Chat users can use some agents at no extra cost; tenant-data / metered scenarios require billing setup. |
-| **Observability / telemetry in Agent 365 dashboards** | Centralized registry, adoption/activity/health, and role-specific oversight are documented. | **Not yet documented:** whether shared-agent interaction telemetry is partitioned by licensed vs. unlicensed end-user interactions is not yet stated in public sources. | Centralized registry and role-specific oversight are documented; mixed-user telemetry scope is not explicitly addressed. |
-| **Security / compliance controls** | Agent 365 + Entra + Purview + Defender are documented for managed agents and agents acting on behalf of users. | **Not yet documented:** how end-user entitlement boundaries apply for the same shared agent; core platform controls are described at the agent/tenant/platform level. | Entra risk-based controls, Purview DLP/information protection, and Defender protections are documented for agents and Copilot/agent workloads broadly. |
-| **Visibility risk in a mixed user population** | Lower entitlement ambiguity for licensed users. | **Documentation gap**, not necessarily a platform gap. | Public docs do not yet provide a mixed-user shared-agent observability matrix. |
+Here's what we know for certain.
 
+**The agent itself does not change.** Agent 365 is the control plane around the agent, not the agent itself. Assigning Agent 365 licenses to some users does not turn the shared agent into a different "premium" version for those people.
+
+**Whether a user can actually use the agent has nothing to do with Agent 365.** That depends on their underlying license path — Microsoft 365 Copilot, Copilot Chat, Teams, SharePoint — and how the agent is built. If the agent only uses public web data, some Copilot Chat users can access it at no extra cost. If it accesses tenant data, it's metered and requires billing setup regardless of Agent 365.
+
+**Agent 365 entitlement is per user.** Licensed users are within that commercial scope. Unlicensed users are not. But that does not mean unlicensed users lose access to the agent — it means they are outside the Agent 365 governance and observability entitlement.
+
+**Security and governance controls like Entra, Purview, and Defender apply at the tenant and agent level, not just to licensed users.** Those protections are not gated behind individual Agent 365 licenses.
+
+> [!NOTE]
+> **Where documentation still has a gap:** Microsoft has not yet published a clear answer to what Agent 365 telemetry and observability looks like when a shared agent is used by a mix of licensed and unlicensed users. The org-wide control plane story is well documented. The exact visibility partitioning for mixed-user scenarios is not. That is a documentation gap, not necessarily a product gap.
 ---
 
 ## 6. Table 2: Tenant-Level Features vs. User-Level Licensed Features
