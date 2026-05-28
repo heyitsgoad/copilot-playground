@@ -16,17 +16,6 @@ Microsoft builds and runs agents through **Microsoft Copilot Studio**, **Microso
 
 **Sources:** [microsoft.com/en-us/microsoft-agent-365](https://www.microsoft.com/en-us/microsoft-agent-365), [learn.microsoft.com/en-us/microsoft-agent-365/overview](https://learn.microsoft.com/en-us/microsoft-agent-365/overview), [microsoft.com/licensing/faqs/122](https://www.microsoft.com/licensing/faqs/122)
 
----
-
-## The Mixed-Licensing Question
-
-No public Microsoft document says that turning on Agent 365 makes a shared agent become a separately licensed "premium agent." Microsoft documents Agent 365 as a **control plane** with a **per-user license**.
-
-**The agent object stays the same.** What changes is the management and control plane around it, and which users are entitled to Agent 365's governance, security, and observability value.
-
-A user's **ability to use an agent** is governed by the **underlying agent access path and runtime licensing**, not by Agent 365 alone. In Microsoft 365 Copilot, agent use comes with the Copilot license, and certain interactions in Copilot Chat/Teams/SharePoint are **zero-rated** for Microsoft 365 Copilot-licensed users. For **Copilot Chat** users without Microsoft 365 Copilot, some agent types are available at no additional cost, while agents that access shared tenant data are **metered** and require billing setup.
-
-**Where documentation is still evolving:** Microsoft has not yet published documentation that explicitly walks through one shared agent used by both Agent 365-licensed and non-licensed users and states whether Agent 365 telemetry/observability is full-fleet, licensed-user-only, or something in between. The exact telemetry partitioning for a mixed-user scenario is not yet documented in current public sources.
 
 ---
 
