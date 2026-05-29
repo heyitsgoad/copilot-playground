@@ -156,7 +156,9 @@ One shared agent can continue to be shared. Agent 365 entitlement attaches to th
 
 ## 5. What Actually Happens With a Shared Agent When Only Some Users Are Licensed
 
-This is the question that comes up most in the field, and the honest answer is: Microsoft's public documentation covers most of it, but not all of it.
+One of the most common licensing questions once Agent 365 enters the picture: if your organization has a shared agent used by 1,000 people but only 100 are licensed for Agent 365, what actually happens to the other 900?
+
+This is the question that comes up most in the field, and the honest answer is: Microsoft’s public documentation covers most of it, but not all of it.
 
 Here's what we know for certain.
 
