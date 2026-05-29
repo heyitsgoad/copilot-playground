@@ -84,9 +84,7 @@ For **Microsoft 365-bound agents**, data access is governed through standard Mic
 
 For **Foundry agents**, the Foundry runtime supports tools with managed authentication, including **service managed credentials** and **On-Behalf-Of (OBO)** authentication. Foundry can publish/share through Microsoft Teams, Microsoft 365 Copilot, and the **Entra Agent Registry**.
 
-**Agent 365-enabled** agents can invoke governed Work IQ MCP servers to access Microsoft 365 workloads through the Agent 365 tooling gateway. Supported workloads include Outlook Mail, Outlook Calendar, SharePoint, OneDrive, Teams, Word, and more.
- 
-IT admins manage which servers are active and what permissions apply directly from the Microsoft 365 admin center. Access through these servers is user-scoped, auditable, and gated behind the Microsoft 365 Copilot license.
+**Agent 365-enabled** agents can invoke governed Work IQ MCP servers to access Microsoft 365 workloads through the Agent 365 tooling gateway. Supported workloads include Outlook Mail, Outlook Calendar, SharePoint, OneDrive, Teams, Word, and more. IT admins manage which servers are active and what permissions apply directly from the Microsoft 365 admin center. Access through these servers is user-scoped, auditable, and gated behind the Microsoft 365 Copilot license.
  
 
 ### 2.5 Logging, Observability, and Security Telemetry
