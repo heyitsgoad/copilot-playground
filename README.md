@@ -39,6 +39,7 @@ Agents that help you stay organized, focused, and moving forward.
 
 - [BossBuddy](./agent%20playground/bossbuddy.md) — A virtual AI manager that guides your work, strategy, and career growth through simple conversations. Helps clarify your impact and see the bigger picture in projects and opportunities.
 - [Taskmaster](./agent%20playground/taskmaster.md) — Your chief of staff. Tracks opportunities, surfaces what needs attention, pulls out action items, and gives strategic guidance to move projects forward.
+- [Chief of Staff](./agent%20playground/chief%20of%20staff.md) — Build your own AI Chief of Staff in about 15 minutes. Comes with two downloadable Word templates, a guided Soul Code profile, and a copy-paste instruction block so the agent protects your time, thinks at your altitude, and sounds like you.
 
 ---
 
