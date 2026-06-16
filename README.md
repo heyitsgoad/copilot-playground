@@ -145,6 +145,13 @@ Prompts built specifically for Copilot Cowork, designed to run deeper analysis a
 - [The Copilot Chronicle: Daily AI News Brief](https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/daily%20ai%20news.md) — Generates a daily newspaper-styled HTML email covering external AI industry news and internal field updates pulled via Microsoft Graph, delivered to your inbox every morning as a 5-minute coffee read.
 
 ---
+### 🛠️ Skills
+
+Installable skills you can drop into your assistant's skills folder to add new capabilities, personas, and decision-making frameworks.
+
+- [Guardian Council: Multi-Perspective Skills](./prompt%20playground/guardian%20council%20skills.md) — A pack of five installable skills that give Copilot four decision-making lenses (technical, strategic, and execution) plus a synthesizer that reconciles them into one clear recommendation. Drop them into your skills folder and pressure-test any decision.
+
+---
 ---
 
 # 🎓 Copilot Education Playground
