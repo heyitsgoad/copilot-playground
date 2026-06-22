@@ -177,3 +177,11 @@ For IT admins and compliance teams responsible for managing Copilot at scale.
 Follow-along guides with real prompts, data, and steps you can run yourself.
 
 - [Claude in Copilot with Agent Mode for Excel](https://github.com/heyitsgoad/copilot-playground/blob/8f2b297288551b7c6db1f347578c2af1a3c0aad3/education%20playground/claude%20in%20copilot%20with%20agent%20mode%20for%20excel.md) — A hands-on walkthrough showing how Claude-level Excel reasoning works inside Microsoft 365 Copilot. Includes demo data, prompts, and step-by-step instructions so you can rebuild it yourself or follow along with the video.
+
+---
+
+### 🗂️ Best Practices & Strategy
+
+How to build content, files, and knowledge bases so AI can actually find and use them.
+
+- [Why AI Can't Find Your Files (And the Simple Fix)](https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/ai-ready%20file%20naming%20and%20metadata%20for%20ai.md). A practical look at how AI finds files in two levels (the title, then the metadata at the top) and why descriptive names plus a small metadata header help AI return better answers with less guessing and lower latency. Includes a downloadable one-page reference PDF and the full video.
