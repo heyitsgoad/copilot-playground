@@ -5,8 +5,6 @@
 
 A field perspective for the conversation every IT leader is having right now: if Cowork is more expensive to run, who do we actually give it to? The short answer is that you don't roll it out by headcount, you scope it by work shape. This page gives you the framework I use to separate the people who genuinely need Cowork from the much larger group that Copilot Premium already covers, plus a slide deck you can share.
 
-> [!NOTE]
-> This is written IT-manager to IT-manager, not as a sales pitch. The most credible move in this conversation is telling people who should *not* get Cowork.
 
 ---
 
