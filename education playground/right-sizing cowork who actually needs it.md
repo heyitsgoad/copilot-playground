@@ -90,10 +90,3 @@ Don't hand-wave "we'll just figure out who." Use a real selection path.
 
 That turns "a giant seat count, fingers crossed" into "we earned our way up from 100, and every added seat passed a bar."
 
----
-
-## How to Land It
-
-The line I'd open with: *"My first piece of advice is don't give this to everyone. Let me show you how to find the few hundred it's actually for, and why the rest of your users are already covered by what you have."*
-
-Then walk the qualification question, the tiering, and the cohort method. You come across as someone protecting the budget, which is exactly what makes people lean in on the seats that do make sense.
