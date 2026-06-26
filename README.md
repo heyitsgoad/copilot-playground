@@ -154,6 +154,13 @@ Installable skills you can drop into your assistant's skills folder to add new c
 - [Guardian Council: Multi-Perspective Skills](./prompt%20playground/guardian%20council%20skills.md) — A pack of five installable skills that give Copilot four decision-making lenses (technical, strategic, and execution) plus a synthesizer that reconciles them into one clear recommendation. Drop them into your skills folder and pressure-test any decision.
 
 ---
+### 🔧 IT & Technical
+
+Prompts for the technical room: decode errors, draft and explain scripts, and turn IT work into audit-ready docs.
+
+- [IT Power Moves Prompt Pack](./prompt%20playground/it%20power%20moves%20prompt%20pack.md) — A grouped set of golden-nugget prompts for IT teams covering Copilot Chat (error decoding, script drafting and explanation, regex, stack traces, config diffs), plus everyday wins in Excel, Word, and Outlook. Built around two habits: explain before you run, and first draft then you verify.
+
+---
 ---
 
 # 🎓 Copilot Education Playground
