@@ -124,6 +124,7 @@ Prompts focused on self-awareness and personal development.
 - [Career Growth](./prompt%20playground/future%20meeting%20catch-up.md) — Get a 90-day action plan for growing in your role, strengthening relationships, and driving team impact
 - [Weekly Case Study Review](./prompt%20playground/weekly%20case%20study%20review.md) — Reframe your week as a business case study with structured analysis across successes, challenges, and recommendations
 - [Career Capability Assessment & Growth Planner](https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/career%20capability%20and%20growth%20planner.md) — Get an evidence-based view of your confirmed strengths, capability gaps, and recommended next steps across short and medium-term career pathways
+- [My Work Life on One Whiteboard](./prompt%20playground/my%20work%20life%20on%20one%20whiteboard.md) — Turn your role, values, and the people you work with into one clean whiteboard sketch with your headshot at the center, grounded in your work data and LinkedIn
 
 ---
 
