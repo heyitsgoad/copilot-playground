@@ -2,7 +2,7 @@
 
 ![Getting started with Microsoft 365 Copilot Premium: Copilot does the catch-up, you make the calls](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/executive%20copilot%20playbook/playbook-cover.png)
 
-A practical guide for a C-suite or executive leader who is brand new to Copilot. What it is, where to find it, how to use it like a chief of staff, and the few prompts and habits that get you real value in the first week instead of the first quarter. Plain language, no jargon, and every section is short enough to skim. There is a polished PDF you can hand to any leader, and the full guide is written out below so you can read it, link it, and steal the prompts without opening a file.
+A practical guide for a C-suite or executive leader who is brand new to Copilot. What it is, where to find it, how to use it like a chief of staff, and the few prompts and habits that get you real value in the first week instead of the first quarter. Plain language, no jargon, and every section is short enough to skim. There is a polished PDF you can hand to any leader, a ready-to-present PowerPoint deck for a live working session, and the full guide is written out below so you can read it, link it, and steal the prompts without opening a file.
 
 > [!TIP]
 > Hand the PDF to a leader who just got licensed, then have them do the [first 5-minute win](#your-first-5-minute-win) on their own real work. One win beats a feature tour every time.
@@ -14,6 +14,10 @@ A practical guide for a C-suite or executive leader who is brand new to Copilot.
 | File | What it is | Download |
 |---|---|---|
 | **An Executive Guide to Copilot Premium (PDF)** | The full 12-section playbook as a clean, shareable PDF. Send it to a leader or an assistant before a working session. | [Download (PDF)](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/executive%20copilot%20playbook/Copilot-Premium-Executive-Playbook.pdf) |
+| **Executive Working Session (PowerPoint)** | A ready-to-present 20-slide deck built around this playbook. Three tiers, from foundations to premium reasoning agents to the chief-of-staff setup, sized for a live 30-minute session. Present it yourself or hand it to whoever is running the room. | [Download (PPTX)](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/executive%20copilot%20playbook/Copilot-Premium-Executive-Training.pptx) |
+
+> [!NOTE]
+> There is a PowerPoint attached here too. Grab the deck above to run this playbook as a live executive working session, or hand it off to whoever is presenting.
 
 ---
 
