@@ -58,7 +58,7 @@ This is the first question every leader should ask, so here is the honest answer
 > The short version: Copilot works on your real work, not the open internet, and your work never leaves your tenant.
 
 - **Your data stays in your tenant.** Copilot Premium runs inside your Microsoft 365 boundary, protected by the same enterprise encryption and access controls as the rest of your data.
-- **It is not used to train public models.** Your prompts, your documents, and Copilot's responses are not used to train the foundation models.
+- **It is not used to train models.** Your prompts, your documents, and Copilot's responses are not used to train the foundation models.
 - **It only sees what you can see.** Copilot respects your existing permissions. It cannot surface a file you do not already have access to.
 - **You have controls and an audit trail.** Purview gives your IT and compliance teams visibility, data-loss-prevention policies, and audit logs across Copilot activity.
 
