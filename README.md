@@ -162,6 +162,13 @@ Prompts for the technical room: decode errors, draft and explain scripts, and tu
 - [IT Power Moves Prompt Pack](./prompt%20playground/it%20power%20moves%20prompt%20pack.md) — A grouped set of golden-nugget prompts for IT teams covering Copilot Chat (error decoding, script drafting and explanation, regex, stack traces, config diffs), plus everyday wins in Excel, Word, and Outlook. Built around two habits: explain before you run, and first draft then you verify.
 
 ---
+### 💻 Coding
+
+Prompts for pressure-testing engineering work before you write a line of code.
+
+- [Grill My Coding Plan](./prompt%20playground/grill%20my%20coding%20plan.md) — A relentless but constructive reviewer that stress-tests a coding plan, architecture, refactor, API, or migration one decision at a time. Asks a single sharp question per turn with its own recommendation and rationale, separates facts it can look up from the calls that are yours, and stops with an agreed plan plus unresolved risks before any code gets written.
+
+---
 ---
 
 # 🎓 Copilot Education Playground
