@@ -164,9 +164,10 @@ Prompts for the technical room: decode errors, draft and explain scripts, and tu
 ---
 ### 💻 Coding
 
-Prompts for pressure-testing engineering work before you write a line of code.
+Prompts and skills that sharpen engineering work before and while you write code, from pressure-testing a plan to keeping changes small and disciplined.
 
 - [Grill My Coding Plan](./prompt%20playground/grill%20my%20coding%20plan.md) — A relentless but constructive reviewer that stress-tests a coding plan, architecture, refactor, API, or migration one decision at a time. Asks a single sharp question per turn with its own recommendation and rationale, separates facts it can look up from the calls that are yours, and stops with an agreed plan plus unresolved risks before any code gets written.
+- [Karpathy Coding Guidelines](./prompt%20playground/karpathy%20coding%20guidelines.md) — A composable set of coding habits that layer onto real work: think before coding, take the minimum complete solution, keep changes surgical, define verifiable done, and reproduce bugs before fixing them. Built to cut the scope creep, needless abstractions, and happy-path fixes LLMs fall into on production code.
 
 ---
 ---
