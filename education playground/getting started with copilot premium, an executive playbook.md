@@ -62,6 +62,23 @@ Every session is 30 or 60 minutes and stands on its own. Run one a week, block a
 
 ---
 
+## Three Ways to Run It
+
+You do not have to choose between "Microsoft runs everything" and "you are on your own." The program is modular, and every asset is yours to download. Pick the model that fits how much time your leaders can commit and how much you want to own.
+
+| Model | How it works | Best when |
+|---|---|---|
+| **1. Microsoft-led** | Microsoft facilitates the full tiered program with your leaders, session by session. You bring the room, we run it. | You want expert-led delivery and the fastest path, with little lift on your side. |
+| **2. We start, you scale** | Microsoft runs the foundation session live and delivers tailored one-on-one training with each executive. Then you download the deck and the rest of the framework and build out your own program. We train your trainers so your team owns delivery from there. | You cannot get a full hourly commitment from every leader, or you want to build the capability in-house. |
+| **3. Partner-led** | A Microsoft partner delivers and customizes the full program alongside you and Microsoft. A dedicated team owns rollout, tailoring, and adoption end to end. | You want a committed team to carry the program and drive adoption long term. |
+
+> [!NOTE]
+> Whichever model you pick, you own the framework. Microsoft gets you started, hands you the deck and every asset, and trains your team to run it. This becomes your program, and your leaders see you deliver it.
+
+**The soundbite:** Same framework, three speeds. You decide who carries it.
+
+---
+
 # Tier 1 · Foundations
 
 *Use Copilot, and prompt like you mean it. Find it, trust it, give it a clear job. This tier alone gets your time back.*
