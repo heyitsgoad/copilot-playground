@@ -438,7 +438,7 @@ Adoption dies without a habit. Four weeks, one focus each. Fifteen minutes a day
 
 The reason trainings fall flat is that people leave the room and forget where to start. These are the places to send them so they don't stall.
 
-- **The Executive Playbook PDF**, in every leader's hands and their assistant's.
+- **The [Executive Playbook PDF](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/executive%20copilot%20playbook/Copilot-Premium-Executive-Playbook.pdf)**, in every leader's hands and their assistant's.
 - **The [Copilot Playground](https://github.com/heyitsgoad/copilot-playground)** for agents, prompts, and video guides.
 - **The [Copilot Prompt Gallery](https://copilot.cloud.microsoft/prompts)**, Microsoft's official prompts by role.
 - **A shared team prompt library** so the best prompts spread instead of getting retyped.
