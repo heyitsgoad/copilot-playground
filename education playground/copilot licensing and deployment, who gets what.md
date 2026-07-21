@@ -19,6 +19,19 @@ Prefer to keep a copy? [Download the HTML file](https://github.com/heyitsgoad/co
 
 ---
 
+## Downloads
+
+Two takeaways spun off the guide for the leadership room. The deck is for the exec conversation; the one-pager is a print-and-pin field cheat sheet.
+
+| File | What it is | Download |
+|---|---|---|
+| **Exec Deck (PDF)** | An 11-slide leadership readout: the model, who-gets-what by role, governance, consumption, agents, compliance, and the rollout. Easiest to read and share. | [Download (PDF)](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/Copilot-Licensing-Exec-Deck.pdf) |
+| **Exec Deck (PowerPoint)** | The editable deck if you want to adapt it for your own room. | [Download (PPTX)](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/Copilot-Licensing-Exec-Deck.pptx) |
+| **One-Page Cheat Sheet (PDF)** | The whole thing on one landscape page: the model, the role matrix, the budget fact, the three dated compliance items, and the five next steps. | [Download (PDF)](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/Copilot-Licensing-One-Pager.pdf) |
+| **One-Page Cheat Sheet (PowerPoint)** | The editable one-pager. | [Download (PPTX)](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/Copilot-Licensing-One-Pager.pptx) |
+
+---
+
 ## What You Will Learn
 
 - Where AI governance starts, and why it is step zero, not step eight
