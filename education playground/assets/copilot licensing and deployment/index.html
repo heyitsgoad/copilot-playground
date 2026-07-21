@@ -300,18 +300,21 @@ details[open] summary::before { content: "\2212"; }
       <div class="nav-label">Start</div>
       <a href="#overview"><span class="num">00</span>The big picture</a>
       <a href="#map"><span class="num">01</span>The map: two tiers, one layer</a>
-      <a href="#roles"><span class="num">02</span>Who gets what, by role</a>
+      <div class="nav-label">Govern first</div>
+      <a href="#govern"><span class="num">02</span>Start with governance</a>
+      <div class="nav-label">Decide</div>
+      <a href="#roles"><span class="num">03</span>Who gets what, by role</a>
       <div class="nav-label">Two lenses</div>
-      <a href="#exec"><span class="num">03</span>The executive approach</a>
-      <a href="#it"><span class="num">04</span>The IT deployment playbook</a>
+      <a href="#exec"><span class="num">04</span>The executive approach</a>
+      <a href="#it"><span class="num">05</span>The IT deployment playbook</a>
       <div class="nav-label">The hard parts</div>
-      <a href="#consumption"><span class="num">05</span>Consumption without surprises</a>
-      <a href="#agents"><span class="num">06</span>Agents: build and access</a>
-      <a href="#healthcare"><span class="num">07</span>Healthcare and compliance</a>
+      <a href="#consumption"><span class="num">06</span>Consumption without surprises</a>
+      <a href="#agents"><span class="num">07</span>Agents: build, use, govern</a>
+      <a href="#healthcare"><span class="num">08</span>Healthcare and compliance</a>
       <div class="nav-label">Make it stick</div>
-      <a href="#rollout"><span class="num">08</span>Roll out without overwhelming</a>
-      <a href="#next"><span class="num">09</span>Do this next</a>
-      <a href="#sources"><span class="num">10</span>Sources</a>
+      <a href="#rollout"><span class="num">09</span>Roll out without overwhelming</a>
+      <a href="#next"><span class="num">10</span>Do this next</a>
+      <a href="#sources"><span class="num">11</span>Sources</a>
     </nav>
     <button class="icon-btn" id="themeToggle" style="margin-top:24px;width:100%;">Toggle light / dark</button>
   </aside>
@@ -324,6 +327,7 @@ details[open] summary::before { content: "\2212"; }
       <p class="lede">Most teams already believe Copilot can help. What stalls them is the licensing maze, the fear of exposing patient data, and the worry that they will hand staff a pile of tools nobody asked for. This guide fixes all three.</p>
       <div class="oneliner">A lot of healthcare organizations want Copilot's productivity but get stuck on who gets what, what it costs, and whether it is safe. This guide maps the right Copilot to each role, makes the spend predictable, and lays out a rollout that earns adoption, so you get outcomes without overwhelming your people or exposing PHI.</div>
       <div class="chips">
+        <span class="chip">Where governance starts</span>
         <span class="chip">How to assign licenses</span>
         <span class="chip">Who gets premium and Cowork</span>
         <span class="chip">How consumption is billed</span>
@@ -331,11 +335,12 @@ details[open] summary::before { content: "\2212"; }
         <span class="chip">HIPAA and PHI guardrails</span>
       </div>
       <div class="tl-dr">
-        <h3>The whole guide in six lines</h3>
+        <h3>The whole guide in seven lines</h3>
         <ol>
+          <li><strong>Govern first.</strong> Decide who owns AI, what data is in bounds, and where the guardrails are before you buy a single seat.</li>
           <li>There are two licenses that matter: <strong>Copilot Chat</strong> (free, already in your M365) and <strong>Microsoft 365 Copilot</strong> (the paid seat). "Premium" is not a product you buy.</li>
           <li>Give free Chat to everyone eligible. Buy paid seats for the roles where the work is heavy: leaders, managers, analysts.</li>
-          <li><strong>Cowork</strong> and <strong>agents</strong> are usage-billed layers on top of a paid seat, not per-person licenses. Turn them on deliberately and cap the spend.</li>
+          <li><strong>Cowork</strong> needs a paid seat plus an admin switch. <strong>Agents</strong> run across both tiers and are billed by usage: free for most work on a paid seat, metered on free Chat. Neither is a per-person license. Cap the spend.</li>
           <li>Paid seats make most agent use free. Free-Chat users pay per interaction. That one fact drives your budget.</li>
           <li>Let a governed set of people build agents. Let everyone use the ones you approve.</li>
           <li>Roll out in waves and let the data pull the next one. A small paid pilot beats a big-bang launch every time.</li>
@@ -355,19 +360,19 @@ details[open] summary::before { content: "\2212"; }
           <div class="tier-tag">Tier 1 &middot; The front door</div>
           <h3>Microsoft 365 Copilot Chat</h3>
           <div class="price">Included with your M365. No added per-user cost.</div>
-          <p>Protected AI chat grounded in the web, with enterprise data protection. Users can upload a file or paste content to work with it. Safe to give broadly. It builds the habit at zero added seat cost. It does not automatically see your organization's data.</p>
+          <p>Protected AI chat grounded in the web, with enterprise data protection. Users can upload a file or paste content to work with it. Safe to give broadly once you have handled the web-search path for regulated data (see the Healthcare section). It builds the habit at zero added seat cost. It does not automatically see your organization's data.</p>
         </div>
         <div class="card tier" style="border-color:var(--cp-accent);">
           <div class="tier-tag" style="color:var(--cp-accent);">Tier 2 &middot; The paid seat</div>
           <h3>Microsoft 365 Copilot</h3>
           <div class="price">Add-on, about $30 / user / month (confirm live)</div>
-          <p>The full assistant. It grounds on your own data through Microsoft Graph (email, meetings, files, chats), edits inside Word, Excel, PowerPoint, Outlook and Teams, and adds the Researcher and Analyst agents. It also makes most agent usage free for that person.</p>
+          <p>The full assistant. It grounds on your own data through Microsoft Graph (email, meetings, files, chats), edits inside Word, Excel, PowerPoint, Outlook and Teams, and adds the Researcher and Analyst agents, Copilot Search across your data, and SharePoint Advanced Management for governance. It also makes most agent usage free for that person.</p>
         </div>
         <div class="card tier">
-          <div class="tier-tag">Usage layer &middot; On top of a paid seat</div>
+          <div class="tier-tag">Usage layer &middot; Billed by consumption</div>
           <h3>Copilot Cowork &amp; agents</h3>
           <div class="price">Billed by usage in Copilot Credits</div>
-          <p>Cowork runs multi-step work on its own. Agents answer and act on your behalf. Neither is a per-person license. They sit on top of a paid seat, they are off until an admin turns them on, and you pay for what they consume.</p>
+          <p>Cowork runs multi-step work on its own and needs a paid seat plus an admin switch. Agents answer and act on your behalf, and they run across both tiers. Neither is a per-person license. A paid seat makes most agent use free; on free Chat you pay per interaction.</p>
         </div>
       </div>
 
@@ -380,9 +385,58 @@ details[open] summary::before { content: "\2212"; }
       <p>Agents are not a fourth product. They are a capability that runs across both tiers. A paid seat gets the full set (the Agent Store, custom agents grounded in your data, plus Researcher and Analyst) and pays almost nothing to use them. A free-Chat user can still use agents, but every interaction is metered. The <a href="#agents">Agents section</a> covers who builds them and who can use them.</p>
     </section>
 
+    <!-- GOVERNANCE -->
+    <section id="govern">
+      <div class="sec-kicker">02 &middot; Start here</div>
+      <h2>Governance is step zero, not step eight.</h2>
+      <div class="lens-badges"><span class="badge exec">For leaders</span><span class="badge it">For IT</span></div>
+      <p>The organizations that scale Copilot safely make one move first. They decide who owns AI, what good use looks like, and where the guardrails are before they buy a single seat. Skip it and you are cleaning up in production, which in a health system means a data exposure you have to report. Governance is the ground the rest of this plan stands on.</p>
+      <p>It has two halves. The people side sets direction and owns the decisions. The platform side is the toolkit that makes those decisions real. You need both. One without the other is either a policy nobody enforces or a pile of controls nobody aimed.</p>
+
+      <h3>The people side: govern before you deploy</h3>
+      <div class="grid grid-2">
+        <div class="card">
+          <h4>Stand up an AI governance committee</h4>
+          <p>One group that owns the AI decisions instead of scattering them across IT tickets. Put the right seats at the table: an executive sponsor, IT and security, compliance and privacy, a clinical or business-unit voice, and HR or change management. What they own: acceptable use, which data is in bounds, who gets which license, how new agents get approved, and a standing risk review. Give it a real cadence, not a one-time kickoff.</p>
+        </div>
+        <div class="card">
+          <h4>Put AI in your mission and strategy</h4>
+          <p>If leadership treats Copilot as a tool IT bought, it stalls. If leadership frames it as how the organization works now, adoption follows. Name AI in the strategy, tie it to outcomes the organization already cares about (clinician time back, lower cost, a better experience for staff and patients), and make it a leadership talking point, not an IT project.</p>
+        </div>
+        <div class="card">
+          <h4>Drive culture from the top</h4>
+          <p>Change management is a leadership job, not a training deck. Executives set the tone by using it themselves, naming the behavior they want to see, and giving people time to build the habit. Top-down permission is what turns "we have licenses" into "this is how we work."</p>
+        </div>
+        <div class="card">
+          <h4>Build a champion network</h4>
+          <p>Champions are your bottom-up engine, and they pair with the top-down sponsorship. A handful of enthusiastic peers in each department, modeling real use and answering questions, moves adoption further than any mandate. Microsoft's Copilot Success Kit and Copilot Academy give them the material to run with.</p>
+        </div>
+      </div>
+
+      <div class="callout key">
+        <p class="callout-title">The sequence that works</p>
+        <p>Executive sponsorship and the committee come first. Champions carry it the last mile. Do them in that order. Champions with no air cover burn out, and sponsorship that never reaches the floor changes nothing.</p>
+      </div>
+
+      <h3>The platform side: the controls that make governance real</h3>
+      <p>This is the toolkit your committee's decisions run on. SharePoint Advanced Management comes with your paid Copilot seats. The Purview pieces depend on your broader data-governance licensing, since several capabilities need Microsoft 365 E5 or a Purview add-on, so check what you already hold.</p>
+      <ul>
+        <li><strong>The Microsoft 365 admin center is the control plane.</strong> Manage who gets Copilot and Chat, control public web access, and manage agents from one place.</li>
+        <li><strong>SharePoint Advanced Management comes with your paid Copilot seat.</strong> This is the one people miss. It is included, and it is where you fix the oversharing problem before it becomes an agent problem. Use its Data Access Governance reports to find broadly shared and externally shared sites, and use <strong>Restricted Content Discovery (RCD)</strong> to cut accidental tenant-wide discovery of sensitive sites while you clean up the permissions. RCD reduces discoverability, it is not an access control, so pair it with permission cleanup, labels, and DLP.</li>
+        <li><strong>Microsoft Purview is your data governance layer.</strong> Sensitivity labels that Copilot and agents honor, DSPM for AI to spot risky usage and oversharing, plus audit, eDiscovery, and insider-risk coverage across prompts and responses.</li>
+        <li><strong>Agent 365 and the Agent Registry govern the agents.</strong> More on this in the <a href="#agents">Agents section</a>. The short version: one inventory across your agent platforms, with the power to observe, approve, block, and secure them.</li>
+        <li><strong>Least privilege by default.</strong> Use the AI Administrator role to run agent governance, not Global Admin.</li>
+      </ul>
+
+      <div class="callout flag">
+        <p class="callout-title">Where governance starts in the timeline</p>
+        <p>Before you buy seats: stand up the committee and name the executive sponsor. Before you turn Copilot on: do the SharePoint Advanced Management and oversharing work and set your labels. Before you scale agents: stand up the Agent Registry and your approval path. Governance is not a phase you reach later. It is the ground you build on from day one.</p>
+      </div>
+    </section>
+
     <!-- ROLES -->
     <section id="roles">
-      <div class="sec-kicker">02 &middot; The centerpiece</div>
+      <div class="sec-kicker">03 &middot; The centerpiece</div>
       <h2>Who gets what, by role.</h2>
       <p>This is the question every customer asks and the one that decides your budget. Pick a role to see the recommended tier, what comes with the seat, and what costs extra. The full comparison table sits below for a side-by-side view.</p>
 
@@ -434,7 +488,7 @@ details[open] summary::before { content: "\2212"; }
             <div class="box own"><h4>Comes with free Chat</h4><ul><li>Web research, drafting, and analysis on uploaded files</li><li>Meeting prep and writing help</li><li>Approved pay-as-you-go agents (metered)</li></ul></div>
             <div class="box extra"><h4>What the paid seat adds</h4><ul><li>Grounding in their own email, files, and meetings</li><li>In-app editing in Word and Outlook</li><li>"What did I miss while I was out?" across their own data</li></ul></div>
           </div>
-          <p class="role-example">Healthcare example: a scheduling coordinator uses free Chat for policy questions and drafting, and earns a paid seat once the team leans on it daily.</p>
+          <p class="role-example">Healthcare example: a scheduling coordinator uses free Chat for drafting and quick web research, and earns a paid seat once the team leans on it daily.</p>
         </div>
 
         <div class="role-panel" data-role="engineer">
@@ -454,7 +508,7 @@ details[open] summary::before { content: "\2212"; }
             <div class="box own"><h4>Comes with the seat</h4><ul><li>Free Chat for quick answers and drafting on eligible plans</li><li>Paid Copilot can layer onto F1 / F3 for select roles</li></ul></div>
             <div class="box extra"><h4>Confirm before you assume</h4><ul><li>Cowork on frontline plans is not clearly documented. Verify with your account team before you promise it.</li></ul></div>
           </div>
-          <p class="role-example">Healthcare example: a unit clerk uses Chat for policy lookups and message drafting on a shared device, without a paid seat.</p>
+          <p class="role-example">Healthcare example: a unit clerk uses Chat for quick answers and message drafting on a shared device, without a paid seat.</p>
         </div>
 
         <div class="role-panel" data-role="security">
@@ -490,7 +544,7 @@ details[open] summary::before { content: "\2212"; }
 
     <!-- EXEC -->
     <section id="exec">
-      <div class="sec-kicker">03 &middot; Lens one</div>
+      <div class="sec-kicker">04 &middot; Lens one</div>
       <h2>The executive approach.</h2>
       <div class="lens-badges"><span class="badge exec">For leaders</span></div>
       <p>If you are the executive sponsor, your job is not to pick features. It is to fund the right populations, set the guardrails, and protect the rollout from turning into noise. Five moves.</p>
@@ -502,10 +556,10 @@ details[open] summary::before { content: "\2212"; }
       <p>Meetings, email volume, and spreadsheet-heavy analysis are where a paid seat pays for itself fastest. That points at leaders, managers, and analysts first. Resist spreading a thin layer of paid seats across everyone. A focused cohort produces visible wins you can point to.</p>
 
       <h3>3. Treat Cowork and agents as a metered budget</h3>
-      <p>These are consumption lines, not headcount lines. Turn them on for the roles that need them, set tenant, group, and per-user spend limits, and watch the usage reports. You control the ceiling. Nothing runs up a surprise bill unless you let it.</p>
+      <p>These are consumption lines, not headcount lines. Turn them on for the roles that need them, set tenant, group, and per-user spend limits, and watch the usage reports. Prepaid capacity gives you a hard ceiling; pay-as-you-go keeps billing past your alerts, so set the alerts and per-agent caps on purpose.</p>
 
       <h3>4. Measure, then expand</h3>
-      <p>The Copilot Dashboard shows you exactly who is engaged and who is ready for a paid seat. Let that data pull your next wave of licenses. Buying seats ahead of demonstrated use is how pilots stall and budgets get questioned.</p>
+      <p>The Copilot Dashboard shows you who is engaged and surfaces candidates for a paid seat. Let that data pull your next wave of licenses. Buying seats ahead of demonstrated use is how pilots stall and budgets get questioned.</p>
 
       <h3>5. Do not overwhelm your people</h3>
       <p>The fastest way to kill adoption is to drop six new capabilities on a team in one week. Start with one or two habits that solve a real daily annoyance. Let people get a win before you add the next thing.</p>
@@ -523,12 +577,12 @@ details[open] summary::before { content: "\2212"; }
 
     <!-- IT -->
     <section id="it">
-      <div class="sec-kicker">04 &middot; Lens two</div>
+      <div class="sec-kicker">05 &middot; Lens two</div>
       <h2>The IT deployment playbook.</h2>
       <div class="lens-badges"><span class="badge it">For IT</span></div>
       <p>Microsoft's own guidance breaks deployment into five steps. Here they are with the mechanics that matter, including the part everyone asks about: how you actually assign the licenses.</p>
 
-      <div class="step"><div class="step-num">1</div><div class="step-body"><h4>Get the org ready</h4><p>Run the Microsoft 365 Copilot Optimization Assessment to benchmark your data governance. Fix oversharing before you turn anything on, because Copilot only surfaces what a user can already reach, and in most tenants that is more than people think. Turn on the security basics: MFA, audit logging, and sensitivity labels.</p></div></div>
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h4>Get the org ready, starting with governance</h4><p>Stand up the governance foundation from <a href="#govern">section 02</a> first: the committee, the executive sponsor, and the guardrails. Then run the Microsoft 365 Copilot Optimization Assessment to benchmark your data governance, and fix oversharing before you turn anything on, because Copilot only surfaces what a user can already reach, and in most tenants that is more than people think. Turn on the security basics: MFA, audit logging, and sensitivity labels.</p></div></div>
       <div class="step"><div class="step-num">2</div><div class="step-body"><h4>Choose the license per population</h4><p>Use the <a href="#roles">role matrix</a>. Decide who gets free Chat (everyone eligible) and who gets a paid seat (the high-ROI roles). Write it down as named groups before you buy anything.</p></div></div>
       <div class="step"><div class="step-num">3</div><div class="step-body"><h4>Ready the apps and network</h4><p>Put Microsoft 365 Apps on the Current or Monthly Enterprise channel, confirm Teams, Outlook, and OneDrive are configured, and allow the required endpoints. This is quick, but skipping it produces the "why doesn't Copilot show up" tickets.</p></div></div>
       <div class="step"><div class="step-num">4</div><div class="step-body"><h4>Assign licenses with groups, not one by one</h4><p>Use group-based licensing in the Microsoft 365 admin center. Create a security group per population, assign the license to the group, and let membership drive who has a seat. It scales, it is auditable, and it makes de-provisioning clean.</p></div></div>
@@ -538,7 +592,7 @@ details[open] summary::before { content: "\2212"; }
         <summary>Deep dive: how to structure your licensing groups</summary>
         <p>Create groups that map to the matrix, and keep the naming obvious so anyone auditing the tenant can read your intent:</p>
         <ul>
-          <li><strong>Copilot-Chat-All-Eligible</strong>: every user on a qualifying plan. This is your free front door.</li>
+          <li><strong>Copilot-Chat-All-Eligible</strong>: Chat is already included for eligible users, so use a group to manage its availability and policies, not to assign a license. This is your free front door.</li>
           <li><strong>Copilot-Paid-Leadership</strong>, <strong>Copilot-Paid-Finance-Ops</strong>, <strong>Copilot-Paid-Analysts</strong>: paid add-on seats, sliced by business unit so you can track ROI per unit.</li>
           <li><strong>Copilot-Cowork-Enabled</strong> and <strong>CopilotStudio-Makers</strong>: small, deliberately governed groups for the usage-billed and build capabilities.</li>
         </ul>
@@ -551,12 +605,12 @@ details[open] summary::before { content: "\2212"; }
       </div>
 
       <h3>How you measure it</h3>
-      <p>The Microsoft Copilot Dashboard in Viva Insights is your instrument panel. It needs no extra license, works with as few as one Copilot seat, and unlocks the full picture at 50 seats. It shows readiness (who is a prime candidate for a paid seat), adoption (active use by app and by group), and impact (assisted hours and value). Use it to justify the next wave of spend with numbers instead of anecdotes.</p>
+      <p>The Microsoft Copilot Dashboard in Viva Insights is your instrument panel. It needs no extra license, works with as few as one Copilot seat, and unlocks the full picture at 50 seats. It shows readiness (who is a prime candidate for a paid seat), adoption (active use by app and by group), and impact (assisted hours and value, which are modeled estimates, not audited savings). Use it to justify the next wave of spend with numbers instead of anecdotes.</p>
     </section>
 
     <!-- CONSUMPTION -->
     <section id="consumption">
-      <div class="sec-kicker">05 &middot; The money question</div>
+      <div class="sec-kicker">06 &middot; The money question</div>
       <h2>Consumption without surprises.</h2>
       <div class="lens-badges"><span class="badge exec">For leaders</span><span class="badge it">For IT</span></div>
       <p>This is where customers get nervous, and it is simpler than it looks once you hold one fact in your head: if you own the paid seat, most of your everyday agent use is already paid for. If you are on free Chat, every agent answer is a metered charge.</p>
@@ -599,23 +653,23 @@ details[open] summary::before { content: "\2212"; }
       </details>
 
       <div class="callout note">
-        <p><strong>The budgeting sound bite:</strong> "Paid seats make our internal agent use essentially free. We only pay real consumption for customer-facing agents, for free-Chat users, and for Cowork, and all three are capped."</p>
+        <p><strong>The budgeting sound bite:</strong> "Paid seats make most of our everyday agent use free. We only pay real consumption for customer-facing agents, for free-Chat users, and for Cowork, and we hold those with limits and alerts."</p>
       </div>
     </section>
 
     <!-- AGENTS -->
     <section id="agents">
-      <div class="sec-kicker">06 &middot; The part people fear most</div>
-      <h2>Agents: who builds them and who can use them.</h2>
+      <div class="sec-kicker">07 &middot; The part people fear most</div>
+      <h2>Agents: who builds them, who uses them, and who governs them.</h2>
       <div class="lens-badges"><span class="badge it">For IT</span><span class="badge exec">For leaders</span></div>
-      <p>Two separate questions live here, and mixing them up is what makes agents feel scary. One is "who is allowed to build an agent." The other is "who is allowed to use one." Answer them separately and the fear goes away.</p>
+      <p>Three questions live here, and mixing them up is what makes agents feel scary. Who is allowed to build an agent. Who is allowed to use one. And how you govern the whole set. Answer them separately and the fear goes away.</p>
 
       <h3>Who can build: three surfaces, three audiences</h3>
       <div class="table-wrap">
         <table>
           <thead><tr><th>Build surface</th><th>Who it is for</th><th>What it takes to build</th><th>What you can build</th></tr></thead>
           <tbody>
-            <tr><td><strong>Agent Builder</strong><br>(inside Microsoft 365 Copilot)</td><td>Business users</td><td>A paid Microsoft 365 Copilot seat. No extra license.</td><td>Simple declarative agents grounded in your SharePoint, files, or connectors. No code. No custom APIs.</td></tr>
+            <tr><td><strong>Agent Builder</strong><br>(inside Microsoft 365 Copilot)</td><td>Business users</td><td>A paid Microsoft 365 Copilot seat. No extra license.</td><td>Simple declarative agents grounded in your SharePoint, files, or connectors. No code, no custom APIs, not usable in Teams Chat, and no customer-managed keys.</td></tr>
             <tr><td><strong>Copilot Studio</strong></td><td>Power users and IT makers</td><td>A Copilot Studio user license plus tenant capacity (or a paid Copilot seat for extending Copilot), plus a maker role in a governed environment.</td><td>Full agents with actions, connectors, autonomy, and publishing to Teams, web, and SharePoint.</td></tr>
             <tr><td><strong>Azure AI Foundry</strong></td><td>Developers</td><td>Azure access with the right Foundry role. Billed through Azure.</td><td>Code-first, highly custom agents and line-of-business integrations.</td></tr>
           </tbody>
@@ -633,21 +687,25 @@ details[open] summary::before { content: "\2212"; }
       <h3>How you keep control</h3>
       <p>This is the answer to "won't agents get out of hand." No, if you set the guardrails first.</p>
       <ul>
-        <li><strong>The Agent Registry</strong> in the Microsoft 365 admin center gives you one inventory of every agent (Microsoft, partner, and homegrown across Copilot Studio, Agent Builder, SharePoint, and Foundry). You can block, allow, and approve from there. Agent 365 is the broader control plane above it.</li>
+        <li><strong>The Agent Registry</strong> in the Microsoft 365 admin center gives you one inventory across platforms (Microsoft, partner, and homegrown from Copilot Studio, Agent Builder, SharePoint, and Foundry). You can block, allow, and approve from there. Draft-agent visibility still varies by platform, so keep the platform-level views too. Agent 365 is the broader control plane above it.</li>
         <li><strong>Use the AI Administrator role</strong>, not Global Admin, to govern agents. Least privilege by default.</li>
         <li><strong>Power Platform DLP</strong> lets you force every agent to require sign-in, block risky knowledge connectors, route makers into managed environments, and even disable generative-AI agent publishing until a review is done.</li>
         <li><strong>Purview</strong> carries the data side: sensitivity labels the agents honor, DSPM for AI to spot oversharing, plus audit, eDiscovery, and insider-risk coverage for prompts and responses.</li>
       </ul>
 
+      <h3>Agent 365: the control plane when agents scale</h3>
+      <p>Once agents multiply past a handful, you want one place to see and control them all. That is Agent 365. Think of it as the layer above the Agent Registry, built on three jobs: <strong>observe</strong> (one map of every agent, whether Microsoft-built, partner, or homegrown), <strong>govern</strong> (give agents identity, access, approval, and a lifecycle the same way you manage people), and <strong>secure</strong> (protect against agent-specific risks). It went generally available on May 1, 2026.</p>
+      <p>The honest read for planning: Agent 365 is a newer, separately licensed layer. It works best on a Microsoft 365 E5 foundation and is bundled into the newer Microsoft 365 E7. You do not need it to start. The Agent Registry and Purview cover you for a first wave of agents. Add Agent 365 when your agent count, or your risk, grows past what the admin center alone should carry. Confirm current licensing and healthcare BAA coverage with your Microsoft account team before you commit.</p>
+
       <div class="callout key">
         <p class="callout-title">The posture to recommend</p>
-        <p>Let <strong>everyone use</strong> the agents you approve. Let a <strong>governed few build</strong>. Business users build simple agents in Agent Builder. IT and pro developers build the serious ones in Copilot Studio and Foundry. The Agent Registry plus DLP is the seatbelt that makes "let people build" safe to say out loud.</p>
+        <p>Let <strong>everyone use</strong> the agents you approve. Let a <strong>governed few build</strong>. Business users build simple agents in Agent Builder. IT and pro developers build the serious ones in Copilot Studio and Foundry. The Agent Registry plus DLP, with Agent 365 as you scale, is the seatbelt that makes "let people build" safe to say out loud.</p>
       </div>
     </section>
 
     <!-- HEALTHCARE -->
     <section id="healthcare">
-      <div class="sec-kicker">07 &middot; The non-negotiable</div>
+      <div class="sec-kicker">08 &middot; The non-negotiable</div>
       <h2>Healthcare and compliance.</h2>
       <div class="lens-badges"><span class="badge hc">Healthcare</span><span class="badge it">For IT</span></div>
       <p>For a health system this section decides whether the rest of the plan is allowed to happen. The short version: the core products are covered, the risk is oversharing, and there are three dated items you need to handle this month.</p>
@@ -661,17 +719,17 @@ details[open] summary::before { content: "\2212"; }
 
       <div class="callout danger">
         <p class="callout-title">Three dated items to handle now</p>
-        <p><strong>July 24, 2026:</strong> OpenAI-operated models auto-enable as a subprocessor. They do not carry HITRUST. If your risk framework requires HITRUST for all AI processing, disable the OpenAI subprocessor in the admin center before that date. Azure OpenAI (Microsoft-operated) keeps HITRUST and FedRAMP High and is unaffected.</p>
+        <p><strong>July 24, 2026:</strong> OpenAI-operated models auto-enable as a subprocessor. They do not carry HITRUST, SOC 1, or FedRAMP High. If your risk framework requires any of those for AI processing, disable the OpenAI subprocessor in the admin center before that date. Azure OpenAI (Microsoft-operated) keeps HITRUST and FedRAMP High and is unaffected.</p>
         <p><strong>July 31, 2026:</strong> new enablement of Restricted SharePoint Search is blocked. Move your oversharing control to Restricted Content Discovery through SharePoint Advanced Management.</p>
-        <p><strong>Ongoing:</strong> Anthropic, which powers Cowork and Researcher, sits outside the EU Data Boundary and is a named subprocessor. Confirm BAA coverage with your Microsoft account team before you turn Cowork on for PHI-adjacent work.</p>
+        <p><strong>Ongoing:</strong> Anthropic, which powers Cowork and Researcher, sits outside the EU Data Boundary and is a named subprocessor. Confirm BAA coverage with your Microsoft account team before you turn on Cowork or Researcher for PHI-adjacent work.</p>
       </div>
 
       <h3>Oversharing is the real risk, so control it</h3>
-      <p>When many people can build agents, the danger is not the model, it is an agent surfacing PHI from a SharePoint site that was shared too broadly years ago. Layer these:</p>
+      <p>When many people can build agents, the danger is not the model, it is an agent surfacing PHI from a SharePoint site that was shared too broadly years ago. The tools live in the <a href="#govern">governance section</a>. SharePoint Advanced Management comes with your paid Copilot seat; the Purview pieces depend on your data-governance licensing. For PHI specifically, lean on these:</p>
       <ul>
-        <li><strong>Restricted Content Discovery (RCD)</strong> via SharePoint Advanced Management, included with a paid Copilot seat. Keep sensitive sites out of Copilot and agent results without changing who has direct access.</li>
-        <li><strong>Data Access Governance reports</strong> to find the broadly shared and externally shared sites before Copilot does.</li>
-        <li><strong>Sensitivity labels</strong> in Purview on PHI content. Copilot and agents honor them, and require the right usage rights to surface labeled content.</li>
+        <li><strong>Restricted Content Discovery</strong> to cut accidental tenant-wide discovery of clinical and sensitive sites while you run the permissions cleanup. It reduces discoverability, it does not replace fixing the permissions.</li>
+        <li><strong>Data Access Governance reports</strong> in SharePoint Advanced Management to find the overshared sites before an agent does.</li>
+        <li><strong>Sensitivity labels</strong> on PHI content, which Copilot and agents honor and which require the right usage rights to surface.</li>
       </ul>
 
       <h3>Know the product boundary</h3>
@@ -688,10 +746,14 @@ details[open] summary::before { content: "\2212"; }
 
     <!-- ROLLOUT -->
     <section id="rollout">
-      <div class="sec-kicker">08 &middot; Make it stick</div>
+      <div class="sec-kicker">09 &middot; Make it stick</div>
       <h2>Roll it out without overwhelming the team.</h2>
       <div class="lens-badges"><span class="badge exec">For leaders</span><span class="badge it">For IT</span></div>
       <p>The worry comes up in every rollout: do not flood the team. It is a good instinct. Adoption is a habit you build in waves, not a launch you announce once. Here is a shape that works.</p>
+
+      <div class="callout note">
+        <p><strong>Before Phase 1:</strong> the governance foundation from <a href="#govern">section 02</a> should already be standing. The committee, the executive sponsor, and the oversharing cleanup are the ground these waves run on, not a task inside them.</p>
+      </div>
 
       <div class="phases">
         <div class="phase">
@@ -740,13 +802,14 @@ details[open] summary::before { content: "\2212"; }
 
     <!-- NEXT -->
     <section id="next">
-      <div class="sec-kicker">09 &middot; Do this next</div>
+      <div class="sec-kicker">10 &middot; Do this next</div>
       <h2>Where to start this quarter.</h2>
-      <p>If you do four things, you are moving in the right direction and you have not overwhelmed anyone.</p>
+      <p>If you do five things, you are moving in the right direction and you have not overwhelmed anyone.</p>
       <ol>
-        <li><strong>Turn on free Chat</strong> for everyone eligible. It is already paid for.</li>
+        <li><strong>Stand up your AI governance committee</strong> and name the executive sponsor. This is step zero, before any spend.</li>
+        <li><strong>Turn on free Chat</strong> for everyone eligible (it is already included), and handle the web-search path for PHI-heavy groups first.</li>
         <li><strong>Buy a focused block of paid seats</strong> (start in the dozens, not the thousands) for leaders, managers, and analysts.</li>
-        <li><strong>Do the oversharing work</strong> and stand up the Agent Registry before you scale agents.</li>
+        <li><strong>Do the oversharing work</strong> with SharePoint Advanced Management, and stand up the Agent Registry before you scale agents.</li>
         <li><strong>Handle the three dated compliance items</strong> in the Healthcare section, the July 24 one first.</li>
       </ol>
       <div class="callout note">
@@ -760,7 +823,7 @@ details[open] summary::before { content: "\2212"; }
 
     <!-- SOURCES -->
     <section id="sources" style="border-bottom:none;">
-      <div class="sec-kicker">10 &middot; Sources</div>
+      <div class="sec-kicker">11 &middot; Sources</div>
       <h2>Where this comes from.</h2>
       <p>Every claim above traces to Microsoft's own documentation, checked on July 21, 2026. The primary references:</p>
       <ul class="source-list">
@@ -780,6 +843,7 @@ details[open] summary::before { content: "\2212"; }
         <li>Restricted Content Discovery and SharePoint Advanced Management &mdash; learn.microsoft.com/sharepoint/restricted-content-discovery</li>
         <li>Purview for AI &mdash; learn.microsoft.com/purview/ai-microsoft-purview</li>
         <li>Copilot adoption and Success Kit &mdash; adoption.microsoft.com/copilot and learn.microsoft.com/microsoft-365/copilot/microsoft-365-copilot-enablement-resources</li>
+        <li>Copilot adoption framework, champions, and change management &mdash; adoption.microsoft.com/copilot and learn.microsoft.com/viva/learning/academy-copilot</li>
         <li>Copilot Dashboard &mdash; learn.microsoft.com/viva/insights/org-team-insights/copilot-dashboard</li>
         <li>Dragon Copilot &mdash; learn.microsoft.com/industry/healthcare/dragon-copilot</li>
       </ul>

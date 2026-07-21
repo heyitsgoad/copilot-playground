@@ -21,11 +21,13 @@ Prefer to keep a copy? [Download the HTML file](https://github.com/heyitsgoad/co
 
 ## What You Will Learn
 
+- Where AI governance starts, and why it is step zero, not step eight
 - The two licenses that actually matter, and why there is no "Copilot Premium" to buy
 - Who gets a paid seat and who starts on free Chat, broken down by role level
 - What comes with a seat versus what costs extra, for Directors, managers, analysts, and engineers
 - How Cowork and agents are billed, and the one fact that drives your whole budget
-- Who is allowed to build agents versus who is allowed to use them
+- Who is allowed to build agents versus who is allowed to use them, and where Agent 365 fits
+- The governance stack: your AI committee, champions, SharePoint Advanced Management, RCD, and Purview
 - The healthcare and compliance guardrails, including three dated items to handle this month
 - A phased rollout that builds the habit in waves instead of a big-bang launch
 
