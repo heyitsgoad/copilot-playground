@@ -9,27 +9,16 @@ The question I get more than any other: how do we actually roll Copilot out with
 
 ---
 
-## Open in your browser
+## Get the guide
 
-Everything here opens inline in the browser, no download needed.
-
-| What | Best for | Open |
+| Deliverable | What it is | Open or download |
 |---|---|---|
-| **Interactive guide** | The full reference: role explorer, executive lens, IT deployment playbook, consumption, agents, governance, and compliance. | [Open the guide](https://heyitsgoad.github.io/copilot-playground/education%20playground/assets/copilot%20licensing%20and%20deployment/) |
-| **Exec deck (PDF)** | An 11-slide leadership readout. Opens in your browser's PDF viewer. | [Open the deck](https://heyitsgoad.github.io/copilot-playground/education%20playground/assets/copilot%20licensing%20and%20deployment/Copilot-Licensing-Exec-Deck.pdf) |
-| **One-page cheat sheet** | The whole thing on one page: the model, the role matrix, the budget fact, the compliance guardrails, and the next steps. | [Open the cheat sheet](https://heyitsgoad.github.io/copilot-playground/education%20playground/assets/copilot%20licensing%20and%20deployment/Copilot-Licensing-One-Pager.html) |
+| **Interactive guide** | The full reference: role explorer, executive lens, IT deployment playbook, consumption, agents, governance, and compliance. | [Open in browser](https://heyitsgoad.github.io/copilot-playground/education%20playground/assets/copilot%20licensing%20and%20deployment/) · [Download HTML](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/index.html) |
+| **Exec deck** | An 11-slide, board-ready leadership readout: the model, who-gets-what by role, governance, consumption, agents, compliance, and the rollout. | [View slides](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fheyitsgoad%2Fcopilot-playground%2Fmain%2Feducation%2520playground%2Fassets%2Fcopilot%2520licensing%2520and%2520deployment%2FCopilot-Licensing-Exec-Deck.pptx) · [Download PDF](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/Copilot-Licensing-Exec-Deck.pdf) |
+| **One-page cheat sheet** | The whole thing on one landscape page: the model, the role matrix, the budget fact, the compliance guardrails, and the next steps. Print-and-pin. | [Open in browser](https://heyitsgoad.github.io/copilot-playground/education%20playground/assets/copilot%20licensing%20and%20deployment/Copilot-Licensing-One-Pager.html) · [Download PDF](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/Copilot-Licensing-One-Pager.pdf) |
 
----
-
-## Download
-
-One row per artifact, with each format on the same line.
-
-| File | What it is | Download |
-|---|---|---|
-| **Exec deck** | An 11-slide, board-ready leadership readout: the model, who-gets-what by role, governance, consumption, agents, compliance, and the rollout. | [Download (PPTX)](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/Copilot-Licensing-Exec-Deck.pptx) · [PDF](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/Copilot-Licensing-Exec-Deck.pdf) |
-| **One-page cheat sheet** | The whole thing on one landscape page: the model, the role matrix, the budget fact, the compliance guardrails, and the next steps. Print-and-pin. | [Download (PDF)](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/Copilot-Licensing-One-Pager.pdf) · [HTML](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/Copilot-Licensing-One-Pager.html) |
-| **Interactive guide** | The full reference as a single self-contained file to keep and open offline. | [Download (HTML)](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/index.html) |
+> [!TIP]
+> **View slides** opens the deck in Microsoft's PowerPoint viewer in your browser, with a Download button right in the toolbar. The PDF links download so you can print or attach them. Tip: Ctrl-click (Cmd-click on Mac) any link to open it in a new tab.
 
 ---
 
