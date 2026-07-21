@@ -390,7 +390,7 @@ details[open] summary::before { content: "\2212"; }
       <div class="sec-kicker">02 &middot; Start here</div>
       <h2>Governance is step zero, not step eight.</h2>
       <div class="lens-badges"><span class="badge exec">For leaders</span><span class="badge it">For IT</span></div>
-      <p>The organizations that scale Copilot safely make one move first. They decide who owns AI, what good use looks like, and where the guardrails are before they buy a single seat. Skip it and you are cleaning up in production, which in a health system means a data exposure you have to report. Governance is the ground the rest of this plan stands on.</p>
+      <p>The organizations that scale Copilot safely make one move first. They decide who owns AI, what good use looks like, and where the guardrails are before they buy a single seat. Skip it and you are cleaning up in production, which in a health system means an inappropriate disclosure you then have to assess and may have to report. Governance is the ground the rest of this plan stands on.</p>
       <p>It has two halves. The people side sets direction and owns the decisions. The platform side is the toolkit that makes those decisions real. You need both. One without the other is either a policy nobody enforces or a pile of controls nobody aimed.</p>
 
       <h3>The people side: govern before you deploy</h3>
@@ -465,7 +465,7 @@ details[open] summary::before { content: "\2212"; }
           <div class="role-head"><h3>Manager / Project lead</h3><span class="tier-pill paid">Paid seat</span></div>
           <p>Meetings, team coordination, and status roll-ups. Strong, reliable payback. Managers also become your best champions because they model the behavior for their teams.</p>
           <div class="own-extra">
-            <div class="box own"><h4>Comes with the seat</h4><ul><li>Catch up on missed meetings and share the recap with the team</li><li>Draft status updates and project briefs from notes and email</li><li>"What did my team commit to this week?"</li><li>Copilot Dashboard access to see adoption on their team</li></ul></div>
+            <div class="box own"><h4>Comes with the seat</h4><ul><li>Catch up on missed meetings and share the recap with the team</li><li>Draft status updates and project briefs from notes and email</li><li>"What did my team commit to this week?"</li><li>Dashboard access if enabled for them; team-level views depend on tenant setup</li></ul></div>
             <div class="box extra"><h4>Costs extra</h4><ul><li>Cowork for recurring multi-step workflows (usage-billed)</li></ul></div>
           </div>
           <p class="role-example">Healthcare example: a nurse manager turns a week of shift notes and emails into a clean handoff summary instead of staying late to write it.</p>
@@ -694,8 +694,8 @@ details[open] summary::before { content: "\2212"; }
       </ul>
 
       <h3>Agent 365: the control plane when agents scale</h3>
-      <p>Once agents multiply past a handful, you want one place to see and control them all. That is Agent 365. Think of it as the layer above the Agent Registry, built on three jobs: <strong>observe</strong> (one map of every agent, whether Microsoft-built, partner, or homegrown), <strong>govern</strong> (give agents identity, access, approval, and a lifecycle the same way you manage people), and <strong>secure</strong> (protect against agent-specific risks). It went generally available on May 1, 2026.</p>
-      <p>The honest read for planning: Agent 365 is a newer, separately licensed layer. It works best on a Microsoft 365 E5 foundation and is bundled into the newer Microsoft 365 E7. You do not need it to start. The Agent Registry and Purview cover you for a first wave of agents. Add Agent 365 when your agent count, or your risk, grows past what the admin center alone should carry. Confirm current licensing and healthcare BAA coverage with your Microsoft account team before you commit.</p>
+      <p>Once agents multiply past a handful, you want one place to see and manage agents across your platforms. That is Agent 365. Think of it as the layer above the Agent Registry, built on three jobs: <strong>observe</strong> (one map of agents from supported Microsoft and connected third-party platforms), <strong>govern</strong> (give agents identity, access, approval, and a lifecycle the same way you manage people), and <strong>secure</strong> (protect against agent-specific risks). It went generally available on May 1, 2026.</p>
+      <p>The honest read for planning: Agent 365 is a newer layer that licenses per user, so people who build, manage, or interact with agents through its premium capabilities may need a license. It works best on a Microsoft 365 E5 foundation and is bundled into the newer Microsoft 365 E7. You do not need it to start. The Agent Registry and Purview cover you for a first wave of agents. Add Agent 365 when your agent count, or your risk, grows past what the admin center alone should carry. Confirm current licensing and healthcare BAA coverage with your Microsoft account team before you commit.</p>
 
       <div class="callout key">
         <p class="callout-title">The posture to recommend</p>
@@ -719,7 +719,7 @@ details[open] summary::before { content: "\2212"; }
 
       <div class="callout danger">
         <p class="callout-title">Three dated items to handle now</p>
-        <p><strong>July 24, 2026:</strong> OpenAI-operated models auto-enable as a subprocessor. They do not carry HITRUST, SOC 1, or FedRAMP High. If your risk framework requires any of those for AI processing, disable the OpenAI subprocessor in the admin center before that date. Azure OpenAI (Microsoft-operated) keeps HITRUST and FedRAMP High and is unaffected.</p>
+        <p><strong>July 24, 2026:</strong> OpenAI-operated models become enabled by default for eligible commercial customers unless you set OpenAI to "No users" first. They do not carry HITRUST, SOC 1, or FedRAMP High. If your risk framework requires any of those for AI processing, disable them in the admin center before that date. Azure OpenAI (Microsoft-operated) keeps HITRUST and FedRAMP High and is unaffected.</p>
         <p><strong>July 31, 2026:</strong> new enablement of Restricted SharePoint Search is blocked. Move your oversharing control to Restricted Content Discovery through SharePoint Advanced Management.</p>
         <p><strong>Ongoing:</strong> Anthropic, which powers Cowork and Researcher, sits outside the EU Data Boundary and is a named subprocessor. Confirm BAA coverage with your Microsoft account team before you turn on Cowork or Researcher for PHI-adjacent work.</p>
       </div>
@@ -772,7 +772,7 @@ details[open] summary::before { content: "\2212"; }
           <ul>
             <li>Use the dashboard to graduate engaged Chat users to paid seats</li>
             <li>Ship one governed agent that solves a real annoyance</li>
-            <li>Share measured wins (assisted hours) with leadership</li>
+            <li>Share modeled assisted-hours estimates with leadership</li>
             <li>Turn on Cowork for a couple of power users, with a spend cap</li>
           </ul>
         </div>
@@ -792,7 +792,7 @@ details[open] summary::before { content: "\2212"; }
       <ul>
         <li><strong>Champions carry it, not IT.</strong> Peers modeling real use beats any training deck.</li>
         <li><strong>One habit at a time.</strong> Meeting recaps this month. Email triage next. Let each win land before the next ask.</li>
-        <li><strong>Measure and show.</strong> The dashboard turns "I think it's helping" into "here is the time we got back." That is what funds the next wave.</li>
+        <li><strong>Measure and show.</strong> The dashboard turns "I think it's helping" into a modeled estimate of the hours you got back. That is what funds the next wave.</li>
       </ul>
 
       <div class="callout key">
