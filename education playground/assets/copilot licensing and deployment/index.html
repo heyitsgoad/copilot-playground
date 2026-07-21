@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microsoft Copilot: Licensing and Deployment Guide</title>
+<script>
+  (() => {
+    const param = new URLSearchParams(window.location.search).get("scoutTheme");
+    const theme =
+      param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+<style>
+:root {
+  color-scheme: light;
+  --cp-bg: #f7f4ef;
+  --cp-bg-elevated: #fcfbf8;
+  --cp-surface: #ffffff;
+  --cp-surface-soft: #f5f5f5;
+  --cp-border: #dedede;
+  --cp-border-strong: #919191;
+  --cp-text: #242424;
+  --cp-text-muted: #5c5c5c;
+  --cp-text-soft: #6f6f6f;
+  --cp-accent: #b11f4b;
+  --cp-accent-hover: #9a1a41;
+  --cp-accent-soft: rgba(177, 31, 75, 0.08);
+  --cp-accent-fg: #ffffff;
+  --cp-success: #16a34a;
+  --cp-danger: #dc2626;
+  --cp-warning: #f59e0b;
+  --cp-link: #0078d4;
+  --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+  --cp-overlay: rgba(255, 255, 255, 0.8);
+  --cp-panel: rgba(255, 255, 255, 0.86);
+  --cp-panel-strong: rgba(255, 255, 255, 0.96);
+  --cp-sheen: rgba(255, 255, 255, 0.55);
+  --cp-highlight: rgba(177, 31, 75, 0.12);
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --cp-bg: #3d3b3a;
+  --cp-bg-elevated: #343231;
+  --cp-surface: #292929;
+  --cp-surface-soft: #2e2e2e;
+  --cp-border: #474747;
+  --cp-border-strong: #5f5f5f;
+  --cp-text: #dedede;
+  --cp-text-muted: #919191;
+  --cp-text-soft: #b0b0b0;
+  --cp-accent: #fd8ea1;
+  --cp-accent-hover: #fb7b91;
+  --cp-accent-soft: rgba(253, 142, 161, 0.14);
+  --cp-accent-fg: #1a1a1a;
+  --cp-success: #4ade80;
+  --cp-danger: #f87171;
+  --cp-warning: #fbbf24;
+  --cp-link: #4da6ff;
+  --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+  --cp-overlay: rgba(41, 41, 41, 0.88);
+  --cp-panel: rgba(41, 41, 41, 0.72);
+  --cp-panel-strong: rgba(41, 41, 41, 0.96);
+  --cp-sheen: rgba(255, 255, 255, 0.04);
+  --cp-highlight: rgba(253, 142, 161, 0.12);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--cp-bg);
+  color: var(--cp-text);
+  font-family: "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--cp-link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: var(--cp-accent); color: var(--cp-accent-fg);
+  padding: 10px 16px; border-radius: 0 0 10px 0; z-index: 100;
+}
+.skip-link:focus { left: 0; }
+
+/* Layout */
+.shell { display: flex; max-width: 1280px; margin: 0 auto; gap: 0; }
+.sidebar {
+  width: 280px; flex: 0 0 280px;
+  position: sticky; top: 0; align-self: flex-start;
+  height: 100vh; overflow-y: auto;
+  padding: 28px 20px 40px 28px;
+  border-right: 1px solid var(--cp-border);
+}
+.main { flex: 1 1 auto; min-width: 0; padding: 0 40px 120px; }
+
+/* Sidebar nav */
+.brand { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.brand-mark {
+  width: 30px; height: 30px; border-radius: 8px;
+  background: var(--cp-accent); color: var(--cp-accent-fg);
+  display: grid; place-items: center; font-weight: 700; font-size: 15px;
+}
+.brand-name { font-weight: 700; font-size: 15px; letter-spacing: 0.2px; }
+.sidebar-sub { color: var(--cp-text-soft); font-size: 12.5px; margin: 0 0 22px 40px; }
+.nav-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.9px; color: var(--cp-text-soft); margin: 18px 0 8px; }
+.nav a {
+  display: block; color: var(--cp-text-muted); font-size: 14px;
+  padding: 7px 12px; border-radius: 8px; border-left: 2px solid transparent;
+  text-decoration: none;
+}
+.nav a:hover { background: var(--cp-surface-soft); color: var(--cp-text); text-decoration: none; }
+.nav a.active { color: var(--cp-accent); background: var(--cp-accent-soft); border-left-color: var(--cp-accent); font-weight: 600; }
+.nav .num { color: var(--cp-text-soft); font-variant-numeric: tabular-nums; margin-right: 8px; }
+
+/* Topbar (mobile) */
+.topbar {
+  display: none; position: sticky; top: 0; z-index: 40;
+  align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 18px; background: var(--cp-panel-strong);
+  backdrop-filter: blur(8px); border-bottom: 1px solid var(--cp-border);
+}
+.icon-btn {
+  border: 1px solid var(--cp-border); background: var(--cp-surface);
+  color: var(--cp-text); border-radius: 9px; padding: 8px 12px;
+  font-size: 14px; cursor: pointer; font-family: inherit;
+}
+.icon-btn:hover { border-color: var(--cp-border-strong); }
+
+/* Hero */
+.hero { padding: 64px 0 30px; border-bottom: 1px solid var(--cp-border); }
+.kicker { color: var(--cp-accent); font-weight: 700; font-size: 12.5px; letter-spacing: 1.4px; text-transform: uppercase; }
+h1 { font-size: 40px; line-height: 1.12; margin: 14px 0 18px; letter-spacing: -0.5px; font-weight: 700; max-width: 20ch; }
+.lede { font-size: 19px; color: var(--cp-text-muted); max-width: 62ch; margin: 0 0 24px; }
+.oneliner {
+  border-left: 3px solid var(--cp-accent); padding: 4px 0 4px 18px;
+  font-size: 17px; color: var(--cp-text); max-width: 60ch; margin: 24px 0 26px;
+}
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+.chip {
+  font-size: 13px; color: var(--cp-text-muted); background: var(--cp-surface);
+  border: 1px solid var(--cp-border); border-radius: 999px; padding: 6px 13px;
+}
+.meta-line { margin-top: 26px; font-size: 13px; color: var(--cp-text-soft); }
+
+/* Sections */
+section { padding: 46px 0; border-bottom: 1px solid var(--cp-border); scroll-margin-top: 20px; }
+.sec-kicker { color: var(--cp-accent); font-weight: 700; font-size: 12px; letter-spacing: 1.1px; text-transform: uppercase; }
+h2 { font-size: 27px; margin: 8px 0 6px; letter-spacing: -0.3px; font-weight: 700; }
+h3 { font-size: 18.5px; margin: 26px 0 8px; font-weight: 650; }
+h4 { font-size: 15.5px; margin: 18px 0 6px; font-weight: 650; }
+p { margin: 12px 0; max-width: 68ch; }
+ul, ol { max-width: 68ch; padding-left: 22px; }
+li { margin: 7px 0; }
+strong { font-weight: 650; }
+
+.lens-badges { display: flex; gap: 8px; margin: 10px 0 0; }
+.badge {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 6px;
+}
+.badge.exec { background: var(--cp-accent-soft); color: var(--cp-accent); }
+.badge.it { background: rgba(0,120,212,0.10); color: var(--cp-link); }
+.badge.hc { background: rgba(22,163,74,0.12); color: var(--cp-success); }
+
+/* Cards */
+.card {
+  background: var(--cp-surface); border: 1px solid var(--cp-border);
+  border-radius: 16px; padding: 22px 24px; margin: 18px 0;
+  box-shadow: 0 0 2px rgba(0,0,0,0.10), 0 1px 2px rgba(0,0,0,0.12);
+}
+.grid { display: grid; gap: 16px; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+/* Tier cards */
+.tier { position: relative; }
+.tier .tier-tag { font-size: 12px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase; color: var(--cp-text-soft); }
+.tier h3 { margin: 6px 0 2px; font-size: 19px; }
+.tier .price { font-size: 13.5px; color: var(--cp-accent); font-weight: 650; margin-bottom: 8px; }
+.tier p { font-size: 14.5px; color: var(--cp-text-muted); margin: 8px 0 0; }
+
+/* Callouts */
+.callout { border-radius: 14px; padding: 16px 20px; margin: 20px 0; border: 1px solid var(--cp-border); }
+.callout p:first-child { margin-top: 0; }
+.callout p:last-child { margin-bottom: 0; }
+.callout.flag { border-left: 4px solid var(--cp-warning); background: rgba(245,158,11,0.07); }
+.callout.danger { border-left: 4px solid var(--cp-danger); background: rgba(220,38,38,0.06); }
+.callout.key { border-left: 4px solid var(--cp-accent); background: var(--cp-accent-soft); }
+.callout.note { border-left: 4px solid var(--cp-border-strong); background: var(--cp-surface-soft); }
+.callout .callout-title { font-weight: 700; font-size: 14px; letter-spacing: 0.3px; }
+
+/* Tables */
+.table-wrap { overflow-x: auto; margin: 20px 0; border: 1px solid var(--cp-border); border-radius: 14px; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; min-width: 640px; }
+th, td { text-align: left; padding: 12px 15px; border-bottom: 1px solid var(--cp-border); vertical-align: top; }
+thead th { background: var(--cp-surface-soft); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--cp-text-soft); position: sticky; top: 0; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: var(--cp-accent-soft); }
+td .yes { color: var(--cp-success); font-weight: 650; }
+td .no { color: var(--cp-danger); font-weight: 650; }
+td .part { color: var(--cp-warning); font-weight: 650; }
+
+/* Role explorer */
+.role-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 20px; }
+.role-tab {
+  border: 1px solid var(--cp-border); background: var(--cp-surface); color: var(--cp-text-muted);
+  border-radius: 999px; padding: 9px 16px; font-size: 14px; font-weight: 600; cursor: pointer;
+  font-family: inherit;
+}
+.role-tab:hover { border-color: var(--cp-border-strong); color: var(--cp-text); }
+.role-tab.active { background: var(--cp-accent); color: var(--cp-accent-fg); border-color: var(--cp-accent); }
+.role-panel { display: none; }
+.role-panel.active { display: block; animation: fade 0.25s ease; }
+@keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.role-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; }
+.role-head h3 { margin: 0; }
+.tier-pill { font-size: 12px; font-weight: 700; padding: 4px 11px; border-radius: 999px; }
+.tier-pill.paid { background: var(--cp-accent-soft); color: var(--cp-accent); }
+.tier-pill.chat { background: rgba(0,120,212,0.10); color: var(--cp-link); }
+.tier-pill.sep { background: var(--cp-surface-soft); color: var(--cp-text-muted); border: 1px solid var(--cp-border); }
+.own-extra { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+.own-extra .box { background: var(--cp-surface-soft); border-radius: 12px; padding: 14px 16px; }
+.own-extra .box h4 { margin: 0 0 6px; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.6px; }
+.own-extra .own h4 { color: var(--cp-success); }
+.own-extra .extra h4 { color: var(--cp-accent); }
+.own-extra ul { margin: 0; padding-left: 18px; font-size: 14px; }
+.role-example { font-size: 13.5px; color: var(--cp-text-soft); margin-top: 12px; font-style: italic; }
+
+/* Steps */
+.step { display: flex; gap: 16px; margin: 16px 0; }
+.step-num {
+  flex: 0 0 34px; height: 34px; border-radius: 10px; background: var(--cp-accent-soft);
+  color: var(--cp-accent); font-weight: 700; display: grid; place-items: center; font-size: 15px;
+}
+.step-body { flex: 1 1 auto; }
+.step-body h4 { margin: 4px 0 4px; }
+.step-body p { margin: 4px 0; font-size: 14.5px; color: var(--cp-text-muted); }
+
+/* Phase timeline */
+.phases { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin: 20px 0; }
+.phase { border: 1px solid var(--cp-border); border-radius: 14px; padding: 18px 20px; background: var(--cp-surface); }
+.phase .ph-tag { font-size: 12px; font-weight: 700; color: var(--cp-accent); text-transform: uppercase; letter-spacing: 0.6px; }
+.phase h4 { margin: 6px 0 8px; font-size: 16px; }
+.phase ul { font-size: 13.5px; padding-left: 18px; margin: 0; color: var(--cp-text-muted); }
+
+/* details */
+details { border: 1px solid var(--cp-border); border-radius: 12px; padding: 4px 18px; margin: 14px 0; background: var(--cp-surface); }
+details[open] { padding-bottom: 14px; }
+summary { cursor: pointer; padding: 12px 0; font-weight: 650; font-size: 14.5px; list-style: none; display: flex; align-items: center; gap: 10px; }
+summary::-webkit-details-marker { display: none; }
+summary::before { content: "+"; color: var(--cp-accent); font-weight: 700; font-size: 18px; width: 16px; }
+details[open] summary::before { content: "\2212"; }
+
+/* Sources */
+.source-list { font-size: 13.5px; columns: 2; column-gap: 32px; }
+.source-list li { break-inside: avoid; margin-bottom: 8px; }
+
+.footer { padding: 40px 0 0; color: var(--cp-text-soft); font-size: 13px; }
+.tl-dr { background: var(--cp-bg-elevated); border: 1px solid var(--cp-border); border-radius: 16px; padding: 22px 26px; margin: 26px 0 0; }
+.tl-dr h3 { margin-top: 0; }
+.tl-dr ol { margin: 0; }
+
+@media (max-width: 1000px) {
+  .sidebar { display: none; position: fixed; z-index: 45; background: var(--cp-bg-elevated); width: 300px; box-shadow: var(--cp-shadow); }
+  .sidebar.open { display: block; }
+  .topbar { display: flex; }
+  .main { padding: 0 22px 100px; }
+  .hero { padding: 34px 0 26px; }
+  h1 { font-size: 30px; }
+  .grid-3, .grid-2, .phases { grid-template-columns: 1fr; }
+  .own-extra { grid-template-columns: 1fr; }
+  .source-list { columns: 1; }
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#overview">Skip to content</a>
+
+<div class="topbar">
+  <div class="brand" style="margin:0;">
+    <div class="brand-mark">C</div>
+    <span class="brand-name">Copilot Guide</span>
+  </div>
+  <button class="icon-btn" id="navToggle" aria-label="Open navigation">Menu</button>
+</div>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-mark">C</div>
+      <span class="brand-name">Copilot Guide</span>
+    </div>
+    <p class="sidebar-sub">Licensing &amp; deployment for healthcare teams</p>
+    <nav class="nav" id="nav">
+      <div class="nav-label">Start</div>
+      <a href="#overview"><span class="num">00</span>The big picture</a>
+      <a href="#map"><span class="num">01</span>The map: two tiers, one layer</a>
+      <a href="#roles"><span class="num">02</span>Who gets what, by role</a>
+      <div class="nav-label">Two lenses</div>
+      <a href="#exec"><span class="num">03</span>The executive approach</a>
+      <a href="#it"><span class="num">04</span>The IT deployment playbook</a>
+      <div class="nav-label">The hard parts</div>
+      <a href="#consumption"><span class="num">05</span>Consumption without surprises</a>
+      <a href="#agents"><span class="num">06</span>Agents: build and access</a>
+      <a href="#healthcare"><span class="num">07</span>Healthcare and compliance</a>
+      <div class="nav-label">Make it stick</div>
+      <a href="#rollout"><span class="num">08</span>Roll out without overwhelming</a>
+      <a href="#next"><span class="num">09</span>Do this next</a>
+      <a href="#sources"><span class="num">10</span>Sources</a>
+    </nav>
+    <button class="icon-btn" id="themeToggle" style="margin-top:24px;width:100%;">Toggle light / dark</button>
+  </aside>
+
+  <main class="main">
+    <!-- HERO -->
+    <header class="hero" id="overview">
+      <div class="kicker">Microsoft Copilot &middot; Licensing &amp; Deployment</div>
+      <h1>Copilot, without the guesswork.</h1>
+      <p class="lede">Most teams already believe Copilot can help. What stalls them is the licensing maze, the fear of exposing patient data, and the worry that they will hand staff a pile of tools nobody asked for. This guide fixes all three.</p>
+      <div class="oneliner">A lot of healthcare organizations want Copilot's productivity but get stuck on who gets what, what it costs, and whether it is safe. This guide maps the right Copilot to each role, makes the spend predictable, and lays out a rollout that earns adoption, so you get outcomes without overwhelming your people or exposing PHI.</div>
+      <div class="chips">
+        <span class="chip">How to assign licenses</span>
+        <span class="chip">Who gets premium and Cowork</span>
+        <span class="chip">How consumption is billed</span>
+        <span class="chip">Who builds and uses agents</span>
+        <span class="chip">HIPAA and PHI guardrails</span>
+      </div>
+      <div class="tl-dr">
+        <h3>The whole guide in six lines</h3>
+        <ol>
+          <li>There are two licenses that matter: <strong>Copilot Chat</strong> (free, already in your M365) and <strong>Microsoft 365 Copilot</strong> (the paid seat). "Premium" is not a product you buy.</li>
+          <li>Give free Chat to everyone eligible. Buy paid seats for the roles where the work is heavy: leaders, managers, analysts.</li>
+          <li><strong>Cowork</strong> and <strong>agents</strong> are usage-billed layers on top of a paid seat, not per-person licenses. Turn them on deliberately and cap the spend.</li>
+          <li>Paid seats make most agent use free. Free-Chat users pay per interaction. That one fact drives your budget.</li>
+          <li>Let a governed set of people build agents. Let everyone use the ones you approve.</li>
+          <li>Roll out in waves and let the data pull the next one. A small paid pilot beats a big-bang launch every time.</li>
+        </ol>
+      </div>
+      <p class="meta-line">Validated against Microsoft documentation current as of July 21, 2026. Prices that Microsoft renders dynamically are flagged "confirm live" rather than guessed.</p>
+    </header>
+
+    <!-- MAP -->
+    <section id="map">
+      <div class="sec-kicker">01 &middot; The map</div>
+      <h2>Two tiers, one usage layer. That is the whole model.</h2>
+      <p>Before you decide who gets what, get the shape of the product straight. Microsoft's naming has changed a lot, and the confusion costs real money when people buy the wrong thing. Here is the honest version.</p>
+
+      <div class="grid grid-3">
+        <div class="card tier">
+          <div class="tier-tag">Tier 1 &middot; The front door</div>
+          <h3>Microsoft 365 Copilot Chat</h3>
+          <div class="price">Included with your M365. No added per-user cost.</div>
+          <p>Protected AI chat grounded in the web, with enterprise data protection. Users can upload a file or paste content to work with it. Safe to give broadly. It builds the habit at zero added seat cost. It does not automatically see your organization's data.</p>
+        </div>
+        <div class="card tier" style="border-color:var(--cp-accent);">
+          <div class="tier-tag" style="color:var(--cp-accent);">Tier 2 &middot; The paid seat</div>
+          <h3>Microsoft 365 Copilot</h3>
+          <div class="price">Add-on, about $30 / user / month (confirm live)</div>
+          <p>The full assistant. It grounds on your own data through Microsoft Graph (email, meetings, files, chats), edits inside Word, Excel, PowerPoint, Outlook and Teams, and adds the Researcher and Analyst agents. It also makes most agent usage free for that person.</p>
+        </div>
+        <div class="card tier">
+          <div class="tier-tag">Usage layer &middot; On top of a paid seat</div>
+          <h3>Copilot Cowork &amp; agents</h3>
+          <div class="price">Billed by usage in Copilot Credits</div>
+          <p>Cowork runs multi-step work on its own. Agents answer and act on your behalf. Neither is a per-person license. They sit on top of a paid seat, they are off until an admin turns them on, and you pay for what they consume.</p>
+        </div>
+      </div>
+
+      <div class="callout key">
+        <p class="callout-title">The "premium" trap</p>
+        <p>There is no "Copilot Premium" to buy for your enterprise. When someone sees <strong>M365 Copilot (Premium)</strong> inside Word or Excel, that label just means they hold the paid add-on. The $20 consumer "Copilot Pro" is a personal product for home accounts, not this. When you talk to your team, use two names only: <strong>Copilot Chat</strong> (free) and <strong>Microsoft 365 Copilot</strong> (paid). It removes 80 percent of the confusion.</p>
+      </div>
+
+      <h3>Where agents fit</h3>
+      <p>Agents are not a fourth product. They are a capability that runs across both tiers. A paid seat gets the full set (the Agent Store, custom agents grounded in your data, plus Researcher and Analyst) and pays almost nothing to use them. A free-Chat user can still use agents, but every interaction is metered. The <a href="#agents">Agents section</a> covers who builds them and who can use them.</p>
+    </section>
+
+    <!-- ROLES -->
+    <section id="roles">
+      <div class="sec-kicker">02 &middot; The centerpiece</div>
+      <h2>Who gets what, by role.</h2>
+      <p>This is the question every customer asks and the one that decides your budget. Pick a role to see the recommended tier, what comes with the seat, and what costs extra. The full comparison table sits below for a side-by-side view.</p>
+
+      <div class="role-tabs" id="roleTabs">
+        <button class="role-tab active" data-role="exec">Director / Executive</button>
+        <button class="role-tab" data-role="manager">Manager</button>
+        <button class="role-tab" data-role="analyst">Analyst</button>
+        <button class="role-tab" data-role="knowledge">Knowledge worker</button>
+        <button class="role-tab" data-role="engineer">Engineer / Developer</button>
+        <button class="role-tab" data-role="frontline">Frontline</button>
+        <button class="role-tab" data-role="security">Security / Compliance</button>
+      </div>
+
+      <div class="card">
+        <div class="role-panel active" data-role="exec">
+          <div class="role-head"><h3>Director / Executive</h3><span class="tier-pill paid">Paid seat</span></div>
+          <p>High meeting load, long email threads, and constant cross-document synthesis. This is the fastest measurable payback for a paid seat, so fund it first.</p>
+          <div class="own-extra">
+            <div class="box own"><h4>Comes with the seat</h4><ul><li>Meeting recaps and action items across a busy calendar</li><li>Outlook thread summaries and drafting grounded in real context</li><li>"What did we decide about X in the last 30 days?" across their files</li><li>Researcher and Analyst for board and strategy prep</li></ul></div>
+            <div class="box extra"><h4>Costs extra</h4><ul><li>Cowork, if they want it to run multi-step work on its own (usage-billed)</li><li>Custom agents they use are mostly free on a paid seat</li></ul></div>
+          </div>
+          <p class="role-example">Healthcare example: a VP of Operations walks into a system leadership meeting with a synthesized read on last month's staffing, budget, and project threads, prepared in minutes.</p>
+        </div>
+
+        <div class="role-panel" data-role="manager">
+          <div class="role-head"><h3>Manager / Project lead</h3><span class="tier-pill paid">Paid seat</span></div>
+          <p>Meetings, team coordination, and status roll-ups. Strong, reliable payback. Managers also become your best champions because they model the behavior for their teams.</p>
+          <div class="own-extra">
+            <div class="box own"><h4>Comes with the seat</h4><ul><li>Catch up on missed meetings and share the recap with the team</li><li>Draft status updates and project briefs from notes and email</li><li>"What did my team commit to this week?"</li><li>Copilot Dashboard access to see adoption on their team</li></ul></div>
+            <div class="box extra"><h4>Costs extra</h4><ul><li>Cowork for recurring multi-step workflows (usage-billed)</li></ul></div>
+          </div>
+          <p class="role-example">Healthcare example: a nurse manager turns a week of shift notes and emails into a clean handoff summary instead of staying late to write it.</p>
+        </div>
+
+        <div class="role-panel" data-role="analyst">
+          <div class="role-head"><h3>Analyst (Finance, Data, Research, Ops)</h3><span class="tier-pill paid">Paid seat</span></div>
+          <p>Excel and data work show some of the highest measured returns. If you only had ten paid seats, a chunk of them belong here.</p>
+          <div class="own-extra">
+            <div class="box own"><h4>Comes with the seat</h4><ul><li>Excel formula help, chart suggestions, and insights on a dataset</li><li>The Excel, Word, and PowerPoint agents for deeper data-to-deliverable work</li><li>Analyst agent for structured reasoning over data</li><li>Data-to-presentation in PowerPoint</li></ul></div>
+            <div class="box extra"><h4>Costs extra</h4><ul><li>Heavy Cowork usage for large multi-source aggregation</li><li>Copilot Studio capacity if they build shared agents</li><li>Azure consumption if they move to custom Foundry agents</li></ul></div>
+          </div>
+          <p class="role-example">Healthcare example: a revenue-cycle analyst asks Copilot to find denial patterns across a claims export and draft the summary for the finance review.</p>
+        </div>
+
+        <div class="role-panel" data-role="knowledge">
+          <div class="role-head"><h3>General knowledge / administrative worker</h3><span class="tier-pill chat">Start on Chat</span> <span class="tier-pill paid">Graduate when ready</span></div>
+          <p>The largest population and the place people overspend. Start them on free Chat. Watch the dashboard. Move the ones with real, repeated use up to a paid seat. Do not buy seats on hope.</p>
+          <div class="own-extra">
+            <div class="box own"><h4>Comes with free Chat</h4><ul><li>Web research, drafting, and analysis on uploaded files</li><li>Meeting prep and writing help</li><li>Approved pay-as-you-go agents (metered)</li></ul></div>
+            <div class="box extra"><h4>What the paid seat adds</h4><ul><li>Grounding in their own email, files, and meetings</li><li>In-app editing in Word and Outlook</li><li>"What did I miss while I was out?" across their own data</li></ul></div>
+          </div>
+          <p class="role-example">Healthcare example: a scheduling coordinator uses free Chat for policy questions and drafting, and earns a paid seat once the team leans on it daily.</p>
+        </div>
+
+        <div class="role-panel" data-role="engineer">
+          <div class="role-head"><h3>Engineer / Developer</h3><span class="tier-pill sep">GitHub Copilot</span> <span class="tier-pill paid">+ paid seat for collab</span></div>
+          <p>Two different tools. GitHub Copilot handles code and is licensed separately. A Microsoft 365 Copilot seat handles the meetings, docs, and email around the code. If they build agents, that is a third path (see Agents).</p>
+          <div class="own-extra">
+            <div class="box own"><h4>What they use</h4><ul><li>GitHub Copilot in the IDE for code (separate license)</li><li>M365 Copilot for sprint recaps, technical docs, and thread digests</li><li>Copilot Studio or Azure AI Foundry to build custom agents</li></ul></div>
+            <div class="box extra"><h4>Costs extra</h4><ul><li>Copilot Studio user license plus tenant capacity for makers</li><li>Azure consumption (tokens and infra) for Foundry-built agents</li></ul></div>
+          </div>
+          <p class="role-example">Healthcare example: an integration engineer builds a Foundry agent against an internal API, billed through Azure, while using a paid seat for the project's meetings and documentation.</p>
+        </div>
+
+        <div class="role-panel" data-role="frontline">
+          <div class="role-head"><h3>Frontline worker (F-plans)</h3><span class="tier-pill chat">Chat if eligible</span></div>
+          <p>Shift-based and deskless staff. Free Chat is the right on-ramp where their plan qualifies. A paid seat can be added to F1 or F3 for the specific frontline roles that do enough knowledge work to justify it.</p>
+          <div class="own-extra">
+            <div class="box own"><h4>Comes with the seat</h4><ul><li>Free Chat for quick answers and drafting on eligible plans</li><li>Paid Copilot can layer onto F1 / F3 for select roles</li></ul></div>
+            <div class="box extra"><h4>Confirm before you assume</h4><ul><li>Cowork on frontline plans is not clearly documented. Verify with your account team before you promise it.</li></ul></div>
+          </div>
+          <p class="role-example">Healthcare example: a unit clerk uses Chat for policy lookups and message drafting on a shared device, without a paid seat.</p>
+        </div>
+
+        <div class="role-panel" data-role="security">
+          <div class="role-head"><h3>Security / Compliance team</h3><span class="tier-pill sep">Security Copilot</span></div>
+          <p>A different product for a different job. Security Copilot is purpose-built for threat hunting and incident response and plugs into Defender, Purview, Entra, and Intune. Your compliance leads also own the guardrails for everyone else's agents.</p>
+          <div class="own-extra">
+            <div class="box own"><h4>What they use</h4><ul><li>Microsoft Security Copilot for SOC work (separate product)</li><li>Purview and the admin center to govern all Copilot and agent activity</li></ul></div>
+            <div class="box extra"><h4>Their cross-cutting job</h4><ul><li>Sensitivity labels, DSPM for AI, and the Agent Registry for the whole org</li></ul></div>
+          </div>
+          <p class="role-example">Healthcare example: the compliance officer sets label policies so agents never surface PHI-marked files to people who should not summarize them.</p>
+        </div>
+      </div>
+
+      <h3>The at-a-glance matrix</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Role</th><th>Recommended tier</th><th>Comes with the seat</th><th>Pays extra for</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Director / Exec</strong></td><td>Paid Microsoft 365 Copilot</td><td>Meeting and email synthesis, Researcher, Analyst</td><td>Cowork usage</td></tr>
+            <tr><td><strong>Manager</strong></td><td>Paid Microsoft 365 Copilot</td><td>Recaps, team roll-ups, dashboard</td><td>Cowork usage</td></tr>
+            <tr><td><strong>Analyst</strong></td><td>Paid Microsoft 365 Copilot</td><td>Excel and Analyst, data-to-deck</td><td>Cowork, Studio capacity, Azure for custom</td></tr>
+            <tr><td><strong>Knowledge worker</strong></td><td>Start free Chat, graduate to paid</td><td>Web chat, file upload, approved agents</td><td>Paid seat; metered agents on Chat</td></tr>
+            <tr><td><strong>Engineer / Dev</strong></td><td>GitHub Copilot + paid seat</td><td>Code assist, collab, doc drafting</td><td>Studio license, Azure consumption</td></tr>
+            <tr><td><strong>Frontline (F-plan)</strong></td><td>Free Chat if eligible</td><td>Web chat on eligible plans</td><td>Paid add-on on F1 / F3 (confirm Cowork)</td></tr>
+            <tr><td><strong>Security / Compliance</strong></td><td>Security Copilot</td><td>SOC workflows, governance tooling</td><td>Consumption per Security Copilot terms</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout note">
+        <p><strong>How to slice your groups.</strong> Do not license by title alone. Slice by <em>role plus business unit</em>. Give free Chat to every eligible person. For paid seats, start with the units where the ROI is obvious: leadership, revenue cycle, finance and operations, HR, and IT. Expand from there using real usage data, not requests.</p>
+      </div>
+    </section>
+
+    <!-- EXEC -->
+    <section id="exec">
+      <div class="sec-kicker">03 &middot; Lens one</div>
+      <h2>The executive approach.</h2>
+      <div class="lens-badges"><span class="badge exec">For leaders</span></div>
+      <p>If you are the executive sponsor, your job is not to pick features. It is to fund the right populations, set the guardrails, and protect the rollout from turning into noise. Five moves.</p>
+
+      <h3>1. Fund the front door for everyone</h3>
+      <p>Give Copilot Chat to every eligible employee. It is already in your M365 subscription, it carries enterprise data protection, and it costs nothing extra per user. This is how you build the AI habit across the organization without a budget fight.</p>
+
+      <h3>2. Buy paid seats where the work is heavy</h3>
+      <p>Meetings, email volume, and spreadsheet-heavy analysis are where a paid seat pays for itself fastest. That points at leaders, managers, and analysts first. Resist spreading a thin layer of paid seats across everyone. A focused cohort produces visible wins you can point to.</p>
+
+      <h3>3. Treat Cowork and agents as a metered budget</h3>
+      <p>These are consumption lines, not headcount lines. Turn them on for the roles that need them, set tenant, group, and per-user spend limits, and watch the usage reports. You control the ceiling. Nothing runs up a surprise bill unless you let it.</p>
+
+      <h3>4. Measure, then expand</h3>
+      <p>The Copilot Dashboard shows you exactly who is engaged and who is ready for a paid seat. Let that data pull your next wave of licenses. Buying seats ahead of demonstrated use is how pilots stall and budgets get questioned.</p>
+
+      <h3>5. Do not overwhelm your people</h3>
+      <p>The fastest way to kill adoption is to drop six new capabilities on a team in one week. Start with one or two habits that solve a real daily annoyance. Let people get a win before you add the next thing.</p>
+
+      <div class="callout key">
+        <p class="callout-title">The sound bite for your leadership team</p>
+        <p>"Free Copilot for everyone, paid seats for the roles that live in meetings and spreadsheets, and agents turned on with a spending cap. We expand based on what the data shows, not what people ask for."</p>
+      </div>
+
+      <div class="callout danger">
+        <p class="callout-title">What it costs you to get this wrong</p>
+        <p>Buy paid seats for everyone and you burn budget on people who barely touch it. Skip the front door and you never build the habit. Turn agents loose without governance in a health system and you risk an agent surfacing PHI it should not. None of these are hypothetical. All three are avoidable with the plan in this guide.</p>
+      </div>
+    </section>
+
+    <!-- IT -->
+    <section id="it">
+      <div class="sec-kicker">04 &middot; Lens two</div>
+      <h2>The IT deployment playbook.</h2>
+      <div class="lens-badges"><span class="badge it">For IT</span></div>
+      <p>Microsoft's own guidance breaks deployment into five steps. Here they are with the mechanics that matter, including the part everyone asks about: how you actually assign the licenses.</p>
+
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h4>Get the org ready</h4><p>Run the Microsoft 365 Copilot Optimization Assessment to benchmark your data governance. Fix oversharing before you turn anything on, because Copilot only surfaces what a user can already reach, and in most tenants that is more than people think. Turn on the security basics: MFA, audit logging, and sensitivity labels.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h4>Choose the license per population</h4><p>Use the <a href="#roles">role matrix</a>. Decide who gets free Chat (everyone eligible) and who gets a paid seat (the high-ROI roles). Write it down as named groups before you buy anything.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h4>Ready the apps and network</h4><p>Put Microsoft 365 Apps on the Current or Monthly Enterprise channel, confirm Teams, Outlook, and OneDrive are configured, and allow the required endpoints. This is quick, but skipping it produces the "why doesn't Copilot show up" tickets.</p></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-body"><h4>Assign licenses with groups, not one by one</h4><p>Use group-based licensing in the Microsoft 365 admin center. Create a security group per population, assign the license to the group, and let membership drive who has a seat. It scales, it is auditable, and it makes de-provisioning clean.</p></div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-body"><h4>Enable users and give them a reason</h4><p>Send the welcome email, point people at Copilot Academy and the Prompt Gallery, and name your champions. A license nobody was taught to use is wasted money.</p></div></div>
+
+      <details>
+        <summary>Deep dive: how to structure your licensing groups</summary>
+        <p>Create groups that map to the matrix, and keep the naming obvious so anyone auditing the tenant can read your intent:</p>
+        <ul>
+          <li><strong>Copilot-Chat-All-Eligible</strong>: every user on a qualifying plan. This is your free front door.</li>
+          <li><strong>Copilot-Paid-Leadership</strong>, <strong>Copilot-Paid-Finance-Ops</strong>, <strong>Copilot-Paid-Analysts</strong>: paid add-on seats, sliced by business unit so you can track ROI per unit.</li>
+          <li><strong>Copilot-Cowork-Enabled</strong> and <strong>CopilotStudio-Makers</strong>: small, deliberately governed groups for the usage-billed and build capabilities.</li>
+        </ul>
+        <p>Membership can be static or dynamic (rule-based on department or job title). Dynamic groups keep the paid population honest as people move roles. You can also assign licenses with PowerShell or Microsoft Graph if you are automating from an identity system.</p>
+      </details>
+
+      <div class="callout flag">
+        <p class="callout-title">Do the oversharing work before you scale, not after</p>
+        <p>In a health system this is the difference between a clean rollout and a compliance incident. Use SharePoint Advanced Management (included with a paid Copilot seat) to find broadly shared sites, apply Restricted Content Discovery to sensitive sites, and label PHI content in Purview so Copilot and agents respect it. Details are in the <a href="#healthcare">Healthcare section</a>.</p>
+      </div>
+
+      <h3>How you measure it</h3>
+      <p>The Microsoft Copilot Dashboard in Viva Insights is your instrument panel. It needs no extra license, works with as few as one Copilot seat, and unlocks the full picture at 50 seats. It shows readiness (who is a prime candidate for a paid seat), adoption (active use by app and by group), and impact (assisted hours and value). Use it to justify the next wave of spend with numbers instead of anecdotes.</p>
+    </section>
+
+    <!-- CONSUMPTION -->
+    <section id="consumption">
+      <div class="sec-kicker">05 &middot; The money question</div>
+      <h2>Consumption without surprises.</h2>
+      <div class="lens-badges"><span class="badge exec">For leaders</span><span class="badge it">For IT</span></div>
+      <p>This is where customers get nervous, and it is simpler than it looks once you hold one fact in your head: if you own the paid seat, most of your everyday agent use is already paid for. If you are on free Chat, every agent answer is a metered charge.</p>
+
+      <h3>The currency: Copilot Credits</h3>
+      <p>Agent and Cowork usage is billed in Copilot Credits. Microsoft renamed these from "messages" on September 1, 2025 with no change to the rate. Pay-as-you-go runs about $0.01 per credit through an Azure subscription. Different actions cost different amounts of credits.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Action</th><th>Credits</th><th>Rough cost (PAYG)</th></tr></thead>
+          <tbody>
+            <tr><td>Classic answer</td><td>1</td><td>~$0.01</td></tr>
+            <tr><td>Generative answer</td><td>2</td><td>~$0.02</td></tr>
+            <tr><td>Agent action</td><td>5</td><td>~$0.05</td></tr>
+            <tr><td>Grounding on your tenant data (per response)</td><td>10</td><td>~$0.10</td></tr>
+            <tr><td>Generative answer grounded in your data</td><td>12 (10 + 2)</td><td>~$0.12</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>The fact that drives your budget</h3>
+      <div class="callout key">
+        <p>For a user with a <strong>paid Microsoft 365 Copilot seat</strong>, everyday employee-facing agent use (classic answers, generative answers, agent actions, and grounding on your own data) is <strong>zero-rated</strong>. It does not draw down credits, within fair-use limits. For a user on <strong>free Chat</strong>, those same interactions are <strong>metered</strong> at the rates above. So the paid seat is not only a productivity upgrade, it also flattens your agent bill for that person.</p>
+      </div>
+
+      <h3>Prepaid or pay-as-you-go</h3>
+      <p>You have two ways to fund the metered usage. Prepaid capacity packs give you a fixed monthly ceiling and no billing surprises (the pack structure has historically been about $200 for 25,000 credits, confirm current pricing). Pay-as-you-go bills in arrears through Azure and suits variable or low volume. Most organizations use prepaid for the predictable base load and a pay-as-you-go plan as an overflow safety net.</p>
+
+      <h3>Your cost controls</h3>
+      <ul>
+        <li><strong>Per-agent monthly credit caps</strong>, so a single runaway agent cannot drain the pool.</li>
+        <li><strong>Automatic enforcement</strong>: agent flows stop at 100 percent of prepaid capacity, and custom agents are disabled at 125 percent. You get email and admin-center alerts before that.</li>
+        <li><strong>Tenant, group, and per-user spend limits</strong> for Cowork, with configurable usage alerts.</li>
+        <li>The <strong>Copilot Studio Agent Usage Estimator</strong> to forecast before you deploy at scale, and Azure budgets for anything running in Foundry.</li>
+      </ul>
+
+      <details>
+        <summary>How Azure AI Foundry agents bill differently</summary>
+        <p>Foundry does not use Copilot Credits. It bills the way Azure always has: per token for the model calls, plus any tools (search, file search, code interpreter), plus infrastructure and, for hosted agents, container compute. There is no separate "agent service" fee. Use Azure Cost Management, budgets, and tags for department-level tracking, and reserve provisioned throughput only for predictable, high-volume workloads. Think of Copilot Studio as abstracted, credit-based billing tied to your M365 licensing, and Foundry as direct, token-level billing with full control.</p>
+      </details>
+
+      <div class="callout note">
+        <p><strong>The budgeting sound bite:</strong> "Paid seats make our internal agent use essentially free. We only pay real consumption for customer-facing agents, for free-Chat users, and for Cowork, and all three are capped."</p>
+      </div>
+    </section>
+
+    <!-- AGENTS -->
+    <section id="agents">
+      <div class="sec-kicker">06 &middot; The part people fear most</div>
+      <h2>Agents: who builds them and who can use them.</h2>
+      <div class="lens-badges"><span class="badge it">For IT</span><span class="badge exec">For leaders</span></div>
+      <p>Two separate questions live here, and mixing them up is what makes agents feel scary. One is "who is allowed to build an agent." The other is "who is allowed to use one." Answer them separately and the fear goes away.</p>
+
+      <h3>Who can build: three surfaces, three audiences</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Build surface</th><th>Who it is for</th><th>What it takes to build</th><th>What you can build</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Agent Builder</strong><br>(inside Microsoft 365 Copilot)</td><td>Business users</td><td>A paid Microsoft 365 Copilot seat. No extra license.</td><td>Simple declarative agents grounded in your SharePoint, files, or connectors. No code. No custom APIs.</td></tr>
+            <tr><td><strong>Copilot Studio</strong></td><td>Power users and IT makers</td><td>A Copilot Studio user license plus tenant capacity (or a paid Copilot seat for extending Copilot), plus a maker role in a governed environment.</td><td>Full agents with actions, connectors, autonomy, and publishing to Teams, web, and SharePoint.</td></tr>
+            <tr><td><strong>Azure AI Foundry</strong></td><td>Developers</td><td>Azure access with the right Foundry role. Billed through Azure.</td><td>Code-first, highly custom agents and line-of-business integrations.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Who can use: it follows the license</h3>
+      <ul>
+        <li><strong>Paid Microsoft 365 Copilot seat:</strong> full access to the Agent Store, custom agents grounded in your data, and the Researcher and Analyst agents, with most usage zero-rated.</li>
+        <li><strong>Free Chat:</strong> can use approved pay-as-you-go agents, metered per interaction.</li>
+        <li><strong>Sharing:</strong> a maker shares an agent with named people or security groups, with the whole org, or publishes it to your catalog (which requires admin approval). Someone using a shared Copilot Studio agent does not need a Studio license. The usage bills to the tenant.</li>
+        <li><strong>Foundry-built agents:</strong> access is granted with the Foundry Agent Consumer role, and it can be scoped down to an individual agent.</li>
+      </ul>
+
+      <h3>How you keep control</h3>
+      <p>This is the answer to "won't agents get out of hand." No, if you set the guardrails first.</p>
+      <ul>
+        <li><strong>The Agent Registry</strong> in the Microsoft 365 admin center gives you one inventory of every agent (Microsoft, partner, and homegrown across Copilot Studio, Agent Builder, SharePoint, and Foundry). You can block, allow, and approve from there. Agent 365 is the broader control plane above it.</li>
+        <li><strong>Use the AI Administrator role</strong>, not Global Admin, to govern agents. Least privilege by default.</li>
+        <li><strong>Power Platform DLP</strong> lets you force every agent to require sign-in, block risky knowledge connectors, route makers into managed environments, and even disable generative-AI agent publishing until a review is done.</li>
+        <li><strong>Purview</strong> carries the data side: sensitivity labels the agents honor, DSPM for AI to spot oversharing, plus audit, eDiscovery, and insider-risk coverage for prompts and responses.</li>
+      </ul>
+
+      <div class="callout key">
+        <p class="callout-title">The posture to recommend</p>
+        <p>Let <strong>everyone use</strong> the agents you approve. Let a <strong>governed few build</strong>. Business users build simple agents in Agent Builder. IT and pro developers build the serious ones in Copilot Studio and Foundry. The Agent Registry plus DLP is the seatbelt that makes "let people build" safe to say out loud.</p>
+      </div>
+    </section>
+
+    <!-- HEALTHCARE -->
+    <section id="healthcare">
+      <div class="sec-kicker">07 &middot; The non-negotiable</div>
+      <h2>Healthcare and compliance.</h2>
+      <div class="lens-badges"><span class="badge hc">Healthcare</span><span class="badge it">For IT</span></div>
+      <p>For a health system this section decides whether the rest of the plan is allowed to happen. The short version: the core products are covered, the risk is oversharing, and there are three dated items you need to handle this month.</p>
+
+      <h3>What is covered under your BAA</h3>
+      <p>Microsoft 365 Copilot and Copilot Chat are both explicitly in scope for HIPAA, and the Business Associate Agreement comes through the Microsoft Data Protection Addendum by default. You do not sign a separate contract. Azure and Azure OpenAI (Microsoft-operated) are covered through the Azure BAA. Your prompts and responses are not used to train the foundation models.</p>
+      <div class="callout flag">
+        <p class="callout-title">The web-search carve-out</p>
+        <p>HIPAA coverage does <strong>not</strong> extend to Copilot's public web-search queries, because those run under different terms. Keep PHI out of web-grounded prompts, or have an admin disable web search for regulated groups. This is the single most common miss in healthcare Copilot rollouts.</p>
+      </div>
+
+      <div class="callout danger">
+        <p class="callout-title">Three dated items to handle now</p>
+        <p><strong>July 24, 2026:</strong> OpenAI-operated models auto-enable as a subprocessor. They do not carry HITRUST. If your risk framework requires HITRUST for all AI processing, disable the OpenAI subprocessor in the admin center before that date. Azure OpenAI (Microsoft-operated) keeps HITRUST and FedRAMP High and is unaffected.</p>
+        <p><strong>July 31, 2026:</strong> new enablement of Restricted SharePoint Search is blocked. Move your oversharing control to Restricted Content Discovery through SharePoint Advanced Management.</p>
+        <p><strong>Ongoing:</strong> Anthropic, which powers Cowork and Researcher, sits outside the EU Data Boundary and is a named subprocessor. Confirm BAA coverage with your Microsoft account team before you turn Cowork on for PHI-adjacent work.</p>
+      </div>
+
+      <h3>Oversharing is the real risk, so control it</h3>
+      <p>When many people can build agents, the danger is not the model, it is an agent surfacing PHI from a SharePoint site that was shared too broadly years ago. Layer these:</p>
+      <ul>
+        <li><strong>Restricted Content Discovery (RCD)</strong> via SharePoint Advanced Management, included with a paid Copilot seat. Keep sensitive sites out of Copilot and agent results without changing who has direct access.</li>
+        <li><strong>Data Access Governance reports</strong> to find the broadly shared and externally shared sites before Copilot does.</li>
+        <li><strong>Sensitivity labels</strong> in Purview on PHI content. Copilot and agents honor them, and require the right usage rights to surface labeled content.</li>
+      </ul>
+
+      <h3>Know the product boundary</h3>
+      <p>Microsoft draws a hard line between two tracks, and it is worth stating clearly:</p>
+      <ul>
+        <li><strong>Microsoft 365 Copilot</strong> is for knowledge and administrative workers: operations, revenue cycle, HR, IT, compliance, and non-clinical management. That is what this guide is about.</li>
+        <li><strong>Dragon Copilot</strong> is the separate product for clinicians doing ambient clinical documentation (the successor to DAX). Different license, different infrastructure, different rollout. Neither is a medical device.</li>
+      </ul>
+
+      <div class="callout note">
+        <p><strong>One more for the highest-security environments:</strong> Agent Builder does not support Customer-Managed Keys. If your risk tier requires you to hold your own encryption key, build those agents in Copilot Studio instead.</p>
+      </div>
+    </section>
+
+    <!-- ROLLOUT -->
+    <section id="rollout">
+      <div class="sec-kicker">08 &middot; Make it stick</div>
+      <h2>Roll it out without overwhelming the team.</h2>
+      <div class="lens-badges"><span class="badge exec">For leaders</span><span class="badge it">For IT</span></div>
+      <p>The worry comes up in every rollout: do not flood the team. It is a good instinct. Adoption is a habit you build in waves, not a launch you announce once. Here is a shape that works.</p>
+
+      <div class="phases">
+        <div class="phase">
+          <div class="ph-tag">Phase 1 &middot; Prove</div>
+          <h4>Weeks 1 to 4</h4>
+          <ul>
+            <li>Free Chat to a broad eligible group</li>
+            <li>Paid seats to a small, high-ROI cohort (leaders, a few analysts)</li>
+            <li>Name 3 to 5 champions</li>
+            <li>Teach one or two daily habits, nothing more</li>
+          </ul>
+        </div>
+        <div class="phase">
+          <div class="ph-tag">Phase 2 &middot; Expand</div>
+          <h4>Weeks 5 to 10</h4>
+          <ul>
+            <li>Use the dashboard to graduate engaged Chat users to paid seats</li>
+            <li>Ship one governed agent that solves a real annoyance</li>
+            <li>Share measured wins (assisted hours) with leadership</li>
+            <li>Turn on Cowork for a couple of power users, with a spend cap</li>
+          </ul>
+        </div>
+        <div class="phase">
+          <div class="ph-tag">Phase 3 &middot; Scale</div>
+          <h4>Weeks 11+</h4>
+          <ul>
+            <li>Expand department by department, not all at once</li>
+            <li>Open agent building to governed makers</li>
+            <li>Roll Cowork to the roles that earn it</li>
+            <li>Review usage and spend on a monthly cadence</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>What keeps it from stalling</h3>
+      <ul>
+        <li><strong>Champions carry it, not IT.</strong> Peers modeling real use beats any training deck.</li>
+        <li><strong>One habit at a time.</strong> Meeting recaps this month. Email triage next. Let each win land before the next ask.</li>
+        <li><strong>Measure and show.</strong> The dashboard turns "I think it's helping" into "here is the time we got back." That is what funds the next wave.</li>
+      </ul>
+
+      <div class="callout key">
+        <p><strong>The rollout sound bite:</strong> "We are not launching Copilot to everyone on Monday. We are building a habit in waves, proving the value with data, and letting demand pull the next group in."</p>
+      </div>
+    </section>
+
+    <!-- NEXT -->
+    <section id="next">
+      <div class="sec-kicker">09 &middot; Do this next</div>
+      <h2>Where to start this quarter.</h2>
+      <p>If you do four things, you are moving in the right direction and you have not overwhelmed anyone.</p>
+      <ol>
+        <li><strong>Turn on free Chat</strong> for everyone eligible. It is already paid for.</li>
+        <li><strong>Buy a focused block of paid seats</strong> (start in the dozens, not the thousands) for leaders, managers, and analysts.</li>
+        <li><strong>Do the oversharing work</strong> and stand up the Agent Registry before you scale agents.</li>
+        <li><strong>Handle the three dated compliance items</strong> in the Healthcare section, the July 24 one first.</li>
+      </ol>
+      <div class="callout note">
+        <p><strong>Not ready to buy yet?</strong> Run the Microsoft 365 Copilot Optimization Assessment and walk your leadership through the role matrix above. That is a real first step with no spend attached.</p>
+      </div>
+      <div class="callout flag">
+        <p class="callout-title">Confirm these live before you quote a number</p>
+        <p>Microsoft renders some prices dynamically, so this guide does not hard-code them. Confirm with your account team or the admin center purchase flow: the current Microsoft 365 Copilot seat price, the Microsoft 365 Copilot Business SKU (price and feature delta), what Microsoft 365 E7 includes, the Copilot Studio prepaid pack price, Cowork typical per-user cost, and whether Anthropic as a subprocessor is covered under your specific BAA.</p>
+      </div>
+    </section>
+
+    <!-- SOURCES -->
+    <section id="sources" style="border-bottom:none;">
+      <div class="sec-kicker">10 &middot; Sources</div>
+      <h2>Where this comes from.</h2>
+      <p>Every claim above traces to Microsoft's own documentation, checked on July 21, 2026. The primary references:</p>
+      <ul class="source-list">
+        <li>Microsoft 365 Copilot licensing and prerequisites &mdash; learn.microsoft.com/microsoft-365/copilot/microsoft-365-copilot-licensing</li>
+        <li>Which Copilot for your organization &mdash; learn.microsoft.com/microsoft-365/copilot/which-copilot-for-your-organization</li>
+        <li>Copilot Chat overview and management &mdash; learn.microsoft.com/copilot/overview and /copilot/manage</li>
+        <li>Copilot Cowork (GA) &mdash; microsoft.com/microsoft-365/blog Copilot Cowork GA post and learn.microsoft.com/microsoft-365/copilot/cowork</li>
+        <li>Copilot Studio billing and Copilot Credits &mdash; learn.microsoft.com/microsoft-copilot-studio/billing-licensing and /requirements-messages-management</li>
+        <li>Pay-as-you-go and capacity &mdash; learn.microsoft.com/power-platform/admin/pay-as-you-go-overview</li>
+        <li>Agent Builder &mdash; learn.microsoft.com/microsoft-365/copilot/extensibility/agent-builder</li>
+        <li>Azure AI Foundry agents and RBAC &mdash; learn.microsoft.com/azure/foundry/agents/overview and /concepts/rbac-foundry</li>
+        <li>Agent Registry and settings &mdash; learn.microsoft.com/microsoft-365/admin/manage/agent-registry</li>
+        <li>Microsoft Agent 365 &mdash; learn.microsoft.com/microsoft-agent-365/overview</li>
+        <li>HIPAA and HITECH coverage &mdash; learn.microsoft.com/compliance/regulatory/offering-hipaa-hitech</li>
+        <li>Enterprise data protection and web search &mdash; learn.microsoft.com/microsoft-365/copilot/enterprise-data-protection</li>
+        <li>OpenAI subprocessor &mdash; learn.microsoft.com/microsoft-365/copilot/openai-subprocessor</li>
+        <li>Restricted Content Discovery and SharePoint Advanced Management &mdash; learn.microsoft.com/sharepoint/restricted-content-discovery</li>
+        <li>Purview for AI &mdash; learn.microsoft.com/purview/ai-microsoft-purview</li>
+        <li>Copilot adoption and Success Kit &mdash; adoption.microsoft.com/copilot and learn.microsoft.com/microsoft-365/copilot/microsoft-365-copilot-enablement-resources</li>
+        <li>Copilot Dashboard &mdash; learn.microsoft.com/viva/insights/org-team-insights/copilot-dashboard</li>
+        <li>Dragon Copilot &mdash; learn.microsoft.com/industry/healthcare/dragon-copilot</li>
+      </ul>
+      <div class="footer">
+        <p>A field guide by Michael Goad. Healthcare-forward, general enough for any knowledge-worker organization. Current as of July 21, 2026. Confirm dynamically priced items with Microsoft before quoting figures.</p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+(function () {
+  // Mobile nav toggle
+  var toggle = document.getElementById("navToggle");
+  var sidebar = document.getElementById("sidebar");
+  if (toggle && sidebar) {
+    toggle.addEventListener("click", function () {
+      sidebar.classList.toggle("open");
+    });
+    sidebar.addEventListener("click", function (e) {
+      if (e.target.tagName === "A") sidebar.classList.remove("open");
+    });
+  }
+
+  // Theme toggle
+  var themeBtn = document.getElementById("themeToggle");
+  if (themeBtn) {
+    themeBtn.addEventListener("click", function () {
+      var cur = document.documentElement.getAttribute("data-theme");
+      document.documentElement.setAttribute("data-theme", cur === "dark" ? "light" : "dark");
+    });
+  }
+
+  // Scrollspy
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll("#nav a"));
+  var map = {};
+  navLinks.forEach(function (a) {
+    var id = a.getAttribute("href").slice(1);
+    map[id] = a;
+  });
+  var sections = Array.prototype.slice.call(document.querySelectorAll("section, header.hero"));
+  if ("IntersectionObserver" in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          navLinks.forEach(function (a) { a.classList.remove("active"); });
+          var link = map[entry.target.id];
+          if (link) link.classList.add("active");
+        }
+      });
+    }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+    sections.forEach(function (s) { if (s.id) observer.observe(s); });
+  }
+
+  // Role explorer tabs
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".role-tab"));
+  var panels = Array.prototype.slice.call(document.querySelectorAll(".role-panel"));
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      var role = tab.getAttribute("data-role");
+      tabs.forEach(function (t) { t.classList.remove("active"); });
+      panels.forEach(function (p) { p.classList.remove("active"); });
+      tab.classList.add("active");
+      var panel = document.querySelector('.role-panel[data-role="' + role + '"]');
+      if (panel) panel.classList.add("active");
+    });
+  });
+})();
+</script>
+</body>
+</html>
