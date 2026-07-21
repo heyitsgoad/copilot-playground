@@ -23,12 +23,13 @@ Everything here opens inline in the browser, no download needed.
 
 ## Download
 
+One row per artifact, with each format on the same line.
+
 | File | What it is | Download |
 |---|---|---|
-| **Exec deck (PowerPoint)** | The editable deck if you want to adapt it for your own room. | [Download (PPTX)](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/Copilot-Licensing-Exec-Deck.pptx) |
-| **Exec deck (PDF)** | The deck as a clean, shareable PDF. | [Download (PDF)](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/Copilot-Licensing-Exec-Deck.pdf) |
-| **One-page cheat sheet (PDF)** | Print-and-pin, one landscape page. | [Download (PDF)](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/Copilot-Licensing-One-Pager.pdf) |
-| **Interactive guide (HTML)** | The self-contained guide file to keep and open offline. | [Download (HTML)](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/index.html) |
+| **Exec deck** | An 11-slide, board-ready leadership readout: the model, who-gets-what by role, governance, consumption, agents, compliance, and the rollout. | [Download (PPTX)](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/Copilot-Licensing-Exec-Deck.pptx) · [PDF](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/Copilot-Licensing-Exec-Deck.pdf) |
+| **One-page cheat sheet** | The whole thing on one landscape page: the model, the role matrix, the budget fact, the compliance guardrails, and the next steps. Print-and-pin. | [Download (PDF)](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/Copilot-Licensing-One-Pager.pdf) · [HTML](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/Copilot-Licensing-One-Pager.html) |
+| **Interactive guide** | The full reference as a single self-contained file to keep and open offline. | [Download (HTML)](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/index.html) |
 
 ---
 
