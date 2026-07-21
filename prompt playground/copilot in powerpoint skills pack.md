@@ -11,15 +11,37 @@ Each skill is a small folder with a single `SKILL.md` file inside. That is the f
 
 ---
 
-## How to Install
+## How to Turn This On in PowerPoint
 
-1. Open the custom skills folder your Copilot in PowerPoint points you to. Check the Copilot pane where it manages skills, it names the folder to use.
-2. Copy the skill folders in, one folder per skill, each with its `SKILL.md` inside.
-3. Refresh Copilot so it picks them up.
-4. Call a skill by name in the Copilot pane, like "run apply-brand-template."
+Custom skills live in a special OneDrive folder that Copilot in PowerPoint reads from. You set that folder up once, right from the Copilot pane, then drop these skills in. Here is the whole flow.
+
+> [!IMPORTANT]
+> You need Copilot in PowerPoint for this. If you don't see Copilot in the app, it isn't part of your Microsoft 365 subscription or your organization hasn't turned it on yet.
+
+### 1. Create your OneDrive skills folder
+
+1. Open a presentation and open the Copilot pane.
+2. Select the Settings menu, the **...** in the upper-right corner of the pane.
+3. Select **Manage skills**.
+4. Select **Custom skills**.
+5. Select **Create OneDrive folder**. Copilot creates the skills folder in your OneDrive.
+6. Select **Open skills folder** to open it.
+
+### 2. Add these skills
+
+Copy the skill folders from this pack into that OneDrive folder. Keep one folder per skill, each with its `SKILL.md` inside and the folder named to match the `name` in the file. Back in the **Custom skills** dialog, select **Refresh** so Copilot picks them up.
+
+### 3. Use a skill
+
+- Select the **+** menu in the Copilot prompt field, choose **Choose skills**, and pick the one you want.
+- Or call it straight from your prompt with an @mention, like `@executive-summary-slide`.
+- Toggle any skill on or off from **Manage skills**.
 
 > [!NOTE]
-> If your build expects flat `.md` files instead of folders, just rename each `SKILL.md` to the skill name, like `apply-brand-template.md`.
+> Added or renamed a skill in OneDrive? Hit **Refresh** in the Custom skills dialog so Copilot sees it. To hide a skill without deleting it, rename its folder so it no longer matches the `name` in its `SKILL.md`. Copilot skips folders that don't match.
+
+> [!TIP]
+> Want the official walkthrough with screenshots of each step? See [Copilot in PowerPoint skills](https://support.microsoft.com/en-us/powerpoint/copilot/copilot-in-powerpoint-skills) on Microsoft Support. Format spec: [Agent Skills specification](https://agentskills.io/specification).
 
 ---
 
