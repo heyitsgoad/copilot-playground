@@ -2,7 +2,7 @@
 
 ![Getting started with Microsoft 365 Copilot Premium: Copilot does the catch-up, you make the calls](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/executive%20copilot%20playbook/playbook-cover.png)
 
-A practical, tiered training program for a C-suite or executive leader who is brand new to Copilot. It walks your leaders from their first prompt to their own chief-of-staff agent, in three tiers of short sessions, so Copilot does the catch-up and your leaders get back to the calls only they can make. Plain language, no jargon, and every session is sized at 30 or 60 minutes. There is a polished PDF you can hand to any leader, a ready-to-present PowerPoint for a live working session, and the full program is written out below so you can read it, link it, and steal the prompts without opening a file.
+A practical, tiered training program for a C-suite or executive leader who is brand new to Copilot. It walks your leaders from their first prompt to their own chief-of-staff agent, in three tiers of short sessions, so Copilot does the catch-up and your leaders get back to the calls only they can make. Plain language, no jargon, and every session is sized at 30 or 60 minutes. There is a polished PDF you can hand to any leader, a ready-to-present PowerPoint for a live working session, a short sponsorship deck a leader can take to their own executive team to green-light the program, and the full program is written out below so you can read it, link it, and steal the prompts without opening a file.
 
 > [!TIP]
 > Hand the PDF to a leader who just got licensed, then have them do the [first 5-minute win](#12--prompt-like-you-mean-it-your-first-win-and-a-second-set-of-eyes--60-min) on their own real work. One win beats a feature tour every time.
@@ -15,6 +15,7 @@ A practical, tiered training program for a C-suite or executive leader who is br
 |---|---|---|
 | **An Executive Guide to Copilot Premium (PDF)** | The full playbook as a clean, shareable PDF. Send it to a leader or an assistant before a working session. | [Download (PDF)](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/executive%20copilot%20playbook/Copilot-Premium-Executive-Playbook.pdf) |
 | **Executive Working Session (PowerPoint)** | A ready-to-present deck built around this playbook. Three tiers, from foundations to premium reasoning agents to the chief-of-staff setup. Present it yourself or hand it to whoever is running the room. | [Download (PPTX)](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/executive%20copilot%20playbook/Copilot-Premium-Executive-Training.pptx) |
+| **Executive Sponsorship Deck (PowerPoint)** | A short, board-ready deck a business or IT leader takes to their own executive team to win sponsorship for the program. Same visual identity as the working-session deck, with a full talk track in the speaker notes so anyone can present it. | [Download (PPTX)](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/executive%20copilot%20playbook/Copilot-Premium-Executive-Sponsorship.pptx)  ·  [PDF](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/executive%20copilot%20playbook/Copilot-Premium-Executive-Sponsorship.pdf) |
 
 ---
 
