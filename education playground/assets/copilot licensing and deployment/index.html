@@ -708,18 +708,18 @@ details[open] summary::before { content: "\2212"; }
       <div class="sec-kicker">08 &middot; The non-negotiable</div>
       <h2>Healthcare and compliance.</h2>
       <div class="lens-badges"><span class="badge hc">Healthcare</span><span class="badge it">For IT</span></div>
-      <p>For a health system this section decides whether the rest of the plan is allowed to happen. The short version: the core products are covered, the risk is oversharing, and there are three dated items you need to handle this month.</p>
+      <p>For a health system this section decides whether the rest of the plan is allowed to happen. The short version: the core products are covered, the risk is oversharing, and there are three time-sensitive items worth reviewing early.</p>
 
       <h3>What is covered under your BAA</h3>
       <p>Microsoft 365 Copilot and Copilot Chat are both explicitly in scope for HIPAA, and the Business Associate Agreement comes through the Microsoft Data Protection Addendum by default. You do not sign a separate contract. Azure and Azure OpenAI (Microsoft-operated) are covered through the Azure BAA. Your prompts and responses are not used to train the foundation models.</p>
       <div class="callout flag">
         <p class="callout-title">The web-search carve-out</p>
-        <p>HIPAA coverage does <strong>not</strong> extend to Copilot's public web-search queries, because those run under different terms. Keep PHI out of web-grounded prompts, or have an admin disable web search for regulated groups. This is the single most common miss in healthcare Copilot rollouts.</p>
+        <p>HIPAA coverage does <strong>not</strong> extend to Copilot's public web-search queries, because those run under different terms. Keep PHI out of web-grounded prompts, or manage public web access for regulated groups in the admin center. This is the single most common miss in healthcare Copilot rollouts.</p>
       </div>
 
-      <div class="callout danger">
-        <p class="callout-title">Three dated items to handle now</p>
-        <p><strong>July 24, 2026:</strong> OpenAI-operated models become enabled by default for eligible commercial customers unless you set OpenAI to "No users" first. They do not carry HITRUST, SOC 1, or FedRAMP High. If your risk framework requires any of those for AI processing, disable them in the admin center before that date. Azure OpenAI (Microsoft-operated) keeps HITRUST and FedRAMP High and is unaffected.</p>
+      <div class="callout flag">
+        <p class="callout-title">Three time-sensitive items to review</p>
+        <p><strong>Effective July 24, 2026:</strong> Microsoft turns on additional AI model providers by default for eligible commercial customers. Certification coverage can differ between providers, so review which providers your risk framework allows (for example, whether you require HITRUST, SOC 1, or FedRAMP High) and set model-provider access in the admin center to match. The Microsoft-operated Azure OpenAI path retains that certification coverage.</p>
         <p><strong>July 31, 2026:</strong> new enablement of Restricted SharePoint Search is blocked. Move your oversharing control to Restricted Content Discovery through SharePoint Advanced Management.</p>
         <p><strong>Ongoing:</strong> Anthropic, which powers Cowork and Researcher, sits outside the EU Data Boundary and is a named subprocessor. Confirm BAA coverage with your Microsoft account team before you turn on Cowork or Researcher for PHI-adjacent work.</p>
       </div>
@@ -810,7 +810,7 @@ details[open] summary::before { content: "\2212"; }
         <li><strong>Turn on free Chat</strong> for everyone eligible (it is already included), and handle the web-search path for PHI-heavy groups first.</li>
         <li><strong>Buy a focused block of paid seats</strong> (start in the dozens, not the thousands) for leaders, managers, and analysts.</li>
         <li><strong>Do the oversharing work</strong> with SharePoint Advanced Management, and stand up the Agent Registry before you scale agents.</li>
-        <li><strong>Handle the three dated compliance items</strong> in the Healthcare section, the July 24 one first.</li>
+        <li><strong>Review the three time-sensitive compliance items</strong> in the Healthcare section, starting with the model-provider settings.</li>
       </ol>
       <div class="callout note">
         <p><strong>Not ready to buy yet?</strong> Run the Microsoft 365 Copilot Optimization Assessment and walk your leadership through the role matrix above. That is a real first step with no spend attached.</p>
