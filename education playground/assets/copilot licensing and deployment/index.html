@@ -339,8 +339,8 @@ details[open] summary::before { content: "\2212"; }
         <ol>
           <li><strong>Govern first.</strong> Decide who owns AI, what data is in bounds, and where the guardrails are before you buy a single seat.</li>
           <li>There are two licenses that matter: <strong>Copilot Chat</strong> (free, already in your M365) and <strong>Microsoft 365 Copilot</strong> (the paid seat). "Premium" is not a product you buy.</li>
-          <li>Give free Chat to everyone eligible. Buy paid seats for the roles where the work is heavy: leaders, managers, analysts.</li>
-          <li><strong>Cowork</strong> needs a paid seat plus an admin switch. <strong>Agents</strong> run across both tiers and are billed by usage: free for most work on a paid seat, metered on free Chat. Neither is a per-person license. Cap the spend.</li>
+          <li>Give free Chat to everyone eligible. Start paid seats with the heaviest roles (leaders, managers, analysts), then graduate knowledge workers as usage justifies. See <a href="#roles">who gets what by role</a>.</li>
+          <li><strong>Cowork</strong> suits manual, multi-step work where someone would otherwise pull information from several sources by hand. It needs a paid seat plus an admin switch. <strong>Agents</strong> run across both tiers, billed by usage: free for most work on a paid seat, metered on free Chat. Neither is a per-person license. Cap the spend.</li>
           <li>Paid seats make most agent use free. Free-Chat users pay per interaction. That one fact drives your budget.</li>
           <li>Let a governed set of people build agents. Let everyone use the ones you approve.</li>
           <li>Roll out in waves and let the data pull the next one. A small paid pilot beats a big-bang launch every time.</li>
@@ -423,7 +423,7 @@ details[open] summary::before { content: "\2212"; }
       <ul>
         <li><strong>The Microsoft 365 admin center is the control plane.</strong> Manage who gets Copilot and Chat, control public web access, and manage agents from one place.</li>
         <li><strong>SharePoint Advanced Management comes with your paid Copilot seat.</strong> This is the one people miss. It is included, and it is where you fix the oversharing problem before it becomes an agent problem. Use its Data Access Governance reports to find broadly shared and externally shared sites, and use <strong>Restricted Content Discovery (RCD)</strong> to cut accidental tenant-wide discovery of sensitive sites while you clean up the permissions. RCD reduces discoverability, it is not an access control, so pair it with permission cleanup, labels, and DLP.</li>
-        <li><strong>Microsoft Purview is your data governance layer.</strong> Sensitivity labels that Copilot and agents honor, DSPM for AI to spot risky usage and oversharing, plus audit, eDiscovery, and insider-risk coverage across prompts and responses.</li>
+        <li><strong>Microsoft Purview is your data governance layer.</strong> Sensitivity labels that Copilot and agents honor, Data Security Posture Management (DSPM) for AI to spot risky usage and oversharing, plus audit, eDiscovery, and insider-risk coverage across prompts and responses.</li>
         <li><strong>Agent 365 and the Agent Registry govern the agents.</strong> More on this in the <a href="#agents">Agents section</a>. The short version: one inventory across your agent platforms, with the power to observe, approve, block, and secure them.</li>
         <li><strong>Least privilege by default.</strong> Use the AI Administrator role to run agent governance, not Global Admin.</li>
       </ul>
@@ -502,21 +502,21 @@ details[open] summary::before { content: "\2212"; }
         </div>
 
         <div class="role-panel" data-role="frontline">
-          <div class="role-head"><h3>Frontline worker (F-plans)</h3><span class="tier-pill chat">Chat if eligible</span></div>
-          <p>Shift-based and deskless staff. Free Chat is the right on-ramp where their plan qualifies. A paid seat can be added to F1 or F3 for the specific frontline roles that do enough knowledge work to justify it.</p>
+          <div class="role-head"><h3>Frontline worker (F-plans)</h3><span class="tier-pill chat">Chat if eligible</span> <span class="tier-pill paid">Paid seat for their leaders</span></div>
+          <p>Shift-based and deskless staff. Free Chat is the right on-ramp where their plan qualifies. Their leaders are a different case: frontline nursing managers and unit leaders do enough meeting and coordination work to belong in the paid-seat manager tier above. Add a paid seat to F1 or F3 for those roles.</p>
           <div class="own-extra">
-            <div class="box own"><h4>Comes with the seat</h4><ul><li>Free Chat for quick answers and drafting on eligible plans</li><li>Paid Copilot can layer onto F1 / F3 for select roles</li></ul></div>
+            <div class="box own"><h4>Comes with the seat</h4><ul><li>Free Chat for quick answers and drafting on eligible plans</li><li>Paid Copilot layered onto F1 / F3 for frontline leaders and select roles</li></ul></div>
             <div class="box extra"><h4>Confirm before you assume</h4><ul><li>Cowork on frontline plans is not clearly documented. Verify with your account team before you promise it.</li></ul></div>
           </div>
-          <p class="role-example">Healthcare example: a unit clerk uses Chat for quick answers and message drafting on a shared device, without a paid seat.</p>
+          <p class="role-example">Healthcare example: a unit clerk uses Chat on a shared device without a paid seat, while the nurse manager over that unit gets a paid seat for recaps and coordination.</p>
         </div>
 
         <div class="role-panel" data-role="security">
-          <div class="role-head"><h3>Security / Compliance team</h3><span class="tier-pill sep">Security Copilot</span></div>
-          <p>A different product for a different job. Security Copilot is purpose-built for threat hunting and incident response and plugs into Defender, Purview, Entra, and Intune. Your compliance leads also own the guardrails for everyone else's agents.</p>
+          <div class="role-head"><h3>Security / Compliance team</h3><span class="tier-pill sep">Security Copilot</span> <span class="tier-pill paid">+ paid seat for collab</span></div>
+          <p>A specialized product plus a regular seat. Security Copilot is purpose-built for threat hunting and incident response and plugs into Defender, Purview, Entra, and Intune. On top of that, give the team a paid Microsoft 365 Copilot seat for their own meetings, reporting, and documentation, since they live in that work too. Your compliance leads also own the guardrails for everyone else's agents.</p>
           <div class="own-extra">
-            <div class="box own"><h4>What they use</h4><ul><li>Microsoft Security Copilot for SOC work (separate product)</li><li>Purview and the admin center to govern all Copilot and agent activity</li></ul></div>
-            <div class="box extra"><h4>Their cross-cutting job</h4><ul><li>Sensitivity labels, DSPM for AI, and the Agent Registry for the whole org</li></ul></div>
+            <div class="box own"><h4>What they use</h4><ul><li>Microsoft Security Copilot for SOC work (separate product)</li><li>A paid Microsoft 365 Copilot seat for their own collaboration and reporting</li><li>Purview and the admin center to govern all Copilot and agent activity</li></ul></div>
+            <div class="box extra"><h4>Their cross-cutting job</h4><ul><li>Sensitivity labels, Data Security Posture Management (DSPM) for AI, and the Agent Registry for the whole org</li></ul></div>
           </div>
           <p class="role-example">Healthcare example: the compliance officer sets label policies so agents never surface PHI-marked files to people who should not summarize them.</p>
         </div>
@@ -532,8 +532,8 @@ details[open] summary::before { content: "\2212"; }
             <tr><td><strong>Analyst</strong></td><td>Paid Microsoft 365 Copilot</td><td>Excel and Analyst, data-to-deck</td><td>Cowork, Studio capacity, Azure for custom</td></tr>
             <tr><td><strong>Knowledge worker</strong></td><td>Start free Chat, graduate to paid</td><td>Web chat, file upload, approved agents</td><td>Paid seat; metered agents on Chat</td></tr>
             <tr><td><strong>Engineer / Dev</strong></td><td>GitHub Copilot + paid seat</td><td>Code assist, collab, doc drafting</td><td>Studio license, Azure consumption</td></tr>
-            <tr><td><strong>Frontline (F-plan)</strong></td><td>Free Chat if eligible</td><td>Web chat on eligible plans</td><td>Paid add-on on F1 / F3 (confirm Cowork)</td></tr>
-            <tr><td><strong>Security / Compliance</strong></td><td>Security Copilot</td><td>SOC workflows, governance tooling</td><td>Consumption per Security Copilot terms</td></tr>
+            <tr><td><strong>Frontline (F-plan)</strong></td><td>Free Chat; paid seat for their leaders</td><td>Web chat; recaps + coordination for frontline managers</td><td>Paid add-on on F1 / F3 (confirm Cowork)</td></tr>
+            <tr><td><strong>Security / Compliance</strong></td><td>Security Copilot + paid seat</td><td>SOC workflows, governance tooling, own collab</td><td>Consumption per Security Copilot terms</td></tr>
           </tbody>
         </table>
       </div>
@@ -690,7 +690,7 @@ details[open] summary::before { content: "\2212"; }
         <li><strong>The Agent Registry</strong> in the Microsoft 365 admin center gives you one inventory across platforms (Microsoft, partner, and homegrown from Copilot Studio, Agent Builder, SharePoint, and Foundry). You can block, allow, and approve from there. Draft-agent visibility still varies by platform, so keep the platform-level views too. Agent 365 is the broader control plane above it.</li>
         <li><strong>Use the AI Administrator role</strong>, not Global Admin, to govern agents. Least privilege by default.</li>
         <li><strong>Power Platform DLP</strong> lets you force every agent to require sign-in, block risky knowledge connectors, route makers into managed environments, and even disable generative-AI agent publishing until a review is done.</li>
-        <li><strong>Purview</strong> carries the data side: sensitivity labels the agents honor, DSPM for AI to spot oversharing, plus audit, eDiscovery, and insider-risk coverage for prompts and responses.</li>
+        <li><strong>Purview</strong> carries the data side: sensitivity labels the agents honor, Data Security Posture Management (DSPM) for AI to spot oversharing, plus audit, eDiscovery, and insider-risk coverage for prompts and responses.</li>
       </ul>
 
       <h3>Agent 365: the control plane when agents scale</h3>
