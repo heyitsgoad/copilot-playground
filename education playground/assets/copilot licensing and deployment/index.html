@@ -341,7 +341,7 @@ details[open] summary::before { content: "\2212"; }
           <li>There are two licenses that matter: <strong>Copilot Chat</strong> (free, already in your M365) and <strong>Microsoft 365 Copilot</strong> (the paid seat). "Premium" is not a product you buy.</li>
           <li>Give free Chat to everyone eligible. Start paid seats with the heaviest roles (leaders, managers, analysts), then graduate knowledge workers as usage justifies. See <a href="#roles">who gets what by role</a>.</li>
           <li><strong>Cowork</strong> suits manual, multi-step work where someone would otherwise pull information from several sources by hand. It needs a paid seat plus an admin switch. <strong>Agents</strong> run across both tiers, billed by usage: free for most work on a paid seat, metered on free Chat. Neither is a per-person license. Cap the spend.</li>
-          <li>Paid seats make most agent use free. Free-Chat users pay per interaction. That one fact drives your budget.</li>
+          <li>Paid seats make most agent use free. Free-Chat users pay per agent interaction. That one fact drives your budget.</li>
           <li>Let a governed set of people build agents. Let everyone use the ones you approve.</li>
           <li>Roll out in waves and let the data pull the next one. A small paid pilot beats a big-bang launch every time.</li>
         </ol>
@@ -372,7 +372,7 @@ details[open] summary::before { content: "\2212"; }
           <div class="tier-tag">Usage layer &middot; Billed by consumption</div>
           <h3>Copilot Cowork &amp; agents</h3>
           <div class="price">Billed by usage in Copilot Credits</div>
-          <p>Cowork runs multi-step work on its own and needs a paid seat plus an admin switch. Agents answer and act on your behalf, and they run across both tiers. Neither is a per-person license. A paid seat makes most agent use free; on free Chat you pay per interaction.</p>
+          <p>Cowork runs multi-step work on its own and needs a paid seat plus an admin switch. Agents answer and act on your behalf, and they run across both tiers. Neither is a per-person license. A paid seat makes most agent use free; on free Chat you pay per agent interaction.</p>
         </div>
       </div>
 
@@ -488,7 +488,22 @@ details[open] summary::before { content: "\2212"; }
             <div class="box own"><h4>Comes with free Chat</h4><ul><li>Web research, drafting, and analysis on uploaded files</li><li>Meeting prep and writing help</li><li>Approved pay-as-you-go agents (metered)</li></ul></div>
             <div class="box extra"><h4>What the paid seat adds</h4><ul><li>Grounding in their own email, files, and meetings</li><li>In-app editing in Word and Outlook</li><li>"What did I miss while I was out?" across their own data</li></ul></div>
           </div>
-          <p class="role-example">Healthcare example: a scheduling coordinator uses free Chat for drafting and quick web research, and earns a paid seat once the team leans on it daily.</p>
+          <div class="callout note" style="margin-top:14px;">
+            <p class="callout-title">The second wave of paid seats</p>
+            <p>After the first tier (leaders, managers, analysts), these functions are where paid seats usually pay off next. Graduate them as the dashboard shows real, repeated use, not all at once:</p>
+            <ul style="margin-bottom:0;">
+              <li><strong>HR</strong>: policy drafting, employee-question triage, onboarding content</li>
+              <li><strong>Finance &amp; revenue cycle</strong>: reporting, reconciliation, denial and variance narratives</li>
+              <li><strong>Marketing &amp; communications</strong>: campaign content, internal comms, first drafts at volume</li>
+              <li><strong>Nursing leadership</strong>: care-coordination summaries, staffing and committee prep</li>
+              <li><strong>Legal, risk &amp; compliance</strong>: document review, policy summarization, audit prep</li>
+              <li><strong>IT &amp; informatics</strong>: ticket triage, documentation, knowledge-base upkeep</li>
+              <li><strong>Supply chain</strong>: vendor and contract summaries, operational reporting</li>
+              <li><strong>Quality &amp; patient safety</strong>: event summaries, report drafting, trend write-ups</li>
+              <li><strong>Population health</strong>: multi-source synthesis and program reporting</li>
+            </ul>
+          </div>
+          <p class="role-example">Healthcare example: a scheduling coordinator uses free Chat for drafting and quick web research, and earns a paid seat once the team leans on it daily. An HR generalist or a revenue-cycle analyst is often in the next wave up.</p>
         </div>
 
         <div class="role-panel" data-role="engineer">
@@ -538,7 +553,7 @@ details[open] summary::before { content: "\2212"; }
         </table>
       </div>
       <div class="callout note">
-        <p><strong>How to slice your groups.</strong> Do not license by title alone. Slice by <em>role plus business unit</em>. Give free Chat to every eligible person. For paid seats, start with the units where the ROI is obvious: leadership, revenue cycle, finance and operations, HR, and IT. Expand from there using real usage data, not requests.</p>
+        <p><strong>How to slice your groups.</strong> Do not license by title alone. Slice by <em>role plus business unit</em>. Give free Chat to every eligible person. For paid seats, think in two waves: the first tier is leaders, managers, and analysts, then a second wave of HR, finance and revenue cycle, marketing and comms, nursing leadership, legal and risk, IT and informatics, supply chain, quality, and population health. Expand from the first wave into the second using real usage data, not requests.</p>
       </div>
     </section>
 
@@ -613,7 +628,7 @@ details[open] summary::before { content: "\2212"; }
       <div class="sec-kicker">06 &middot; The money question</div>
       <h2>Consumption without surprises.</h2>
       <div class="lens-badges"><span class="badge exec">For leaders</span><span class="badge it">For IT</span></div>
-      <p>This is where customers get nervous, and it is simpler than it looks once you hold one fact in your head: if you own the paid seat, most of your everyday agent use is already paid for. If you are on free Chat, every agent answer is a metered charge.</p>
+      <p>This is where customers get nervous, and it is simpler than it looks once you hold one fact in your head: if you own the paid seat, most of your everyday agent use is already paid for. If you are on free Chat, each agent interaction is a metered charge. Regular Chat itself stays free.</p>
 
       <h3>The currency: Copilot Credits</h3>
       <p>Agent and Cowork usage is billed in Copilot Credits. Microsoft renamed these from "messages" on September 1, 2025 with no change to the rate. Pay-as-you-go runs about $0.01 per credit through an Azure subscription. Different actions cost different amounts of credits.</p>
@@ -633,7 +648,7 @@ details[open] summary::before { content: "\2212"; }
 
       <h3>The fact that drives your budget</h3>
       <div class="callout key">
-        <p>For a user with a <strong>paid Microsoft 365 Copilot seat</strong>, everyday employee-facing agent use (classic answers, generative answers, agent actions, and grounding on your own data) is <strong>zero-rated</strong>. It does not draw down credits, within fair-use limits. For a user on <strong>free Chat</strong>, those same interactions are <strong>metered</strong> at the rates above. So the paid seat is not only a productivity upgrade, it also flattens your agent bill for that person.</p>
+        <p>For a user with a <strong>paid Microsoft 365 Copilot seat</strong>, everyday employee-facing agent use (classic answers, generative answers, agent actions, and grounding on your own data) is <strong>zero-rated</strong>. It does not draw down credits, within fair-use limits. For a user on <strong>free Chat</strong>, those same agent interactions are <strong>metered</strong> at the rates above, though regular Chat stays free. So the paid seat is not only a productivity upgrade, it also flattens your agent bill for that person.</p>
       </div>
 
       <h3>Prepaid or pay-as-you-go</h3>
@@ -679,7 +694,7 @@ details[open] summary::before { content: "\2212"; }
       <h3>Who can use: it follows the license</h3>
       <ul>
         <li><strong>Paid Microsoft 365 Copilot seat:</strong> full access to the Agent Store, custom agents grounded in your data, and the Researcher and Analyst agents, with most usage zero-rated.</li>
-        <li><strong>Free Chat:</strong> can use approved pay-as-you-go agents, metered per interaction.</li>
+        <li><strong>Free Chat:</strong> can use approved pay-as-you-go agents, metered per agent interaction.</li>
         <li><strong>Sharing:</strong> a maker shares an agent with named people or security groups, with the whole org, or publishes it to your catalog (which requires admin approval). Someone using a shared Copilot Studio agent does not need a Studio license. The usage bills to the tenant.</li>
         <li><strong>Foundry-built agents:</strong> access is granted with the Foundry Agent Consumer role, and it can be scoped down to an individual agent.</li>
       </ul>
