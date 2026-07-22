@@ -58,6 +58,58 @@ Every session is 30 or 60 minutes and stands on its own. Run one a week, block a
 | 3.2 | More Agents Worth Building | 30 min |
 | 3.3 | For Your Executive Assistant: Own the Daily Prep *(optional)* | 30 min |
 
+<details>
+<summary><strong>📋 See exactly what each session covers (click to expand the full syllabus)</strong></summary>
+
+<br>
+
+Each session in the table above expands below into what actually gets covered inside it, so a leader or champion can see the contents before booking the room or opening a file.
+
+**Tier 1 · Foundations**
+
+**1.1 · Meet Copilot, Find It, and Make It Yours** · 60 min
+- **Is my data safe:** the tenant boundary, why your prompts are not used to train models, permission-trimmed answers, and the Purview audit trail
+- **Where to find Copilot:** the app tour across the Copilot front door, the Office ribbon, Teams meetings, mobile, and using it by voice
+- **Make it sound like you:** setting up personalization and custom instructions, plus turning on Memory so you stop repeating yourself
+
+**1.2 · Prompt Like You Mean It: Your First Win and a Second Set of Eyes** · 60 min
+- **The four-part prompt formula:** goal, context, source, and format, and the difference between a weak ask and a useful answer
+- **Your first 5-minute win:** ready prompts to catch up on a thread, clear the inbox, and walk into a meeting prepared
+- **A second set of eyes:** power-user lenses like Contextual Filter, Devil's Advocate, and Voice Distiller
+
+**1.3 · By App: Where the Time Comes Back** · 60 min
+- **Outlook:** inbox triage, long-thread summaries, drafting in your tone, and meeting prep
+- **Word:** drafting from your own files, rewriting for an audience, and the one-page board summary
+- **Excel:** plain-English analysis, trend spotting, and Agent Mode
+- **PowerPoint:** turning a document into a first-draft deck and cleaning up cluttered slides
+- **Teams and Copilot Chat:** meeting recaps, decisions and owners, audio overviews, and reasoning across all your work
+
+**1.4 · Put It on a Schedule: Your Morning Brief** · 30 min
+- **Scheduled prompts:** the first chief-of-staff move, setting up a weekday brief that lands before you open your laptop
+
+**Tier 2 · Deeper Value**
+
+**2.1 · Premium Reasoning Agents: Researcher + Analyst** · 60 min
+- **Researcher:** deep, multi-step, cited research across your work and the open web
+- **Analyst:** reasoning over raw spreadsheets, writing and running its own analysis code
+- **Put them together:** one cited briefing and a recommendation on a real decision
+
+**2.2 · Copilot Notebooks: One Place for a Big Topic** · 30 min *(optional)*
+- **A grounded workspace:** gather the documents for one topic, ask across all of them at once, and generate an audio overview to catch up hands-free
+
+**Tier 3 · Build Your Own**
+
+**3.1 · Build Your Chief of Staff Agent** · 60 min
+- **Your first agent:** give Copilot a standing job that thinks at your altitude and sounds like you, built in about 15 minutes from two Word templates, then shared with your team
+
+**3.2 · More Agents Worth Building** · 30 min
+- **Three to build and share:** BossBuddy for strategy, Taskmaster for tracking what needs attention, and Impact Check for seeing your influence, plus saving reusable prompts in the Prompt Gallery
+
+**3.3 · For Your Executive Assistant: Own the Daily Prep** · 30 min *(optional)*
+- **Executive and assistant together:** share your personalization profile so their output sounds like you, then hand off the daily inbox triage, briefings, and follow-ups
+
+</details>
+
 > [!NOTE]
 > Running this for your own leaders? This is the shape of a first-class executive enablement program. Your leadership goes first, sets the example, and the rest of the organization follows. Built with Microsoft, run by you.
 
