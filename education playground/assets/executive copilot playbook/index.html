@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Getting Started with Copilot Premium: An Executive Playbook</title>
+<script>
+  (() => {
+    const param = new URLSearchParams(window.location.search).get("scoutTheme");
+    const theme =
+      param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+<style>
+:root {
+  color-scheme: light;
+  --cp-bg: #f4f7fe;
+  --cp-bg-elevated: #ffffff;
+  --cp-surface: #ffffff;
+  --cp-surface-soft: #edf1fb;
+  --cp-border: #dbe3f4;
+  --cp-border-strong: #a9b6d6;
+  --cp-text: #111c44;
+  --cp-text-muted: #45536e;
+  --cp-text-soft: #6b7896;
+  --cp-accent: #2d6cdf;
+  --cp-accent-hover: #1e5ac6;
+  --cp-accent-soft: rgba(45, 108, 223, 0.10);
+  --cp-accent-fg: #ffffff;
+  --cp-teal: #12b3c4;
+  --cp-gold: #f0a500;
+  --cp-purple: #7c5cfc;
+  --cp-t1: #2d6cdf;
+  --cp-t2: #7c5cfc;
+  --cp-t3: #d98c00;
+  --cp-t1-soft: rgba(45, 108, 223, 0.10);
+  --cp-t2-soft: rgba(124, 92, 252, 0.12);
+  --cp-t3-soft: rgba(240, 165, 0, 0.14);
+  --cp-success: #10b981;
+  --cp-link: #2d6cdf;
+  --cp-shadow: 0 18px 48px rgba(17, 28, 68, 0.14);
+  --cp-panel-strong: rgba(255, 255, 255, 0.96);
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --cp-bg: #111c44;
+  --cp-bg-elevated: #16224f;
+  --cp-surface: #1b2a55;
+  --cp-surface-soft: #22315f;
+  --cp-border: #2c3b69;
+  --cp-border-strong: #3b4d82;
+  --cp-text: #f4f7fe;
+  --cp-text-muted: #9fb0d8;
+  --cp-text-soft: #8290b5;
+  --cp-accent: #5b8def;
+  --cp-accent-hover: #7ba3f3;
+  --cp-accent-soft: rgba(91, 141, 239, 0.16);
+  --cp-accent-fg: #0b1330;
+  --cp-teal: #3fd0e0;
+  --cp-gold: #fbbf24;
+  --cp-purple: #a78bfa;
+  --cp-t1: #5b8def;
+  --cp-t2: #a78bfa;
+  --cp-t3: #fbbf24;
+  --cp-t1-soft: rgba(91, 141, 239, 0.16);
+  --cp-t2-soft: rgba(167, 139, 250, 0.16);
+  --cp-t3-soft: rgba(251, 191, 36, 0.16);
+  --cp-success: #4ade80;
+  --cp-link: #7ba3f3;
+  --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.4);
+  --cp-panel-strong: rgba(27, 42, 85, 0.96);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--cp-bg);
+  color: var(--cp-text);
+  font-family: "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--cp-link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: var(--cp-accent); color: var(--cp-accent-fg);
+  padding: 10px 16px; border-radius: 0 0 10px 0; z-index: 100;
+}
+.skip-link:focus { left: 0; }
+
+/* Layout */
+.shell { display: flex; max-width: 1280px; margin: 0 auto; gap: 0; }
+.sidebar {
+  width: 288px; flex: 0 0 288px;
+  position: sticky; top: 0; align-self: flex-start;
+  height: 100vh; overflow-y: auto;
+  padding: 28px 20px 40px 28px;
+  border-right: 1px solid var(--cp-border);
+}
+.main { flex: 1 1 auto; min-width: 0; padding: 0 44px 120px; }
+
+/* Sidebar nav */
+.brand { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.brand-mark {
+  width: 32px; height: 32px; border-radius: 9px;
+  background: linear-gradient(135deg, var(--cp-accent), var(--cp-teal));
+  color: #fff; display: grid; place-items: center; font-weight: 800; font-size: 15px;
+}
+.brand-name { font-weight: 700; font-size: 15px; letter-spacing: 0.2px; }
+.sidebar-sub { color: var(--cp-text-soft); font-size: 12.5px; margin: 0 0 22px 42px; }
+.nav-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.9px; color: var(--cp-text-soft); margin: 18px 0 8px; }
+.nav a {
+  display: block; color: var(--cp-text-muted); font-size: 14px;
+  padding: 7px 12px; border-radius: 8px; border-left: 2px solid transparent;
+  text-decoration: none;
+}
+.nav a:hover { background: var(--cp-surface-soft); color: var(--cp-text); text-decoration: none; }
+.nav a.active { color: var(--cp-accent); background: var(--cp-accent-soft); border-left-color: var(--cp-accent); font-weight: 600; }
+.nav .num { color: var(--cp-text-soft); font-variant-numeric: tabular-nums; margin-right: 8px; }
+
+/* Topbar (mobile) */
+.topbar {
+  display: none; position: sticky; top: 0; z-index: 40;
+  align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 18px; background: var(--cp-panel-strong);
+  backdrop-filter: blur(8px); border-bottom: 1px solid var(--cp-border);
+}
+.icon-btn {
+  border: 1px solid var(--cp-border); background: var(--cp-surface);
+  color: var(--cp-text); border-radius: 9px; padding: 8px 12px;
+  font-size: 14px; cursor: pointer; font-family: inherit;
+}
+.icon-btn:hover { border-color: var(--cp-border-strong); }
+
+/* Hero */
+.hero { padding: 60px 0 34px; border-bottom: 1px solid var(--cp-border); }
+.kicker { color: var(--cp-teal); font-weight: 700; font-size: 12.5px; letter-spacing: 1.4px; text-transform: uppercase; }
+h1 { font-size: 42px; line-height: 1.1; margin: 14px 0 18px; letter-spacing: -0.6px; font-weight: 800; max-width: 18ch; }
+.lede { font-size: 19px; color: var(--cp-text-muted); max-width: 60ch; margin: 0 0 22px; }
+.oneliner {
+  border-left: 3px solid var(--cp-gold); padding: 4px 0 4px 18px;
+  font-size: 16.5px; color: var(--cp-text); max-width: 60ch; margin: 22px 0 24px;
+}
+.chips { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 8px; }
+.chip {
+  font-size: 12.5px; color: var(--cp-text-muted); background: var(--cp-surface);
+  border: 1px solid var(--cp-border); border-radius: 999px; padding: 6px 13px;
+}
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 26px 0 4px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; font-family: inherit;
+  font-size: 14.5px; font-weight: 650; padding: 11px 20px; border-radius: 10px;
+  border: 1px solid var(--cp-border); background: var(--cp-surface); color: var(--cp-text);
+  cursor: pointer; text-decoration: none;
+}
+.btn:hover { border-color: var(--cp-border-strong); text-decoration: none; }
+.btn.primary { background: var(--cp-accent); color: var(--cp-accent-fg); border-color: var(--cp-accent); }
+.btn.primary:hover { background: var(--cp-accent-hover); }
+.hero-art {
+  margin: 30px 0 0; border: 1px solid var(--cp-border); border-radius: 16px;
+  overflow: hidden; box-shadow: var(--cp-shadow); max-width: 720px;
+}
+.hero-art img { display: block; width: 100%; height: auto; }
+
+/* Sections */
+section { padding: 46px 0; border-bottom: 1px solid var(--cp-border); scroll-margin-top: 20px; }
+.sec-kicker { color: var(--cp-teal); font-weight: 700; font-size: 12px; letter-spacing: 1.1px; text-transform: uppercase; }
+h2 { font-size: 28px; margin: 8px 0 6px; letter-spacing: -0.3px; font-weight: 750; }
+h3 { font-size: 18.5px; margin: 26px 0 8px; font-weight: 700; }
+h4 { font-size: 15.5px; margin: 18px 0 6px; font-weight: 700; }
+p { margin: 12px 0; max-width: 68ch; }
+ul, ol { max-width: 68ch; padding-left: 22px; }
+li { margin: 7px 0; }
+strong { font-weight: 700; }
+.lead-p { font-size: 17.5px; color: var(--cp-text-muted); }
+
+/* Value grid */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 22px 0; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 22px 0; }
+.card {
+  background: var(--cp-surface); border: 1px solid var(--cp-border);
+  border-radius: 16px; padding: 20px 22px; margin: 0;
+  box-shadow: 0 1px 2px rgba(17, 28, 68, 0.06);
+}
+.card h4 { margin: 0 0 6px; }
+.card p { margin: 0; font-size: 14.5px; color: var(--cp-text-muted); }
+
+/* Tier cards */
+.tier-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
+.tier-card { background: var(--cp-surface); border: 1px solid var(--cp-border); border-radius: 16px; padding: 22px; position: relative; overflow: hidden; }
+.tier-card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; }
+.tier-card.t1::before { background: var(--cp-t1); }
+.tier-card.t2::before { background: var(--cp-t2); }
+.tier-card.t3::before { background: var(--cp-t3); }
+.tier-eyebrow { font-size: 11.5px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+.t1 .tier-eyebrow { color: var(--cp-t1); }
+.t2 .tier-eyebrow { color: var(--cp-t2); }
+.t3 .tier-eyebrow { color: var(--cp-t3); }
+.tier-card h3 { margin: 6px 0 8px; font-size: 19px; }
+.tier-card p { font-size: 14.5px; color: var(--cp-text-muted); margin: 0 0 12px; }
+.tier-meta { font-size: 12.5px; color: var(--cp-text-soft); font-style: italic; }
+
+/* Session explorer */
+.tier-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 22px; }
+.tier-tab {
+  border: 1px solid var(--cp-border); background: var(--cp-surface); color: var(--cp-text-muted);
+  border-radius: 999px; padding: 10px 18px; font-size: 14px; font-weight: 650; cursor: pointer;
+  font-family: inherit;
+}
+.tier-tab:hover { border-color: var(--cp-border-strong); color: var(--cp-text); }
+.tier-tab.active[data-tier="1"] { background: var(--cp-t1); color: #fff; border-color: var(--cp-t1); }
+.tier-tab.active[data-tier="2"] { background: var(--cp-t2); color: #fff; border-color: var(--cp-t2); }
+.tier-tab.active[data-tier="3"] { background: var(--cp-t3); color: #fff; border-color: var(--cp-t3); }
+.tier-panel { display: none; }
+.tier-panel.active { display: block; animation: fade 0.25s ease; }
+@keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.tier-intro { font-size: 14.5px; color: var(--cp-text-soft); font-style: italic; margin: 0 0 14px; }
+
+details.session {
+  border: 1px solid var(--cp-border); border-radius: 14px; padding: 2px 20px; margin: 12px 0;
+  background: var(--cp-surface);
+}
+details.session[open] { padding-bottom: 16px; box-shadow: 0 1px 2px rgba(17, 28, 68, 0.06); }
+details.session summary {
+  cursor: pointer; padding: 16px 0; list-style: none; display: flex; align-items: center; gap: 14px;
+}
+details.session summary::-webkit-details-marker { display: none; }
+.s-num {
+  flex: 0 0 auto; min-width: 44px; height: 30px; border-radius: 8px; padding: 0 8px;
+  display: grid; place-items: center; font-weight: 800; font-size: 13px; font-variant-numeric: tabular-nums;
+}
+.t1 .s-num, .tier-panel[data-tier="1"] .s-num { background: var(--cp-t1-soft); color: var(--cp-t1); }
+.tier-panel[data-tier="2"] .s-num { background: var(--cp-t2-soft); color: var(--cp-t2); }
+.tier-panel[data-tier="3"] .s-num { background: var(--cp-t3-soft); color: var(--cp-t3); }
+.s-title { font-weight: 700; font-size: 15.5px; flex: 1 1 auto; }
+.s-time { font-size: 12.5px; color: var(--cp-text-soft); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.s-opt { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--cp-text-soft); border: 1px solid var(--cp-border); border-radius: 6px; padding: 2px 7px; }
+.s-plus { flex: 0 0 auto; color: var(--cp-text-soft); font-size: 20px; font-weight: 400; width: 16px; text-align: center; }
+details.session[open] .s-plus { transform: rotate(45deg); }
+.s-body { padding: 2px 0 4px 58px; }
+.s-hook { font-style: italic; color: var(--cp-text-muted); margin: 0 0 12px; font-size: 14.5px; }
+.s-body ul { margin: 0 0 12px; padding-left: 20px; }
+.s-body li { font-size: 14.5px; margin: 6px 0; }
+.s-body li strong { color: var(--cp-text); }
+.s-res { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.s-res a {
+  font-size: 12.5px; background: var(--cp-surface-soft); border: 1px solid var(--cp-border);
+  border-radius: 999px; padding: 5px 12px; color: var(--cp-text-muted); text-decoration: none;
+}
+.s-res a:hover { border-color: var(--cp-accent); color: var(--cp-accent); text-decoration: none; }
+.s-res .res-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--cp-text-soft); align-self: center; margin-right: 2px; }
+
+/* Run models + steps */
+.run-card { background: var(--cp-surface); border: 1px solid var(--cp-border); border-radius: 16px; padding: 20px 22px; }
+.run-card .run-tag { font-size: 12px; font-weight: 800; color: var(--cp-accent); text-transform: uppercase; letter-spacing: 0.6px; }
+.run-card h4 { margin: 6px 0 8px; font-size: 16.5px; }
+.run-card p { font-size: 14px; color: var(--cp-text-muted); margin: 0 0 8px; }
+.run-card .best { font-size: 13px; color: var(--cp-text-soft); }
+.run-card .best strong { color: var(--cp-text-muted); }
+
+/* Habit table */
+table { border-collapse: collapse; width: 100%; margin: 20px 0; font-size: 14px; }
+th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--cp-border); vertical-align: top; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--cp-text-soft); }
+td strong { color: var(--cp-text); }
+
+/* Nuggets */
+.nugget { display: flex; gap: 16px; margin: 16px 0; }
+.nugget-num { flex: 0 0 34px; height: 34px; border-radius: 10px; background: var(--cp-accent-soft); color: var(--cp-accent); font-weight: 800; display: grid; place-items: center; font-size: 15px; }
+.nugget-body { flex: 1 1 auto; }
+.nugget-body h4 { margin: 3px 0 4px; }
+.nugget-body p { margin: 4px 0; font-size: 14.5px; color: var(--cp-text-muted); }
+.quote { border-left: 3px solid var(--cp-teal); padding-left: 14px; font-style: italic; color: var(--cp-text); font-size: 14.5px; margin: 8px 0 0; }
+
+/* Callouts */
+.callout { border-radius: 12px; padding: 14px 18px; margin: 18px 0; font-size: 14.5px; border: 1px solid var(--cp-border); }
+.callout.note { background: var(--cp-accent-soft); border-color: transparent; }
+.callout.gold { background: var(--cp-t3-soft); border-color: transparent; }
+.callout p { margin: 4px 0; max-width: none; }
+.callout .callout-title { font-weight: 700; }
+
+/* Downloads */
+.dl-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 22px 0; }
+.dl-card { display: block; background: var(--cp-surface); border: 1px solid var(--cp-border); border-radius: 16px; padding: 20px 22px; text-decoration: none; color: inherit; }
+.dl-card:hover { border-color: var(--cp-accent); text-decoration: none; box-shadow: var(--cp-shadow); }
+.dl-type { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.6px; padding: 3px 9px; border-radius: 6px; background: var(--cp-accent-soft); color: var(--cp-accent); }
+.dl-card h4 { margin: 12px 0 6px; font-size: 16px; }
+.dl-card p { margin: 0 0 12px; font-size: 14px; color: var(--cp-text-muted); }
+.dl-cta { font-size: 13.5px; font-weight: 700; color: var(--cp-accent); }
+
+/* Resource library */
+.res-group { margin: 20px 0; }
+.res-group h4 { margin: 0 0 8px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.6px; color: var(--cp-text-soft); }
+.res-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.res-links a { font-size: 13.5px; background: var(--cp-surface); border: 1px solid var(--cp-border); border-radius: 999px; padding: 6px 13px; color: var(--cp-text-muted); }
+.res-links a:hover { border-color: var(--cp-accent); color: var(--cp-accent); text-decoration: none; }
+
+.footer { padding: 40px 0 0; color: var(--cp-text-soft); font-size: 13.5px; }
+.cta-box { background: var(--cp-bg-elevated); border: 1px solid var(--cp-border); border-radius: 16px; padding: 24px 26px; margin: 8px 0 26px; }
+.cta-box h3 { margin-top: 0; }
+
+@media (max-width: 1000px) {
+  .sidebar { display: none; position: fixed; z-index: 45; background: var(--cp-bg-elevated); width: 300px; box-shadow: var(--cp-shadow); }
+  .sidebar.open { display: block; }
+  .topbar { display: flex; }
+  .main { padding: 0 22px 100px; }
+  .hero { padding: 32px 0 26px; }
+  h1 { font-size: 31px; }
+  .grid-2, .grid-3, .tier-cards, .dl-grid { grid-template-columns: 1fr; }
+  .s-body { padding-left: 8px; }
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#overview">Skip to content</a>
+
+<div class="topbar">
+  <div class="brand" style="margin:0;">
+    <div class="brand-mark">CP</div>
+    <span class="brand-name">Executive Playbook</span>
+  </div>
+  <button class="icon-btn" id="navToggle" aria-label="Open navigation">Menu</button>
+</div>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-mark">CP</div>
+      <span class="brand-name">Executive Playbook</span>
+    </div>
+    <p class="sidebar-sub">Getting started with Copilot Premium</p>
+    <nav class="nav" id="nav">
+      <div class="nav-label">Start</div>
+      <a href="#overview"><span class="num">00</span>The big picture</a>
+      <a href="#why"><span class="num">01</span>What Copilot Premium is</a>
+      <div class="nav-label">The program</div>
+      <a href="#tiers"><span class="num">02</span>How it works: three tiers</a>
+      <a href="#sessions"><span class="num">03</span>The nine sessions</a>
+      <a href="#run"><span class="num">04</span>Three ways to run it</a>
+      <div class="nav-label">Make it real</div>
+      <a href="#limits"><span class="num">05</span>Copilot, not autopilot</a>
+      <a href="#habit"><span class="num">06</span>The first 30 days</a>
+      <a href="#adoption"><span class="num">07</span>Make it stick</a>
+      <div class="nav-label">Take it with you</div>
+      <a href="#downloads"><span class="num">08</span>Downloads</a>
+      <a href="#resources"><span class="num">09</span>Resource library</a>
+    </nav>
+    <button class="icon-btn" id="themeToggle" style="margin-top:24px;width:100%;">Toggle light / dark</button>
+  </aside>
+
+  <main class="main">
+    <!-- HERO -->
+    <header class="hero" id="overview">
+      <div class="kicker">Executive Playbook &middot; 3 Tiers &middot; 9 Sessions</div>
+      <h1>Copilot does the catch-up. You make the calls.</h1>
+      <p class="lede">A plain-language program for a leader who is brand new to Copilot. It walks your executives from their first prompt to their own chief-of-staff agent, in three tiers of short sessions, so they get back to the calls only they can make.</p>
+      <div class="oneliner">Most leaders believe Copilot can help. What stalls them is not knowing if their data is safe, where to find it, or what to actually do first. This playbook answers all three, then builds the habit that makes it stick.</div>
+      <div class="chips">
+        <span class="chip">Is our data safe</span>
+        <span class="chip">Where to find it</span>
+        <span class="chip">One 5-minute win</span>
+        <span class="chip">The four-part prompt formula</span>
+        <span class="chip">Run it like a chief of staff</span>
+        <span class="chip">A 30-day habit plan</span>
+      </div>
+      <div class="btn-row">
+        <a class="btn primary" href="Copilot-Premium-Executive-Playbook.pdf">Download the playbook (PDF)</a>
+        <a class="btn" href="Copilot-Premium-Executive-Training.pptx">Working-session deck (PPTX)</a>
+        <a class="btn" href="Copilot-Premium-Executive-Sponsorship.pptx">Sponsorship deck (PPTX)</a>
+        <a class="btn" href="https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/getting%20started%20with%20copilot%20premium%2C%20an%20executive%20playbook.md">Read the full playbook</a>
+      </div>
+      <div class="hero-art">
+        <img src="playbook-cover.png" alt="Getting Started with Microsoft 365 Copilot Premium: Copilot does the catch-up, you make the calls">
+      </div>
+    </header>
+
+    <!-- WHY -->
+    <section id="why">
+      <div class="sec-kicker">01 &middot; What it is</div>
+      <h2>Premium works from your actual work, not the public web.</h2>
+      <p class="lead-p">Copilot Premium works inside the apps you already use, more like a chief of staff than a chatbot. Here is what a leader gets, and why each part matters.</p>
+      <div class="grid-2">
+        <div class="card"><h4>It knows your work</h4><p>Ask about a thread, a customer, a project, or a document by name and Copilot reads across your Microsoft 365 content to answer.</p></div>
+        <div class="card"><h4>It works where you work</h4><p>Built into Outlook, Word, Excel, PowerPoint, Teams, and a single Copilot Chat front door. No new tool to learn.</p></div>
+        <div class="card"><h4>It sounds like you</h4><p>Set it up once and it drafts in your voice and remembers your priorities, so less of what it produces needs a rewrite.</p></div>
+        <div class="card"><h4>It stays private</h4><p>Your prompts and data stay inside your tenant under enterprise protection. It is not used to train the models.</p></div>
+      </div>
+    </section>
+
+    <!-- TIERS -->
+    <section id="tiers">
+      <div class="sec-kicker">02 &middot; How it works</div>
+      <h2>Three tiers. Each one builds on the last.</h2>
+      <p>Start at the bottom. Every tier is useful on its own, and each adds more leverage than the last. Every session is 30 or 60 minutes and stands alone. Run one a week, block a half-day per tier, or do Tier 1 in a morning.</p>
+      <div class="tier-cards">
+        <div class="tier-card t1">
+          <div class="tier-eyebrow">Tier 1 &middot; Foundations</div>
+          <h3>Find it, trust it, make it yours</h3>
+          <p>Find it, trust it, give it a clear job, and put it to work. The core every leader should do.</p>
+          <div class="tier-meta">4 sessions &middot; about 3.5 hours</div>
+        </div>
+        <div class="tier-card t2">
+          <div class="tier-eyebrow">Tier 2 &middot; Deeper Value</div>
+          <h3>Agents that do the heavy thinking</h3>
+          <p>The premium reasoning agents that research and analyze, the work that used to take an analyst a week.</p>
+          <div class="tier-meta">1 core session &middot; 1 optional</div>
+        </div>
+        <div class="tier-card t3">
+          <div class="tier-eyebrow">Tier 3 &middot; Build Your Own</div>
+          <h3>A Copilot that comes to you</h3>
+          <p>Give Copilot a standing job as an agent that protects your time and thinks at your altitude.</p>
+          <div class="tier-meta">2 core sessions &middot; 1 optional</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SESSIONS -->
+    <section id="sessions">
+      <div class="sec-kicker">03 &middot; The nine sessions</div>
+      <h2>See exactly what each session covers.</h2>
+      <p>Pick a tier, then expand any session to see what actually gets covered inside it, from the Copilot app tour to setting up custom instructions. This is the syllabus a leader or champion can skim before booking the room.</p>
+
+      <div class="tier-tabs" role="tablist">
+        <button class="tier-tab active" data-tier="1" role="tab">Tier 1 &middot; Foundations</button>
+        <button class="tier-tab" data-tier="2" role="tab">Tier 2 &middot; Deeper Value</button>
+        <button class="tier-tab" data-tier="3" role="tab">Tier 3 &middot; Build Your Own</button>
+      </div>
+
+      <!-- TIER 1 -->
+      <div class="tier-panel active" data-tier="1">
+        <p class="tier-intro">Use Copilot, and prompt like you mean it. This tier alone gets your time back.</p>
+
+        <details class="session" open>
+          <summary><span class="s-num">1.1</span><span class="s-title">Meet Copilot, Find It, and Make It Yours</span><span class="s-time">60 min</span><span class="s-plus">+</span></summary>
+          <div class="s-body">
+            <p class="s-hook">"One hour: find it, trust it, and make it sound like you."</p>
+            <ul>
+              <li><strong>Is my data safe:</strong> the tenant boundary, why your prompts are not used to train models, permission-trimmed answers, and the Purview audit trail</li>
+              <li><strong>Where to find Copilot:</strong> the app tour across the Copilot front door, the Office ribbon, Teams meetings, mobile, and using it by voice</li>
+              <li><strong>Make it sound like you:</strong> setting up personalization and custom instructions, plus turning on Memory so you stop repeating yourself</li>
+            </ul>
+            <div class="s-res">
+              <span class="res-label">Prompts to steal</span>
+              <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/copilot%20personalization.md">Copilot Personalization</a>
+              <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/copilot%20memory.md">Copilot Memory</a>
+              <a href="https://github.com/heyitsgoad/copilot-chat-hipaa-websearch">HIPAA &amp; Web Search</a>
+            </div>
+          </div>
+        </details>
+
+        <details class="session">
+          <summary><span class="s-num">1.2</span><span class="s-title">Prompt Like You Mean It: Your First Win and a Second Set of Eyes</span><span class="s-time">60 min</span><span class="s-plus">+</span></summary>
+          <div class="s-body">
+            <p class="s-hook">"Better prompts beat better tools. Give it one job, then have it tell you what you're missing."</p>
+            <ul>
+              <li><strong>The four-part prompt formula:</strong> goal, context, source, and format, and the difference between a weak ask and a useful answer</li>
+              <li><strong>Your first 5-minute win:</strong> ready prompts to catch up on a thread, clear the inbox, and walk into a meeting prepared</li>
+              <li><strong>A second set of eyes:</strong> power-user lenses like Contextual Filter, Devil's Advocate, and Voice Distiller</li>
+            </ul>
+            <div class="s-res">
+              <span class="res-label">Prompts to steal</span>
+              <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/10%20executive%20prompts.md">10 Executive Prompts</a>
+              <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/contextual%20filter%2C%20gain%20a%20new%20perspective%20prompt.md">Contextual Filter</a>
+              <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/devils%20advocate%20skeptical%20stakeholder.md">Devil's Advocate</a>
+              <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/leadership%20style%20and%20voice%20distiller.md">Voice Distiller</a>
+            </div>
+          </div>
+        </details>
+
+        <details class="session">
+          <summary><span class="s-num">1.3</span><span class="s-title">By App: Where the Time Comes Back</span><span class="s-time">60 min</span><span class="s-plus">+</span></summary>
+          <div class="s-body">
+            <p class="s-hook">"Same assistant, tuned to whatever's in front of you."</p>
+            <ul>
+              <li><strong>Outlook:</strong> inbox triage, long-thread summaries, drafting in your tone, and meeting prep</li>
+              <li><strong>Word:</strong> drafting from your own files, rewriting for an audience, and the one-page board summary</li>
+              <li><strong>Excel:</strong> plain-English analysis, trend spotting, and Agent Mode</li>
+              <li><strong>PowerPoint:</strong> turning a document into a first-draft deck and cleaning up cluttered slides</li>
+              <li><strong>Teams and Copilot Chat:</strong> meeting recaps, decisions and owners, audio overviews, and reasoning across all your work</li>
+            </ul>
+            <div class="s-res">
+              <span class="res-label">Prompts to steal</span>
+              <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/copilot%20in%20outlook%20prompt%20pack.md">Outlook Prompt Pack</a>
+              <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/claude%20in%20copilot%20with%20agent%20mode%20for%20excel.md">Agent Mode for Excel</a>
+              <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/meeting%20notes%20to%20action%20items.md">Meeting Notes to Action Table</a>
+            </div>
+          </div>
+        </details>
+
+        <details class="session">
+          <summary><span class="s-num">1.4</span><span class="s-title">Put It on a Schedule: Your Morning Brief</span><span class="s-time">30 min</span><span class="s-plus">+</span></summary>
+          <div class="s-body">
+            <p class="s-hook">"Stop asking for the update. Have it come to you."</p>
+            <ul>
+              <li><strong>Scheduled prompts:</strong> the first chief-of-staff move, setting up a weekday brief that lands before you open your laptop, so you get the summary, not the search</li>
+            </ul>
+            <div class="s-res">
+              <span class="res-label">Prompts to steal</span>
+              <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/start%20my%20day.md">Start My Day</a>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <!-- TIER 2 -->
+      <div class="tier-panel" data-tier="2">
+        <p class="tier-intro">Agents that do the heavy thinking. Purpose-built reasoning agents that research and analyze.</p>
+
+        <details class="session" open>
+          <summary><span class="s-num">2.1</span><span class="s-title">Premium Reasoning Agents: Researcher + Analyst</span><span class="s-time">60 min</span><span class="s-plus">+</span></summary>
+          <div class="s-body">
+            <p class="s-hook">"Point Researcher at a decision and Analyst at your numbers, and walk in with the thinking already done."</p>
+            <ul>
+              <li><strong>Researcher:</strong> deep, multi-step, cited research across your work and the open web, built for strategy, not quick lookups</li>
+              <li><strong>Analyst:</strong> reasoning over raw spreadsheets, writing and running its own analysis code, and returning trends, tables, and visuals</li>
+              <li><strong>Put them together:</strong> one cited briefing and a recommendation you could act on, on a real decision</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="session">
+          <summary><span class="s-num">2.2</span><span class="s-title">Copilot Notebooks: One Place for a Big Topic</span><span class="s-time">30 min</span><span class="s-opt">Optional</span><span class="s-plus">+</span></summary>
+          <div class="s-body">
+            <p class="s-hook">"Gather it once, ask across all of it, then listen to it like a podcast."</p>
+            <ul>
+              <li><strong>A grounded workspace:</strong> gather the documents, notes, and recaps for one topic, ask across all of them at once, and generate an audio overview to catch up hands-free</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+
+      <!-- TIER 3 -->
+      <div class="tier-panel" data-tier="3">
+        <p class="tier-intro">Build a Copilot that comes to you. This is the chief-of-staff move.</p>
+
+        <details class="session" open>
+          <summary><span class="s-num">3.1</span><span class="s-title">Build Your Chief of Staff Agent</span><span class="s-time">60 min</span><span class="s-plus">+</span></summary>
+          <div class="s-body">
+            <p class="s-hook">"If you're typing the same prompt twice a week, that's an agent waiting to happen."</p>
+            <ul>
+              <li><strong>Your first agent:</strong> give Copilot a standing job that thinks at your altitude and sounds like you, built in about 15 minutes from two Word templates, then shared with your team</li>
+            </ul>
+            <div class="s-res">
+              <span class="res-label">Build it</span>
+              <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/agent%20playground/chief%20of%20staff.md">Chief of Staff agent</a>
+            </div>
+          </div>
+        </details>
+
+        <details class="session">
+          <summary><span class="s-num">3.2</span><span class="s-title">More Agents Worth Building</span><span class="s-time">30 min</span><span class="s-plus">+</span></summary>
+          <div class="s-body">
+            <p class="s-hook">"Build it once, and your whole team inherits it."</p>
+            <ul>
+              <li><strong>Three to build and share:</strong> BossBuddy for strategy, Taskmaster for tracking what needs attention, and Impact Check for seeing your influence, plus saving reusable prompts in the Prompt Gallery</li>
+            </ul>
+            <div class="s-res">
+              <span class="res-label">Build them</span>
+              <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/agent%20playground/bossbuddy.md">BossBuddy</a>
+              <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/agent%20playground/taskmaster.md">Taskmaster</a>
+              <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/agent%20playground/impact%20check.md">Impact Check</a>
+            </div>
+          </div>
+        </details>
+
+        <details class="session">
+          <summary><span class="s-num">3.3</span><span class="s-title">For Your Executive Assistant: Own the Daily Prep</span><span class="s-time">30 min</span><span class="s-opt">Optional</span><span class="s-plus">+</span></summary>
+          <div class="s-body">
+            <p class="s-hook">"Copilot multiplies a great assistant, it doesn't replace one. You get the summary, not the search."</p>
+            <ul>
+              <li><strong>Executive and assistant together:</strong> share your personalization profile so their output sounds like you, then hand off the daily inbox triage, briefings, meeting follow-ups, and drafting in a voice you have agreed on</li>
+            </ul>
+            <div class="s-res">
+              <span class="res-label">Prompts to steal</span>
+              <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/start%20my%20day.md">Start My Day</a>
+              <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/meeting%20notes%20to%20action%20items.md">Meeting Notes to Action Table</a>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- RUN -->
+    <section id="run">
+      <div class="sec-kicker">04 &middot; Three ways to run it</div>
+      <h2>Same framework, three speeds. You decide who carries it.</h2>
+      <p>You do not have to choose between "Microsoft runs everything" and "you are on your own." The program is modular, and every asset is yours to download. Pick the model that fits how much time your leaders can commit and how much you want to own.</p>
+      <div class="grid-3">
+        <div class="run-card">
+          <div class="run-tag">Model 1</div>
+          <h4>Microsoft-led</h4>
+          <p>Microsoft facilitates the full tiered program with your leaders, session by session. You bring the room, we run it.</p>
+          <div class="best"><strong>Best when:</strong> you want expert-led delivery and the fastest path, with little lift on your side.</div>
+        </div>
+        <div class="run-card">
+          <div class="run-tag">Model 2</div>
+          <h4>We start, you scale</h4>
+          <p>Microsoft runs the foundation live and delivers tailored one-on-one training, then hands you the deck and trains your trainers so your team owns delivery.</p>
+          <div class="best"><strong>Best when:</strong> you cannot get a full commitment from every leader, or you want the capability in-house.</div>
+        </div>
+        <div class="run-card">
+          <div class="run-tag">Model 3</div>
+          <h4>Partner-led</h4>
+          <p>A Microsoft partner delivers and customizes the full program alongside you and Microsoft. A dedicated team owns rollout, tailoring, and adoption end to end.</p>
+          <div class="best"><strong>Best when:</strong> you want a committed team to carry the program and drive adoption long term.</div>
+        </div>
+      </div>
+      <div class="callout note"><p>Whichever model you pick, you own the framework. Microsoft gets you started, hands you the deck and every asset, and trains your team to run it. This becomes your program, and your leaders see you deliver it.</p></div>
+    </section>
+
+    <!-- LIMITS -->
+    <section id="limits">
+      <div class="sec-kicker">05 &middot; Copilot, not autopilot</div>
+      <h2>Trust it faster by knowing exactly where the line is.</h2>
+      <p>Honest expectations prevent week-two disappointment. One principle runs under all three tiers.</p>
+      <div class="grid-2">
+        <div class="card"><h4>It drafts, you decide</h4><p>Copilot won't send an email, book a meeting, or make a call you didn't ask for. Your name still goes on the output.</p></div>
+        <div class="card"><h4>Check the facts that matter</h4><p>It can be confidently wrong. For numbers, names, and commitments, verify before you forward.</p></div>
+        <div class="card"><h4>The output is only as good as the input</h4><p>A vague prompt or messy files give vague answers. The four-part formula fixes most of this.</p></div>
+        <div class="card"><h4>It is getting better fast</h4><p>Capabilities change month to month. If something felt limited in the spring, it is worth another look.</p></div>
+      </div>
+      <div class="callout gold"><p class="callout-title">Copilot writes the first draft. You still sign your name to it.</p></div>
+    </section>
+
+    <!-- HABIT -->
+    <section id="habit">
+      <div class="sec-kicker">06 &middot; The first 30 days</div>
+      <h2>Adoption dies without a habit.</h2>
+      <p>Four weeks, one focus each. Fifteen minutes a day beats a training marathon.</p>
+      <table>
+        <thead><tr><th>Week</th><th>Focus</th><th>What to do</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Week 1</strong><br>Find it</td><td>One win a day</td><td>Open Copilot each morning. Catch up on a thread, summarize your inbox, prep one meeting.</td></tr>
+          <tr><td><strong>Week 2</strong><br>Inbox and meetings</td><td>Run your day through it</td><td>Use the Outlook pack and turn every meeting into decisions and owners.</td></tr>
+          <tr><td><strong>Week 3</strong><br>Your documents</td><td>Word, Excel, PowerPoint</td><td>Put Copilot on real work: a report to summarize, a spreadsheet to read, a deck to draft.</td></tr>
+          <tr><td><strong>Week 4</strong><br>Make it yours</td><td>Personalize and delegate</td><td>Set your personalization, build a Chief of Staff agent, and start using it for perspective.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ADOPTION -->
+    <section id="adoption">
+      <div class="sec-kicker">07 &middot; Make it stick</div>
+      <h2>A great training is a spark. This is how you keep the fire lit.</h2>
+      <p>This is what separates a company that bought Copilot from one that runs on it. Five moves, plus the team that owns them.</p>
+
+      <div class="nugget"><div class="nugget-num">1</div><div class="nugget-body"><h4>Champions</h4><p>An internal volunteer in each department who helps their peers and keeps momentum alive. Not IT, not Microsoft. Recruit a few early adopters, give them a channel, and meet on a cadence.</p><p class="quote">"One trainer doesn't scale. A champion in every department does."</p></div></div>
+      <div class="nugget"><div class="nugget-num">2</div><div class="nugget-body"><h4>Governance</h4><p>Copilot only surfaces what a person already has permission to see, so your rollout is only as safe as your permissions. Remediate oversharing and set guardrails with Purview before you go wide.</p><p class="quote">"In healthcare, clean permissions are a patient-safety issue, not an IT chore."</p></div></div>
+      <div class="nugget"><div class="nugget-num">3</div><div class="nugget-body"><h4>Measure it</h4><p>Put four numbers in a monthly leadership review: active users, returning users, assisted hours, and satisfaction. Watch for the 11-by-11 tipping point, about 11 minutes saved a day over 11 weeks. Don't grade ROI in the first 30 days.</p><p class="quote">"Watch the returning users, not the sign-ups. The habit is the ROI."</p></div></div>
+      <div class="nugget"><div class="nugget-num">4</div><div class="nugget-body"><h4>A scenario library</h4><p>"Use it for everything" is how adoption dies. Pick two or three proven, high-value scenarios per team, and define what a win looks like for each.</p><p class="quote">"Pick two wins per team and prove them."</p></div></div>
+      <div class="nugget"><div class="nugget-num">5</div><div class="nugget-body"><h4>A community of practice</h4><p>Most of what people learn in a session is gone in a day without reinforcement. Stand up a Copilot community, run a prompt of the week, and host a monthly lunch-and-learn.</p><p class="quote">"The session teaches it. The community is what makes it stick."</p></div></div>
+      <div class="callout note"><p><strong>And the team that owns it all: a Center of Excellence.</strong> A small cross-functional team, IT, security, a business leader, and communications, that owns the five moves above. If everyone owns adoption, no one does.</p></div>
+    </section>
+
+    <!-- DOWNLOADS -->
+    <section id="downloads">
+      <div class="sec-kicker">08 &middot; Downloads</div>
+      <h2>Every asset, yours to take.</h2>
+      <p>The same program in the format you need: read it, present it, or take it to your own executives for sponsorship.</p>
+      <div class="dl-grid">
+        <a class="dl-card" href="Copilot-Premium-Executive-Playbook.pdf">
+          <span class="dl-type">PDF</span>
+          <h4>The Executive Playbook</h4>
+          <p>The full guide as a clean, shareable PDF. Hand it to a leader or an assistant before a working session.</p>
+          <span class="dl-cta">Download &rarr;</span>
+        </a>
+        <a class="dl-card" href="Copilot-Premium-Executive-Training.pptx">
+          <span class="dl-type">PPTX</span>
+          <h4>Executive Working Session</h4>
+          <p>A ready-to-present deck built around this playbook, from foundations to reasoning agents to the chief-of-staff setup.</p>
+          <span class="dl-cta">Download &rarr;</span>
+        </a>
+        <a class="dl-card" href="Copilot-Premium-Executive-Sponsorship.pptx">
+          <span class="dl-type">PPTX</span>
+          <h4>Executive Sponsorship Deck</h4>
+          <p>A short, board-ready deck a leader takes to their own executive team to win sponsorship, with a full talk track in the notes.</p>
+          <span class="dl-cta">Download &rarr;</span>
+        </a>
+        <a class="dl-card" href="Copilot-Premium-Executive-Sponsorship.pdf">
+          <span class="dl-type">PDF</span>
+          <h4>Sponsorship Deck (PDF)</h4>
+          <p>The same board-ready sponsorship deck as a PDF, for quick sharing when PowerPoint is not handy.</p>
+          <span class="dl-cta">Download &rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- RESOURCES -->
+    <section id="resources" style="border-bottom:none;">
+      <div class="sec-kicker">09 &middot; Resource library</div>
+      <h2>Everything this playbook links, in one place.</h2>
+      <p>All from the Copilot Playground. Steal the prompts, build the agents, and send people somewhere to go when the room clears.</p>
+
+      <div class="res-group">
+        <h4>Start here</h4>
+        <div class="res-links">
+          <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/getting%20started%20with%20copilot.md">Getting Started with Copilot</a>
+          <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/10%20starter%20copilot%20chat%20prompts.md">10 Starter Copilot Chat Prompts</a>
+          <a href="https://copilot.cloud.microsoft/prompts">Copilot Prompt Gallery</a>
+        </div>
+      </div>
+      <div class="res-group">
+        <h4>Make it yours</h4>
+        <div class="res-links">
+          <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/copilot%20personalization.md">Copilot Personalization</a>
+          <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/copilot%20memory.md">Copilot Memory</a>
+          <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/leadership%20style%20and%20voice%20distiller.md">Leadership Style &amp; Voice Distiller</a>
+        </div>
+      </div>
+      <div class="res-group">
+        <h4>Chief of staff agents</h4>
+        <div class="res-links">
+          <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/agent%20playground/chief%20of%20staff.md">Chief of Staff</a>
+          <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/agent%20playground/bossbuddy.md">BossBuddy</a>
+          <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/agent%20playground/taskmaster.md">Taskmaster</a>
+          <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/agent%20playground/impact%20check.md">Impact Check</a>
+        </div>
+      </div>
+      <div class="res-group">
+        <h4>Executive and perspective</h4>
+        <div class="res-links">
+          <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/10%20executive%20prompts.md">10 Prompts for Executives</a>
+          <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/contextual%20filter%2C%20gain%20a%20new%20perspective%20prompt.md">Contextual Filter</a>
+          <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/devils%20advocate%20skeptical%20stakeholder.md">Devil's Advocate</a>
+          <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/meeting%20notes%20to%20action%20items.md">Meeting Notes to Action Table</a>
+        </div>
+      </div>
+      <div class="res-group">
+        <h4>By app and daily workflow</h4>
+        <div class="res-links">
+          <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/copilot%20in%20outlook%20prompt%20pack.md">Copilot in Outlook Prompt Pack</a>
+          <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/claude%20in%20copilot%20with%20agent%20mode%20for%20excel.md">Agent Mode for Excel</a>
+          <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/start%20my%20day.md">Start My Day</a>
+        </div>
+      </div>
+      <div class="res-group">
+        <h4>For your IT, security, and adoption team</h4>
+        <div class="res-links">
+          <a href="https://github.com/heyitsgoad/copilot-chat-hipaa-websearch">Copilot Chat, HIPAA &amp; Web Search</a>
+          <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/copilot%20governance%20getting%20started.md">Copilot Governance, Getting Started</a>
+          <a href="https://learn.microsoft.com/en-us/viva/insights/org-team-insights/copilot-dashboard">Copilot Dashboard (Viva Insights)</a>
+          <a href="https://adoption.microsoft.com/en-us/copilot/">Copilot Adoption hub</a>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="cta-box">
+          <h3>You are not doing this alone.</h3>
+          <p>The fastest path from licensed to fluent is a person. Bring me your team and I will run a live 45-minute working session: we will set up personalization, build a Chief of Staff agent, and get each leader their first real win on their own work.</p>
+          <p style="margin-bottom:0;"><strong>Michael Goad</strong>, Copilot Solution Engineer at Microsoft. Reach me at <a href="mailto:michaelgoad@microsoft.com">michaelgoad@microsoft.com</a>.</p>
+        </div>
+        <p>Part of the <a href="https://github.com/heyitsgoad/copilot-playground">Copilot Playground</a>. Leadership goes first, and the organization follows.</p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+(function () {
+  // Mobile nav
+  var toggle = document.getElementById("navToggle");
+  var sidebar = document.getElementById("sidebar");
+  if (toggle && sidebar) {
+    toggle.addEventListener("click", function () { sidebar.classList.toggle("open"); });
+    sidebar.addEventListener("click", function (e) {
+      if (e.target.tagName === "A") sidebar.classList.remove("open");
+    });
+  }
+
+  // Theme toggle
+  var themeBtn = document.getElementById("themeToggle");
+  if (themeBtn) {
+    themeBtn.addEventListener("click", function () {
+      var cur = document.documentElement.getAttribute("data-theme");
+      document.documentElement.setAttribute("data-theme", cur === "dark" ? "light" : "dark");
+    });
+  }
+
+  // Scrollspy
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll("#nav a"));
+  var sections = navLinks.map(function (a) {
+    return document.querySelector(a.getAttribute("href"));
+  }).filter(Boolean);
+  if ("IntersectionObserver" in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          navLinks.forEach(function (a) { a.classList.remove("active"); });
+          var link = document.querySelector('#nav a[href="#' + entry.target.id + '"]');
+          if (link) link.classList.add("active");
+        }
+      });
+    }, { rootMargin: "-20% 0px -70% 0px" });
+    sections.forEach(function (s) { if (s.id) observer.observe(s); });
+  }
+
+  // Session explorer tier tabs
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".tier-tab"));
+  var panels = Array.prototype.slice.call(document.querySelectorAll(".tier-panel"));
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      var tier = tab.getAttribute("data-tier");
+      tabs.forEach(function (t) { t.classList.remove("active"); });
+      panels.forEach(function (p) { p.classList.remove("active"); });
+      tab.classList.add("active");
+      var panel = document.querySelector('.tier-panel[data-tier="' + tier + '"]');
+      if (panel) panel.classList.add("active");
+    });
+  });
+})();
+</script>
+</body>
+</html>
