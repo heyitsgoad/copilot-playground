@@ -6,6 +6,9 @@ Someone builds an agent. A month later a charge shows up on the Azure bill and n
 
 This guide answers it. It covers how agent usage is billed across Agent Builder, Copilot Studio, Cowork, and Foundry, what Copilot Credits actually cost, where each billing surface is configured, and how to structure Azure subscriptions and resource groups so consumption lands in the right cost center instead of a shared pool nobody owns.
 
+> [!IMPORTANT]
+> This is a personal, community resource. I work at Microsoft, but this is **not** an official Microsoft publication, not pricing guidance, and not an offer or commitment. Every figure is an illustrative planning number from public documentation as of July 31, 2026, and none of it reflects contract or negotiated pricing. Nothing here supersedes the Microsoft Product Terms, your agreement, or the live rate card. Views are my own.
+
 > [!TIP]
 > Open the interactive guide below. It has a decision tool that tells you whether a specific agent will cost you anything before you build it, a credit calculator for quick sanity checks in a meeting, light and dark mode, and a jump nav so a finance lead can read three sections while an admin reads the deep mechanics.
 
@@ -16,21 +19,28 @@ This guide answers it. It covers how agent usage is billed across Agent Builder,
 | Deliverable | What it is | Open or download |
 |---|---|---|
 | **Interactive guide** | The full reference: license model, free vs. metered boundary, credit rate card, the four billing surfaces, Azure cost attribution, purchase options, spend controls, reporting, and rollout checklist. Includes a live decision tool and credit calculator. | [Open in browser](https://heyitsgoad.github.io/copilot-playground/education%20playground/assets/copilot%20agent%20billing/) · [Download HTML](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20agent%20billing/index.html) |
-| **PDF reference** | The same content as a 35 page printable document, with every collapsible section expanded. This is the one to forward to a colleague or attach to a governance review. | [Download PDF](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20agent%20billing/Copilot-Agent-Billing-Guide.pdf) |
+| **PDF reference** | The same content as a 42 page printable document, with every collapsible section expanded. This is the one to forward to a colleague or attach to a governance review. | [Download PDF](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20agent%20billing/Copilot-Agent-Billing-Guide.pdf) |
 
 > [!TIP]
 > Ctrl-click (Cmd-click on Mac) any link to open it in a new tab.
 
 ---
 
-## The Whole Thing in Six Lines
+## The Whole Thing in Seven Lines
 
-1. **The license of the person using the agent decides whether it meters.** Not the person who built it. Building costs nothing; running costs something.
-2. **Nobody is billed personally.** Consumption lands in whatever Azure subscription and resource group an admin named in a billing policy. Departmental cost attribution has to be configured, it does not happen on its own.
-3. **The currency is Copilot Credits**, about $0.01 each on pay-as-you-go. One user question can trigger several charges at once.
-4. **Each build surface bills somewhere different.** Agent Builder and Copilot Chat in the Microsoft 365 admin center, Copilot Studio in the Power Platform admin center, Cowork under Copilot > Cost Management, Foundry directly in Azure.
-5. **The two policy types scope differently.** Microsoft 365 billing policies scope to users and groups. Power Platform billing plans scope to environments. You cannot chargeback Copilot Studio by security group.
-6. **Most budgets do not stop anything.** Azure budgets and Microsoft 365 policy budgets alert only. The controls that actually halt spend are per-agent credit limits, Cowork spending limits, and prepaid capacity with no overflow.
+1. **Building an agent is free. Running it is what costs.** Authoring is never a billable event.
+2. **A paid Microsoft 365 Copilot license is the biggest single factor, but not a simple on/off switch.** It zero-rates ordinary, interactive, employee-facing use. It does not cover autonomous runs, computer use, bring-your-own models, external hosting, or customer-facing scenarios. And an unlicensed user is not automatically charged either: instructions-only and public-web agents are free for everyone.
+3. **Nobody is billed personally.** Where cost lands depends on which funding path you are on. Usually an Azure subscription and resource group named in a billing policy, but prepaid capacity packs with a credit policy need no Azure subscription at all.
+4. **The currency is Copilot Credits**, about $0.01 each on pay-as-you-go. One user question can trigger several charges at once.
+5. **Each surface bills somewhere different.** Agent Builder and Copilot Chat in the Microsoft 365 admin center, Copilot Studio in the Power Platform admin center, Cowork under Copilot > Cost Management, Foundry directly in Azure on Azure meters rather than credits.
+6. **The two policy types scope differently.** Microsoft 365 billing policies scope to users and groups. Power Platform billing plans scope to environments. That makes environments your Copilot Studio reporting dimension, so design environments and your cost model together.
+7. **Most budgets do not stop anything.** Azure budgets and Microsoft 365 policy budgets alert only. Per-agent credit limits and Cowork spending limits genuinely enforce.
+
+---
+
+## The Economic Shape, in One Paragraph
+
+A paid Microsoft 365 Copilot seat zero-rates ordinary, interactive, employee-facing agent use. You already paid for that when you bought the seat. Metering starts at the edges: unlicensed users reaching into organizational data, autonomous or scheduled runs, computer-use agents, and bring-your-own models. That is the difference between per-seat inclusion and per-interaction consumption. On a purely consumption-priced platform every interaction is a charge. Here the everyday majority is already covered, and the work is keeping usage inside that zero-rated core while putting deliberate controls on the metered edges.
 
 ---
 
@@ -43,6 +53,7 @@ This guide answers it. It covers how agent usage is billed across Agent Builder,
 - Where each of the four billing surfaces is configured, and the scoping difference that breaks most chargeback models
 - What a resource group actually is in billing terms, and the misconception that derails cost models
 - All three ways to buy credits, including which commercial detail gets misquoted most often
+- Whether agent identity (Entra Agent ID) has anything to do with billing, and why the answer is no
 - Which spend controls genuinely enforce and which only send email
 - How to get Copilot usage into Power BI, and the one report that does not exist
 - How to align Azure subscriptions and resource groups to business units without over-engineering it
@@ -60,13 +71,13 @@ This guide answers it. It covers how agent usage is billed across Agent Builder,
 
 ## What Makes This One Different
 
-Most billing explanations round off the hard parts. This one does the opposite. Where Microsoft's own documentation contradicts itself, the guide says so and tells you to test it in your tenant rather than picking the answer that sounds cleaner. Three of those are called out explicitly:
+Most billing explanations round off the hard parts. This one does the opposite. It went through a full adversarial technical review against live Microsoft documentation before publication, and several of its own early claims were corrected as a result. Where Microsoft's own documentation contradicts itself, the guide says so and tells you to test it in your tenant rather than picking the answer that sounds cleaner. Three of those are called out explicitly:
 
 - Whether pay-as-you-go actually unlocks SharePoint and OneDrive knowledge in Agent Builder
 - Whether AI Builder tools are zero-rated for licensed users
 - Whether Copilot Studio is named in-scope for HIPAA
 
-It also corrects several things that get repeated confidently in the field and are wrong: that a paid seat makes all agent usage free, that Azure budgets stop spend, that the Copilot Dashboard is a Power BI report you can customize, and that credits and tokens are the same thing.
+It also corrects several things that get repeated confidently in the field and are wrong: that a paid seat makes all agent usage free, that an unlicensed user always costs you money, that Azure budgets stop spend, that the Copilot Dashboard is a Power BI report you can customize, that giving an agent an Entra Agent ID is how you bill it, and that credits and tokens are the same thing.
 
 > [!NOTE]
 > There is a dated item in here worth acting on. **Seeded AI Builder credits are removed on November 1, 2026**, and they are a different currency from Copilot Credits with no automatic conversion. If anyone in your organization is planning against a credit pool, confirm which currency it actually is before you build a budget on it.
@@ -75,7 +86,7 @@ It also corrects several things that get repeated confidently in the field and a
 
 ## Sources
 
-Every substantive claim traces to Microsoft documentation, and section 14 of the guide lists all of them. Rates, product names, and admin surfaces change often, so treat the figures as planning numbers and confirm against the live rate card and your own agreement before committing budget. Current as of July 31, 2026.
+Section 14 of the guide lists the primary references behind it. Rates, product names, and admin surfaces change often, so treat every figure as a planning number and confirm against the live rate card and your own agreement before committing budget. Version 1.1, current as of July 31, 2026, next review due by October 31, 2026.
 
 ---
 
