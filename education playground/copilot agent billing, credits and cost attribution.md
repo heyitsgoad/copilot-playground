@@ -19,7 +19,7 @@ This guide answers it. It covers how agent usage is billed across Agent Builder,
 | Deliverable | What it is | Open or download |
 |---|---|---|
 | **Interactive guide** | The full reference: license model, free vs. metered boundary, credit rate card, the four billing surfaces, Azure cost attribution, purchase options, spend controls, reporting, and rollout checklist. Includes a live decision tool and credit calculator. | [Open in browser](https://heyitsgoad.github.io/copilot-playground/education%20playground/assets/copilot%20agent%20billing/) · [Download HTML](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20agent%20billing/index.html) |
-| **PDF reference** | The same content as a 42 page printable document, with every collapsible section expanded. This is the one to forward to a colleague or attach to a governance review. | [Download PDF](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20agent%20billing/Copilot-Agent-Billing-Guide.pdf) |
+| **PDF reference** | The same content as a 46 page printable document, with every collapsible section expanded. This is the one to forward to a colleague or attach to a governance review. | [Download PDF](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20agent%20billing/Copilot-Agent-Billing-Guide.pdf) |
 
 > [!TIP]
 > Ctrl-click (Cmd-click on Mac) any link to open it in a new tab.
@@ -54,6 +54,8 @@ A paid Microsoft 365 Copilot seat zero-rates ordinary, interactive, employee-fac
 - What a resource group actually is in billing terms, and the misconception that derails cost models
 - All three ways to buy credits, including which commercial detail gets misquoted most often
 - Whether agent identity (Entra Agent ID) has anything to do with billing, and why the answer is no
+- Whether you can run more than one billing policy on the same service, and the All-users rule that makes it look like you cannot
+- How the four different policy objects (billing policies, credit policies, Cowork spending policies, Power Platform billing plans) actually differ
 - Which spend controls genuinely enforce and which only send email
 - How to get Copilot usage into Power BI, and the one report that does not exist
 - How to align Azure subscriptions and resource groups to business units without over-engineering it
@@ -86,7 +88,7 @@ It also corrects several things that get repeated confidently in the field and a
 
 ## Sources
 
-Section 14 of the guide lists the primary references behind it. Rates, product names, and admin surfaces change often, so treat every figure as a planning number and confirm against the live rate card and your own agreement before committing budget. Version 1.1, current as of July 31, 2026, next review due by October 31, 2026.
+Section 14 of the guide lists the primary references behind it. Version 1.2 adds the billing-policy multiplicity rules after hands-on tenant testing surfaced a discrepancy between what the portal appears to allow and what the documentation describes. Rates, product names, and admin surfaces change often, so treat every figure as a planning number and confirm against the live rate card and your own agreement before committing budget. Version 1.2, current as of July 31, 2026, next review due by October 31, 2026.
 
 ---
 
