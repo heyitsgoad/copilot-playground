@@ -292,7 +292,7 @@ footer { margin-top: 60px; padding-top: 26px; border-top: 1px solid var(--cp-bor
     <div class="nav-label">Act</div>
     <a href="#estimate"><span class="num">11</span>Estimate before you build</a>
     <a href="#checklist"><span class="num">12</span>Your rollout checklist</a>
-    <a href="#pitfalls"><span class="num">13</span>Ten costly misconceptions</a>
+    <a href="#pitfalls"><span class="num">13</span>Costly assumptions</a>
     <a href="#sources"><span class="num">14</span>Sources</a>
   </nav>
 </aside>
@@ -302,17 +302,19 @@ footer { margin-top: 60px; padding-top: 26px; border-top: 1px solid var(--cp-bor
 <div class="hero">
   <span class="eyebrow">Field guide</span>
   <h1>Copilot agent billing, in plain language</h1>
-  <p class="lede">Who pays when someone builds an agent? Where does the charge land? Why did an intern's side project show up on the Azure bill? This guide answers those questions for Agent Builder, Copilot Studio, Cowork, and Foundry, and shows you how to structure Azure so the cost lands in the right cost center.</p>
+  <p class="lede">Who pays when someone builds an agent? Where does the charge land? Why did a small side project show up on the Azure bill? This guide answers those questions for Agent Builder, Copilot Studio, Cowork, and Foundry, and shows you how to structure Azure so the cost lands in the right cost center.</p>
   <div class="meta-row">
-    <span class="chip">Reviewed against Microsoft documentation</span>
-    <span class="chip">v1.2 &middot; current as of July 31, 2026</span>
+    <span class="chip">Personal perspective &middot; not official Microsoft guidance</span>
+    <span class="chip">Checked against Microsoft documentation</span>
+    <span class="chip">v1.3 &middot; current as of August 4, 2026</span>
     <span class="chip">Built for IT, finance, and platform owners</span>
   </div>
 </div>
 
 <div class="callout c-warn">
-  <span class="ct">Read this first</span>
-  <p><strong>This is a personal, community resource. I work at Microsoft, but this is not an official Microsoft publication, not pricing guidance, and not an offer or commitment.</strong> Every figure here is an illustrative planning number taken from public documentation as of July 31, 2026. None of it reflects contract, discount, or negotiated pricing, and nothing here supersedes the Microsoft Product Terms, your agreement, or the live rate card. Views are my own.</p>
+  <span class="ct">Read this first: these are my own views</span>
+  <p><strong>This is a personal, community resource, and the analysis, opinions, and recommendations in it are my own. I work at Microsoft, but this is not an official Microsoft publication, not an official Microsoft position, not pricing guidance, and not an offer or commitment.</strong> Where I interpret Microsoft's documentation, draw a conclusion, or recommend an approach, that is my perspective as a practitioner rather than a statement on behalf of Microsoft or my employer.</p>
+  <p>Every figure here is an illustrative planning number taken from public documentation as of August 4, 2026. None of it reflects contract, discount, or negotiated pricing, and nothing here supersedes the Microsoft Product Terms, your agreement, or the live rate card.</p>
   <p>Microsoft changes Copilot pricing, rate cards, and admin surfaces frequently, and several areas are genuinely ambiguous in Microsoft's own documentation. Where that is true, this guide says so explicitly rather than guessing. Confirm anything you are about to spend money on. Sources are in <a href="#sources">section 14</a>.</p>
 </div>
 
@@ -356,13 +358,13 @@ footer { margin-top: 60px; padding-top: 26px; border-top: 1px solid var(--cp-bor
   </div>
 
   <div class="card">
-    <h4 style="margin-top:0;">Worked example: the intern's agent</h4>
-    <p style="font-size:15px;">An intern on included Copilot Chat, with no add-on license, builds an agent and shares it with three people on another team.</p>
+    <h4 style="margin-top:0;">Worked example: a shared agent</h4>
+    <p style="font-size:15px;">Someone on included Copilot Chat, with no add-on license, builds an agent and shares it with three people on another team.</p>
     <ul class="clean-list" style="font-size:14.5px;">
       <li><strong>Building it charged nothing.</strong> Authoring is not a billable event.</li>
       <li><strong>If that agent uses only instructions or public web,</strong> nobody is charged, licensed or not.</li>
       <li><strong>If it reaches into organizational data,</strong> a colleague holding a Microsoft 365 Copilot license who runs it for ordinary work generates no core charge.</li>
-      <li><strong>The same agent, run by an unlicensed teammate,</strong> meters. The charge lands in the Azure subscription and resource group your billing policy names, not the intern's account and not the builder's.</li>
+      <li><strong>The same agent, run by an unlicensed teammate,</strong> meters. The charge lands in the Azure subscription and resource group your billing policy names, not in the builder's account or the user's.</li>
       <li><strong>If no billing is configured at all,</strong> that unlicensed teammate simply cannot use the organizational-data parts of the agent.</li>
     </ul>
     <p style="font-size:15px;">Want the consuming team to carry that cost? Point a billing policy at their resource group deliberately. That is the whole model in one story.</p>
@@ -375,8 +377,8 @@ footer { margin-top: 60px; padding-top: 26px; border-top: 1px solid var(--cp-bor
   <p class="sec-sub">Get the naming right, because the wrong words lead to the wrong budget.</p>
 
   <div class="callout c-fix">
-    <span class="ct">Naming correction worth making early</span>
-    <p>There is no product called "Microsoft 365 Copilot Premium" and no product called "Copilot Basic." Those are labels the apps show users, not things you can buy. Asking a reseller for "Copilot Premium licenses" will cause confusion. The two things that exist commercially are <strong>Microsoft 365 Copilot Chat</strong> (included) and the <strong>Microsoft 365 Copilot</strong> add-on license (paid). Microsoft 365 Copilot Business is a separate current offering for smaller organizations.</p>
+    <span class="ct">Getting the names right, early</span>
+    <p>There is no product called "Microsoft 365 Copilot Premium" and no product called "Copilot Basic." Those are labels the apps show users, not things you can buy. Using those names with a reseller or in a purchase request tends to slow things down, so it is worth switching to the commercial names early. The two things that exist commercially are <strong>Microsoft 365 Copilot Chat</strong> (included) and the <strong>Microsoft 365 Copilot</strong> add-on license (paid). Microsoft 365 Copilot Business is a separate current offering for smaller organizations.</p>
   </div>
 
   <div class="table-wrap">
@@ -398,7 +400,7 @@ footer { margin-top: 60px; padding-top: 26px; border-top: 1px solid var(--cp-bor
   </div>
 
   <h3>The zero-rating rule, stated precisely</h3>
-  <p>"A paid seat means agents are free" is the right instinct and the wrong sentence. Microsoft zero-rates core Copilot Studio consumption only when <strong>all four</strong> of these are true at once:</p>
+  <p>"A paid seat means agents are free" is close, and it is the part that trips up budgets. Microsoft zero-rates core Copilot Studio consumption only when <strong>all four</strong> of these are true at once:</p>
   <div class="grid grid-4">
     <div class="card card-tight"><strong>1. Employee-facing</strong><div style="font-size:13.5px;color:var(--cp-text-muted);margin-top:5px;">The scenario is business-to-employee, not customer-facing or public.</div></div>
     <div class="card card-tight"><strong>2. Licensed user</strong><div style="font-size:13.5px;color:var(--cp-text-muted);margin-top:5px;">The person interacting holds a Microsoft 365 Copilot license.</div></div>
@@ -414,7 +416,7 @@ footer { margin-top: 60px; padding-top: 26px; border-top: 1px solid var(--cp-bor
       <tr><td>Agent flow triggered by "When an agent calls the flow" for a licensed user</td><td><span class="tag t-free">No charge</span></td></tr>
       <tr><td>Agent flow on any other trigger, including a schedule</td><td><span class="tag t-meter">Metered</span></td></tr>
       <tr><td>Autonomous or event-triggered agent work</td><td><span class="tag t-meter">Metered</span> There is usually no interacting licensed user to inherit the inclusion from, and trigger payloads are billable.</td></tr>
-      <tr><td>Computer-using agents (agents that drive a UI)</td><td><span class="tag t-meter">Metered</span> Explicitly excluded from the Microsoft 365 Copilot license terms. 5 credits per step, 15 for premium models.</td></tr>
+      <tr><td>Computer-using agents (agents that drive a UI)</td><td><span class="tag t-meter">Metered</span> Explicitly excluded from the Microsoft 365 Copilot license terms. The published rate card bills these at the agent action rate of 5 credits per step; see section 04 on premium-model rates.</td></tr>
       <tr><td>Bring-your-own model or Microsoft Foundry model processing</td><td><span class="tag t-meter">Metered</span> Billed separately by token usage in Azure.</td></tr>
       <tr><td>Custom-engine agents using App Service, Bot Service, storage, external APIs</td><td><span class="tag t-meter">Metered</span> Those Azure services bill normally regardless of Copilot licensing.</td></tr>
       <tr><td>Customer-facing or unlicensed-user scenarios</td><td><span class="tag t-meter">Metered</span> Standard credit consumption.</td></tr>
@@ -502,8 +504,8 @@ footer { margin-top: 60px; padding-top: 26px; border-top: 1px solid var(--cp-bor
   </div>
 
   <div class="callout c-key">
-    <span class="ct">The one people miss</span>
-    <p>That last row is the trap. Teams, Outlook, and People data in an agent is a <em>licensing</em> boundary, not a spending one. You cannot buy your way past it with credits. If a Copilot Chat user needs an agent over mailbox or Teams content, they need the add-on license.</p>
+    <span class="ct">The row that changes plans</span>
+    <p>That last row is the one worth planning around. Teams, Outlook, and People data in an agent is a <em>licensing</em> boundary, not a spending one. You cannot buy your way past it with credits. If a Copilot Chat user needs an agent over mailbox or Teams content, they need the add-on license.</p>
   </div>
 </section>
 
@@ -521,12 +523,12 @@ footer { margin-top: 60px; padding-top: 26px; border-top: 1px solid var(--cp-bor
   <div class="callout c-fix">
     <span class="ct">Credits are not tokens</span>
     <p>These get used interchangeably in conversation and they are not the same thing. A <strong>credit</strong> is Microsoft's billing unit for Copilot agent activity. A <strong>token</strong> is a unit of model text, and it still shows up as the basis of calculation for two specific things: AI tools inside Copilot Studio, and any bring-your-own or Foundry model processing. So tokens have not gone away, they just are not the thing on your Copilot invoice.</p>
-    <p>Also worth knowing: the word "messages" has not been fully retired. Some Microsoft meter pages still say "$0.01 per message" while the detailed Copilot Studio rate card uses feature-level credits. These pages have different scopes and Microsoft does not reconcile them. Neither this guide nor either page is invoice-authoritative: identify which product and service path you are actually on, use that meter, and confirm against your contract, price sheet, or actual Azure cost records before treating any figure as final.</p>
+    <p>Also worth knowing: the word "messages" has not been fully retired. Microsoft's pay-as-you-go meter page now states the rate per credit, but "messages" language still appears in some overview and meter pages alongside the feature-level credits used in the detailed Copilot Studio rate card. These pages have different scopes and Microsoft does not reconcile them. Neither this guide nor either page is invoice-authoritative: identify which product and service path you are actually on, use that meter, and confirm against your contract, price sheet, or actual Azure cost records before treating any figure as final.</p>
   </div>
 
   <h3>The rate card</h3>
   <p>Rates are per action. A single user question can trigger several of these at once.</p>
-  <p style="font-size:13px;color:var(--cp-text-soft);"><strong>If you screenshot one thing from this guide, it will be this table, so read this line too:</strong> these are public US list reference rates from Microsoft documentation as of July 31, 2026. Not a quote, not contract pricing, and your negotiated rates will differ. Confirm against the live rate card before committing budget.</p>
+  <p style="font-size:13px;color:var(--cp-text-soft);"><strong>If you screenshot one thing from this guide, it will be this table, so read this line too:</strong> these are public US list reference rates from Microsoft documentation as of August 4, 2026. Not a quote, not contract pricing, and your negotiated rates will differ. Confirm against the live rate card before committing budget.</p>
   <div class="table-wrap">
   <table>
     <thead><tr><th>Action</th><th class="num">Credits</th><th class="num">At $0.01/credit</th><th>Licensed user, interactive, work-facing</th></tr></thead>
@@ -536,13 +538,13 @@ footer { margin-top: 60px; padding-top: 26px; border-top: 1px solid var(--cp-bor
       <tr><td>Agent action <span style="color:var(--cp-text-soft);font-size:12.5px;">(see note below)</span></td><td class="num">5</td><td class="num">$0.05</td><td><span class="tag t-free">No charge</span></td></tr>
       <tr><td>Tenant Graph grounding with semantic search</td><td class="num">10</td><td class="num">$0.10</td><td><span class="tag t-free">No charge</span></td></tr>
       <tr><td><em>Generative answer plus tenant Graph grounding</em></td><td class="num"><em>12</em></td><td class="num"><em>$0.12</em></td><td><em>10 + 2 combined</em></td></tr>
-      <tr><td>Agent flow actions</td><td class="num">13 / 100</td><td class="num">$0.13 / 100</td><td><span class="tag t-free">No charge</span> only when triggered by "When an agent calls the flow"</td></tr>
+      <tr><td>Agent flow actions</td><td class="num">13 / 100 actions</td><td class="num">$0.13 / 100 actions</td><td><span class="tag t-free">No charge</span> only when triggered by "When an agent calls the flow"</td></tr>
       <tr><td>AI tool, basic</td><td class="num">0.1 / 1K tokens</td><td class="num">$0.001 / 1K</td><td><span class="tag t-check">See ambiguity note</span></td></tr>
       <tr><td>AI tool, standard</td><td class="num">1.5 / 1K tokens</td><td class="num">$0.015 / 1K</td><td><span class="tag t-check">See ambiguity note</span></td></tr>
       <tr><td>AI tool, premium</td><td class="num">10 / 1K tokens</td><td class="num">$0.10 / 1K</td><td><span class="tag t-check">See ambiguity note</span></td></tr>
       <tr><td>Content processing</td><td class="num">8 / page or image</td><td class="num">$0.08</td><td><span class="tag t-check">See ambiguity note</span></td></tr>
       <tr><td>Computer use, standard model</td><td class="num">5 / step</td><td class="num">$0.05</td><td><span class="tag t-meter">Metered</span> Excluded from license terms</td></tr>
-      <tr><td>Computer use, premium model</td><td class="num">15 / step</td><td class="num">$0.15</td><td><span class="tag t-meter">Metered</span> Excluded from license terms</td></tr>
+      <tr><td>Computer use, premium model</td><td class="num">15 / step</td><td class="num">$0.15</td><td><span class="tag t-check">Confirm before budgeting</span> See note below</td></tr>
       <tr><td>Classic voice</td><td class="num">10 / minute</td><td class="num">$0.10</td><td><span class="tag t-check">Not marked included</span></td></tr>
       <tr><td>Generative voice</td><td class="num">35 / minute</td><td class="num">$0.35</td><td><span class="tag t-check">Not marked included</span></td></tr>
       <tr><td>Premium generative voice</td><td class="num">75 / minute</td><td class="num">$0.75</td><td><span class="tag t-check">Not marked included</span></td></tr>
@@ -551,7 +553,8 @@ footer { margin-top: 60px; padding-top: 26px; border-top: 1px solid var(--cp-bor
   </div>
 
   <details>
-    <summary>Two rate-card details worth knowing before you estimate</summary>
+    <summary>Rate-card details worth knowing before you estimate</summary>
+    <p><strong>The premium computer-use rate needs confirming against your licensing guide.</strong> Microsoft's public Copilot Studio rate page bills computer-using agents at the agent action rate, which is 5 credits per step, without separating standard and premium models. The Standard and Premium model tiers themselves are documented, but a distinct 15-credit premium billing rate does not appear on the public rate card. It is carried here because it circulates widely in licensing material. Treat 5 credits per step as the citable figure and confirm the premium rate against your Product Terms or account team before you budget on it.</p>
     <p><strong>Reasoning models cost more than the base rate suggests.</strong> A reasoning-capable model adds the applicable feature rate <em>plus</em> premium AI tool usage at 10 credits per 1,000 tokens. That can dominate the bill on a chatty agent.</p>
     <p><strong>There is no published per-connector rate, and "agent action" is narrower than it sounds.</strong> People ask "what does a ServiceNow call cost?" and there is no single answer. Microsoft defines an agent action as specific things such as triggers, deep reasoning, and topic transitions. It is <em>not</em> a universal "any tool or connector call costs 5 credits" rate. A connector scenario may bill as tenant Graph grounding, as an agent action, as an agent flow, or as a separately billed external service, depending on how it is wired. Model it in the official estimator rather than reasoning from a single rate.</p>
     <p><strong>Tenant Graph grounding is a specific feature, not "any use of your data."</strong> The 10-credit meter is optional Tenant Graph grounding with semantic search. An agent can reach organizational content through other paths that do not hit that particular meter. Do not assume every answer touching internal data costs 10 credits.</p>
@@ -610,7 +613,7 @@ footer { margin-top: 60px; padding-top: 26px; border-top: 1px solid var(--cp-bor
 
   <div class="callout c-fix">
     <span class="ct">The gotcha that makes it look like only one policy is allowed</span>
-    <p>Plenty of admins try to add a second billing policy to Copilot Chat, find they cannot, and conclude the platform allows only one policy per service. That is usually not the constraint they hit.</p>
+    <p>Adding a second billing policy to Copilot Chat often appears to be blocked, which makes it look like the platform allows only one policy per service. That is usually not the actual constraint.</p>
     <p>Microsoft's rule is: <strong>"Before you connect to a user-specific billing policy, disconnect any existing 'all users' billing policy."</strong> An All-users policy is greedy. While it is connected, it covers everyone, and group-scoped policies have nothing left to scope. Disconnect it first, then connect your group-scoped policies.</p>
     <p>The same page also says admins "can connect or disconnect a billing policy one at a time." That describes the <em>operation</em> being sequential, not a limit of one policy per service. Connect them one after another.</p>
   </div>
@@ -621,7 +624,7 @@ footer { margin-top: 60px; padding-top: 26px; border-top: 1px solid var(--cp-bor
   <table>
     <thead><tr><th>Rule</th><th>What it means for your design</th></tr></thead>
     <tbody>
-      <tr><td><strong>Disconnect any All-users policy first</strong></td><td>This is the blocker most people hit. An All-users policy must come off before user-specific policies go on.</td></tr>
+      <tr><td><strong>Disconnect any All-users policy first</strong></td><td>This is the step that most often blocks the design. An All-users policy must come off before user-specific policies go on.</td></tr>
       <tr><td><strong>One security group per policy</strong></td><td>You cannot put two groups on one policy. Microsoft notes multi-group support is planned but not yet available. One department per policy, one group per department.</td></tr>
       <tr><td><strong>Keep the groups disjoint</strong></td><td>If a user falls under more than one policy, the Credits report attributes their usage to the <em>oldest configured</em> policy. Microsoft does not publish an invoice-level rule for overlap, so overlapping groups will quietly distort your chargeback.</td></tr>
       <tr><td><strong>Subscription and resource group are immutable</strong></td><td>"You can't edit a subscription or resource group associated with a billing policy." Getting the Azure destination wrong means deleting and recreating the policy. Decide the resource group layout before you create anything.</td></tr>
@@ -677,7 +680,7 @@ footer { margin-top: 60px; padding-top: 26px; border-top: 1px solid var(--cp-bor
     <p>You can create any number of policies. A policy can target multiple groups. Users are allowed to belong to more than one policy, and Microsoft publishes the precedence: highest per-user limit wins, then largest overall policy limit, then most recently created. The chosen policy applies in full and settings are not combined.</p>
     <p>Global and Billing administrators can override the billing method per policy, which is what makes genuine departmental billing possible here. Under pay-as-you-go you can set the billing region and resource group in <em>Advanced billing settings</em>.</p>
     <p>Billing draws in a documented order: capacity packs first, then P3 prepaid credits, then pay-as-you-go.</p>
-    <p>Two traps. First, <strong>the billing method is immutable once the policy is created</strong>; to change it you must delete the policy and create a new one. Second, if a user moves between Entra groups mid-month, the new group's policy takes effect and their per-user usage view resets, though total consumption is still tracked and billed at the policy level.</p>
+    <p>Two things to plan around. First, <strong>treat the billing method as fixed once the policy is created</strong>. Microsoft documents no way to change it on an existing policy, so plan on deleting and recreating if you need to switch. Second, if a user moves between Entra groups mid-month, the new group's policy takes effect and their per-user usage view resets, though total consumption is still tracked and billed at the policy level.</p>
   </details>
 
   <h3>Notes on each surface</h3>
@@ -704,7 +707,7 @@ footer { margin-top: 60px; padding-top: 26px; border-top: 1px solid var(--cp-bor
   <details>
     <summary>Cowork</summary>
     <p>Microsoft 365 Copilot Cowork is an agentic system inside Microsoft 365 Copilot that performs multi-step work: drafting and sending mail, scheduling, creating files, posting to Teams, research, scheduled tasks. It is generally available. Not every capability inside it is, though: Claude Fable 5 is documented as Preview, and local browser use has its own prerequisites including Cowork on the web, Microsoft Edge, and tenant enablement. Check current release notes for capability-level status rather than assuming the whole surface moves together.</p>
-    <p><strong>Correction worth noting:</strong> Cowork does not have a separate standalone billing portal. It is managed in the Microsoft 365 admin center under <code>Copilot &gt; Cost Management</code>. It supports existing prepaid capacity, the Copilot Credit Pre-Purchase Plan, and Azure-backed pay-as-you-go. A resource group is only selected under <em>Advanced billing settings</em> for the pay-as-you-go method.</p>
+    <p><strong>Worth knowing:</strong> Cowork does not have a separate standalone billing portal. It is managed in the Microsoft 365 admin center under <code>Copilot &gt; Cost Management</code>. It supports existing prepaid capacity, the Copilot Credit Pre-Purchase Plan, and Azure-backed pay-as-you-go. A resource group is only selected under <em>Advanced billing settings</em> for the pay-as-you-go method.</p>
     <p>Cowork requires an active Microsoft 365 Copilot license <em>and</em> enabled usage-based billing. The license alone does not make Cowork free. Model responses, tool and skill calls, image generation, and browser tasks all consume credits.</p>
     <p>Because capacity packs can be consumed across Microsoft 365 and Power Platform experiences, do not assume Cowork spend is financially isolated from your other Copilot spend just because it has its own admin page.</p>
     <p>Admin controls here are unusually good: policies scoped to tenant or Entra security groups, monthly policy limits, optional per-user credit limits, alerts, <strong>enforceable limits</strong>, per-policy billing method, and consumption views by user, group, service, and agent. Discoverability is controlled separately from access.</p>
@@ -724,7 +727,7 @@ footer { margin-top: 60px; padding-top: 26px; border-top: 1px solid var(--cp-bor
   <div class="card">
     <p style="margin-top:0;">An Entra Agent ID is a specialized Entra <em>service principal</em>, not simply a user account. It can carry a sponsor accountable for lifecycle and access, and it enables identity and authentication, API permission visibility, audit and sign-in logs, lifecycle governance, access packages, and Conditional Access. Copilot Studio creates one automatically for new agents; check current release notes for the exact status, because Microsoft's documentation labels this inconsistently between Preview and generally available.</p>
     <p><strong>What it is not:</strong> a billing meter or a chargeback mechanism. Microsoft documents agent identity separately from service consumption billing. Billing still follows the applicable Copilot or Copilot Studio service and its billing configuration, exactly as described in this guide. Assigning an Agent ID does not move, split, or re-attribute a charge.</p>
-    <p>Two things people over-claim here, worth being careful about: <strong>DLP is not automatically applied</strong> just because an agent has an Agent ID (Copilot Studio connector calls remain subject to Power Platform connector policies and DLP runtime validation), and Microsoft Defender's AI agent detection and investigation is documented as <strong>public preview</strong>.</p>
+    <p>Two capabilities that are easy to assume come with an Agent ID and do not: <strong>DLP is not automatically applied</strong> just because an agent has one (Copilot Studio connector calls remain subject to Power Platform connector policies and DLP runtime validation), and Microsoft Defender's AI agent detection and investigation is documented as <strong>public preview</strong>.</p>
     <p><strong>Microsoft Agent 365</strong> is the broader control plane above this for observing, governing, and securing agents. It is separately licensed rather than included, so treat it as its own line item. There is no documented native capability that automatically attributes agent runtime spend to an owner or business unit through agent identity. Sponsors and owners establish accountability, not cost allocation.</p>
   </div>
 </section>
@@ -767,7 +770,7 @@ footer { margin-top: 60px; padding-top: 26px; border-top: 1px solid var(--cp-bor
   </div>
 
   <h3>What a resource group actually is, and is not</h3>
-  <p>This is where a lot of well-intentioned cost models go wrong.</p>
+  <p>This distinction is what most cost models turn on.</p>
   <div class="grid grid-2">
     <div class="card">
       <h4 style="margin-top:0;color:var(--cp-success);">A resource group IS</h4>
@@ -791,7 +794,7 @@ footer { margin-top: 60px; padding-top: 26px; border-top: 1px solid var(--cp-bor
     </div>
   </div>
 
-  <p>Everything still rolls up to the subscription and its billing agreement. Resource groups organise the reporting; tags and allocation rules do the actual attribution work.</p>
+  <p>Everything still rolls up to the subscription and its billing agreement. Resource groups organize the reporting; tags and allocation rules do the actual attribution work.</p>
 
   <h3>The hierarchy, stated correctly</h3>
   <pre><code>BILLING (who is invoiced)          GOVERNANCE (who controls what)
@@ -806,7 +809,7 @@ Billing account                    Management group
     <p><strong>Microsoft 365 Copilot Chat pay-as-you-go:</strong> the meter is identified as <em>Copilot Studio</em>. You can filter accumulated cost using the supplied <code>m365copilotchat</code> tag. Data can take up to 24 hours to appear. Microsoft does not guarantee that arbitrary custom or resource-group tags automatically apply to this direct billing-policy usage.</p>
     <p><strong>Copilot Studio via Power Platform:</strong> creates a Power Platform account resource in the chosen subscription and resource group. That resource can be tagged like any Azure resource.</p>
     <p><strong>Foundry and Azure OpenAI:</strong> often classified under the broader Cognitive Services service name. Filter on service tier <em>Azure OpenAI</em> rather than assuming a service name. Project-level cost attribution preview applies a <code>project</code> usage tag for Azure-sold models; Marketplace-served models are excluded.</p>
-    <p><strong>Tag behaviour to know:</strong> resource group tags do <em>not</em> automatically appear on child resources. Azure Policy can require, append, or inherit tags with remediation. Cost Management tag inheritance is a separate feature that applies subscription and resource-group tags to <em>usage records</em>, not to the resources themselves, and generally lands within 8 to 24 hours.</p>
+    <p><strong>Tag behavior to know:</strong> resource group tags do <em>not</em> automatically appear on child resources. Azure Policy can require, append, or inherit tags with remediation. Cost Management tag inheritance is a separate feature that applies subscription and resource-group tags to <em>usage records</em>, not to the resources themselves, and generally lands within 8 to 24 hours.</p>
   </details>
 </section>
 
@@ -838,13 +841,13 @@ Billing account                    Management group
   </div>
 
   <div class="callout c-warn">
-    <span class="ct">Two commercial details that get misquoted</span>
-    <p><strong>Commit units are dollars, not credits.</strong> A Copilot Credit Commit Unit is a dollar-value commitment unit. $100 of eligible retail credit consumption consumes 100 CCCUs. It is not a quantity of credits.</p>
-    <p><strong>MACC is not a credit wallet.</strong> A Microsoft Azure Consumption Commitment is a spending commitment. Eligible Copilot consumption can count toward MACC when the billing policy uses an Azure subscription associated with the billing account holding that MACC. But Microsoft does not publicly enumerate every Copilot Studio acquisition route as MACC-eligible, and pre-purchase plan upfront purchases are explicitly <em>not</em> deducted from Azure Prepayment. Confirm with your account team before you plan against it.</p>
+    <span class="ct">Two commercial details worth confirming with your account team</span>
+    <p><strong>Commit units are dollars, not credits.</strong> A Copilot Credit Commit Unit is a dollar-value commitment unit: $100 of eligible retail credit consumption consumes 100 CCCUs. It is not a quantity of credits. This detail sits in licensing-guide and commercial material rather than on a public documentation page, so ask your account team to confirm it in writing before you model against it.</p>
+    <p><strong>MACC is a spending commitment, not a credit wallet.</strong> Eligible Copilot consumption can count toward a Microsoft Azure Consumption Commitment when the billing policy uses an Azure subscription associated with the billing account holding that MACC. Microsoft does not publicly enumerate every Copilot Studio acquisition route as MACC-eligible, and pre-purchase plan upfront purchases are understood not to draw down Azure Prepayment. Both points are commercial terms rather than published documentation, so confirm them with your account team before you plan against them.</p>
   </div>
 
   <h3>What happens when prepaid capacity runs out</h3>
-  <p>"Everyone immediately gets an error" is not accurate. Behaviour differs by scenario.</p>
+  <p>Running out of prepaid capacity does not produce one uniform error. Behavior differs by scenario.</p>
   <div class="table-wrap">
   <table>
     <thead><tr><th>Scenario</th><th>With pay-as-you-go configured</th><th>Without it</th></tr></thead>
@@ -860,7 +863,7 @@ Billing account                    Management group
 
   <div class="callout c-fix">
     <span class="ct">Dated action item: AI Builder credits are being retired</span>
-    <p>If someone in your organisation has mentioned a pool of credits that is "being significantly reduced," check whether they mean <strong>AI Builder credits</strong>, which are a completely different currency from Copilot Credits.</p>
+    <p>If someone in your organization has mentioned a pool of credits that is "being significantly reduced," check whether they mean <strong>AI Builder credits</strong>, which are a completely different currency from Copilot Credits.</p>
     <ul style="font-size:14.5px;margin-top:6px;">
       <li><strong>November 1, 2025</strong> — new customers can no longer purchase AI Builder capacity add-ons. Existing add-on customers may renew or true up under applicable terms.</li>
       <li><strong>November 1, 2026</strong> — seeded AI Builder credits included in qualifying Power Platform and Dynamics licenses are removed, and AI Builder capacity add-ons reach end of life for new purchase and renewal.</li>
@@ -873,7 +876,7 @@ Billing account                    Management group
 <section id="controls">
   <span class="sec-num">Section 08</span>
   <h2>What actually stops spend</h2>
-  <p class="sec-sub">Most of the things people call "limits" are alerts. Here is the honest breakdown.</p>
+  <p class="sec-sub">Many of the things called "limits" are alerts. Here is the breakdown.</p>
 
   <div class="table-wrap">
   <table>
@@ -884,7 +887,7 @@ Billing account                    Management group
       <tr><td>Cost anomaly detection</td><td>Azure Cost Management</td><td><span class="tag t-block">Alert only</span> Daily evaluation, email alert. Not real-time.</td></tr>
       <tr><td><strong>Per-agent monthly credit limit</strong></td><td>Power Platform admin center</td><td><span class="tag t-free">Hard stop</span> Turns the agent off at its limit, with nearing-limit alerts first.</td></tr>
       <tr><td><strong>Cowork spending limits</strong></td><td>M365 admin center &gt; Copilot &gt; Cost Management</td><td><span class="tag t-free">Hard stop</span> Enforceable policy and per-user credit limits that can remove access for the rest of the month.</td></tr>
-      <tr><td><strong>Not configuring pay-as-you-go overflow</strong></td><td>By design</td><td><span class="tag t-free">Hard stop</span> Prepaid-only means you cannot exceed prepaid. See section 07 for the exact cut-off behaviour.</td></tr>
+      <tr><td><strong>Not configuring pay-as-you-go overflow</strong></td><td>By design</td><td><span class="tag t-free">Hard stop</span> Prepaid-only means you cannot exceed prepaid. See section 07 for the exact cut-off behavior.</td></tr>
       <tr><td>Disconnecting the billing policy</td><td>Microsoft 365 admin center</td><td><span class="tag t-free">Hard stop</span> Removes metered agent access, with propagation delay up to about two hours.</td></tr>
       <tr><td>Foundry spend</td><td>Azure</td><td><span class="tag t-block">Alert only</span> No native hard cap. Stopping spend needs custom action-group automation.</td></tr>
     </tbody>
@@ -893,7 +896,7 @@ Billing account                    Management group
 
   <div class="callout c-key">
     <span class="ct">The practical takeaway</span>
-    <p>If a leader asks "what stops us from running up a huge bill," the honest answer is: <strong>prepaid capacity with no overflow, per-agent limits in Power Platform, and Cowork spending limits.</strong> Everything else tells you after the fact. Design your guardrails around the three things that actually enforce, and use budgets and anomaly alerts as your early-warning layer rather than your control layer.</p>
+    <p>If a leader asks "what stops us from running up a huge bill," the answer is: <strong>prepaid capacity with no overflow, per-agent limits in Power Platform, and Cowork spending limits.</strong> Everything else tells you after the fact. Design your guardrails around the three things that actually enforce, and use budgets and anomaly alerts as your early-warning layer rather than your control layer.</p>
   </div>
 </section>
 
@@ -918,13 +921,13 @@ Billing account                    Management group
   </div>
 
   <div class="callout c-fix">
-    <span class="ct">Correction: the Copilot Dashboard is not a Power BI report</span>
+    <span class="ct">The Copilot Dashboard is not a Power BI report</span>
     <p>The Microsoft Copilot Dashboard is a <strong>Viva Insights web app experience</strong>. Microsoft does not document it as a customer-owned Power BI artifact, so do not plan to open it, edit it, or embed it as a Power BI report.</p>
     <p>If your goal is genuinely "put this in Power BI so leaders can self-serve," you have four real options, each with limits:</p>
     <ul style="font-size:14.5px;">
       <li><strong>Copilot Studio agents Power BI template.</strong> Works for qualifying Copilot Studio agents. Excludes declarative agents, Agent Builder agents, SharePoint agents, and third-party agents. Its "agent assisted impact (cost)" figure is estimated business value, <em>not</em> consumption billing — do not present it as spend.</li>
       <li><strong>Viva Insights query results plus the Power BI connector.</strong> Connect approved query output to Power BI.</li>
-      <li><strong>Copilot Dashboard export.</strong> Public preview, de-identified, not customisable.</li>
+      <li><strong>Copilot Dashboard export.</strong> Public preview, de-identified, not customizable.</li>
       <li><strong>Microsoft Graph Copilot usage reporting APIs.</strong> Production <code>v1.0</code> endpoints with <code>Reports.Read.All</code>. Returns <em>only</em> users holding a Microsoft 365 Copilot license, and exposes activity and prompt fields, not credits or dollars.</li>
     </ul>
   </div>
@@ -932,7 +935,7 @@ Billing account                    Management group
   <div class="callout c-warn">
     <span class="ct">The report that does not exist</span>
     <p>There is no native Microsoft report that attributes <strong>billed Copilot Credits in actual invoice dollars to each individual end user</strong>. Native financial showback is strongest by Azure subscription, resource group, tag, Power Platform environment, agent, and feature. If your chargeback model requires per-person dollar attribution, you will be building that yourself by combining the Credits report with your own cost allocation logic. Plan for it rather than discovering it late.</p>
-    <p>Also worth knowing if someone suggests it: the Power Platform <strong>CoE Starter Kit is no longer actively maintained</strong>. Microsoft now directs customers to the admin center inventory, usage, monitor, and actions experiences instead.</p>
+    <p>One more thing worth checking if it comes up in planning: the Power Platform <strong>CoE Starter Kit is no longer actively maintained</strong>. Microsoft now directs customers to the admin center inventory, usage, monitor, and actions experiences instead.</p>
   </div>
 
   <details>
@@ -968,7 +971,7 @@ Billing account                    Management group
 
   <div class="callout c-key">
     <span class="ct">A business unit does not automatically need its own subscription</span>
-    <p>This is the most common over-build. Use subscription-per-business-unit only where that business unit also needs a real management, policy, quota, isolation, or ownership boundary. Otherwise tags and resource-group reporting get you there with far less administrative drag. The Cloud Adoption Framework explicitly warns against a rigid one-size-fits-all subscription model, and recommends keeping management group hierarchies <strong>flat</strong> and policy-driven rather than mirroring your org chart.</p>
+    <p>This is the most common place to over-build. Use subscription-per-business-unit only where that business unit also needs a real management, policy, quota, isolation, or ownership boundary. Otherwise tags and resource-group reporting get you there with far less administrative drag. The Cloud Adoption Framework explicitly warns against a rigid one-size-fits-all subscription model, and recommends keeping management group hierarchies <strong>flat</strong> and policy-driven rather than mirroring your org chart.</p>
   </div>
 
   <h3>The layered model that works</h3>
@@ -1006,7 +1009,7 @@ Billing account                    Management group
   <div class="callout c-warn">
     <span class="ct">Healthcare and regulated-industry note</span>
     <p>Selecting an Azure subscription and resource group as a billing target does <strong>not</strong> by itself establish HIPAA compliance, a BAA, or data residency for the AI workload. Those are governed separately by your Product Terms and DPA, tenant geography, and the specific service configuration.</p>
-    <p>Microsoft's HIPAA page lists Microsoft 365 Copilot and Microsoft 365 Copilot Chat in the in-scope Office 365 table for Commercial and GCC. On web search, be precise about what Microsoft actually says: the <strong>generated web search query sent to Bing</strong> is not covered by the DPA, and Microsoft states HIPAA compliance does not apply to those generated queries. That is narrower than "web search is outside your BAA," and it is distinct from the user's prompt and Copilot's response, which stay within the Microsoft 365 service boundary and are treated differently. Do not paraphrase this one; take it to privacy and legal with the source in hand. A direct Microsoft Learn statement listing Copilot Studio by name as HIPAA in-scope was not located during this research, so validate current Product Terms and Service Trust documentation before processing PHI through it.</p>
+    <p>Microsoft's HIPAA page lists Microsoft 365 Copilot and Microsoft 365 Copilot Chat in the in-scope Office 365 table for Commercial and GCC. On web search, the precise wording matters: the <strong>generated web search query sent to Bing</strong> is not covered by the DPA, and Microsoft states HIPAA compliance does not apply to those generated queries. That is narrower than "web search is outside your BAA," and it is distinct from the user's prompt and Copilot's response, which stay within the Microsoft 365 service boundary and are treated differently. Take this one to privacy and legal with the source in hand rather than a paraphrase. A direct Microsoft Learn statement listing Copilot Studio by name as HIPAA in-scope was not located during this research, so validate current Product Terms and Service Trust documentation before processing PHI through it.</p>
     <p><strong>A practical PHI decision path,</strong> which your privacy team still has to sign off: confirm which surfaces are BAA-covered for your agreement before any PHI touches them; turn off web grounding on any agent that will see PHI, since the generated Bing query is the specific gap; confirm BAA coverage and data geography before putting PHI through Copilot Studio; and keep PHI agents in environments whose billing, residency, and governance you control deliberately.</p>
     <p>And do not treat an Azure budget as a privacy or clinical safety control. It is an alerting mechanism.</p>
   </div>
@@ -1090,7 +1093,7 @@ Billing account                    Management group
   </div>
 
   <div class="callout c-key">
-    <span class="ct">The lever most people miss</span>
+    <span class="ct">The lever worth pulling</span>
     <p>Look at what happens to that number when you move users from the unlicensed column to the licensed one. For a heavy agent user, buying the Microsoft 365 Copilot add-on can genuinely cost less than paying their metered consumption, and they get the rest of Copilot as well. Nominating your heaviest users for licenses is a legitimate cost-control move, not just an upsell.</p>
     <p><strong>To actually run that comparison you need your own add-on price.</strong> This guide deliberately does not print it, because the Microsoft 365 Copilot per-user price varies by agreement, geography, and term, and a stale figure here would be worse than none. Get your effective per-user-per-month price from your agreement or your Microsoft account team, then compare it against the monthly credit consumption of your heaviest users from the Credits report. The break-even is usually lower than people expect.</p>
   </div>
@@ -1111,8 +1114,8 @@ Billing account                    Management group
       <li><strong>[AZ]</strong> Create the resource groups that map to the cost centers you want to report on, now that the environment design tells you what those are.</li>
       <li><strong>[M365] [FIN]</strong> If you want per-department cost splitting for Copilot Chat, design the security groups now and make sure they are <strong>disjoint</strong>. One group per policy, no user in two groups. Overlap quietly distorts attribution.</li>
       <li><strong>[M365]</strong> Get the Azure destination right the first time. The subscription and resource group on a billing policy <strong>cannot be edited</strong> after creation; changing them means deleting and recreating the policy.</li>
-      <li><strong>[M365] [AZ]</strong> Confirm roles. You need Billing, AI, or Global Administrator on the Microsoft 365 side <em>and</em> Owner or Contributor on both the subscription and resource group. These are often two different teams, so get both in the room rather than discovering the gap mid-setup.</li>
-      <li><strong>[AZ] [FIN]</strong> Agree your tagging standard and enforce it with Azure Policy <em>before</em> spend starts. Retrofitting tags is miserable.</li>
+      <li><strong>[M365] [AZ]</strong> Confirm roles. You need Billing, AI, or Global Administrator on the Microsoft 365 side <em>and</em> Owner or Contributor on both the subscription and resource group. These are often two different teams, so line both up before you start rather than discovering the gap mid-setup.</li>
+      <li><strong>[AZ] [FIN]</strong> Agree your tagging standard and enforce it with Azure Policy <em>before</em> spend starts. Retrofitting tags across existing resources is significantly more work.</li>
       <li><strong>[FIN] [PP]</strong> Check which credit currency you actually hold today. If it is seeded AI Builder capacity, note the November 1, 2026 removal date and whether you hold an active add-on contract.</li>
     </ul>
   </div>
@@ -1121,7 +1124,7 @@ Billing account                    Management group
     <h4 style="margin-top:0;">2. Turning it on</h4>
     <ul class="clean-list">
       <li><strong>[M365]</strong> Microsoft 365 Copilot Chat and Agent Builder: go to <code>Copilot &gt; Billing &amp; usage &gt; Billing policies &gt; Add a billing policy</code>, select the Azure subscription and resource group, and scope to <em>All users</em> or a <em>Specific group</em>. Start with a pilot group, not All users.</li>
-      <li><strong>[M365]</strong> Then <strong>connect the policy</strong> under <em>Pay-as-you-go services</em> to Copilot Chat or SharePoint agents. This is a separate step and it is the one people miss. An unconnected policy does nothing.</li>
+      <li><strong>[M365]</strong> Then <strong>connect the policy</strong> under <em>Pay-as-you-go services</em> to Copilot Chat or SharePoint agents. This is a separate step and it is easy to overlook. An unconnected policy does nothing.</li>
       <li><strong>[M365]</strong> If you are going to use group-scoped policies, <strong>disconnect any existing All-users policy first</strong>. This is the step that makes people think only one policy per service is allowed. Then connect your group-scoped policies one at a time.</li>
       <li><strong>[PP]</strong> Copilot Studio: create the pay-as-you-go billing plan in the Power Platform admin center, link the Azure subscription and resource group, and <strong>attach the environments</strong> that should bill to it. This step does not exist in the Microsoft 365 admin center and is easy to skip.</li>
       <li><strong>[M365]</strong> Cowork, if in scope: confirm users hold Microsoft 365 Copilot licenses, then enable usage-based billing and create a spending policy under <code>Copilot &gt; Cost Management</code>, scoped to the tenant or an Entra group.</li>
@@ -1133,7 +1136,7 @@ Billing account                    Management group
 
   <div class="card">
     <h4 style="margin-top:0;">3. Verify it actually worked</h4>
-    <p style="font-size:15px;margin-top:0;">Do not skip this. A policy that looks configured but is not connected fails silently, and you will find out from a user, not from the portal.</p>
+    <p style="font-size:15px;margin-top:0;">This step is worth the time. A policy that looks configured but is not connected fails silently, and the first signal is usually a user report rather than a portal warning.</p>
     <ul class="clean-list">
       <li><strong>[M365]</strong> Run Microsoft's documented test: have an eligible user <em>without</em> an add-on license open the <strong>Learning Coach</strong>, <strong>Writing Coach</strong>, or <strong>Career Coach</strong> agent and send a simple prompt such as "What can you do?" That consumes about 12 credits. If they get an error or refusal instead, coverage is not in place.</li>
       <li><strong>[M365]</strong> Wait for propagation. Enablement and disablement can take up to about two hours.</li>
@@ -1159,12 +1162,12 @@ Billing account                    Management group
 
 <section id="pitfalls">
   <span class="sec-num">Section 13</span>
-  <h2>Ten costly misconceptions</h2>
+  <h2>Costly assumptions</h2>
   <p class="sec-sub">These are the ones that show up repeatedly in real conversations, including some that sound right.</p>
 
   <div class="table-wrap">
   <table>
-    <thead><tr><th style="width:42%;">The belief</th><th>What is actually true</th></tr></thead>
+    <thead><tr><th style="width:42%;">Common assumption</th><th>What actually happens</th></tr></thead>
     <tbody>
       <tr><td>"We should buy Copilot Premium licenses."</td><td>No such product. The paid SKU is the <strong>Microsoft 365 Copilot</strong> add-on. "Premium" and "Basic" are in-app labels.</td></tr>
       <tr><td>"A paid seat means agents are completely free."</td><td>True for ordinary interactive employee-facing use only. Autonomous runs, non-agent-triggered flows, computer use, bring-your-own models, external hosting, customer-facing scenarios, and Cowork all still bill.</td></tr>
@@ -1175,7 +1178,7 @@ Billing account                    Management group
       <tr><td>"Buying credits will unlock agents over Teams and email data."</td><td>Email, People, Teams messages, and Teams meetings knowledge is <strong>license-only</strong>. Pay-as-you-go is not documented as sufficient.</td></tr>
       <tr><td>"Our Azure budget will stop the spend."</td><td>Azure budgets and Microsoft 365 policy budgets <strong>alert only</strong>. Per-agent limits and Cowork limits enforce. Prepaid without overflow contains exposure but is not one clean ceiling, and P3 does not cap at all.</td></tr>
       <tr><td>"A resource group is our cost center."</td><td>It is a reporting and allocation scope, not an invoice or payer boundary. Tags and allocation rules do the real work, and some charges carry no resource group at all.</td></tr>
-      <tr><td>"The Copilot Dashboard is a Power BI report we can customise."</td><td>It is a Viva Insights web app. Getting to Power BI needs the Copilot Studio template, the Viva Insights connector, the preview export, or Graph APIs — each with real limits.</td></tr>
+      <tr><td>"The Copilot Dashboard is a Power BI report we can customize."</td><td>It is a Viva Insights web app. Getting to Power BI needs the Copilot Studio template, the Viva Insights connector, the preview export, or Graph APIs — each with real limits.</td></tr>
       <tr><td>"An unlicensed user always costs us money."</td><td>No. An agent using only instructions or public web is free for everyone. Metering starts when it reaches into organizational data.</td></tr>
       <tr><td>"Giving the agent an Entra Agent ID is how we bill it."</td><td>Agent identity is a governance and observability construct. Microsoft documents it separately from consumption billing, and it does not attribute spend to an owner or business unit.</td></tr>
       <tr><td>"Credits and tokens are the same thing."</td><td>Credits are the billing unit. Tokens still underpin AI tool and Foundry model charges. And "messages" has not fully disappeared from Microsoft's own meter pages.</td></tr>
@@ -1247,10 +1250,10 @@ Billing account                    Management group
   </div>
 
   <footer>
-    <p><strong>Copilot Agent Billing: Credits, Cost Attribution, and Who Actually Pays.</strong> Version 1.2, compiled July 31, 2026. Written to be shared internally and reused across organizations.</p>
-    <p><strong>Next review due by October 31, 2026.</strong> This document contains rates, product names, and admin paths that change often, and it carries at least one dated item (the November 1, 2026 AI Builder credit removal). If you are reading it well past the review date, verify before relying on it.</p>
+    <p><strong>Copilot Agent Billing: Credits, Cost Attribution, and Who Actually Pays.</strong> Version 1.3, compiled August 4, 2026. Written to be shared internally and reused across organizations.</p>
+    <p><strong>Next review due by November 4, 2026.</strong> This document contains rates, product names, and admin paths that change often, and it carries at least one dated item (the November 1, 2026 AI Builder credit removal). If you are reading it well past the review date, verify before relying on it.</p>
     <p>Prepared by Michael Goad. Part of the <a href="https://github.com/heyitsgoad/copilot-playground" target="_blank" rel="noopener">Copilot Playground</a>.</p>
-    <p>This is a field reference, not a contract, a quote, or legal or licensing advice. Microsoft pricing, rate cards, admin surfaces, and product names change frequently. Confirm current figures against Microsoft documentation and your own agreement before making financial commitments.</p>
+    <p>This is a personal field reference and the views in it are my own. It is not an official Microsoft publication or position, and not a contract, a quote, or legal or licensing advice. Microsoft pricing, rate cards, admin surfaces, and product names change frequently. Confirm current figures against Microsoft documentation and your own agreement before making financial commitments.</p>
   </footer>
 </section>
 
