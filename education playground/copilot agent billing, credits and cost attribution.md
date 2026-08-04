@@ -21,7 +21,7 @@ This guide answers it. It covers how agent usage is billed across Agent Builder,
 | Deliverable | What it is | Open or download |
 |---|---|---|
 | **Interactive guide** | The full reference: license model, free vs. metered boundary, credit rate card, the four billing surfaces, Azure cost attribution, purchase options, spend controls, reporting, and rollout checklist. Includes a live decision tool and credit calculator. | [Open in browser](https://heyitsgoad.github.io/copilot-playground/education%20playground/assets/copilot%20agent%20billing/) · [Download HTML](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20agent%20billing/index.html) |
-| **PDF reference** | The same content as a 44 page printable document, with every collapsible section expanded. This is the one to forward to a colleague or attach to a governance review. | [Download PDF](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20agent%20billing/Copilot-Agent-Billing-Guide.pdf) |
+| **PDF reference** | The same content as a 48 page printable document, with the glossary and every collapsible section expanded. This is the one to forward to a colleague or attach to a governance review. | [Download PDF](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20agent%20billing/Copilot-Agent-Billing-Guide.pdf) |
 
 > [!TIP]
 > Ctrl-click (Cmd-click on Mac) any link to open it in a new tab.
@@ -90,7 +90,7 @@ It also clears up several points that are easy to get wrong: that a paid seat ma
 
 ## Sources
 
-Section 14 of the guide lists the primary references behind it. Version 1.3 refreshes the rate card against current Microsoft documentation, flags the premium computer-use rate as one to confirm against your licensing guide, and marks the pre-purchase and MACC commercial details as account-team items rather than published figures. Rates, product names, and admin surfaces change often, so treat every figure as a planning number and confirm against the live rate card and your own agreement before committing budget. Version 1.3, current as of August 4, 2026, next review due by November 4, 2026.
+Section 15 of the guide lists the primary references behind it. Version 1.4 adds a plain-language glossary of the sixteen terms that carry the guide, hover definitions on those terms throughout, a plain-terms summary at the top of every heavy section, and splits the old section 05 into separate sections for the four billing surfaces and for splitting cost across teams. Rates, product names, and admin surfaces change often, so treat every figure as a planning number and confirm against the live rate card and your own agreement before committing budget. Version 1.4, current as of August 4, 2026, next review due by November 4, 2026.
 
 ---
 
