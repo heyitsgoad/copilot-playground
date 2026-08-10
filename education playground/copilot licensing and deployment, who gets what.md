@@ -1,6 +1,6 @@
 # Copilot Licensing and Deployment: Who Gets What
 
-![Copilot licensing and deployment: two tiers, one usage layer, and a plan that does not overwhelm your team](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20licensing%20and%20deployment/banner.png)
+![Copilot licensing and deployment: two tiers, one usage layer, and a plan that does not overwhelm your team](assets/copilot%20licensing%20and%20deployment/banner.png)
 
 The question I get more than any other: how do we actually roll Copilot out without overwhelming the team, and who gets what. This is an interactive guide that answers it. It maps the right Copilot to each role, makes the spend predictable, and lays out a rollout that earns adoption instead of flooding people with tools nobody asked for. Healthcare-forward, general enough for any knowledge-worker organization, and every claim is checked against Microsoft's own documentation.
 

@@ -1,4 +1,4 @@
-![image alt](https://github.com/heyitsgoad/copilot-playground/blob/0923985202e343f06a73110cac7bf98fe816b9d9/agent%20playground/assets/redline%20rover/redline%20rover%20main.png)
+![Redline Rover main](assets/redline%20rover/redline%20rover%20main.png)
 
 # Redline Rover
 
@@ -59,9 +59,9 @@ Include section numbers or headings when possible. The comparison must include:
 ### Templates to Include in Knowledge Base
 [Insert your organization templates in knowledge]
 
-![image alt](https://github.com/heyitsgoad/copilot-playground/blob/0923985202e343f06a73110cac7bf98fe816b9d9/agent%20playground/assets/redline%20rover/redline%20rover%20instructions.png)
-![image alt](https://github.com/heyitsgoad/copilot-playground/blob/0923985202e343f06a73110cac7bf98fe816b9d9/agent%20playground/assets/redline%20rover/redline%20rover%20knowledge.png)
-![image alt](https://github.com/heyitsgoad/copilot-playground/blob/0923985202e343f06a73110cac7bf98fe816b9d9/agent%20playground/assets/redline%20rover/redline%20rover%20capabilities.png)
+![Redline Rover instructions](assets/redline%20rover/redline%20rover%20instructions.png)
+![Redline Rover knowledge](assets/redline%20rover/redline%20rover%20knowledge.png)
+![Redline Rover capabilities](assets/redline%20rover/redline%20rover%20capabilities.png)
 
 ## Run
 
@@ -78,5 +78,5 @@ Run a comparison and confirm that all definitions and appendices are included. A
 
 #### Executive Summary
 Based on the comparison, what are the top three gaps to address with the customer before signing?
-![image alt](https://github.com/heyitsgoad/copilot-playground/blob/0923985202e343f06a73110cac7bf98fe816b9d9/agent%20playground/assets/redline%20rover/redline%20rover%20starter%20prompts.png)
+![Redline Rover starter prompts](assets/redline%20rover/redline%20rover%20starter%20prompts.png)
 ``

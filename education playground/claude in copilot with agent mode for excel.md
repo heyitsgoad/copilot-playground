@@ -1,4 +1,4 @@
-[![Claude in Copilot](https://github.com/heyitsgoad/copilot-playground/blob/c6e79f9a6ad0ce68afdd74e717b22076c078d24d/education%20playground/assets/copilot%20webinar/Agent%20Mode/Claude%20in%20Copilot%206.png?raw=true)](https://youtu.be/zkaRUDSDBwk?si=KNPnsIOLPI9amS8A)
+[![Claude in Copilot](assets/copilot%20webinar/Agent%20Mode/Claude%20in%20Copilot%206.png)](https://youtu.be/zkaRUDSDBwk?si=KNPnsIOLPI9amS8A)
 
 
 There’s been a lot of attention lately on Claude and how strong it is with Excel and structured data.
@@ -14,7 +14,7 @@ If you want to rebuild this yourself, use the steps below in order.
 ### 1) Download the mock RAW data
 This demo uses synthetic data generated for education and walkthrough purposes.
 
-[File Download HERE](https://github.com/heyitsgoad/copilot-playground/blob/01025b1e2d3f697c10dbac42fd07a7d87fc5a8a8/education%20playground/assets/copilot%20webinar/Agent%20Mode/Q2_2025_ParamedicOvertime_RAW.xlsx)
+[File Download HERE](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20webinar/Agent%20Mode/Q2_2025_ParamedicOvertime_RAW.xlsx)
 
 What’s inside (so it feels realistic):
 - Overtime_Raw (3,416 rows): Shift level records with role, station, shift, overtime hours, overtime reason, pay details, call volume, and staffing gap flags

@@ -82,7 +82,7 @@ Agents built for precision work with documents and agreements.
 
 New to Copilot? Start here.
 
-- [Getting Started with Copilot](https://github.com/heyitsgoad/copilot-playground/blob/573ee79899b18fa52df2562a8941c3729e4b0bf8/prompt%20playground/getting%20started%20with%20copilot.md) — Learn the ropes and get comfortable with your first prompts
+- [Getting Started with Copilot](prompt%20playground/getting%20started%20with%20copilot.md) — Learn the ropes and get comfortable with your first prompts
 - [10 Starter Copilot Chat Prompts](https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/10%20starter%20copilot%20chat%20prompts.md) — Ten practical Copilot Chat prompts covering summaries, rewrites, agendas, FAQs, and more — ready to run and easy to customize
 
 ---
@@ -102,7 +102,7 @@ Prompts to keep your day on track from start to finish.
 
 - [Start My Day](./prompt%20playground/start%20my%20day.md) — Kick things off with a morning overview
 - [Morning Kick-off, Afternoon Reset, and Wrap-up](prompt%20playground/morning-kickoff-afternoon-reset-and-wrap-up.md) — Three-part prompt set covering your full workday
-- [Check My Calendar](https://github.com/heyitsgoad/copilot-playground/blob/6cbcb5312fcc16988a27bee5251ca712583d3a95/prompt%20playground/check%20my%20calendar.md) — Get a quick read on what's ahead
+- [Check My Calendar](prompt%20playground/check%20my%20calendar.md) — Get a quick read on what's ahead
 - [Meeting Notes to Action Table](./prompt%20playground/meeting%20notes%20to%20action%20items.md) — Convert raw meeting notes into a prioritized action table and executive summary in one shot
 - [Copilot in Outlook Prompt Pack](./prompt%20playground/copilot%20in%20outlook%20prompt%20pack.md) — A grouped set of golden-nugget prompts for Copilot in Outlook covering inbox triage, long-thread summaries, drafting and tone control, the Coaching feature, and meeting prep
 
@@ -197,7 +197,7 @@ For C-suite and senior leaders new to Copilot who want real value in the first w
 For IT admins and compliance teams responsible for managing Copilot at scale.
 
 - [Getting Started Guide for Copilot Governance](https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/copilot%20governance%20getting%20started.md) — Practical governance sessions covering Microsoft 365 Copilot and agents across M365 Admin Center, Copilot Studio, Power Platform, Purview, and SharePoint Advanced Management. Topics include access and management controls, DLP and labeling, oversharing cleanup, connector risk, and cost management.
-- [Microsoft Agent 365: Licensing, Architecture, and How It Fits Into Your AI Strategy](https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/microsoft%20agent%20365%20licensing%20architecture%20and%20how%20it%20fits%20into%20your%20ai%20strategy.md) — A research-backed breakdown of what Agent 365 is, how it licenses, and how it fits into your agent architecture today and going forward. Covers the three-plane model, identity, observability, governance, mixed-user licensing scenarios, and where documentation still has gaps.) — A research-backed breakdown of what Agent 365 is, how it licenses, and how it fits into your agent architecture today and going forward. Covers the three-plane model, identity, observability, governance, mixed-user licensing scenarios, and where documentation still has gaps.
+- [Microsoft Agent 365: Licensing, Architecture, and How It Fits Into Your AI Strategy](https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/microsoft%20agent%20365%20licensing%20architecture%20and%20how%20it%20fits%20into%20your%20ai%20strategy.md) — A research-backed breakdown of what Agent 365 is, how it licenses, and how it fits into your agent architecture today and going forward. Covers the three-plane model, identity, observability, governance, mixed-user licensing scenarios, and where documentation still has gaps.
 - [Copilot Chat, HIPAA & Web Search: What Actually Crosses the Tenant Boundary](https://github.com/heyitsgoad/copilot-chat-hipaa-websearch) — A plain-language guide for IT and security teams in regulated industries. Breaks down what stays inside your Microsoft 365 boundary under your BAA, what really happens when Copilot uses web search (and why it is outside the BAA), exactly what data goes to Bing, and how all of it is audited, retained, and governed in Purview. Includes a downloadable PDF and links every claim to Microsoft Learn.
 - [Right-Sizing Cowork: Who Actually Needs It](https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/right-sizing%20cowork%20who%20actually%20needs%20it.md) — A field framework for deciding who actually needs Cowork instead of rolling it out by headcount. Covers the one question that separates a Premium user from a Cowork user, the personas that benefit, who does not need it, and a real selection method for scoping the spend. Includes a downloadable slide deck in PDF and PPTX.
 - [Copilot Licensing and Deployment: Who Gets What](https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/copilot%20licensing%20and%20deployment%2C%20who%20gets%20what.md) — An [interactive guide](https://heyitsgoad.github.io/copilot-playground/education%20playground/assets/copilot%20licensing%20and%20deployment/) that maps the right Copilot to each role, makes the spend predictable, and lays out a rollout that does not overwhelm the team. Covers the two tiers (and why there is no "Premium" to buy), a role explorer for who gets what by level, how Cowork and agents are billed, who builds versus who uses agents, and the healthcare and compliance guardrails. Includes a browser-viewable exec deck and one-page cheat sheet, with PowerPoint and PDF downloads. Every claim checked against Microsoft documentation.
@@ -209,7 +209,7 @@ For IT admins and compliance teams responsible for managing Copilot at scale.
 
 Follow-along guides with real prompts, data, and steps you can run yourself.
 
-- [Claude in Copilot with Agent Mode for Excel](https://github.com/heyitsgoad/copilot-playground/blob/8f2b297288551b7c6db1f347578c2af1a3c0aad3/education%20playground/claude%20in%20copilot%20with%20agent%20mode%20for%20excel.md) — A hands-on walkthrough showing how Claude-level Excel reasoning works inside Microsoft 365 Copilot. Includes demo data, prompts, and step-by-step instructions so you can rebuild it yourself or follow along with the video.
+- [Claude in Copilot with Agent Mode for Excel](education%20playground/claude%20in%20copilot%20with%20agent%20mode%20for%20excel.md) — A hands-on walkthrough showing how Claude-level Excel reasoning works inside Microsoft 365 Copilot. Includes demo data, prompts, and step-by-step instructions so you can rebuild it yourself or follow along with the video.
 
 ---
 

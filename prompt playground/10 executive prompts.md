@@ -35,4 +35,4 @@ Hey Copilot, I’m a newbie in the Copilot world. I’m an executive and I don�
 
 Hey Copilot, I’m a newbie in the Copilot world. I’m an executive and I don’t know where to start with Copilot. As a coach specialized on training executives to get the most value of Copilot, teach me step by step on what I should focus on to make me comfortable and to help me have impact. Feel free to ask me questions along this coaching session so it can have a good impact on my work and on my learning curve.
 
-Download the full deck [here](https://github.com/heyitsgoad/copilot-playground/blob/fa97c23746af01ee6f65b84f72ab6329fd4821f8/prompt%20playground/assets/copilot%20personalization/copilot%20for%20executives/Executive%20Briefing.pdf)
+Download the full deck [here](https://github.com/heyitsgoad/copilot-playground/raw/main/prompt%20playground/assets/copilot%20personalization/copilot%20for%20executives/Executive%20Briefing.pdf)

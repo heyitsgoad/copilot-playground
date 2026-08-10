@@ -23,7 +23,7 @@ Create a photorealistic image in a clean cartoon whiteboard sketch style that vi
 
 Here is what it produced for me. One whiteboard: my role and what I do on the left, the people I work with on the right, my headshot in the middle, and sticky notes tying it all together.
 
-![My work life on one whiteboard](https://github.com/heyitsgoad/copilot-playground/raw/main/prompt%20playground/assets/my%20work%20life%20on%20one%20whiteboard/my-work-life-on-one-whiteboard.png)
+![My work life on one whiteboard](assets/my%20work%20life%20on%20one%20whiteboard/my-work-life-on-one-whiteboard.png)
 
 ---
 

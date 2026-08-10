@@ -1,4 +1,4 @@
-[![Why AI Can't Find Your Files](https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/assets/ai-ready%20files/ai-ready-file-example-page-1.png?raw=true)](https://youtu.be/oNF78vg3mlU?si=FEkCYzMQ7rVSIir6)
+[![Why AI Can't Find Your Files](assets/ai-ready%20files/ai-ready-file-example-page-1.png)](https://youtu.be/oNF78vg3mlU?si=FEkCYzMQ7rVSIir6)
 
 # Why AI Can't Find Your Files (And the Simple Fix)
 
@@ -89,9 +89,9 @@ I don't think every file needs this. But as we get more serious about how we bui
 
 Here is a quick visual breakdown of what an AI-ready file looks like and the principles behind it. Feel free to download it and share it with your team.
 
-![What an AI-friendly file actually looks like (page 1)](https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/assets/ai-ready%20files/ai-ready-file-example-page-1.png?raw=true)
+![What an AI-friendly file actually looks like (page 1)](assets/ai-ready%20files/ai-ready-file-example-page-1.png)
 
-![Tidy for humans is not the same as ready for AI (page 2)](https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/assets/ai-ready%20files/ai-ready-file-example-page-2.png?raw=true)
+![Tidy for humans is not the same as ready for AI (page 2)](assets/ai-ready%20files/ai-ready-file-example-page-2.png)
 
 **[Download the PDF: AI-Ready Files Metadata Example](https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/assets/ai-ready%20files/AI-Ready-Files-Metadata-Example.pdf)**
 

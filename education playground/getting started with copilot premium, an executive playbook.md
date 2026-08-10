@@ -1,6 +1,6 @@
 # Getting Started with Copilot Premium: An Executive Playbook
 
-![Getting started with Microsoft 365 Copilot Premium: Copilot does the catch-up, you make the calls](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/executive%20copilot%20playbook/playbook-cover.png)
+![Getting started with Microsoft 365 Copilot Premium: Copilot does the catch-up, you make the calls](assets/executive%20copilot%20playbook/playbook-cover.png)
 
 A practical, tiered training program for a C-suite or executive leader who is brand new to Copilot. It walks your leaders from their first prompt to their own chief-of-staff agent, in three tiers of short sessions, so Copilot does the catch-up and your leaders get back to the calls only they can make. Plain language, no jargon, and every session is sized at 30 or 60 minutes. There is a polished PDF you can hand to any leader, a ready-to-present PowerPoint for a live working session, a short sponsorship deck a leader can take to their own executive team to green-light the program, and the full program is written out below so you can read it, link it, and steal the prompts without opening a file.
 

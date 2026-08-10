@@ -1,4 +1,4 @@
-![image alt](https://github.com/heyitsgoad/copilot-playground/blob/a74abd21c5f493a0c116c7aada4e87e46b428fe1/agent%20playground/assets/professor%20x/professor%20x%20main.png)
+![Professor X main](assets/professor%20x/professor%20x%20main.png)
 # Professor X
 
 **Professor X** is a Copilot agent that reviews uploaded conversation transcripts and scores how you run customer and project discussions. It looks at things like technical depth, selling skills, and how well you can tell the story. It checks how you open topics, respond to questions, and handle objections during live calls.
@@ -34,9 +34,9 @@ An agent that analyzes transcripts of customer interactions to evaluate technica
 - Focus on helping the user and their team understand and improve customer interactions, with the goal of **\[insert goal here\]**.
 - Ensure all feedback is constructive, practical, and tailored to the user's goals and performance metrics.
 - Be more detailed in coaching by explicitly pointing out specific areas of improvement and providing clear, actionable guidance for each area identified.
-![image alt](https://github.com/heyitsgoad/copilot-playground/blob/a74abd21c5f493a0c116c7aada4e87e46b428fe1/agent%20playground/assets/professor%20x/professor%20x%20instructions.png)
-![image alt](https://github.com/heyitsgoad/copilot-playground/blob/a74abd21c5f493a0c116c7aada4e87e46b428fe1/agent%20playground/assets/professor%20x/professor%20x%20knowledge.png)
-![image alt](https://github.com/heyitsgoad/copilot-playground/blob/a74abd21c5f493a0c116c7aada4e87e46b428fe1/agent%20playground/assets/professor%20x/professor%20x%20capabilities.png)
+![Professor X instructions](assets/professor%20x/professor%20x%20instructions.png)
+![Professor X knowledge](assets/professor%20x/professor%20x%20knowledge.png)
+![Professor X capabilities](assets/professor%20x/professor%20x%20capabilities.png)
 ---
 
 ## Run
@@ -55,4 +55,4 @@ An agent that analyzes transcripts of customer interactions to evaluate technica
 - **Improvement Plan**
   - “What are the top three areas I should focus on to improve my sales and technical skills?”
  
-  ![image alt](https://github.com/heyitsgoad/copilot-playground/blob/a74abd21c5f493a0c116c7aada4e87e46b428fe1/agent%20playground/assets/professor%20x/professor%20x%20starter%20prompts.png)
+  ![Professor X starter prompts](assets/professor%20x/professor%20x%20starter%20prompts.png)

@@ -1,4 +1,4 @@
-![image alt](https://github.com/heyitsgoad/copilot-playground/blob/cb3f0f1524716601ff30e93e1f0448cab054ac60/education%20playground/assets/copilot%20webinar/webinar%20main.png)
+![Webinar main](assets/copilot%20webinar/webinar%20main.png)
 This is a hands-on governance series that I built with a few of my SEs. It gives you a practical framework for deploying Microsoft 365 Copilot responsibly at scale.
 
 The content walks through end-to-end controls in the M365 Admin Center, Copilot Studio, Power Platform, Microsoft Purview, and SharePoint Advanced Management. It focuses on agent governance, data protection, oversharing mitigation, cost management, and the operational guardrails IT teams actually use.
@@ -151,4 +151,4 @@ Enforce **Site Ownership Policy** and consider **Blocked Download** on sensitive
 
 [View all our sessions in a playlist](RESOURCE_PLACEHOLDER_16)
 
-![image alt](https://github.com/heyitsgoad/copilot-playground/blob/cb3f0f1524716601ff30e93e1f0448cab054ac60/education%20playground/assets/copilot%20webinar/copilot%20governance.png)
+![Copilot governance](assets/copilot%20webinar/copilot%20governance.png)
