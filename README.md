@@ -103,7 +103,6 @@ Prompts to keep your day on track from start to finish.
 - [Start My Day](./prompt%20playground/start%20my%20day.md) — Kick things off with a morning overview
 - [Morning Kick-off, Afternoon Reset, and Wrap-up](prompt%20playground/morning-kickoff-afternoon-reset-and-wrap-up.md) — Three-part prompt set covering your full workday
 - [Check My Calendar](https://github.com/heyitsgoad/copilot-playground/blob/6cbcb5312fcc16988a27bee5251ca712583d3a95/prompt%20playground/check%20my%20calendar.md) — Get a quick read on what's ahead
-- [Future Meeting Catch Up](./prompt%20playground/future%20meeting%20catch-up.md) — Prep for upcoming meetings before they happen
 - [Meeting Notes to Action Table](./prompt%20playground/meeting%20notes%20to%20action%20items.md) — Convert raw meeting notes into a prioritized action table and executive summary in one shot
 - [Copilot in Outlook Prompt Pack](./prompt%20playground/copilot%20in%20outlook%20prompt%20pack.md) — A grouped set of golden-nugget prompts for Copilot in Outlook covering inbox triage, long-thread summaries, drafting and tone control, the Coaching feature, and meeting prep
 
@@ -126,7 +125,7 @@ Prompts focused on self-awareness and personal development.
 
 - [Worst Traits to Enhance Growth](./prompt%20playground/worst%20traits.md) — Use Copilot to surface blind spots and build on them
 - [Positivity Prompts](./prompt%20playground/positivity%20prompts.md) — Reframe your thinking and stay grounded
-- [Career Growth](./prompt%20playground/future%20meeting%20catch-up.md) — Get a 90-day action plan for growing in your role, strengthening relationships, and driving team impact
+- [Career Growth](./prompt%20playground/career%20growth.md) — Get a 90-day action plan for growing in your role, strengthening relationships, and driving team impact
 - [Weekly Case Study Review](./prompt%20playground/weekly%20case%20study%20review.md) — Reframe your week as a business case study with structured analysis across successes, challenges, and recommendations
 - [Career Capability Assessment & Growth Planner](https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/career%20capability%20and%20growth%20planner.md) — Get an evidence-based view of your confirmed strengths, capability gaps, and recommended next steps across short and medium-term career pathways
 - [My Work Life on One Whiteboard](./prompt%20playground/my%20work%20life%20on%20one%20whiteboard.md) — Turn your role, values, and the people you work with into one clean whiteboard sketch with your headshot at the center, grounded in your work data and LinkedIn
