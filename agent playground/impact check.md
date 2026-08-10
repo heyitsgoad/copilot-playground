@@ -1,5 +1,5 @@
 
-![image alt](https://github.com/heyitsgoad/copilot-playground/blob/b9116a3f42a9481ea9b17bcab62a45050b414cb2/agent%20playground/assets/impact%20check/impact%20check%20main.png)
+![Impact Check main](assets/impact%20check/impact%20check%20main.png)
 
 **The Impact Check agent is designed to support weekly 1:1 with your manager by producing a concise, high‑signal summary of my work from the last seven days.** It evaluates meetings, chats, activities, and emails where you actively contributed, using strict inclusion rules to avoid passive participation or broadcast noise. Every item must be verifiable and directly attributable to your work, with a strong preference for customer‑facing outcomes, completed actions, and measurable impact. Items are scored and ranked to surface the highest‑value wins, ensuring the conversation is grounded in facts, not anecdotes.
 
@@ -125,9 +125,9 @@ Score items, then rank by score and business impact. Favor customer-facing impac
 - Time window default: last 7 days ending today
 - Caps: Wins 3, Efficiency 3, Projects 5, Blockers 3, Networking 3
 
-![image alt](https://github.com/heyitsgoad/copilot-playground/blob/b9116a3f42a9481ea9b17bcab62a45050b414cb2/agent%20playground/assets/impact%20check/impact%20agent%20instructions.png)
-![image alt](https://github.com/heyitsgoad/copilot-playground/blob/b9116a3f42a9481ea9b17bcab62a45050b414cb2/agent%20playground/assets/impact%20check/impact%20agent%20knowledge.png)
-![image alt](https://github.com/heyitsgoad/copilot-playground/blob/b9116a3f42a9481ea9b17bcab62a45050b414cb2/agent%20playground/assets/impact%20check/impact%20agent%20capabilities.png)
+![Impact Agent instructions](assets/impact%20check/impact%20agent%20instructions.png)
+![Impact Agent knowledge](assets/impact%20check/impact%20agent%20knowledge.png)
+![Impact Agent capabilities](assets/impact%20check/impact%20agent%20capabilities.png)
 ---
 
 ## Run
@@ -142,6 +142,6 @@ Score items, then rank by score and business impact. Favor customer-facing impac
 
 - Generate a weekly 1:1 summary for my manager. Focus on strategy, impact, and visibility. Use only verifiable items from the past 7–14 days in my local timezone. Prioritize meetings I contributed to, authored emails, chats with my replies or actions, and completed or progressed work. Score and rank by business impact. Follow the structure: Strategic Wins, AI-Driven Efficiency, Projects & Progress, Visibility & Support, Strategy First.
 
-![image alt](https://github.com/heyitsgoad/copilot-playground/blob/b9116a3f42a9481ea9b17bcab62a45050b414cb2/agent%20playground/assets/impact%20check/impact%20agent%20starter%20prompts.png)
+![Impact Agent starter prompts](assets/impact%20check/impact%20agent%20starter%20prompts.png)
 ``
 

@@ -1,6 +1,6 @@
 # Right-Sizing Cowork: Who Actually Needs It
 
-![Right-Sizing Cowork: don't scope it by headcount, scope it by work shape](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/right-sizing%20cowork/banner.png)
+![Right-Sizing Cowork: don't scope it by headcount, scope it by work shape](assets/right-sizing%20cowork/banner.png)
 
 
 A field perspective for the conversation every IT leader is having right now: if Cowork is more expensive to run, who do we actually give it to? The short answer is that you don't roll it out by headcount, you scope it by work shape. This page gives you the framework I use to separate the people who genuinely need Cowork from the much larger group that Copilot Premium already covers, plus a slide deck you can share.

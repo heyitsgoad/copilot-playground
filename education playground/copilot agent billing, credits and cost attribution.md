@@ -1,6 +1,6 @@
 # Copilot Agent Billing: Credits, Cost Attribution, and Who Actually Pays
 
-![Copilot agent billing: who pays, where the charge lands, and how to structure Azure so it lands in the right cost center](https://github.com/heyitsgoad/copilot-playground/raw/main/education%20playground/assets/copilot%20agent%20billing/banner.png)
+![Copilot agent billing: who pays, where the charge lands, and how to structure Azure so it lands in the right cost center](assets/copilot%20agent%20billing/banner.png)
 
 > [!IMPORTANT]
 > **Read this first: these are my own views.** This is a personal, community resource, and the analysis, opinions, and recommendations in it are my own. I work at Microsoft, but this is **not** an official Microsoft publication, not an official Microsoft position, not pricing guidance, and not an offer or commitment. Where I interpret Microsoft's documentation, draw a conclusion, or recommend an approach, that is my perspective as a practitioner rather than a statement on behalf of Microsoft or my employer.
