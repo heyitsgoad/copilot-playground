@@ -605,7 +605,6 @@ Everything linked in this guide, in one place. All from this playground.
 - [Copilot in Outlook Prompt Pack](../prompt%20playground/copilot%20in%20outlook%20prompt%20pack.md). Triage, summaries, drafting, tone.
 - [Agent Mode for Excel](./claude%20in%20copilot%20with%20agent%20mode%20for%20excel.md). Hands-on walkthrough with demo data.
 - [Start My Day](../prompt%20playground/start%20my%20day.md). A morning overview to run daily.
-- [Future Meeting Catch-Up](../prompt%20playground/future%20meeting%20catch-up.md). Prep for meetings before they happen.
 
 ### For your IT, security, and adoption team
 - [Copilot Chat, HIPAA & Web Search](https://github.com/heyitsgoad/copilot-chat-hipaa-websearch). What crosses the tenant boundary.
