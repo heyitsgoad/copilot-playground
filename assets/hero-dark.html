@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Copilot Playground hero, dark</title>
+<style>
+  :root{
+    --bg:#232323;
+    --surface:#292929;
+    --ink:#dedede;
+    --muted:#a8a8a8;
+    --faint:#b0b0b0;
+    --line:#3d3d3d;
+    --pink:#fd8ea1;
+    --pink-wash:rgba(253,142,161,.10);
+    --pink-edge:rgba(253,142,161,.32);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:#000;}
+  body{font-family:"Segoe UI",Aptos,Calibri,-apple-system,BlinkMacSystemFont,sans-serif;}
+
+  .banner{
+    zoom:2;
+    width:1280px;height:400px;
+    background:var(--bg);
+    position:relative;overflow:hidden;
+    display:flex;align-items:center;
+    padding:0 58px 0 60px;gap:52px;
+  }
+  .edge{position:absolute;left:0;top:0;bottom:0;width:8px;background:var(--pink);}
+
+  .left{flex:1 1 auto;min-width:0;position:relative;z-index:2;}
+  .eyebrow{
+    font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.16em;
+    color:var(--pink);margin:0;
+  }
+  h1{
+    font-size:62px;font-weight:700;letter-spacing:-.022em;line-height:1.06;
+    color:#f2efea;margin:17px 0 0;
+  }
+  .lede{
+    font-size:19px;line-height:1.45;color:var(--muted);margin:15px 0 0;max-width:60ch;
+  }
+  .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px;}
+  .chip{
+    font-size:14px;font-weight:600;color:var(--faint);
+    background:var(--surface);border:1px solid var(--line);
+    border-radius:999px;padding:8px 17px;white-space:nowrap;
+  }
+  .chip.on{background:var(--pink);border-color:var(--pink);color:#1a1a1a;font-weight:700;}
+
+  .cards{flex:0 0 auto;display:flex;gap:13px;position:relative;z-index:2;}
+  .card{
+    width:122px;height:150px;border-radius:12px;
+    background:var(--surface);border:1px solid var(--line);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:14px 10px;gap:9px;
+  }
+  .card.on{background:var(--pink-wash);border-color:var(--pink-edge);}
+  .card svg{width:23px;height:23px;stroke:var(--faint);stroke-width:1.85;}
+  .card.on svg{stroke:var(--pink);}
+  .card b{
+    font-size:13.5px;font-weight:700;color:var(--ink);line-height:1.28;letter-spacing:-.005em;
+  }
+  .card.on b{color:var(--pink);}
+  .card u{
+    text-decoration:none;font-size:11px;font-weight:700;letter-spacing:.13em;
+    text-transform:uppercase;color:#7d7770;
+  }
+  .card.on u{color:rgba(253,142,161,.72);}
+</style>
+</head>
+<body>
+  <div class="banner">
+    <div class="edge"></div>
+    <div class="left">
+      <p class="eyebrow">Michael Goad, Copilot Solution Engineer</p>
+      <h1>Copilot Playground</h1>
+      <p class="lede">Agents, prompts, and field guides for Microsoft 365 Copilot, Copilot Studio, and Agent 365. Built in the open, tested in the field.</p>
+      <div class="chips">
+        <span class="chip on">6 Agents</span>
+        <span class="chip">31 Prompts</span>
+        <span class="chip">9 Field Guides</span>
+        <span class="chip">Free to copy and use</span>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card on">
+        <i data-lucide="bot"></i>
+        <b>Agent<br>Playground</b>
+        <u>Build</u>
+      </div>
+      <div class="card">
+        <i data-lucide="message-square-text"></i>
+        <b>Prompt<br>Playground</b>
+        <u>Run</u>
+      </div>
+      <div class="card">
+        <i data-lucide="graduation-cap"></i>
+        <b>Education<br>Playground</b>
+        <u>Learn</u>
+      </div>
+    </div>
+  </div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

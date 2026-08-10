@@ -1,4 +1,8 @@
-![image alt](https://github.com/heyitsgoad/copilot-playground/blob/9016baa134dc084f71121d9858c9e0d48e95f227/main%20wide%20and%20stretched.png)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.png">
+  <img alt="Copilot Playground. Agents, prompts, and field guides for Microsoft 365 Copilot, Copilot Studio, and Agent 365, by Michael Goad, Copilot Solution Engineer. Six agents, 31 prompts, nine field guides." src="assets/hero-light.png" width="100%">
+</picture>
 
 ## Hello world and welcome to my Copilot Playground
 
