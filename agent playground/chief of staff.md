@@ -207,3 +207,7 @@ A few things that separate a Chief of Staff that actually helps from one that ju
 - Any AI assistant platform that supports custom agents
 - Works best with email and messaging connected for real context
 - Optional file uploads for deeper, personalized reasoning
+
+---
+
+[Back to the Agent Playground](../README.md#agent-playground)

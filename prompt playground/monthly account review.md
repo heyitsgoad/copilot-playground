@@ -7,12 +7,13 @@ A comprehensive account intelligence prompt that acts as your personal Account A
 Each run produces four outputs: a structured Monthly Account Review Report, a one-page Executive Summary, an Executive PowerPoint, and an HTML presentation, all emailed directly to you.
 
 > [!TIP]
-> Swap in your own accounts, role, and data sources before running. The structure below is a template — adjust the TPID list, persona, and output preferences to match your territory and engagement model.
+> Swap in your own accounts, role, and data sources before running. Adjust the TPID list, persona, and output preferences to match your territory and engagement model.
 
 ---
 
-## Prompt
+## Quick Copy
 
+```
 Act as my Account Analyst.
 Research the `Insert projects, accounts, etc` listed below that I support as a `Role`.
 
@@ -227,3 +228,8 @@ Send an email with:
 ## Schedule
 
 Run this task automatically on the first business day of each month on a recurring basis.
+```
+
+---
+
+[Back to the Prompt Playground](../README.md#prompt-playground)

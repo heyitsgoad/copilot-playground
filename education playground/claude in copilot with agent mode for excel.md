@@ -1,3 +1,5 @@
+# Claude in Copilot with Agent Mode for Excel
+
 [![Claude in Copilot](assets/copilot%20webinar/Agent%20Mode/Claude%20in%20Copilot%206.png)](https://youtu.be/zkaRUDSDBwk?si=KNPnsIOLPI9amS8A)
 
 
@@ -109,3 +111,7 @@ Once the workbook is built, the VP should focus on **decisions**, not analysis.
 - ROI shows up as time to answer and quality of decision
 Agent Mode isn’t typing formulas.
 It’s producing usable Excel workbooks, iterating, and validating until the result is ready.
+
+---
+
+[Back to the Education Playground](../README.md#education-playground)

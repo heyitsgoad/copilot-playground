@@ -1,4 +1,4 @@
-# Manager 1:1 Weekly Update for Copilot Cowork
+# Manager 1:1 Weekly Update
 
 ## What This Is
 
@@ -6,12 +6,14 @@ A structured Copilot Cowork prompt that reviews your past week across meetings, 
 
 Each run automatically generates and emails a leadership-ready executive summary, along with a PowerPoint and HTML briefing that highlights portfolio impact, customer commitments, pending follow-ups, risks to Copilot adoption, and decisions that may require leadership support.
 
-> This prompt is meant to be edited and refined over time using your own accounts, workflows, internal processes, and engagement model. Think of it as a repeatable template for turning day-to-day field activity into something leadership can actually use.
+> [!TIP]
+> Edit the customer list, folder path, recipient list, and weekly schedule before you turn it on. This works best when it reflects your actual account model and manager cadence.
 
 ---
 
-## Prompt
+## Quick Copy
 
+```
 **Manager 1:1 Weekly Field Impact Readout**
 
 You are supporting preparation for my weekly 1:1 with my manager.
@@ -305,3 +307,8 @@ After generating all outputs, send an email with:
 **Body:**
 - Include the Executive Summary
 - Include a note that the full PowerPoint and HTML briefing have been created and saved under `Documents > Cowork > Manager 1:1 Briefings`
+```
+
+---
+
+[Back to the Prompt Playground](../README.md#prompt-playground)

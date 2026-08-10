@@ -1,13 +1,22 @@
-# Contextual Filter: Gain a New Perspective
+# Contextual Filter
 
 ## What This Is
 
-A simple but powerful prompt that reframes any document through the lens of a specific role. Instead of reading everything, you tell Copilot who you are and it filters down to only what matters for you.
+A role-based reading prompt for long documents. Copilot reads through a specific lens and only pulls out the action items and deadlines that matter to that role.
 
-> Swap out `[CISO]` for any role: CFO, VP of Sales, IT Admin, Account Executive, etc.
+Use it when a document has too much detail and you need the part that applies to your job.
+
+> [!TIP]
+> Replace `[CISO]` with the role you want Copilot to use, such as CFO, VP of Sales, IT Admin, or Account Executive.
 
 ---
 
-## Prompt
+## Quick Copy
 
+```
 Read this document from the perspective of a [CISO]. Only pull out the action items and deadlines that impact my role. Ignore everything else.
+```
+
+---
+
+[Back to the Prompt Playground](../README.md#prompt-playground)

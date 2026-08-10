@@ -1,14 +1,19 @@
-# Copywriting Precision & Tone Enhancer
+# Copywriting Precision and Tone
 
 ## What This Is
-A senior-level editing prompt that reviews any excerpt you provide and refines it with the precision of a copywriter with 20+ years of experience.
 
-It focuses on clarity, tone, flow, and readability while keeping your original voice intact. The goal is to produce writing that is clean, direct, and easy to absorb.
+A senior editing prompt for improving an excerpt without losing the original voice. It focuses on clarity, tone, flow, grammar, and readability.
+
+Use it when a draft is close, but still needs a sharper copyedit before you send, publish, or share it.
+
+> [!TIP]
+> Replace `[end state]` with the type of writing you want reviewed, such as executive email, product copy, technical documentation, or LinkedIn post.
 
 ---
 
-## Prompt
+## Quick Copy
 
+```
 Act as a senior copywriter with over 20 years of experience writing **[end state]**.
 
 I want you to improve my writing. I will share an excerpt, and your task is to proofread it and provide recommendations based on the following criteria.
@@ -41,3 +46,8 @@ List each change made and explain why it was made.
 
 ### Revised Excerpt
 Provide the improved version of the text.
+```
+
+---
+
+[Back to the Prompt Playground](../README.md#prompt-playground)

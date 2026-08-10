@@ -11,8 +11,9 @@ Each run generates three outputs: an Executive Summary, a PowerPoint briefing sa
 
 ---
 
-## Prompt
+## Quick Copy
 
+```
 Run every Monday through Friday at 8:00 AM
 
 Review the past 24 hours across:
@@ -143,3 +144,8 @@ An HTML-based executive presentation with the same sections for quick browser-ba
 **D. Email Delivery**
 Subject: `Daily Executive Field Readout`
 Body includes the Executive Summary and a note that the full PowerPoint and HTML briefing have been saved to OneDrive under `Documents → Cowork → Daily Briefings`.
+```
+
+---
+
+[Back to the Prompt Playground](../README.md#prompt-playground)

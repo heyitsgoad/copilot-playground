@@ -196,3 +196,7 @@ Smaller diffs, clarifying questions before risky work, fewer needless abstractio
 ## Credit
 
 Adapted from the MIT-licensed [forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills), whose guidelines derive from Andrej Karpathy's observations on common LLM coding pitfalls. The minimal-solution ladder incorporates guidance from the MIT-licensed [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail).
+
+---
+
+[Back to the Prompt Playground](../README.md#prompt-playground)

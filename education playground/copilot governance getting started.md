@@ -1,3 +1,5 @@
+# Getting Started with Copilot Governance
+
 ![Webinar main](assets/copilot%20webinar/webinar%20main.png)
 This is a hands-on governance series that I built with a few of my SEs. It gives you a practical framework for deploying Microsoft 365 Copilot responsibly at scale.
 
@@ -152,3 +154,7 @@ Enforce **Site Ownership Policy** and consider **Blocked Download** on sensitive
 [View all our sessions in a playlist](RESOURCE_PLACEHOLDER_16)
 
 ![Copilot governance](assets/copilot%20webinar/copilot%20governance.png)
+
+---
+
+[Back to the Education Playground](../README.md#education-playground)

@@ -98,3 +98,7 @@ Here is a quick visual breakdown of what an AI-ready file looks like and the pri
 ---
 
 Curious if anyone else is already thinking about this in how they build their knowledge bases. If you are, I'd love to hear how you're approaching it.
+
+---
+
+[Back to the Education Playground](../README.md#education-playground)

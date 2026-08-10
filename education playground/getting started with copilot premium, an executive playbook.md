@@ -621,3 +621,7 @@ Everything linked in this guide, in one place. All from this playground.
 The fastest path from licensed to fluent is a person. Bring me your team and I will run a live 45-minute working session: we will set up personalization, build a Chief of Staff agent, and get each leader their first real win on their own work.
 
 **Michael Goad**, Copilot Solution Engineer at Microsoft. Reach me at michaelgoad@microsoft.com.
+
+---
+
+[Back to the Education Playground](../README.md#education-playground)
