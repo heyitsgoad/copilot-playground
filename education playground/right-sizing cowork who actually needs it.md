@@ -89,3 +89,6 @@ Don't hand-wave "we'll just figure out who." Use a real selection path.
 
 That turns "a giant seat count, fingers crossed" into "we earned our way up from 100, and every added seat passed a bar."
 
+---
+
+[Back to the Education Playground](../README.md#education-playground)

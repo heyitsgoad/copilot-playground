@@ -312,3 +312,7 @@ Agent 365 is **not** an all-or-nothing per-agent "premium switch." It is a **ten
 - [learn.microsoft.com/en-us/microsoft-365/copilot/copilot-control-system/overview](https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-control-system/overview)
 - [microsoft.com/en-us/security/blog/2026/05/01/microsoft-agent-365-now-generally-available-expands-capabilities-and-integrations/](https://www.microsoft.com/en-us/security/blog/2026/05/01/microsoft-agent-365-now-generally-available-expands-capabilities-and-integrations/)
 - [learn.microsoft.com/en-us/microsoft-agent-365/developer/](https://learn.microsoft.com/en-us/microsoft-agent-365/developer/)
+
+---
+
+[Back to the Education Playground](../README.md#education-playground)

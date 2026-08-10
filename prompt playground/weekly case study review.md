@@ -2,12 +2,21 @@
 
 ## What This Is
 
-A self-reflection prompt that reframes your week as a business case study. Instead of a generic recap, Copilot analyzes your week with the same structure a consultant would use, surfacing what worked, what didn't, and what to do about it, written in third person for objectivity and formatted for easy sharing with leadership.
+A reflection prompt that turns your week into a short business case study. Copilot looks for what worked, what did not, and what to do next.
 
-> Run this at the end of the week for a structured look back before your next planning cycle starts.
+Run it at the end of the week when you want a clearer readout before planning the next one. The third-person framing helps make the analysis feel more objective.
+
+> [!TIP]
+> Run it after Copilot has access to the week's relevant meetings, notes, email, or chat context. Add your own metrics if you want the analysis to be more specific.
 
 ---
 
-## Prompt
+## Quick Copy
 
+```
 Review my week like it's a case study: What's working? What's not? Use Markdown to create a structured and visually appealing analysis. Include sections for successes, challenges, and recommendations. Highlight key points with bullet points, bold text, and italicized highlights to enhance readability and impact. Include any relevant data or metrics to support the analysis and provide actionable insights for improvement. Use third person when referencing me.
+```
+
+---
+
+[Back to the Prompt Playground](../README.md#prompt-playground)

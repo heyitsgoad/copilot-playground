@@ -100,3 +100,7 @@ Section 15 of the guide lists the primary references behind it. Version 1.4 adds
 - [Microsoft Agent 365: Licensing, Architecture, and How It Fits Into Your AI Strategy](https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/microsoft%20agent%20365%20licensing%20architecture%20and%20how%20it%20fits%20into%20your%20ai%20strategy.md) for the governance and identity layer above the billing layer
 - [Getting Started Guide for Copilot Governance](https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/copilot%20governance%20getting%20started.md) for the broader admin and compliance picture
 - [Right-Sizing Cowork: Who Actually Needs It](https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/right-sizing%20cowork%20who%20actually%20needs%20it.md) for scoping Cowork before you turn the meter on
+
+---
+
+[Back to the Education Playground](../README.md#education-playground)

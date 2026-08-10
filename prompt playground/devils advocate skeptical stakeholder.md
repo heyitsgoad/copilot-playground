@@ -1,13 +1,22 @@
-# Devil's Advocate: Skeptical Stakeholder
+# Devil's Advocate
 
 ## What This Is
 
-A pressure-test prompt that flips Copilot into critic mode. Before you walk into a room with a proposal, run this first. It surfaces the three most likely failure points and gives you fixes before someone else finds them for you.
+A pressure-test prompt for proposals, pitches, plans, or deck summaries. Copilot acts like a skeptical stakeholder and identifies the three clearest reasons the idea might fail.
 
-> Paste your proposal, deck summary, or pitch directly after the prompt and let Copilot poke holes in it.
+Use it before you share a recommendation, ask for approval, or walk into a meeting where objections are likely.
+
+> [!TIP]
+> Paste the proposal or a short summary after the prompt. Include the audience and decision you want if that context matters.
 
 ---
 
-## Prompt
+## Quick Copy
 
+```
 Act as a skeptical stakeholder. Give me three specific reasons why this proposal might fail and how to fix them.
+```
+
+---
+
+[Back to the Prompt Playground](../README.md#prompt-playground)

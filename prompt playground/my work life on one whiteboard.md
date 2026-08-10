@@ -48,3 +48,7 @@ Every line in this prompt is doing a job. Here is what each part controls and wh
 
 > [!NOTE]
 > Results vary by run. If the first pass misses something or gets a title wrong, tell it what to fix ("move my manager to the top, add my two biggest customers") and have it redraw.
+
+---
+
+[Back to the Prompt Playground](../README.md#prompt-playground)

@@ -122,3 +122,7 @@ When the major branches are resolved it stops and summarizes the agreed plan, th
 ## Credit
 
 The domain-documentation pressure in this skill is inspired by Matt Pocock's [grill-with-docs skill](https://github.com/mattpocock/skills/blob/main/skills/engineering/grill-with-docs/SKILL.md), adapted here to stay coding-focused and to leave your docs untouched during a grilling session.
+
+---
+
+[Back to the Prompt Playground](../README.md#prompt-playground)

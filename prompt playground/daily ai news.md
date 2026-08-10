@@ -1,17 +1,19 @@
-# The Copilot Chronicle: Daily AI News Brief
+# The Copilot Chronicle
 
 ## What This Is
 
-A daily newspaper-styled AI news brief built for Microsoft Copilot Cowork. Every morning it scans the latest external AI industry news across Microsoft Copilot, Anthropic, Google, and OpenAI, plus your internal Microsoft field updates pulled via Microsoft Graph signals from email, Teams, and Viva Engage. The output is a formatted HTML newspaper emailed directly to you, sized for a 5-minute coffee read.
+A daily newspaper-styled AI news brief built for Microsoft Copilot Cowork. Every morning it scans the latest external AI industry news across Microsoft Copilot, Anthropic, Google, and OpenAI, plus your internal Microsoft field updates pulled via Microsoft Graph signals from email, Teams, and Viva Engage.
+
+The output is a formatted HTML newspaper emailed directly to you, sized for a 5-minute coffee read.
 
 > [!TIP]
-> This prompt is built around a specific persona and internal source list. Before running, swap in your own email address, role, and internal search terms. The Field Desk section uses Microsoft Graph to pull from your Outlook and Teams activity, so add any internal newsletters, digests, or community channels you want included in the placeholders below.
+> Before running, swap in your own email address, role, internal search terms, newsletters, digests, and community channels.
 
 ---
 
-## Prompt
+## Quick Copy
 
-
+```
 ---
 name: daily-news
 description: Generates "The Copilot Chronicle" — a daily newspaper-styled HTML morning brief covering external AI industry news (Microsoft Copilot, Anthropic/Claude, Google/Gemini, OpenAI/ChatGPT, broader AI industry) plus internal field updates pulled via Microsoft Graph signals from email, Teams, and Viva Engage. Output is an HTML email with masthead, two-column body, dateline, lead story with drop cap, three section banners, ticker, and footer — emailed directly to you. Every story is hyperlinked to its source.
@@ -149,3 +151,8 @@ Reply with the edition date, story count by section, and confirmation that it ha
 - Do not invent Outlook `webLink` values. Only link items returned from real Graph queries.
 - Do not include performance evaluations of named individuals.
 - Do not include personal or health data scraped from emails.
+```
+
+---
+
+[Back to the Prompt Playground](../README.md#prompt-playground)

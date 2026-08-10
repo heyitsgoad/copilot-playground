@@ -1,11 +1,11 @@
-# Career Capability Assessment & Growth Planner
+# Capability and Growth Planner
 
 ## What This Is
 
 An evidence-based career development prompt that analyzes your current skills and capabilities using your enterprise resources, role profile, and career level. It maps where you stand against your organization's capability framework, identifies confirmed strengths, emerging skills, and gaps, then delivers a structured career guidance report with short and medium-term pathway recommendations.
 
 > [!TIP]
-> Before running, have your role title, career level or grade, and optional target role ready. The more context you provide upfront, the more precise the output. This prompt is designed to be adapted to your organization's role guides and capability frameworks — swap in your own where indicated.
+> Before running, have your role title, career level or grade, and optional target role ready. The more context you provide upfront, the more precise the output. This prompt is designed to be adapted to your organization's role guides and capability frameworks. Swap in your own where indicated.
 
 ---
 
@@ -145,3 +145,7 @@ The highest-impact areas to focus on first.
 - Use clear headings and bullet points
 - Focus on practical, actionable guidance
 - Flag where human manager or HR validation is recommended
+
+---
+
+[Back to the Prompt Playground](../README.md#prompt-playground)

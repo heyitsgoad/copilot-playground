@@ -63,7 +63,9 @@ Copy the skill folders from this pack into that OneDrive folder. Keep one folder
 
 ---
 
-## apply-brand-template
+## Skills
+
+### apply-brand-template
 
 Reformats selected slides to your visual identity. Edit the brand tokens at the top first so it uses your fonts, colors, and logo spot.
 
@@ -103,7 +105,7 @@ The same slides, reformatted. End with a one-line summary of what changed.
 
 ---
 
-## fix-this-slide
+### fix-this-slide
 
 The "make this one slide look intentional" skill. Point it at a messy slide and let it align, space, and tighten.
 
@@ -136,7 +138,7 @@ The cleaned-up slide, plus a one-line note of the top 2 or 3 fixes made.
 
 ---
 
-## executive-summary-slide
+### executive-summary-slide
 
 Reads the whole deck and builds a single summary slide an executive can read in 20 seconds.
 
@@ -168,7 +170,7 @@ One new summary slide. Below it (in the chat), list the source slides each takea
 
 ---
 
-## speaker-notes
+### speaker-notes
 
 Writes a real talk track into the notes pane so you're not reading bullets off the screen.
 
@@ -202,7 +204,7 @@ Notes added to each slide's notes pane. End with the estimated total talk time f
 
 ---
 
-## doc-to-deck
+### doc-to-deck
 
 Turns a document, notes, or pasted content into a clean slide outline you can build on.
 
@@ -237,7 +239,7 @@ A drafted deck. In the chat, give a quick outline (slide titles) so the user can
 
 ---
 
-## de-jargon
+### de-jargon
 
 Rewrites slide text in plain language for a non-technical or executive audience, without changing the facts.
 
@@ -269,7 +271,7 @@ The rewritten slides, plus a short list of the jargon terms you swapped and what
 
 ---
 
-## tighten-copy
+### tighten-copy
 
 Cuts filler and long bullets so the slide is scannable. Great before any exec review.
 
@@ -301,7 +303,7 @@ The tightened slides, plus a one-line note on how much was trimmed.
 
 ---
 
-## consistency-check
+### consistency-check
 
 Audits the whole deck for the little inconsistencies that make it look rushed: mixed fonts, off-palette colors, caps, spacing.
 
@@ -334,7 +336,7 @@ A slide-by-slide issue list (Slide number, issue, suggested fix). Then ask: "Wan
 
 ---
 
-## accessibility-pass
+### accessibility-pass
 
 Adds alt text, checks contrast and font size, and confirms a logical reading order so the deck works for everyone.
 
@@ -365,7 +367,7 @@ A checklist of what was fixed and what still needs the user's decision (like con
 
 ---
 
-## customer-ready-pass
+### customer-ready-pass
 
 Takes an internal deck and preps it to share: strips internal notes and hidden slides, flags anything sensitive, and adds a disclaimer. Set your approved disclaimer wording first.
 
@@ -397,7 +399,7 @@ A cleaned, share-ready deck plus a list of everything removed or flagged for the
 
 ---
 
-## qbr-builder
+### qbr-builder
 
 Structures content into a clean Quarterly Business Review flow: wins, status, pipeline, risks, and asks.
 
@@ -433,3 +435,7 @@ A structured QBR deck plus a short list of the "[NEEDS DATA]" placeholders the u
 - Don't fabricate metrics, dates, or commitments, use placeholders instead.
 - Keep risks honest but constructive, always pair a risk with a mitigation.
 ```
+
+---
+
+[Back to the Prompt Playground](../README.md#prompt-playground)

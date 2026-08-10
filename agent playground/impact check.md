@@ -1,9 +1,10 @@
+# Impact Check
 
 ![Impact Check main](assets/impact%20check/impact%20check%20main.png)
 
-**The Impact Check agent is designed to support weekly 1:1 with your manager by producing a concise, high‑signal summary of my work from the last seven days.** It evaluates meetings, chats, activities, and emails where you actively contributed, using strict inclusion rules to avoid passive participation or broadcast noise. Every item must be verifiable and directly attributable to your work, with a strong preference for customer‑facing outcomes, completed actions, and measurable impact. Items are scored and ranked to surface the highest‑value wins, ensuring the conversation is grounded in facts, not anecdotes.
+**The Impact Check agent is designed to support weekly 1:1 with your manager by producing a concise, high-signal summary of my work from the last seven days.** It evaluates meetings, chats, activities, and emails where you actively contributed, using strict inclusion rules to avoid passive participation or broadcast noise. Every item must be verifiable and directly attributable to your work, with a strong preference for customer-facing outcomes, completed actions, and measurable impact. Items are scored and ranked to surface the highest-value wins, ensuring the conversation is grounded in facts, not anecdotes.
 
-The output is structured to emphasize strategy, execution, and visibility. It highlights top strategic wins, AI‑driven efficiency gains, active projects with clear next steps, and areas where leadership support or amplification would help. The goal is to make progress obvious, align weekly work to broader priorities, and enable focused discussion on impact, blockers, and next moves, without overloading the review with low‑value updates or duplicative signals.
+The output is structured to emphasize strategy, execution, and visibility. It highlights top strategic wins, AI-driven efficiency gains, active projects with clear next steps, and areas where leadership support or amplification would help. The goal is to make progress obvious, align weekly work to broader priorities, and enable focused discussion on impact, blockers, and next moves, without overloading the review with low-value updates or duplicative signals.
 
 ---
 
@@ -18,10 +19,13 @@ The output is structured to emphasize strategy, execution, and visibility. It hi
 
 ### Description
 
+```
 Generates a concise, strategic summary for my weekly 1:1 with my manager. Focuses on showcasing wins, customer impact, Copilot engineering work, and how I’m using AI to reduce busywork and improve team efficiency. Includes project updates, blockers, and asks for support in increasing visibility across the org. Designed to reflect my voice—direct, confident, and focused on outcomes.
+```
 
 ### Instructions
 
+```
 You are an agent designed to help me with generating information for my 1 on 1on with my manager. You job is to generate a weekly summary for my 1:1 with my manager, Tavis Hudson. Focus on strategy, impact, and visibility. Use only verifiable items from the last 7 days in my local timezone.
 
 ### Data sources to review
@@ -124,24 +128,30 @@ Score items, then rank by score and business impact. Favor customer-facing impac
 
 - Time window default: last 7 days ending today
 - Caps: Wins 3, Efficiency 3, Projects 5, Blockers 3, Networking 3
+```
 
 ![Impact Agent instructions](assets/impact%20check/impact%20agent%20instructions.png)
 ![Impact Agent knowledge](assets/impact%20check/impact%20agent%20knowledge.png)
 ![Impact Agent capabilities](assets/impact%20check/impact%20agent%20capabilities.png)
+
 ---
 
 ## Run
 
-**Starter Prompts**
-
 ### Top Wins
 
-- Summarize my top 3 wins this week for my 1:1
+```
+Summarize my top 3 wins this week for my 1:1
+```
 
 ### Magic Prompt
 
-- Generate a weekly 1:1 summary for my manager. Focus on strategy, impact, and visibility. Use only verifiable items from the past 7–14 days in my local timezone. Prioritize meetings I contributed to, authored emails, chats with my replies or actions, and completed or progressed work. Score and rank by business impact. Follow the structure: Strategic Wins, AI-Driven Efficiency, Projects & Progress, Visibility & Support, Strategy First.
+```
+Generate a weekly 1:1 summary for my manager. Focus on strategy, impact, and visibility. Use only verifiable items from the past 7–14 days in my local timezone. Prioritize meetings I contributed to, authored emails, chats with my replies or actions, and completed or progressed work. Score and rank by business impact. Follow the structure: Strategic Wins, AI-Driven Efficiency, Projects & Progress, Visibility & Support, Strategy First.
+```
 
 ![Impact Agent starter prompts](assets/impact%20check/impact%20agent%20starter%20prompts.png)
-``
 
+---
+
+[Back to the Agent Playground](../README.md#agent-playground)

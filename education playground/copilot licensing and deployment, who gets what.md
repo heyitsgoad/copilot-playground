@@ -57,3 +57,7 @@ The question I get more than any other: how do we actually roll Copilot out with
 
 > [!NOTE]
 > The guide does not hard-code prices, because Microsoft renders several of them dynamically. It names the figures worth confirming (current seat price, the Microsoft 365 Copilot Business SKU, E7, Cowork per-user cost, and Anthropic under your BAA) and tells you where to confirm them. Everything is current as of July 21, 2026.
+
+---
+
+[Back to the Education Playground](../README.md#education-playground)

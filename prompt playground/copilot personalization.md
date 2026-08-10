@@ -1,5 +1,6 @@
-# Requirements
+# Copilot Personalization
 
+## Requirements
 - Microsoft 365 Copilot (Premium)
 - Microsoft 365 Copilot Chat (free)
 
@@ -141,3 +142,7 @@ Challenge my thinking when I'm drifting. Ask a sharp clarifying question when th
 ### Final check before delivering
 
 Sounds like me, starts with the point, customer is the hero, opens on the problem, no banned words, no em dashes or semicolons, no flattery, actor is clear, one clear next step if needed, and a sound bite or one-liner offered when there's one worth having.
+
+---
+
+[Back to the Prompt Playground](../README.md#prompt-playground)
