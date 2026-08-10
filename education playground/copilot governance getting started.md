@@ -13,19 +13,19 @@ It’s based on real customer questions and real deployments, not theory.
 
 - **Session 1: Copilot and Agent Governance Foundations in the M365 Admin Center**  
   Deployment approach, the Copilot Control System, access and billing controls, and how to highlight or restrict agents.  
-  [techcommun...rosoft.com](RESOURCE_PLACEHOLDER_0)
+  [Read the session recap](https://techcommunity.microsoft.com/blog/healthcareandlifesciencesblog/webinar-copilot-governance-session-1-deployment-copilot-control-system-and-agent/4461801)
 
 - **Session 2: Copilot Studio + Power Platform Governance**  
   Managed Environments, environment routing, DLP strategy, connector risk controls, and cost management for agents.  
-  [techcommun...rosoft.com](RESOURCE_PLACEHOLDER_1)
+  [Read the session recap](https://techcommunity.microsoft.com/blog/healthcareandlifesciencesblog/webinar--session-2-mastering-copilot-governance-with-copilot-studio--power-platf/4463239)
 
 - **Session 3: Purview for M365 + Agents**  
   Sensitivity labels, DLP, insider risk, audit/eDiscovery, and how labeling and oversharing shape what Copilot can surface.  
-  [techcommun...rosoft.com](RESOURCE_PLACEHOLDER_2)
+  [Read the session recap](https://techcommunity.microsoft.com/blog/healthcareandlifesciencesblog/webinar--session-3-mastering-copilot-governance-purview-for-microsoft-365--agent/4464860)
 
 - **Session 4: SharePoint Advanced Management (SAM) for Content Signals**  
   Oversharing baselines, lifecycle cleanup, access reviews, RAC/RCD, and making Copilot “see” the right content.  
-  [techcommun...rosoft.com](RESOURCE_PLACEHOLDER_3)
+  [Read the session recap](https://techcommunity.microsoft.com/blog/healthcareandlifesciencesblog/mastering-copilot-content-governance-with-sharepoint-advance-management---sessio/4467427)
 
 ---
 
@@ -45,8 +45,8 @@ It’s based on real customer questions and real deployments, not theory.
 
 **Resources**
 
-- [Watch the recording](RESOURCE_PLACEHOLDER_4)  
-- [Blog reference](RESOURCE_PLACEHOLDER_5)  
+- [Watch the recording](https://www.youtube.com/watch?v=Ie7ADxONHtw)  
+- [Blog reference](https://techcommunity.microsoft.com/blog/healthcareandlifesciencesblog/webinar-copilot-governance-session-1-deployment-copilot-control-system-and-agent/4461801)  
 
 ---
 
@@ -67,8 +67,8 @@ It’s based on real customer questions and real deployments, not theory.
 
 **Resources**
 
-- [Watch the recording](RESOURCE_PLACEHOLDER_6)  
-- [Blog reference](RESOURCE_PLACEHOLDER_7)  
+- [Watch the recording](https://www.youtube.com/watch?v=KSkJqHnO_TE)  
+- [Blog reference](https://techcommunity.microsoft.com/blog/healthcareandlifesciencesblog/webinar--session-2-mastering-copilot-governance-with-copilot-studio--power-platf/4463239)  
 
 ---
 
@@ -88,8 +88,8 @@ It’s based on real customer questions and real deployments, not theory.
 
 **Resources**
 
-- [Watch the recording](RESOURCE_PLACEHOLDER_8)  
-- [Blog reference](RESOURCE_PLACEHOLDER_9)  
+- [Watch the recording](https://www.youtube.com/watch?v=7dgDo5cKeYY)  
+- [Blog reference](https://techcommunity.microsoft.com/blog/healthcareandlifesciencesblog/webinar--session-3-mastering-copilot-governance-purview-for-microsoft-365--agent/4464860)  
 
 ---
 
@@ -115,8 +115,8 @@ Enforce **Site Ownership Policy** and consider **Blocked Download** on sensitive
 
 **Resources**
 
-- [Watch the recording](RESOURCE_PLACEHOLDER_10)  
-- [Blog reference](RESOURCE_PLACEHOLDER_11)  
+- [Watch the recording](https://www.youtube.com/watch?v=VxTXvDeIGvk)  
+- [Blog reference](https://techcommunity.microsoft.com/blog/healthcareandlifesciencesblog/mastering-copilot-content-governance-with-sharepoint-advance-management---sessio/4467427)  
 
 ---
 
@@ -142,16 +142,17 @@ Enforce **Site Ownership Policy** and consider **Blocked Download** on sensitive
 
 ## Resources
 
-- [Copilot Success Kit](RESOURCE_PLACEHOLDER_12)  
-- [Implementation Guide](RESOURCE_PLACEHOLDER_13)  
-- [Technical Readiness Guide](RESOURCE_PLACEHOLDER_14)  
-- [User Enablement Guide](RESOURCE_PLACEHOLDER_15)  
+- [Copilot Governance: A Practical Guide From Our 4-Part Webinar Series](https://techcommunity.microsoft.com/blog/healthcareandlifesciencesblog/copilot-governance-a-practical-guide-from-our-4%E2%80%91part-webinar-series/4469033), the written summary of all four sessions in one place  
+- [Copilot Success Kit](https://adoption.microsoft.com/en-us/copilot/success-kit/)  
+- [Implementation Guide](https://aka.ms/Copilot/ImplementationSummaryGuide)  
+- [Technical Readiness Guide](https://aka.ms/Copilot/TechnicalReadinessGuide)  
+- [User Enablement Guide](https://aka.ms/Copilot/UserEnablementGuide)  
 
 ---
 
 ## YouTube Video Playlist
 
-[View all our sessions in a playlist](RESOURCE_PLACEHOLDER_16)
+[View all our sessions in a playlist](https://www.youtube.com/playlist?list=PLdkhFJc5w6-F-J9Os8IzyGy969USAMSIx)
 
 ![Copilot governance](assets/copilot%20webinar/copilot%20governance.png)
 
