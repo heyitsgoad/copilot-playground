@@ -4,217 +4,199 @@
   <img alt="Copilot Playground. Agents, prompts, and field guides for Microsoft 365 Copilot, Copilot Studio, and Agent 365, by Michael Goad, Copilot Solution Engineer. Six agents, 31 prompts, nine field guides." src="assets/hero-light.png" width="100%">
 </picture>
 
-## Hello world and welcome to my Copilot Playground
+# Agents, prompts, and field guides for Microsoft 365 Copilot
 
-I am a Copilot Solution Engineer at Microsoft and since joining, I have been sharing what I am learning, building, and discovering with the community.
+I am a Copilot Solution Engineer at Microsoft, and since joining I have been sharing what I learn, build, and break in the open.
 
-This repository is a portfolio of my **Copilot agents**, **prompt library**, and **videos** that show how I design, manage, govern, and teach AI solutions across Microsoft 365, Copilot Studio, and Agent 365.
+This is the whole library: **6 agents**, **31 prompts**, and **9 field guides** covering how to design, deploy, govern, and teach AI across Microsoft 365 Copilot, Copilot Studio, and Agent 365. Everything here is free to copy, adapt, and use.
 
-**Tech:** Microsoft 365 Copilot, Copilot Studio, Agent 365, Purview, Intune, Power Platform, Azure OpenAI, local/open models
+> [!NOTE]
+> This is a personal community resource. The analysis and opinions are my own and are not an official Microsoft position.
 
----
+## Start here
 
-## 📍 Table of Contents
+New to this? Pick the row that sounds like you.
 
-- [🤖 Agent Playground](#-copilot-agent-playground) — Agents I have built and documented
-- [💬 Prompt Playground](#-copilot-prompt-playground) — Favorite prompts and personalizations
-- [🎓 Education Playground](#-copilot-education-playground) — Videos and hands-on guides
+| If you are | Start with |
+| --- | --- |
+| Brand new to Copilot | [Getting Started with Copilot](./prompt%20playground/getting%20started%20with%20copilot.md), then [10 Starter Chat Prompts](./prompt%20playground/10%20starter%20copilot%20chat%20prompts.md) |
+| An executive or leader | [The Executive Playbook](./education%20playground/getting%20started%20with%20copilot%20premium%2C%20an%20executive%20playbook.md) |
+| Running IT, security, or compliance | [Copilot Governance](./education%20playground/copilot%20governance%20getting%20started.md), then [Agent Billing](./education%20playground/copilot%20agent%20billing%2C%20credits%20and%20cost%20attribution.md) |
+| Deciding who gets licensed | [Licensing and Deployment](./education%20playground/copilot%20licensing%20and%20deployment%2C%20who%20gets%20what.md) |
+| Ready to build an agent | [Chief of Staff](./agent%20playground/chief%20of%20staff.md) |
 
----
----
+## What is in here
 
-# 🤖 Copilot Agent Playground
-
-*A catalog of agents built while learning Copilot and Microsoft 365 Copilot Studio.*
-
----
-
-### 📋 Every Agent Includes
-
-- **Overview** — Summary and licensing info
-- **Setup** — Instructions, environment, connectors, variables, and permissions
-- **Run** — Starter prompts to get going fast
+| Playground | Count | What it is |
+| --- | --- | --- |
+| [Agent Playground](#agent-playground) | 6 | Agents I have built, with setup steps and starter prompts |
+| [Prompt Playground](#prompt-playground) | 31 | Prompts and personalizations, ready to copy |
+| [Education Playground](#education-playground) | 9 | Field guides for admins, executives, and practitioners |
 
 ---
 
-### 🧑‍💼 Productivity & Work Management
+## Agent Playground
 
-Agents that help you stay organized, focused, and moving forward.
+Agents built while learning Copilot Studio and Microsoft 365 Copilot. Each page includes an overview and licensing notes, setup with connectors and permissions, and starter prompts.
 
-- [BossBuddy](./agent%20playground/bossbuddy.md) — A virtual AI manager that guides your work, strategy, and career growth through simple conversations. Helps clarify your impact and see the bigger picture in projects and opportunities.
-- [Taskmaster](./agent%20playground/taskmaster.md) — Your chief of staff. Tracks opportunities, surfaces what needs attention, pulls out action items, and gives strategic guidance to move projects forward.
-- [Chief of Staff](./agent%20playground/chief%20of%20staff.md) — Build your own AI Chief of Staff in about 15 minutes. Comes with two downloadable Word templates, a guided Soul Code profile, and a copy-paste instruction block so the agent protects your time, thinks at your altitude, and sounds like you.
+### Productivity and work management
 
----
+| Agent | What it does |
+| --- | --- |
+| [BossBuddy](./agent%20playground/bossbuddy.md) | A virtual manager for strategy, career growth, and opportunity coaching |
+| [Taskmaster](./agent%20playground/taskmaster.md) | Chief of staff that tracks work, surfaces priorities, and pulls action items |
+| [Chief of Staff](./agent%20playground/chief%20of%20staff.md) | Build your own in about 15 minutes. Includes two Word templates |
 
-### 📊 Impact & Self-Awareness
+### Impact and self-awareness
 
-Agents that help you understand your contribution and influence.
+| Agent | What it does |
+| --- | --- |
+| [Impact Check](./agent%20playground/impact%20check.md) | Shows your real influence across projects and teammates, from data you already have |
 
-- [Impact Check](./agent%20playground/impact%20check.md) — Struggle to see the impact you make day to day? This agent summarizes, analyzes, and links information across your Microsoft 365 apps to help you understand your influence on projects and teammates, using only data you already have access to.
+### Communication and presentation
 
----
+| Agent | What it does |
+| --- | --- |
+| [Professor X](./agent%20playground/professor%20x.md) | Presentation coach. Submit a transcript, get actionable feedback |
 
-### 🎤 Communication & Presentation
+### Contracts and compliance
 
-Agents that sharpen how you speak, present, and show up.
-
-- [Professor X](./agent%20playground/professor%20x.md) — Your personal presentation coach. Submit a transcript and Professor X will analyze it and give you actionable feedback to level up your next talk.
-
----
-
-### 📄 Contracts & Compliance
-
-Agents built for precision work with documents and agreements.
-
-- [Redline Rover](./agent%20playground/readline%20rover.md) — A specialized contract auditor built by Microsoft peer [Sue Vencill](https://www.linkedin.com/in/suevencill/). Performs a bidirectional gap analysis between internal quality templates and customer agreements to ensure SOP equivalence and regulatory compliance.
-
----
----
-
-# 💬 Copilot Prompt Playground
-
-*A catalog of favorite prompts and personalizations for Microsoft Copilot.*
+| Agent | What it does |
+| --- | --- |
+| [Redline Rover](./agent%20playground/readline%20rover.md) | Bidirectional gap analysis between quality templates and customer agreements. Built by [Sue Vencill](https://www.linkedin.com/in/suevencill/) |
 
 ---
 
-### 🚀 Getting Started
+## Prompt Playground
 
-New to Copilot? Start here.
+Favorite prompts and personalizations. Most pages have a Quick Copy block so you can grab the prompt in one click.
 
-- [Getting Started with Copilot](prompt%20playground/getting%20started%20with%20copilot.md) — Learn the ropes and get comfortable with your first prompts
-- [10 Starter Copilot Chat Prompts](https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/10%20starter%20copilot%20chat%20prompts.md) — Ten practical Copilot Chat prompts covering summaries, rewrites, agendas, FAQs, and more — ready to run and easy to customize
+### Getting started
 
----
+| Prompt | What it does |
+| --- | --- |
+| [Getting Started with Copilot](./prompt%20playground/getting%20started%20with%20copilot.md) | Learn the ropes and get comfortable with your first prompts |
+| [10 Starter Chat Prompts](./prompt%20playground/10%20starter%20copilot%20chat%20prompts.md) | Ten practical prompts for summaries, rewrites, agendas, and FAQs |
 
-### ⚙️ Personalization & Memory
+### Personalization and memory
 
-Make Copilot feel like yours.
+| Prompt | What it does |
+| --- | --- |
+| [Copilot Memory](./prompt%20playground/copilot%20memory.md) | Examples for adding information to Copilot's memory |
+| [Copilot Personalization](./prompt%20playground/copilot%20personalization.md) | Templates for customizing how Copilot responds to you |
 
-- [Copilot Memory](./prompt%20playground/copilot%20memory.md) — Examples for adding information to Copilot's memory
-- [Copilot Personalization](./prompt%20playground/copilot%20personalization.md) — Templates for customizing how Copilot responds to you
+### Daily workflow
 
----
+| Prompt | What it does |
+| --- | --- |
+| [Start My Day](./prompt%20playground/start%20my%20day.md) | A morning overview to run daily |
+| [Kick-off, Reset, and Wrap-up](./prompt%20playground/morning-kickoff-afternoon-reset-and-wrap-up.md) | Three-part set covering your full workday |
+| [Check My Calendar](./prompt%20playground/check%20my%20calendar.md) | A quick read on what is ahead |
+| [Meeting Notes to Action Table](./prompt%20playground/meeting%20notes%20to%20action%20items.md) | Raw notes into a prioritized action table and executive summary |
+| [Copilot in Outlook Prompt Pack](./prompt%20playground/copilot%20in%20outlook%20prompt%20pack.md) | Inbox triage, thread summaries, drafting, tone control, meeting prep |
 
-### 📅 Daily Workflow
+### Writing and output quality
 
-Prompts to keep your day on track from start to finish.
+| Prompt | What it does |
+| --- | --- |
+| [Proofread](./prompt%20playground/proofread%20prompt.md) | Run your writing through a Copilot proofreading pass |
+| [Next Level](./prompt%20playground/level%20up%20prompt.md) | Take any output further and sharpen the final product |
+| [Copywriting Precision and Tone](./prompt%20playground/copywriting%20precision%20and%20tone%20enhancer.md) | Senior-level copy editing that preserves your voice |
+| [Copilot in PowerPoint Skills Pack](./prompt%20playground/copilot%20in%20powerpoint%20skills%20pack.md) | Eleven custom skills, each with a copy-paste SKILL.md |
 
-- [Start My Day](./prompt%20playground/start%20my%20day.md) — Kick things off with a morning overview
-- [Morning Kick-off, Afternoon Reset, and Wrap-up](prompt%20playground/morning-kickoff-afternoon-reset-and-wrap-up.md) — Three-part prompt set covering your full workday
-- [Check My Calendar](prompt%20playground/check%20my%20calendar.md) — Get a quick read on what's ahead
-- [Meeting Notes to Action Table](./prompt%20playground/meeting%20notes%20to%20action%20items.md) — Convert raw meeting notes into a prioritized action table and executive summary in one shot
-- [Copilot in Outlook Prompt Pack](./prompt%20playground/copilot%20in%20outlook%20prompt%20pack.md) — A grouped set of golden-nugget prompts for Copilot in Outlook covering inbox triage, long-thread summaries, drafting and tone control, the Coaching feature, and meeting prep
+### Growth and mindset
 
----
+| Prompt | What it does |
+| --- | --- |
+| [Worst Traits](./prompt%20playground/worst%20traits.md) | Surface blind spots and build on them |
+| [Positivity Prompts](./prompt%20playground/positivity%20prompts.md) | Reframe your thinking and stay grounded |
+| [Career Growth](./prompt%20playground/career%20growth.md) | A 90-day plan for your role, relationships, and team impact |
+| [Weekly Case Study Review](./prompt%20playground/weekly%20case%20study%20review.md) | Reframe your week as a structured business case study |
+| [Capability and Growth Planner](./prompt%20playground/career%20capability%20and%20growth%20planner.md) | Evidence-based strengths, gaps, and recommended next steps |
+| [My Work Life on One Whiteboard](./prompt%20playground/my%20work%20life%20on%20one%20whiteboard.md) | Your role, people, and values as one whiteboard sketch |
 
-### ✍️ Writing & Output Quality
+### Executive and leadership
 
-Get better, cleaner, more polished results.
+| Prompt | What it does |
+| --- | --- |
+| [10 Prompts for Executives](./prompt%20playground/10%20executive%20prompts.md) | A curated set built for leadership workflows |
+| [Contextual Filter](./prompt%20playground/contextual%20filter%2C%20gain%20a%20new%20perspective%20prompt.md) | Read any document through a specific role's lens |
+| [Devil's Advocate](./prompt%20playground/devils%20advocate%20skeptical%20stakeholder.md) | Surface the three likeliest failure points before the room does |
+| [Leadership Style and Voice Distiller](./prompt%20playground/leadership%20style%20and%20voice%20distiller.md) | Mine a year of your comms into a personal voice reference |
 
-- [Proofread Prompt](./prompt%20playground/proofread%20prompt.md) — Run your writing through a Copilot proofreading pass
-- [Next Level](./prompt%20playground/level%20up%20prompt.md) — Take any prompt output further and sharpen the final product
-- [Copywriting Precision & Tone Enhancer](./prompt%20playground/copywriting%20precision%20and%20tone%20enhancer.md) — Submit any email, proposal, or stakeholder-facing writing and have Copilot refine it with senior-level copywriting precision while preserving your original voice, tone, and intent
-- [Copilot in PowerPoint Skills Pack](./prompt%20playground/copilot%20in%20powerpoint%20skills%20pack.md) — Eleven ready-to-use custom skills for Copilot in PowerPoint covering branding, slide cleanup, executive summaries, speaker notes, doc-to-deck, plain-language rewrites, accessibility, and customer-ready prep, each with a copy-paste SKILL.md
+### Copilot Cowork
 
----
+Deeper analysis and scheduled output across your Microsoft 365 activity.
 
-### 🧠 Growth & Mindset
+| Prompt | What it does |
+| --- | --- |
+| [Manager 1:1 Weekly Update](./prompt%20playground/1%20on%201%20weekly%20manager%20update%20for%20copilot%20cowork.md) | A leadership-ready field impact readout from your week |
+| [Monthly Account Review](./prompt%20playground/monthly%20account%20review.md) | Portfolio review with executive summary, PowerPoint, and HTML |
+| [Daily Executive Field Readout](./prompt%20playground/daily%20account%20and%20executive%20readout.md) | Weekday briefing on commitments, risks, and field priorities |
+| [The Copilot Chronicle](./prompt%20playground/daily%20ai%20news.md) | A newspaper-styled daily AI news brief in your inbox |
 
-Prompts focused on self-awareness and personal development.
+### Skills
 
-- [Worst Traits to Enhance Growth](./prompt%20playground/worst%20traits.md) — Use Copilot to surface blind spots and build on them
-- [Positivity Prompts](./prompt%20playground/positivity%20prompts.md) — Reframe your thinking and stay grounded
-- [Career Growth](./prompt%20playground/career%20growth.md) — Get a 90-day action plan for growing in your role, strengthening relationships, and driving team impact
-- [Weekly Case Study Review](./prompt%20playground/weekly%20case%20study%20review.md) — Reframe your week as a business case study with structured analysis across successes, challenges, and recommendations
-- [Career Capability Assessment & Growth Planner](https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/career%20capability%20and%20growth%20planner.md) — Get an evidence-based view of your confirmed strengths, capability gaps, and recommended next steps across short and medium-term career pathways
-- [My Work Life on One Whiteboard](./prompt%20playground/my%20work%20life%20on%20one%20whiteboard.md) — Turn your role, values, and the people you work with into one clean whiteboard sketch with your headshot at the center, grounded in your work data and LinkedIn
+| Skill pack | What it does |
+| --- | --- |
+| [Guardian Council](./prompt%20playground/guardian%20council%20skills.md) | Five installable skills: four decision lenses plus a synthesizer |
 
----
+### IT and technical
 
-### 👔 Executive & Leadership
+| Prompt | What it does |
+| --- | --- |
+| [IT Power Moves Prompt Pack](./prompt%20playground/it%20power%20moves%20prompt%20pack.md) | Error decoding, script drafting, regex, stack traces, config diffs |
 
-Prompts built for higher-stakes, strategic use cases.
+### Coding
 
-- [10 Prompts for Executives](./prompt%20playground/10%20executive%20prompts.md) — A curated set of prompts tailored for leadership workflows
-- [Contextual Filter: Gain a New Perspective](./prompt%20playground/contextual%20filter%2C%20gain%20a%20new%20perspective%20prompt.md) — Read any document through the lens of a specific role and surface only the action items and deadlines that matter to you
-- [Devil's Advocate: Skeptical Stakeholder](./prompt%20playground/devils%20advocate%20skeptical%20stakeholder.md) — Pressure-test any proposal by having Copilot surface the three most likely failure points before you walk in the room
-- [Leadership Style & Voice Distiller](./prompt%20playground/leadership%20style%20and%20voice%20distiller.md) — Mine a full year of your communications to build a leadership style document you can feed directly into Copilot as your personal voice reference
-
----
-### 🖥️ Copilot Cowork
-
-Prompts built specifically for Copilot Cowork, designed to run deeper analysis and generate outputs across your Microsoft 365 activity.
-
-- [Manager 1:1 Weekly Update](./prompt%20playground/1%20on%201%20weekly%20manager%20update%20for%20copilot%20cowork.md) — Reviews your past week across meetings, emails, Teams, and tasks to generate a leadership-ready field impact readout for your manager 1:1.
-- [Monthly Account Review](https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/monthly%20account%20review.md) — Automatically generates a full monthly account review across your portfolio, including an executive summary, PowerPoint, and HTML presentation, delivered to your inbox on the first business day of every month.
-- [Daily Executive Field Readout](https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/daily%20account%20and%20executive%20readout.md) — Runs every weekday at 8:00 AM to surface customer commitments, risks, pending responses, team availability, and field priorities, with a PowerPoint and HTML briefing saved to OneDrive and delivered to your inbox automatically.
-- [The Copilot Chronicle: Daily AI News Brief](https://github.com/heyitsgoad/copilot-playground/blob/main/prompt%20playground/daily%20ai%20news.md) — Generates a daily newspaper-styled HTML email covering external AI industry news and internal field updates pulled via Microsoft Graph, delivered to your inbox every morning as a 5-minute coffee read.
-
----
-### 🛠️ Skills
-
-Installable skills you can drop into your assistant's skills folder to add new capabilities, personas, and decision-making frameworks.
-
-- [Guardian Council: Multi-Perspective Skills](./prompt%20playground/guardian%20council%20skills.md) — A pack of five installable skills that give Copilot four decision-making lenses (technical, strategic, and execution) plus a synthesizer that reconciles them into one clear recommendation. Drop them into your skills folder and pressure-test any decision.
-
----
-### 🔧 IT & Technical
-
-Prompts for the technical room: decode errors, draft and explain scripts, and turn IT work into audit-ready docs.
-
-- [IT Power Moves Prompt Pack](./prompt%20playground/it%20power%20moves%20prompt%20pack.md) — A grouped set of golden-nugget prompts for IT teams covering Copilot Chat (error decoding, script drafting and explanation, regex, stack traces, config diffs), plus everyday wins in Excel, Word, and Outlook. Built around two habits: explain before you run, and first draft then you verify.
-
----
-### 💻 Coding
-
-Prompts and skills that sharpen engineering work before and while you write code, from pressure-testing a plan to keeping changes small and disciplined.
-
-- [Grill My Coding Plan](./prompt%20playground/grill%20my%20coding%20plan.md) — A relentless but constructive reviewer that stress-tests a coding plan, architecture, refactor, API, or migration one decision at a time. Asks a single sharp question per turn with its own recommendation and rationale, separates facts it can look up from the calls that are yours, and stops with an agreed plan plus unresolved risks before any code gets written.
-- [Karpathy Coding Guidelines](./prompt%20playground/karpathy%20coding%20guidelines.md) — A composable set of coding habits that layer onto real work: think before coding, take the minimum complete solution, keep changes surgical, define verifiable done, and reproduce bugs before fixing them. Built to cut the scope creep, needless abstractions, and happy-path fixes LLMs fall into on production code.
-
----
----
-
-# 🎓 Copilot Education Playground
-
-*Short videos and runnable guides for IT admins, executives, and anyone looking to understand how to use, manage, and secure AI at scale.*
-
-This section covers how to **manage**, **govern**, **observe**, and **use** Copilot and agents across your organization.
+| Prompt | What it does |
+| --- | --- |
+| [Grill My Coding Plan](./prompt%20playground/grill%20my%20coding%20plan.md) | A relentless reviewer that stress-tests a plan one decision at a time |
+| [Karpathy Coding Guidelines](./prompt%20playground/karpathy%20coding%20guidelines.md) | Habits that cut scope creep, needless abstractions, and happy-path fixes |
 
 ---
 
-### 👔 For Executives & Leaders
+## Education Playground
 
-For C-suite and senior leaders new to Copilot who want real value in the first week, not the first quarter.
+Field guides for IT admins, executives, and anyone who has to manage, govern, or explain AI at scale. Every claim is checked against Microsoft documentation.
 
-- [Getting Started with Copilot Premium: An Executive Playbook](https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/getting%20started%20with%20copilot%20premium%2C%20an%20executive%20playbook.md). A skimmable, plain-language playbook for a leader brand new to Copilot: what it is, whether their data is safe, where to find it, one first 5-minute win, the four-part prompt formula, running it like a chief of staff, a full by-app tour, and a 30-day habit plan. Includes a browser-viewable [interactive guide](https://heyitsgoad.github.io/copilot-playground/education%20playground/assets/executive%20copilot%20playbook/) with a click-through session explorer, a downloadable PDF, a ready-to-present PowerPoint deck, and a short executive sponsorship deck a leader can take to their own execs to green-light the program. A built-in, click-to-expand syllabus shows exactly what each of the nine sessions covers, from the Copilot app tour to setting up custom instructions. Links every prompt and agent it references across the playground.
+### For executives and leaders
+
+| Guide | What it covers | Extras |
+| --- | --- | --- |
+| [The Executive Playbook](./education%20playground/getting%20started%20with%20copilot%20premium%2C%20an%20executive%20playbook.md) | Nine sessions, from a first 5-minute win to a 30-day habit plan | [Interactive](https://heyitsgoad.github.io/copilot-playground/education%20playground/assets/executive%20copilot%20playbook/), PDF, 2 decks |
+
+### Governance and administration
+
+| Guide | What it covers | Extras |
+| --- | --- | --- |
+| [Copilot Governance](./education%20playground/copilot%20governance%20getting%20started.md) | Admin Center, Studio, Power Platform, Purview, and SAM controls | 4 sessions |
+| [Microsoft Agent 365](./education%20playground/microsoft%20agent%20365%20licensing%20architecture%20and%20how%20it%20fits%20into%20your%20ai%20strategy.md) | Licensing, the three-plane model, identity, and observability | Names the doc gaps |
+| [Copilot Chat, HIPAA, and Web Search](https://github.com/heyitsgoad/copilot-chat-hipaa-websearch) | What actually crosses the tenant boundary under your BAA | PDF |
+| [Right-Sizing Cowork](./education%20playground/right-sizing%20cowork%20who%20actually%20needs%20it.md) | Scope the spend by persona instead of by headcount | PDF, PPTX |
+| [Licensing and Deployment](./education%20playground/copilot%20licensing%20and%20deployment%2C%20who%20gets%20what.md) | Which Copilot each role needs, and a rollout that scales | [Interactive](https://heyitsgoad.github.io/copilot-playground/education%20playground/assets/copilot%20licensing%20and%20deployment/), deck, cheat sheet |
+| [Copilot Agent Billing](./education%20playground/copilot%20agent%20billing%2C%20credits%20and%20cost%20attribution.md) | Credits, cost attribution, spend controls, and who actually pays | [Interactive](https://heyitsgoad.github.io/copilot-playground/education%20playground/assets/copilot%20agent%20billing/), 46-page PDF |
+
+### Hands-on use and demos
+
+| Guide | What it covers | Extras |
+| --- | --- | --- |
+| [Claude in Copilot, Agent Mode for Excel](./education%20playground/claude%20in%20copilot%20with%20agent%20mode%20for%20excel.md) | Claude-level Excel reasoning inside Microsoft 365 Copilot | Demo data, video |
+
+### Best practices and strategy
+
+| Guide | What it covers | Extras |
+| --- | --- | --- |
+| [Why AI Cannot Find Your Files](./education%20playground/ai-ready%20file%20naming%20and%20metadata%20for%20ai.md) | Naming and metadata that help AI return better answers | PDF, video |
 
 ---
 
-### 🔐 Governance & Administration
+## Tech covered
 
-For IT admins and compliance teams responsible for managing Copilot at scale.
+Microsoft 365 Copilot, Copilot Studio, Agent 365, Copilot Cowork, Purview, Intune, Power Platform, Azure OpenAI, and local or open models.
 
-- [Getting Started Guide for Copilot Governance](https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/copilot%20governance%20getting%20started.md) — Practical governance sessions covering Microsoft 365 Copilot and agents across M365 Admin Center, Copilot Studio, Power Platform, Purview, and SharePoint Advanced Management. Topics include access and management controls, DLP and labeling, oversharing cleanup, connector risk, and cost management.
-- [Microsoft Agent 365: Licensing, Architecture, and How It Fits Into Your AI Strategy](https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/microsoft%20agent%20365%20licensing%20architecture%20and%20how%20it%20fits%20into%20your%20ai%20strategy.md) — A research-backed breakdown of what Agent 365 is, how it licenses, and how it fits into your agent architecture today and going forward. Covers the three-plane model, identity, observability, governance, mixed-user licensing scenarios, and where documentation still has gaps.
-- [Copilot Chat, HIPAA & Web Search: What Actually Crosses the Tenant Boundary](https://github.com/heyitsgoad/copilot-chat-hipaa-websearch) — A plain-language guide for IT and security teams in regulated industries. Breaks down what stays inside your Microsoft 365 boundary under your BAA, what really happens when Copilot uses web search (and why it is outside the BAA), exactly what data goes to Bing, and how all of it is audited, retained, and governed in Purview. Includes a downloadable PDF and links every claim to Microsoft Learn.
-- [Right-Sizing Cowork: Who Actually Needs It](https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/right-sizing%20cowork%20who%20actually%20needs%20it.md) — A field framework for deciding who actually needs Cowork instead of rolling it out by headcount. Covers the one question that separates a Premium user from a Cowork user, the personas that benefit, who does not need it, and a real selection method for scoping the spend. Includes a downloadable slide deck in PDF and PPTX.
-- [Copilot Licensing and Deployment: Who Gets What](https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/copilot%20licensing%20and%20deployment%2C%20who%20gets%20what.md) — An [interactive guide](https://heyitsgoad.github.io/copilot-playground/education%20playground/assets/copilot%20licensing%20and%20deployment/) that maps the right Copilot to each role, makes the spend predictable, and lays out a rollout that does not overwhelm the team. Covers the two tiers (and why there is no "Premium" to buy), a role explorer for who gets what by level, how Cowork and agents are billed, who builds versus who uses agents, and the healthcare and compliance guardrails. Includes a browser-viewable exec deck and one-page cheat sheet, with PowerPoint and PDF downloads. Every claim checked against Microsoft documentation.
-- [Copilot Agent Billing: Credits, Cost Attribution, and Who Actually Pays](https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/copilot%20agent%20billing%2C%20credits%20and%20cost%20attribution.md) — An [interactive guide](https://heyitsgoad.github.io/copilot-playground/education%20playground/assets/copilot%20agent%20billing/) for the conversation that starts when an agent shows up on the Azure bill and nobody can explain who caused it. Covers the free versus metered boundary, the full Copilot Credit rate card, the four surfaces (Agent Builder, Copilot Studio, Cowork, Foundry) and the scoping difference that breaks most chargeback models, where cost lands by funding path, all three ways to buy credits, which spend controls actually enforce versus only alert, whether agent identity has anything to do with billing, and how to align Azure subscriptions and resource groups to business units. Includes a decision tool that tells you whether a specific agent will cost anything before you build it, an order-of-magnitude illustrator, a comparison of the four different policy objects, and a 46-page PDF. Went through an adversarial technical review against live Microsoft documentation before publishing. Names the places Microsoft's own docs contradict each other instead of guessing, and flags the November 1, 2026 AI Builder credit removal. Personal community resource, not an official Microsoft publication.
+## Using this content
 
----
+Everything here is [MIT licensed](./LICENSE). Copy it, fork it, adapt it, ship it. Attribution is appreciated but not required.
 
-### 🧪 Hands-On Use & Demos
-
-Follow-along guides with real prompts, data, and steps you can run yourself.
-
-- [Claude in Copilot with Agent Mode for Excel](education%20playground/claude%20in%20copilot%20with%20agent%20mode%20for%20excel.md) — A hands-on walkthrough showing how Claude-level Excel reasoning works inside Microsoft 365 Copilot. Includes demo data, prompts, and step-by-step instructions so you can rebuild it yourself or follow along with the video.
-
----
-
-### 🗂️ Best Practices & Strategy
-
-How to build content, files, and knowledge bases so AI can actually find and use them.
-
-- [Why AI Can't Find Your Files (And the Simple Fix)](https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/ai-ready%20file%20naming%20and%20metadata%20for%20ai.md). A practical look at how AI finds files in two levels (the title, then the metadata at the top) and why descriptive names plus a small metadata header help AI return better answers with less guessing and lower latency. Includes a downloadable one-page reference PDF and the full video.
+Found something wrong or out of date? Open an issue.
