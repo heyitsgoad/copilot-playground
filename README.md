@@ -123,6 +123,7 @@ Favorite prompts and personalizations. Most pages have a Quick Copy block so you
 | [Contextual Filter](./prompt%20playground/contextual%20filter%2C%20gain%20a%20new%20perspective%20prompt.md) | Read any document through a specific role's lens |
 | [Devil's Advocate](./prompt%20playground/devils%20advocate%20skeptical%20stakeholder.md) | Surface the three likeliest failure points before the room does |
 | [Leadership Style and Voice Distiller](./prompt%20playground/leadership%20style%20and%20voice%20distiller.md) | Mine a year of your comms into a personal voice reference |
+| [Stakeholder Dress Rehearsal](./prompt%20playground/stakeholder%20dress%20rehearsal.md) | Test a message against three audiences, then rewrite it under 300 words |
 
 ### Copilot Cowork
 
