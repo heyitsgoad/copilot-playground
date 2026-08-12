@@ -94,6 +94,7 @@ Favorite prompts and personalizations. Most pages have a Quick Copy block so you
 | [Check My Calendar](./prompt%20playground/check%20my%20calendar.md) | A quick read on what is ahead |
 | [Meeting Notes to Action Table](./prompt%20playground/meeting%20notes%20to%20action%20items.md) | Raw notes into a prioritized action table and executive summary |
 | [Copilot in Outlook Prompt Pack](./prompt%20playground/copilot%20in%20outlook%20prompt%20pack.md) | Inbox triage, thread summaries, drafting, tone control, meeting prep |
+| [Executive Assistant Prompt Pack](./prompt%20playground/executive%20assistant%20prompt%20pack.md) | Inbox triage, time zone scheduling, minutes, contracts, and event logistics for admin professionals |
 
 ### Writing and output quality
 
