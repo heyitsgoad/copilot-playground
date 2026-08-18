@@ -1,14 +1,14 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.png">
-  <img alt="Copilot Playground. Agents, prompts, and field guides for Microsoft 365 Copilot, Copilot Studio, and Agent 365, by Michael Goad, Copilot Solution Engineer. Six agents, 31 prompts, nine field guides." src="assets/hero-light.png" width="100%">
+  <img alt="Copilot Playground. Agents, prompts, and field guides for Microsoft 365 Copilot, Copilot Studio, and Agent 365, by Michael Goad, Copilot Solution Engineer. Six agents, 32 prompts, nine field guides." src="assets/hero-light.png" width="100%">
 </picture>
 
 # Agents, prompts, and field guides for Microsoft 365 Copilot
 
 I am a Copilot Solution Engineer at Microsoft, and since joining I have been sharing what I learn, build, and break in the open.
 
-This is the whole library: **6 agents**, **31 prompts**, and **9 field guides** covering how to design, deploy, govern, and teach AI across Microsoft 365 Copilot, Copilot Studio, and Agent 365. Everything here is free to copy, adapt, and use.
+This is the whole library: **6 agents**, **32 prompts**, and **9 field guides** covering how to design, deploy, govern, and teach AI across Microsoft 365 Copilot, Copilot Studio, and Agent 365. Everything here is free to copy, adapt, and use.
 
 > [!NOTE]
 > This is a personal community resource. The analysis and opinions are my own and are not an official Microsoft position.
@@ -30,7 +30,7 @@ New to this? Pick the row that sounds like you.
 | Playground | Count | What it is |
 | --- | --- | --- |
 | [Agent Playground](#agent-playground) | 6 | Agents I have built, with setup steps and starter prompts |
-| [Prompt Playground](#prompt-playground) | 31 | Prompts and personalizations, ready to copy |
+| [Prompt Playground](#prompt-playground) | 32 | Prompts and personalizations, ready to copy |
 | [Education Playground](#education-playground) | 9 | Field guides for admins, executives, and practitioners |
 
 ---
@@ -115,6 +115,7 @@ Favorite prompts and personalizations. Most pages have a Quick Copy block so you
 | [Weekly Case Study Review](./prompt%20playground/weekly%20case%20study%20review.md) | Reframe your week as a structured business case study |
 | [Capability and Growth Planner](./prompt%20playground/career%20capability%20and%20growth%20planner.md) | Evidence-based strengths, gaps, and recommended next steps |
 | [My Work Life on One Whiteboard](./prompt%20playground/my%20work%20life%20on%20one%20whiteboard.md) | Your role, people, and values as one whiteboard sketch |
+| [Teach-Back Tutor](./prompt%20playground/teach-back%20tutor.md) | Turns a doc, deck, or meeting into a five-question quiz that waits for your answers |
 
 ### Executive and leadership
 
