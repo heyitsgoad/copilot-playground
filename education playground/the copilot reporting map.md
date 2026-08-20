@@ -4,7 +4,9 @@ Every report you can use to measure, govern, and prove out Microsoft 365 Copilot
 
 You get asked "how is Copilot actually going?" and the answer lives in nine different portals. Adoption numbers are in one place, credit burn in another, oversharing risk in a third, and the audit trail somewhere else entirely. Nobody hands you a map.
 
-This is the map. Every report below is a real, documented, customer-side report you can open in your own tenant today. No internal Microsoft tools, no seller dashboards. Each row tells you where it lives, what it shows, and what license or role you need to see it.
+This is the map. All 36 reports below are real, documented, customer-side reports you can open in your own tenant today. No internal Microsoft tools, no seller dashboards. Each row tells you where it lives, what it shows, and what license or role you need to see it.
+
+**Prefer to filter and search instead of scroll?** [Open the interactive version](https://heyitsgoad.github.io/copilot-playground/education%20playground/assets/the%20copilot%20reporting%20map/), which lets you filter all 36 by portal, GA vs Preview, and topic.
 
 **Checked against Microsoft Learn as of August 20, 2026.** This space moves fast, so GA and Preview status is called out on every row that has one.
 
@@ -501,6 +503,8 @@ Microsoft states plainly that the audit log is not a usage reporting source. Cou
 ---
 
 ## Section 7: APIs, when the portal isn't enough
+
+### 36. Microsoft Graph reporting APIs
 
 Use these when you need Copilot numbers in Power BI, a warehouse, or a scheduled export.
 

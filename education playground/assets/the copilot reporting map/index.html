@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Copilot Reporting Map</title>
+<meta name="description" content="Every report a Microsoft 365, Purview, or security admin can use to measure and govern Copilot. 36 reports across the admin center, Copilot Analytics, agents, SharePoint, and Purview.">
+<script>
+  (() => {
+    const param = new URLSearchParams(window.location.search).get("scoutTheme");
+    const theme = param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+<style>
+:root{
+  color-scheme:light;
+  --cp-bg:#f7f4ef; --cp-bg-elevated:#fcfbf8; --cp-surface:#ffffff; --cp-surface-soft:#f5f5f5;
+  --cp-border:#dedede; --cp-border-strong:#919191;
+  --cp-text:#242424; --cp-text-muted:#5c5c5c; --cp-text-soft:#6f6f6f;
+  --cp-accent:#b11f4b; --cp-accent-hover:#9a1a41; --cp-accent-soft:rgba(177,31,75,.08); --cp-accent-fg:#fff;
+  --cp-success:#16a34a; --cp-danger:#dc2626; --cp-warning:#b45309; --cp-link:#0078d4;
+  --cp-ga-bg:rgba(22,163,74,.10); --cp-ga-fg:#15803d; --cp-ga-bd:rgba(22,163,74,.35);
+  --cp-pv-bg:rgba(180,83,9,.10); --cp-pv-fg:#b45309; --cp-pv-bd:rgba(180,83,9,.35);
+}
+html[data-theme="dark"]{
+  color-scheme:dark;
+  --cp-bg:#3d3b3a; --cp-bg-elevated:#343231; --cp-surface:#292929; --cp-surface-soft:#2e2e2e;
+  --cp-border:#474747; --cp-border-strong:#5f5f5f;
+  --cp-text:#dedede; --cp-text-muted:#919191; --cp-text-soft:#b0b0b0;
+  --cp-accent:#fd8ea1; --cp-accent-hover:#fb7b91; --cp-accent-soft:rgba(253,142,161,.14); --cp-accent-fg:#1a1a1a;
+  --cp-success:#4ade80; --cp-danger:#f87171; --cp-warning:#fbbf24; --cp-link:#4da6ff;
+  --cp-ga-bg:rgba(74,222,128,.12); --cp-ga-fg:#4ade80; --cp-ga-bd:rgba(74,222,128,.35);
+  --cp-pv-bg:rgba(251,191,36,.12); --cp-pv-fg:#fbbf24; --cp-pv-bd:rgba(251,191,36,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--cp-bg);color:var(--cp-text);
+  font-family:"Segoe UI",Aptos,Calibri,-apple-system,BlinkMacSystemFont,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--cp-link);text-decoration:none}
+a:hover{text-decoration:underline}
+.skip-link{position:absolute;left:-999px;top:0;background:var(--cp-accent);color:var(--cp-accent-fg);padding:10px 16px;border-radius:0 0 10px 0;z-index:100}
+.skip-link:focus{left:0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+header.hero{background:var(--cp-bg-elevated);border-bottom:1px solid var(--cp-border);padding:44px 0 34px;position:relative}
+header.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--cp-accent)}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cp-accent);margin:0 0 10px}
+h1{font-size:clamp(30px,4.4vw,46px);line-height:1.1;margin:0 0 12px;letter-spacing:-.02em}
+.lede{font-size:17.5px;color:var(--cp-text-muted);max-width:68ch;margin:0}
+.stamp{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-size:13px;color:var(--cp-text-soft);
+  background:var(--cp-surface);border:1px solid var(--cp-border);border-radius:999px;padding:6px 14px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--cp-success);flex:none}
+.topbar{position:absolute;top:18px;right:24px;display:flex;gap:8px}
+.iconbtn{background:var(--cp-surface);border:1px solid var(--cp-border);color:var(--cp-text-muted);
+  border-radius:8px;padding:7px 12px;font:inherit;font-size:13px;cursor:pointer}
+.iconbtn:hover{border-color:var(--cp-accent);color:var(--cp-accent)}
+
+section.router{padding:34px 0 6px}
+h2{font-size:22px;margin:0 0 6px;letter-spacing:-.01em}
+.sub{color:var(--cp-text-muted);font-size:14.5px;margin:0 0 16px}
+.qgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:10px}
+.qcard{background:var(--cp-surface);border:1px solid var(--cp-border);border-radius:11px;padding:13px 15px;
+  cursor:pointer;text-align:left;font:inherit;color:var(--cp-text);transition:.14s;display:flex;flex-direction:column;gap:3px}
+.qcard:hover{border-color:var(--cp-accent);box-shadow:0 4px 14px rgba(0,0,0,.07);transform:translateY(-1px)}
+.qcard b{font-size:14.5px;font-weight:600}
+.qcard span{font-size:12.5px;color:var(--cp-text-soft)}
+
+.controls{position:sticky;top:0;z-index:40;background:var(--cp-bg);
+  border-bottom:1px solid var(--cp-border);padding:16px 0 14px;margin-top:30px}
+.searchrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.search{flex:1 1 320px;position:relative}
+.search input{width:100%;padding:11px 38px 11px 14px;border-radius:10px;border:1px solid var(--cp-border);
+  background:var(--cp-surface);color:var(--cp-text);font:inherit;font-size:15px}
+.search input:focus{outline:2px solid var(--cp-accent);outline-offset:-1px;border-color:transparent}
+.clearx{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:0;
+  color:var(--cp-text-soft);cursor:pointer;font-size:17px;padding:4px 7px;line-height:1;border-radius:6px}
+.clearx:hover{color:var(--cp-accent);background:var(--cp-accent-soft)}
+.filters{display:flex;flex-wrap:wrap;gap:16px;margin-top:13px}
+.fgroup{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.flabel{font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--cp-text-soft);margin-right:2px}
+.chip{background:var(--cp-surface);border:1px solid var(--cp-border);color:var(--cp-text-muted);
+  border-radius:999px;padding:5px 13px;font:inherit;font-size:13px;cursor:pointer;transition:.12s;white-space:nowrap}
+.chip:hover{border-color:var(--cp-border-strong);color:var(--cp-text)}
+.chip[aria-pressed="true"]{background:var(--cp-accent);border-color:var(--cp-accent);color:var(--cp-accent-fg);font-weight:600}
+.meta{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:13px;flex-wrap:wrap}
+.count{font-size:13.5px;color:var(--cp-text-soft)}
+.count b{color:var(--cp-text);font-weight:700}
+.reset{background:none;border:0;color:var(--cp-accent);font:inherit;font-size:13.5px;cursor:pointer;padding:4px 6px;border-radius:6px}
+.reset:hover{background:var(--cp-accent-soft)}
+
+main{padding:26px 0 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(346px,1fr));gap:15px}
+.card{background:var(--cp-surface);border:1px solid var(--cp-border);border-radius:13px;padding:17px 18px;
+  display:flex;flex-direction:column;gap:10px;transition:.14s}
+.card:hover{border-color:var(--cp-border-strong);box-shadow:0 6px 20px rgba(0,0,0,.07)}
+.chead{display:flex;align-items:flex-start;gap:10px}
+.num{flex:none;width:26px;height:26px;border-radius:7px;background:var(--cp-accent-soft);color:var(--cp-accent);
+  display:grid;place-items:center;font-size:12px;font-weight:700;margin-top:1px}
+.ctitle{font-size:16.5px;font-weight:650;line-height:1.3;margin:0;flex:1}
+.badges{display:flex;flex-wrap:wrap;gap:6px}
+.badge{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  border-radius:5px;padding:2.5px 7px;border:1px solid}
+.b-ga{background:var(--cp-ga-bg);color:var(--cp-ga-fg);border-color:var(--cp-ga-bd)}
+.b-pv{background:var(--cp-pv-bg);color:var(--cp-pv-fg);border-color:var(--cp-pv-bd)}
+.b-portal{background:var(--cp-surface-soft);color:var(--cp-text-muted);border-color:var(--cp-border);
+  text-transform:none;letter-spacing:0;font-weight:600}
+.shows{font-size:14.2px;color:var(--cp-text-muted);margin:0}
+.rows{display:flex;flex-direction:column;gap:5px;border-top:1px solid var(--cp-border);padding-top:10px;margin-top:auto}
+.row{display:grid;grid-template-columns:74px 1fr;gap:10px;font-size:12.8px;align-items:start}
+.row dt{color:var(--cp-text-soft);font-weight:600}
+.row dd{margin:0;color:var(--cp-text-muted)}
+.doclink{font-size:13.2px;font-weight:600;margin-top:2px;display:inline-flex;align-items:center;gap:5px}
+.empty{text-align:center;padding:56px 20px;color:var(--cp-text-soft)}
+.empty b{display:block;font-size:17px;color:var(--cp-text);margin-bottom:6px}
+
+section.ref{padding:40px 0 0}
+.panel{background:var(--cp-surface);border:1px solid var(--cp-border);border-radius:13px;padding:20px 22px;margin-top:14px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--cp-border);vertical-align:top}
+th{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--cp-text-soft);font-weight:700}
+tbody tr:last-child td{border-bottom:0}
+.gotcha{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--cp-border)}
+.gotcha:last-child{border-bottom:0}
+.gicon{flex:none;width:22px;height:22px;border-radius:6px;background:var(--cp-accent-soft);color:var(--cp-accent);
+  display:grid;place-items:center;font-size:12px;font-weight:700;margin-top:2px}
+.gotcha p{margin:0;font-size:14.2px;color:var(--cp-text-muted)}
+.gotcha strong{color:var(--cp-text)}
+.note{background:var(--cp-accent-soft);border-left:3px solid var(--cp-accent);border-radius:0 9px 9px 0;
+  padding:13px 16px;font-size:14.2px;color:var(--cp-text-muted);margin-top:14px}
+footer{margin-top:48px;border-top:1px solid var(--cp-border);background:var(--cp-bg-elevated);padding:26px 0 34px}
+.fnote{font-size:13.5px;color:var(--cp-text-soft);margin:0 0 6px}
+
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .grid{grid-template-columns:1fr}
+  .controls{position:static}
+  .topbar{position:static;justify-content:flex-end;padding:0 24px 10px}
+}
+@media print{
+  .controls,.router,.topbar,.skip-link{display:none!important}
+  .card{break-inside:avoid;border-color:#ccc}
+  body{background:#fff}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#catalog">Skip to the report catalog</a>
+
+<header class="hero">
+  <div class="topbar">
+    <button class="iconbtn" id="themeBtn" type="button">Dark mode</button>
+  </div>
+  <div class="wrap">
+    <p class="eyebrow">Michael Goad, Copilot Solution Engineer</p>
+    <h1>The Copilot Reporting Map</h1>
+    <p class="lede">Every report you can use to measure, govern, and prove out Microsoft 365 Copilot. Thirty-six reports across nine portals, each with where it lives, what it shows, what license you need, and how far back the data goes.</p>
+    <span class="stamp"><span class="dot"></span> Verified against Microsoft Learn on August 20, 2026</span>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="router">
+    <h2>Start with your question</h2>
+    <p class="sub">Pick what you're actually being asked. It filters the catalog below.</p>
+    <div class="qgrid" id="qgrid"></div>
+  </section>
+
+  <div class="controls">
+    <div class="searchrow">
+      <div class="search">
+        <input type="search" id="q" placeholder="Search 36 reports by name, metric, or portal" aria-label="Search reports">
+        <button class="clearx" id="clearq" type="button" aria-label="Clear search" hidden>&times;</button>
+      </div>
+    </div>
+    <div class="filters" id="filters"></div>
+    <div class="meta">
+      <span class="count" id="count"></span>
+      <button class="reset" id="reset" type="button" hidden>Clear all filters</button>
+    </div>
+  </div>
+
+  <main id="catalog">
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" hidden>
+      <b>Nothing matches that</b>
+      Try a different word, or clear the filters.
+    </div>
+  </main>
+
+  <section class="ref">
+    <h2>Retention, at a glance</h2>
+    <p class="sub">The number that bites people is the shortest one in the chain.</p>
+    <div class="panel">
+      <table>
+        <thead><tr><th>Data</th><th>How far back</th></tr></thead>
+        <tbody id="retention"></tbody>
+      </table>
+      <div class="note">If you need year-over-year Copilot reporting, nothing above gives it to you natively. Schedule a Graph export to your own storage now, because you can't go back and get data the platform already dropped.</div>
+    </div>
+  </section>
+
+  <section class="ref">
+    <h2>The gotchas</h2>
+    <p class="sub">The things that cost people a rework cycle.</p>
+    <div class="panel" id="gotchas"></div>
+  </section>
+
+  <section class="ref">
+    <h2>Turn this on before you need it</h2>
+    <p class="sub">Three settings decide whether your data is any good later.</p>
+    <div class="panel" id="setup"></div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p class="fnote">This is a personal community resource. The analysis and opinions are my own and are not an official Microsoft position. Always confirm licensing against your own agreement.</p>
+    <p class="fnote">Full write-up, source, and issues: <a href="https://github.com/heyitsgoad/copilot-playground/blob/main/education%20playground/the%20copilot%20reporting%20map.md">The Copilot Reporting Map on GitHub</a> &middot; <a href="https://github.com/heyitsgoad/copilot-playground">Copilot Playground</a></p>
+  </div>
+</footer>
+
+<script>
+const R = [
+{n:1,t:"Microsoft 365 Copilot Usage",p:"Admin center",s:"GA",tag:["Adoption"],
+ w:"Reports &gt; Usage &gt; Microsoft Copilot &gt; Copilot &gt; Usage tab",
+ d:"Enabled vs. active users and active user rate. Total prompts and average per user. Per-app adoption across Teams, Outlook, Word, Excel, PowerPoint, OneNote, Loop, Edge, and Copilot Chat. Per-user table with prompts, active days, and a fixed last-activity date per app.",
+ lic:"Copilot license on the tenant",ret:"7 / 28 / 90 / 180 days",
+ u:"https://learn.microsoft.com/en-us/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage"},
+{n:2,t:"Copilot Readiness",p:"Admin center",s:"GA",tag:["Readiness"],
+ w:"Reports &gt; Usage &gt; Microsoft Copilot &gt; Copilot &gt; Readiness tab",
+ d:"Prerequisite licenses, users on an eligible update channel, assigned vs. available licenses. Ranks unlicensed users by M365 activity and flags the top 25% as suggested Copilot candidates.",
+ lic:"Included, Public cloud only",ret:"28 days, 30-day CSV export",
+ u:"https://learn.microsoft.com/en-us/microsoft-365/admin/activity-reports/microsoft-365-copilot-readiness"},
+{n:3,t:"Microsoft Copilot Chat Usage",p:"Admin center",s:"GA",tag:["Adoption"],
+ w:"Reports &gt; Usage &gt; Microsoft Copilot &gt; Copilot Chat",
+ d:"Active users, average daily active users, total prompts, and average per user for people WITHOUT a paid Copilot license. Adoption split across Edge, the Copilot app, Teams, Outlook, and the Office apps.",
+ lic:"Included",ret:"7 / 28 / 90 / 180 days",
+ u:"https://learn.microsoft.com/en-us/microsoft-365/admin/activity-reports/microsoft-copilot-usage"},
+{n:4,t:"Microsoft Copilot Agents Usage",p:"Admin center",s:"Preview",tag:["Agents"],
+ w:"Reports &gt; Usage &gt; Microsoft Copilot &gt; Agents",
+ d:"Total active users split into licensed and unlicensed, total active agents, and a per-agent table. Covers Microsoft-built, third-party, and org-built agents across declarative, SharePoint, and custom engine types.",
+ lic:"Included, Public cloud only",ret:"7 or 30 days, 1-hour latency",
+ u:"https://learn.microsoft.com/en-us/microsoft-365/admin/activity-reports/microsoft-365-copilot-agents-new"},
+{n:5,t:"Copilot Connectors Usage",p:"Admin center",s:"Preview",tag:["Adoption"],
+ w:"Reports &gt; Usage &gt; Microsoft Copilot &gt; Connectors",
+ d:"Connections used by Copilot and by agents, active connector users, and total connector-grounded responses, broken out per connector and per user. Only counts when a licensed user gets a response citing connector content.",
+ lic:"Included, Public cloud only",ret:"7 or 30 days",
+ u:"https://learn.microsoft.com/en-us/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage"},
+{n:6,t:"Copilot Search Usage",p:"Admin center",s:"Preview",tag:["Adoption"],
+ w:"Reports &gt; Usage &gt; Microsoft Copilot &gt; Copilot Search",
+ d:"Active users, average daily active users, total searches, and average searches per user, plus a per-user table.",
+ lic:"Included, Public cloud only",ret:"7 / 30 / 90 / 180 days",
+ u:"https://learn.microsoft.com/en-us/microsoft-365/admin/activity-reports/microsoft-365-copilot-search-usage"},
+{n:7,t:"Microsoft Copilot Credits",p:"Admin center",s:"Preview",tag:["Cost"],
+ w:"Reports &gt; Usage &gt; Microsoft Copilot &gt; Credits",
+ d:"Credits consumed by unlicensed users hitting metered agents in Copilot Chat. Broken down by user, agent, billing policy, and agent-user pair. Alerts when a user crosses roughly 2,000 to 3,000 credits in 30 days.",
+ lic:"Pay-as-you-go setup",ret:"7 or 30 days, nothing before May 3 2025",
+ u:"https://learn.microsoft.com/en-us/microsoft-365/admin/activity-reports/microsoft-365-copilot-credits"},
+{n:8,t:"Cowork Usage",p:"Admin center",s:"GA",tag:["Adoption","Cost"],
+ w:"Admin center &gt; Copilot (left nav) &gt; Cowork. Not under Reports &gt; Usage.",
+ d:"Active Cowork users, total tasks, average tasks per user, and retained users across two 7-day windows. Daily active trend and a user-initiated vs. scheduled task split. Also shows your billing grace period countdown.",
+ lic:"Included, Public cloud only",ret:"From April 1, 2026",
+ u:"https://learn.microsoft.com/en-us/microsoft-365/admin/activity-reports/cowork-usage-report"},
+{n:9,t:"Adoption Score",p:"Admin center",s:"GA",tag:["Readiness"],
+ w:"Reports &gt; Adoption Score",
+ d:"People experiences scoring across communication, meetings, content collaboration, teamwork, and mobility, plus technology experiences via Endpoint Analytics. Now carries an AI adoption category.",
+ lic:"Included",ret:"Rolling",
+ u:"https://learn.microsoft.com/en-us/microsoft-365/admin/adoption/adoption-score"},
+{n:10,t:"Message center, Service health, Roadmap",p:"Admin center",s:"GA",tag:["Readiness"],
+ w:"Health &gt; Message center, Health &gt; Service health",
+ d:"Not usage reports, but the reason your numbers moved. Message center carries Copilot feature changes landing in your tenant. Service health tells you whether a metric dropped because of an incident.",
+ lic:"Included",ret:"Varies",
+ u:"https://learn.microsoft.com/en-us/microsoft-365/admin/activity-reports/activity-reports"},
+{n:11,t:"Copilot license and seat position",p:"Admin center",s:"GA",tag:["Readiness","Cost"],
+ w:"Billing &gt; Licenses, Billing &gt; Your products, Users &gt; Active users",
+ d:"Purchased vs. assigned vs. available seats per SKU, and per-user license detail. For unused seats, pair this with the Readiness report rather than reading Billing alone.",
+ lic:"Included",ret:"Current state",
+ u:"https://learn.microsoft.com/en-us/microsoft-365/admin/activity-reports/activity-reports"},
+{n:12,t:"Microsoft 365 Apps admin center",p:"Admin center",s:"GA",tag:["Readiness"],
+ w:"config.office.com",
+ d:"Update channel distribution, app inventory, servicing health, and add-in readiness. Copilot requires Current Channel or Monthly Enterprise Channel, so check here when Copilot won't appear in Word.",
+ lic:"Included",ret:"Rolling",
+ u:"https://learn.microsoft.com/en-us/microsoft-365-apps/admin-center/overview"},
+{n:13,t:"Microsoft Copilot Dashboard",p:"Copilot Analytics",s:"GA",tag:["Adoption","Impact"],
+ w:"Viva Insights web app &gt; Copilot Dashboard",
+ d:"Readiness, Adoption, Impact, and Sentiment. Adoption covers a 28-day active window, returning users, per-app breakdown, and power/habitual/novice segments. Impact covers Copilot actions, assisted hours (time saved), assisted value, and satisfaction rate. This is where ROI conversations start.",
+ lic:"1+ Copilot license. 50+ unlocks the full feature set.",ret:"28-day window, 6 months of trend, up to 6-day lag",
+ u:"https://learn.microsoft.com/en-us/viva/insights/org-team-insights/copilot-dashboard"},
+{n:14,t:"Agent Dashboard",p:"Copilot Analytics",s:"Preview",tag:["Agents","Cost"],
+ w:"Viva Insights web app &gt; Agent Dashboard",
+ d:"Active agents, active users, agent responses, sessions, credits used on agents, and the share of Copilot users touching agents. Filters by creator type and by source. Managers do not get access.",
+ lic:"50+ Copilot licenses with agent activity",ret:"28-day window, 6 months of trend",
+ u:"https://learn.microsoft.com/en-us/viva/insights/org-team-insights/agent-dashboard"},
+{n:15,t:"Consumption Dashboard",p:"Copilot Analytics",s:"Mixed",tag:["Cost"],
+ w:"Viva Insights web app &gt; Consumption Dashboard",
+ d:"Active users, total credit usage, session counts, usage by service and org group, usage intensity by segment, spending policy tracking, and users at or above 90% of their limit. A GitHub page covers GitHub Copilot separately.",
+ lic:"Covers Copilot Cowork and the Work IQ API only",ret:"Rolling",
+ u:"https://learn.microsoft.com/en-us/viva/insights/org-team-insights/ai-cost-dashboard"},
+{n:16,t:"Copilot Analytics reports",p:"Copilot Analytics",s:"GA",tag:["Agents","Adoption"],
+ w:"Viva Insights web app &gt; Reports &gt; Copilot Analytics reports",
+ d:"Prebuilt Power BI reports. The Copilot Studio agents report covers active agents, engaged sessions, success rate, satisfaction score, and top 5 agents. Does not cover declarative, Agent Builder, or SharePoint-built agents.",
+ lic:"50+ Copilot plus a Copilot Studio license",ret:"Rolling",
+ u:"https://learn.microsoft.com/en-us/viva/insights/org-team-insights/copilot-analytics-reports"},
+{n:17,t:"Advanced analysis and analyst workbench",p:"Copilot Analytics",s:"GA",tag:["Impact"],
+ w:"Viva Insights web app &gt; Create analysis",
+ d:"Custom person, meeting, group-to-group, and consumption queries against the Copilot metric library. The only way to correlate Copilot usage with an org attribute the dashboard won't slice by.",
+ lic:"Insights Analyst role and a Viva Insights license",ret:"Query-defined",
+ u:"https://learn.microsoft.com/en-us/viva/insights/advanced/analyst/copilot-query"},
+{n:18,t:"Sentiment via Viva Glint and Pulse",p:"Copilot Analytics",s:"GA",tag:["Impact"],
+ w:"Copilot Dashboard &gt; Sentiment section",
+ d:"A Copilot Impact survey template covering productivity, speed, effort, and quality. Results render as a heat map by org attribute. Usage tells you people clicked, sentiment tells you whether it helped.",
+ lic:"50+ Copilot or Viva Insights licenses",ret:"Survey-defined",
+ u:"https://learn.microsoft.com/en-us/viva/insights/org-team-insights/copilot-dashboard"},
+{n:19,t:"Agent Registry",p:"Agents",s:"GA",tag:["Agents","Governance"],
+ w:"Admin center &gt; Agents &gt; All Agents &gt; Registry",
+ d:"Every agent in the tenant by publisher type, platform, channel, and creation date. Summary cards for total agents, agents without owners, and unmanaged agents. Covers Copilot Studio, Agent Builder, SharePoint, AI Foundry, Bedrock, and Vertex AI.",
+ lic:"Copilot, Agent 365, or M365 E7. Global Admin or AI Administrator.",ret:"Current state",
+ u:"https://learn.microsoft.com/en-us/microsoft-365/admin/manage/agent-registry"},
+{n:20,t:"Agent Map",p:"Agents",s:"GA",tag:["Agents","Governance"],
+ w:"Admin center &gt; Agents &gt; All Agents &gt; Map",
+ d:"Cluster visualization of agents grouped by build platform, with cards for total agents, agents at risk, agents without owners, and unmanaged agents. The usage filter only works below 4,000 agents.",
+ lic:"Agent 365. Global Admin or AI Administrator.",ret:"Current state",
+ u:"https://learn.microsoft.com/en-us/microsoft-365/admin/manage/agent-map"},
+{n:21,t:"Agent Overview",p:"Agents",s:"GA",tag:["Agents","Governance"],
+ w:"Admin center &gt; Agents &gt; Overview",
+ d:"A 30-day snapshot of agent activity, usage trends, governance gaps, pending approval requests, ownerless agents, and top 5 agent platforms.",
+ lic:"M365, Copilot, or Agent 365. Global Admin or AI Admin.",ret:"30 days",
+ u:"https://learn.microsoft.com/en-us/microsoft-365/admin/manage/agent-365-overview"},
+{n:22,t:"Copilot Studio agent analytics",p:"Agents",s:"GA",tag:["Agents"],
+ w:"copilotstudio.microsoft.com &gt; open an agent &gt; Analytics",
+ d:"Per-agent. Daily and monthly active users, conversation outcomes split into resolved, escalated, abandoned, and unengaged, CSAT, sentiment, knowledge source performance, and up to 3 custom metrics you define in natural language.",
+ lic:"Copilot Studio. Active users need auth enabled on the agent.",ret:"Rolling",
+ u:"https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-overview"},
+{n:23,t:"Copilot Studio credit consumption",p:"Agents",s:"GA",tag:["Cost","Agents"],
+ w:"Power Platform admin center &gt; Licensing &gt; Capacity add-ons",
+ d:"Copilot Credit allocation, consumption, and overage against purchased packs, by tenant and environment. Microsoft renamed Copilot Studio messages to Copilot Credits on September 1, 2025.",
+ lic:"Power Platform Administrator",ret:"Billing period",
+ u:"https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing"},
+{n:24,t:"Power Platform admin center analytics",p:"Agents",s:"GA",tag:["Governance","Agents"],
+ w:"admin.powerplatform.microsoft.com",
+ d:"Power Apps and Power Automate usage analytics, Dataverse capacity, environment inventory, and DLP policy state. Note that the CoE Starter Kit is no longer actively maintained per Microsoft's own docs.",
+ lic:"Power Platform Administrator",ret:"Rolling",
+ u:"https://learn.microsoft.com/en-us/power-platform/admin/admin-documentation"},
+{n:25,t:"Azure AI Foundry",p:"Agents",s:"GA",tag:["Agents","Cost"],
+ w:"ai.azure.com",
+ d:"Agent monitoring dashboard, tracing, built-in evaluators for groundedness and relevance, and token and cost telemetry through Azure Monitor and Cost Management. Where custom-built agents report in.",
+ lic:"Azure subscription",ret:"Azure Monitor retention",
+ u:"https://learn.microsoft.com/en-us/azure/ai-foundry/"},
+{n:26,t:"Data Access Governance (DAG)",p:"SharePoint",s:"GA",tag:["Readiness","Governance"],
+ w:"SharePoint admin center &gt; Reports &gt; Data access governance",
+ d:"Your oversharing baseline. Snapshot reports for site permissions, sites with broadest access, and label locations. Activity reports for sharing links and content shared with Everyone except external users (EEEU). Run the EEEU oversharing report before your first pilot.",
+ lic:"SAM for full features. E5 gets activity reports capped at 10,000 sites.",ret:"28 days for activity reports",
+ u:"https://learn.microsoft.com/en-us/sharepoint/data-access-governance-reports"},
+{n:27,t:"SharePoint Agent Insights",p:"SharePoint",s:"GA",tag:["Agents","Governance"],
+ w:"SharePoint admin center &gt; Reports &gt; Agent Insights",
+ d:"Recently created agents across all SharePoint and OneDrive sites, top 100 sites by agent count, and governance policy status. Apply Restricted Access Control or Restricted Content Discovery straight from the report.",
+ lic:"SAM add-on or a Copilot license",ret:"1, 7, 14, or 28 days",
+ u:"https://learn.microsoft.com/en-us/sharepoint/insights-on-sharepoint-agents"},
+{n:28,t:"SharePoint Advanced Management",p:"SharePoint",s:"GA",tag:["Readiness","Governance"],
+ w:"SharePoint admin center &gt; Advanced Management",
+ d:"Content Management Assessment produces a Copilot readiness view and surfaces oversharing risk. Restricted Content Discovery hides a site from Copilot without changing permissions. Plus site ownership and inactive site policies, attestation, change history, and app insights.",
+ lic:"SAM add-on",ret:"180 days for change history",
+ u:"https://learn.microsoft.com/en-us/sharepoint/advanced-management"},
+{n:29,t:"DSPM for AI",p:"Purview",s:"GA",tag:["Security","Governance"],
+ w:"Purview &gt; Solutions &gt; DSPM for AI",
+ d:"Total AI interactions over time, sensitive info types in AI prompts, unethical behavior detections, and insider risk severity for AI usage. Activity Explorer drills to individual events with the files referenced and their labels. Covers Copilot experiences, enterprise AI apps, and consumer AI apps including ChatGPT, Gemini, and DeepSeek.",
+ lic:"E3+ with Audit on for Copilot. Pay-as-you-go for third-party AI apps.",ret:"30 days in Activity Explorer",
+ u:"https://learn.microsoft.com/en-us/purview/dspm-for-ai"},
+{n:30,t:"Purview Audit for Copilot",p:"Purview",s:"GA",tag:["Security","Governance"],
+ w:"Purview &gt; Solutions &gt; Audit &gt; Search",
+ d:"The CopilotInteraction record captures AppHost, AgentId, and AccessedResources, an array of every file and email Copilot touched including each item's sensitivity label. Also flags jailbreak and prompt injection detections. Prompt text is not stored here.",
+ lic:"Standard included. Premium needs E5 or E5 Compliance.",ret:"180 days Standard, 1 year Premium, 10 years with add-on",
+ u:"https://learn.microsoft.com/en-us/purview/audit-copilot"},
+{n:31,t:"eDiscovery for Copilot interactions",p:"Purview",s:"GA",tag:["Security","Governance"],
+ w:"Purview &gt; Solutions &gt; eDiscovery",
+ d:"Copilot prompts and responses stored in a hidden folder in each user's Exchange mailbox. Search by custodian against Exchange, then hold, review, and export. Classic eDiscovery retired August 31, 2025.",
+ lic:"E3 for search and export. E5 for review sets and analytics.",ret:"Retention-policy defined",
+ u:"https://learn.microsoft.com/en-us/purview/edisc"},
+{n:32,t:"The rest of the Purview stack",p:"Purview",s:"Mixed",tag:["Security","Governance"],
+ w:"Purview &gt; Solutions",
+ d:"Communication Compliance generative AI policy, Insider Risk Management risky AI usage and risky agents templates, DLP for the Copilot location, retention for Copilot interactions, Activity and Content Explorer, Compliance Manager AI assessments, and Data Security Investigations.",
+ lic:"E3 for DLP and retention. E5 or E5 Compliance for Comm Compliance and IRM.",ret:"30 days in Activity Explorer",
+ u:"https://learn.microsoft.com/en-us/purview/ai-microsoft-purview"},
+{n:33,t:"Defender for Cloud Apps shadow AI",p:"Defender",s:"GA",tag:["Security"],
+ w:"security.microsoft.com &gt; Cloud apps &gt; Cloud discovery",
+ d:"Shadow AI discovery. Finds generative AI apps in use across the org, ChatGPT and Gemini included, with risk scores from the cloud app catalog, user counts, and traffic volume. File policies retire January 6, 2027, so move that logic to Purview DLP.",
+ lic:"Defender for Cloud Apps, or E5",ret:"Rolling",
+ u:"https://learn.microsoft.com/en-us/defender-cloud-apps/discovered-apps"},
+{n:34,t:"Microsoft Entra",p:"Entra",s:"GA",tag:["Security","Agents"],
+ w:"entra.microsoft.com &gt; Entra ID &gt; Monitoring &amp; health",
+ d:"Sign-in logs filtered to Copilot applications, Usage and insights for per-app activity, and audit logs. Entra Agent ID adds agent-aware logging with an agentType field distinguishing blueprints, instances, and agent user accounts.",
+ lic:"Entra ID P1 or P2",ret:"30 days in portal, longer via export",
+ u:"https://learn.microsoft.com/en-us/entra/agent-id/sign-in-audit-logs-agents"},
+{n:35,t:"Security Copilot usage",p:"Security Copilot",s:"GA",tag:["Cost","Security"],
+ w:"securitycopilot.microsoft.com &gt; Owner settings &gt; Usage monitoring",
+ d:"Security Compute Unit consumption by session, user, plugin, category, and experience, with Excel export and capacity warnings.",
+ lic:"Copilot owner role. SCU capacity provisioned in Azure.",ret:"90 days",
+ u:"https://learn.microsoft.com/en-us/copilot/security/manage-usage"},
+{n:36,t:"Microsoft Graph reporting APIs",p:"API",s:"GA",tag:["Adoption","Impact"],
+ w:"graph.microsoft.com/v1.0/copilot/reports/",
+ d:"Copilot usage as data instead of a portal. getMicrosoft365CopilotUsageUserDetail with version=v2 returns prompts submitted, active days, Edge, Copilot Chat work and web, and agent last activity date. Plus user count summary and trend endpoints. Call from PowerShell with Invoke-MgGraphRequest. A separate interaction history API exports raw prompts and responses.",
+ lic:"Reports.Read.All. Raw export needs AiEnterpriseInteraction.Read.All (application only).",ret:"D7 / D30 / D90 / D180 / ALL",
+ u:"https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/api/admin-settings/reports/resources/copilotreportroot"}
+];
+
+const QUESTIONS=[
+ {q:"Are people using Copilot?",hint:"Adoption numbers for licensed users",go:{search:"Microsoft 365 Copilot Usage"}},
+ {q:"Who should get the next 500 licenses?",hint:"Data-backed rollout list",go:{search:"Readiness"}},
+ {q:"Is it saving anyone time?",hint:"Impact and assisted hours",go:{tag:"Impact"}},
+ {q:"What are the unlicensed people doing?",hint:"Copilot Chat without a paid seat",go:{search:"Chat Usage"}},
+ {q:"What agents exist in my tenant?",hint:"Inventory, ownership, and risk",go:{tag:"Agents"}},
+ {q:"Who is burning credits?",hint:"Cost and consumption",go:{tag:"Cost"}},
+ {q:"Will Copilot surface something it shouldn't?",hint:"Oversharing and content readiness",go:{portal:"SharePoint"}},
+ {q:"What did Copilot touch when it answered?",hint:"Audit trail and investigations",go:{portal:"Purview"}},
+ {q:"Is anyone pasting secrets into ChatGPT?",hint:"Shadow AI discovery",go:{tag:"Security"}},
+ {q:"Show me everything still in Preview",hint:"What will change on you",go:{status:"Preview"}}
+];
+
+const RETENTION=[
+ ["Admin center usage reports","7 / 30 / 90 / 180 days"],
+ ["Copilot agent, connectors, and credits reports","7 or 30 days"],
+ ["Cowork usage","From April 1, 2026"],
+ ["Copilot Dashboard","28-day rolling window, 6 months of trend"],
+ ["Copilot Dashboard data lag","Up to 6 days"],
+ ["Agent Dashboard","28-day window, 6 months of trend"],
+ ["Purview Activity Explorer","30 days"],
+ ["Audit Standard","180 days"],
+ ["Audit Premium","1 year, or 10 years with the add-on"],
+ ["Entra sign-in logs","30 days in portal"],
+ ["SharePoint DAG activity reports","28 days"],
+ ["SharePoint change history","180 days"],
+ ["Security Copilot SCU usage","90 days"]
+];
+
+const GOTCHAS=[
+ ["The usage report and the audit log will never agree.","They measure different things and Microsoft says so directly. Use usage reports for adoption, audit for investigations. Don't let anyone build a better adoption metric on audit data."],
+ ["Licensed and unlicensed Copilot usage are two separate reports.","Reports 1 and 3. Pull both or you'll understate your footprint."],
+ ["Opening the Copilot pane isn't usage.","A user has to take an action. Expect your active user number to run below what adoption champions believe."],
+ ["Under 50 Copilot licenses, the Viva dashboard is materially thinner.","No agent insights, no benchmarks, no sentiment, no trendlines. Factor it into pilot sizing."],
+ ["Assisted hours are modeled, not measured.","Six minutes per action, times an editable $72 default rate. Fine as a directional number. Dangerous as a hard ROI claim."],
+ ["Prompt text isn't where you think it is.","Not in the audit log. It's in a hidden mailbox folder, reachable through eDiscovery or Activity Explorer with a role most admins don't have."],
+ ["Several things are deprecated or retiring.","The old Copilot agents report is deprecated. Classic eDiscovery retired August 2025. Defender for Cloud Apps file policies retire January 6, 2027."],
+ ["The CoE Starter Kit is no longer actively maintained.","Per Microsoft's own docs. Fine to keep running. Not a foundation for something new."],
+ ["Preview reports change.","Agent usage, connectors, search, credits, the Agent Dashboard, and the GitHub consumption page are all Preview. Schemas and field names can move."]
+];
+
+const SETUP=[
+ ["Usernames are hidden by default.","Reports &gt; Settings has a \"Display concealed user, group, and site names\" toggle. When it's on, every usage report shows anonymized identifiers, which makes per-user analysis useless. Turning it off is a deliberate privacy decision, so make it with your privacy stakeholders. The Graph APIs return real identifiers regardless."],
+ ["Audit has to be on.","DSPM for AI shows no Copilot activity without it. On by default in most tenants. Confirm it."],
+ ["Set minimum group size before leaders ask for team views.","Viva Insights defaults to 10 and can go as low as 5. It determines which breakdowns render at all."]
+];
+
+const state={search:"",portal:null,status:null,tag:null};
+const PORTALS=[...new Set(R.map(r=>r.p))];
+const TAGS=[...new Set(R.flatMap(r=>r.tag))].sort();
+const STATUSES=["GA","Preview","Mixed"];
+
+const el=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function buildFilters(){
+  const mk=(label,items,key)=>{
+    const g=document.createElement("div");g.className="fgroup";
+    g.innerHTML=`<span class="flabel">${label}</span>`;
+    items.forEach(v=>{
+      const b=document.createElement("button");
+      b.className="chip";b.type="button";b.textContent=v;
+      b.setAttribute("aria-pressed","false");
+      b.dataset.key=key;b.dataset.val=v;
+      b.addEventListener("click",()=>{state[key]=state[key]===v?null:v;render();});
+      g.appendChild(b);
+    });
+    return g;
+  };
+  const f=el("filters");
+  f.appendChild(mk("Portal",PORTALS,"portal"));
+  f.appendChild(mk("Status",STATUSES,"status"));
+  f.appendChild(mk("Topic",TAGS,"tag"));
+}
+
+function buildRouter(){
+  el("qgrid").innerHTML=QUESTIONS.map((x,i)=>
+    `<button class="qcard" type="button" data-i="${i}"><b>${esc(x.q)}</b><span>${esc(x.hint)}</span></button>`
+  ).join("");
+  el("qgrid").addEventListener("click",e=>{
+    const b=e.target.closest(".qcard");if(!b)return;
+    const g=QUESTIONS[+b.dataset.i].go;
+    state.search=g.search||"";state.portal=g.portal||null;state.status=g.status||null;state.tag=g.tag||null;
+    el("q").value=state.search;
+    render();
+    document.querySelector(".controls").scrollIntoView({behavior:"smooth",block:"start"});
+  });
+}
+
+function matches(r){
+  if(state.portal&&r.p!==state.portal)return false;
+  if(state.status&&r.s!==state.status)return false;
+  if(state.tag&&!r.tag.includes(state.tag))return false;
+  if(state.search){
+    const hay=(r.t+" "+r.p+" "+r.d+" "+r.w+" "+r.lic+" "+r.ret+" "+r.tag.join(" ")).toLowerCase();
+    const tokens=state.search.toLowerCase().split(/\s+/).filter(Boolean);
+    if(!tokens.every(tok=>hay.includes(tok)))return false;
+  }
+  return true;
+}
+
+function card(r){
+  const cls=r.s==="GA"?"b-ga":(r.s==="Preview"?"b-pv":"b-portal");
+  return `<article class="card">
+    <div class="chead">
+      <span class="num">${r.n}</span>
+      <h3 class="ctitle">${esc(r.t)}</h3>
+    </div>
+    <div class="badges">
+      <span class="badge ${cls}">${esc(r.s)}</span>
+      <span class="badge b-portal">${esc(r.p)}</span>
+      ${r.tag.filter(t=>t!==r.p).map(t=>`<span class="badge b-portal">${esc(t)}</span>`).join("")}
+    </div>
+    <p class="shows">${r.d}</p>
+    <dl class="rows">
+      <div class="row"><dt>Where</dt><dd>${r.w}</dd></div>
+      <div class="row"><dt>License</dt><dd>${esc(r.lic)}</dd></div>
+      <div class="row"><dt>History</dt><dd>${esc(r.ret)}</dd></div>
+    </dl>
+    <a class="doclink" href="${r.u}" target="_blank" rel="noopener">Microsoft Learn &rarr;</a>
+  </article>`;
+}
+
+function render(){
+  const hits=R.filter(matches);
+  el("grid").innerHTML=hits.map(card).join("");
+  el("empty").hidden=hits.length>0;
+  el("count").innerHTML=`Showing <b>${hits.length}</b> of ${R.length} reports`;
+  document.querySelectorAll(".chip").forEach(b=>{
+    b.setAttribute("aria-pressed",String(state[b.dataset.key]===b.dataset.val));
+  });
+  const active=state.search||state.portal||state.status||state.tag;
+  el("reset").hidden=!active;
+  el("clearq").hidden=!state.search;
+}
+
+function buildRef(){
+  el("retention").innerHTML=RETENTION.map(([a,b])=>`<tr><td>${esc(a)}</td><td>${esc(b)}</td></tr>`).join("");
+  el("gotchas").innerHTML=GOTCHAS.map(([h,b],i)=>
+    `<div class="gotcha"><span class="gicon">${i+1}</span><p><strong>${esc(h)}</strong> ${esc(b)}</p></div>`).join("");
+  el("setup").innerHTML=SETUP.map(([h,b],i)=>
+    `<div class="gotcha"><span class="gicon">${i+1}</span><p><strong>${esc(h)}</strong> ${b}</p></div>`).join("");
+}
+
+el("q").addEventListener("input",e=>{state.search=e.target.value.trim();render();});
+el("clearq").addEventListener("click",()=>{state.search="";el("q").value="";el("q").focus();render();});
+el("reset").addEventListener("click",()=>{
+  state.search="";state.portal=null;state.status=null;state.tag=null;el("q").value="";render();
+});
+el("themeBtn").addEventListener("click",()=>{
+  const cur=document.documentElement.getAttribute("data-theme");
+  const next=cur==="dark"?"light":"dark";
+  document.documentElement.setAttribute("data-theme",next);
+  el("themeBtn").textContent=next==="dark"?"Light mode":"Dark mode";
+});
+
+buildRouter();buildFilters();buildRef();render();
+el("themeBtn").textContent=document.documentElement.getAttribute("data-theme")==="dark"?"Light mode":"Dark mode";
+</script>
+</body>
+</html>

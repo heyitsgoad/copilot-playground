@@ -174,7 +174,7 @@ Field guides for IT admins, executives, and anyone who has to manage, govern, or
 | Guide | What it covers | Extras |
 | --- | --- | --- |
 | [Copilot Governance](./education%20playground/copilot%20governance%20getting%20started.md) | Admin Center, Studio, Power Platform, Purview, and SAM controls | 4 sessions |
-| [The Copilot Reporting Map](./education%20playground/the%20copilot%20reporting%20map.md) | Every report that measures Copilot, across admin center, Copilot Analytics, agents, SharePoint, and Purview | 35 reports, all linked |
+| [The Copilot Reporting Map](./education%20playground/the%20copilot%20reporting%20map.md) | Every report that measures Copilot, across admin center, Copilot Analytics, agents, SharePoint, and Purview | [Interactive](https://heyitsgoad.github.io/copilot-playground/education%20playground/assets/the%20copilot%20reporting%20map/), 36 reports |
 | [Microsoft Agent 365](./education%20playground/microsoft%20agent%20365%20licensing%20architecture%20and%20how%20it%20fits%20into%20your%20ai%20strategy.md) | Licensing, the three-plane model, identity, and observability | Names the doc gaps |
 | [Copilot Chat, HIPAA, and Web Search](https://github.com/heyitsgoad/copilot-chat-hipaa-websearch) | What actually crosses the tenant boundary under your BAA | PDF |
 | [Right-Sizing Cowork](./education%20playground/right-sizing%20cowork%20who%20actually%20needs%20it.md) | Scope the spend by persona instead of by headcount | PDF, PPTX |
