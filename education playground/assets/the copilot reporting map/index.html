@@ -117,7 +117,7 @@ main{padding:26px 0 10px}
 .empty{text-align:center;padding:56px 20px;color:var(--cp-text-soft)}
 .empty b{display:block;font-size:17px;color:var(--cp-text);margin-bottom:6px}
 
-section.ref{padding:40px 0 0}
+section.ref{padding:40px 0 0;scroll-margin-top:210px}
 .panel{background:var(--cp-surface);border:1px solid var(--cp-border);border-radius:13px;padding:20px 22px;margin-top:14px}
 table{width:100%;border-collapse:collapse;font-size:14px}
 th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--cp-border);vertical-align:top}
@@ -190,6 +190,32 @@ footer{margin-top:48px;border-top:1px solid var(--cp-border);background:var(--cp
       Try a different word, or clear the filters.
     </div>
   </main>
+
+  <section class="ref" id="estimate">
+    <h2>Estimate before you spend</h2>
+    <p class="sub">Everything above tells you what you already spent. These tell you what you're about to. Agents and Cowork bill on consumption, so this is the question that comes first.</p>
+    <div class="panel">
+      <table>
+        <thead><tr><th>Tool</th><th>What it estimates</th><th>Type</th></tr></thead>
+        <tbody id="estimators"></tbody>
+      </table>
+      <div class="note"><strong>Three caveats on the credit estimator, all from Microsoft's own wording.</strong> It models one agent at a time, so a portfolio means running it repeatedly. Microsoft's guidance is to add a 10 to 20% buffer on top of the result. And the tool says outright that it should not be used as a pricing calculator or a definite forecast. Treat it as a planning range, not a budget line.</div>
+    </div>
+
+    <h3 style="font-size:17px;margin:26px 0 0">The published rate card</h3>
+    <p class="sub">One Copilot Credit is $0.01. Users with a Microsoft Copilot license aren't charged credits for these.</p>
+    <div class="panel">
+      <table>
+        <thead><tr><th>What the agent does</th><th>Copilot Credits</th></tr></thead>
+        <tbody id="rates"></tbody>
+      </table>
+      <div class="note">Watch the tenant graph grounding line. At 10 credits a message, an agent grounded in your tenant costs roughly five times a generative answer, which is how pay-as-you-go bills surprise people. Source: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management" target="_blank" rel="noopener">billing rates and management</a>. "Messages" became "Copilot Credits" on September 1, 2025, with no change to the rate.</div>
+    </div>
+
+    <h3 style="font-size:17px;margin:26px 0 0">What doesn't exist, so you can stop looking</h3>
+    <p class="sub">People burn afternoons hunting for these.</p>
+    <div class="panel" id="notfound"></div>
+  </section>
 
   <section class="ref">
     <h2>Retention, at a glance</h2>
@@ -417,7 +443,8 @@ const QUESTIONS=[
  {q:"Will Copilot surface something it shouldn't?",hint:"Oversharing and content readiness",go:{portal:"SharePoint"}},
  {q:"What did Copilot touch when it answered?",hint:"Audit trail and investigations",go:{portal:"Purview"}},
  {q:"Is anyone pasting secrets into ChatGPT?",hint:"Shadow AI discovery",go:{tag:"Security"}},
- {q:"Show me everything still in Preview",hint:"What will change on you",go:{status:"Preview"}}
+ {q:"Show me everything still in Preview",hint:"What will change on you",go:{status:"Preview"}},
+ {q:"What will this cost before we roll it out?",hint:"Estimators and the credit rate card",go:{jump:"estimate"}}
 ];
 
 const RETENTION=[
@@ -452,6 +479,36 @@ const SETUP=[
  ["Usernames are hidden by default.","Reports &gt; Settings has a \"Display concealed user, group, and site names\" toggle. When it's on, every usage report shows anonymized identifiers, which makes per-user analysis useless. Turning it off is a deliberate privacy decision, so make it with your privacy stakeholders. The Graph APIs return real identifiers regardless."],
  ["Audit has to be on.","DSPM for AI shows no Copilot activity without it. On by default in most tenants. Confirm it."],
  ["Set minimum group size before leaders ask for team views.","Viva Insights defaults to 10 and can go as low as 5. It determines which breakdowns render at all."]
+];
+
+const ESTIMATORS=[
+ ['<a href="https://microsoft.github.io/copilot-studio-estimator/" target="_blank" rel="noopener">Copilot Credit Estimator</a>',
+  'Monthly Copilot Credit volume for an agent, based on agent type, traffic, orchestration model, knowledge sources, and tool use. Covers Copilot Studio custom agents (B2E and B2C) plus the Dynamics 365 Sales, Service, Finance, and Supply Chain agents. Exports a PDF you can hand to a stakeholder.',
+  'Interactive'],
+ ['<a href="https://aka.ms/CustomerCoworkEstimator" target="_blank" rel="noopener">Customer Cowork Estimator</a>',
+  'Cowork credit consumption before you commit to usage-based billing. Note that Cowork needs usage-based billing enabled before users can access it at all, so this is a setup step and not just a budgeting one.',
+  'Excel download'],
+ ['<a href="https://azure.microsoft.com/en-us/pricing/calculator/" target="_blank" rel="noopener">Azure Pricing Calculator</a>',
+  'Azure OpenAI, Microsoft Foundry, and Security Copilot SCUs, since custom agents and Security Copilot bill through Azure.',
+  'Interactive']
+];
+
+const RATES=[
+ ["Classic answer","1"],
+ ["Generative answer","2"],
+ ["Agent action","5"],
+ ["Tenant graph grounding, per message","10"],
+ ["Agent flow actions, per 100","13"],
+ ["AI tools, basic / standard / premium, per 10 responses","1 / 15 / 100"],
+ ["Content processing, per page","8"],
+ ["Voice per minute: classic / GenAI / premium GenAI","10 / 35 / 75"]
+];
+
+const NOTFOUND=[
+ ["There is no first-party Microsoft Copilot ROI calculator.","Plenty of partner and consultancy calculators claim Microsoft affiliation. None are Microsoft tools. The Forrester Total Economic Impact studies are commissioned research, not calculators, and shouldn't be presented as your own numbers."],
+ ["The Azure TCO Calculator is gone.","Its old URL now redirects to a FinOps blog post."],
+ ["There's no standalone Agent 365 pricing page.","Agent 365 is real and bundled into Microsoft 365 E7, but the E7 product page is the only pricing reference."],
+ ["There's no interactive Power Platform licensing calculator.","You get the monthly PDF licensing guide, the in-product capacity pages, and the credit estimator above."]
 ];
 
 const state={search:"",portal:null,status:null,tag:null};
@@ -489,6 +546,10 @@ function buildRouter(){
   el("qgrid").addEventListener("click",e=>{
     const b=e.target.closest(".qcard");if(!b)return;
     const g=QUESTIONS[+b.dataset.i].go;
+    if(g.jump){
+      document.getElementById("estimate").scrollIntoView({behavior:"smooth",block:"start"});
+      return;
+    }
     state.search=g.search||"";state.portal=g.portal||null;state.status=g.status||null;state.tag=g.tag||null;
     el("q").value=state.search;
     render();
@@ -545,6 +606,11 @@ function render(){
 
 function buildRef(){
   el("retention").innerHTML=RETENTION.map(([a,b])=>`<tr><td>${esc(a)}</td><td>${esc(b)}</td></tr>`).join("");
+  el("estimators").innerHTML=ESTIMATORS.map(([a,b,c])=>
+    `<tr><td style="white-space:nowrap"><strong>${a}</strong></td><td>${esc(b)}</td><td style="white-space:nowrap">${esc(c)}</td></tr>`).join("");
+  el("rates").innerHTML=RATES.map(([a,b])=>`<tr><td>${esc(a)}</td><td><strong>${esc(b)}</strong></td></tr>`).join("");
+  el("notfound").innerHTML=NOTFOUND.map(([h,b],i)=>
+    `<div class="gotcha"><span class="gicon">&times;</span><p><strong>${esc(h)}</strong> ${esc(b)}</p></div>`).join("");
   el("gotchas").innerHTML=GOTCHAS.map(([h,b],i)=>
     `<div class="gotcha"><span class="gicon">${i+1}</span><p><strong>${esc(h)}</strong> ${esc(b)}</p></div>`).join("");
   el("setup").innerHTML=SETUP.map(([h,b],i)=>

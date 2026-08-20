@@ -31,6 +31,7 @@ Pick the question you're actually being asked.
 | What did Copilot touch when it answered that? | [Purview Audit](#30-purview-audit-for-copilot) | Purview |
 | Is anyone pasting secrets into ChatGPT? | [DSPM for AI](#29-dspm-for-ai) | Purview |
 | Legal needs the prompts from a specific user | [eDiscovery](#31-ediscovery-for-copilot-interactions) | Purview |
+| What will this cost before we roll it out? | [Estimate before you spend](#section-8-estimate-before-you-spend) | Estimators |
 
 ---
 
@@ -535,6 +536,67 @@ Invoke-MgGraphRequest -Uri "https://graph.microsoft.com/v1.0/copilot/reports/get
 ```
 
 Docs: [Copilot reports API](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/api/admin-settings/reports/resources/copilotreportroot) and [AI interaction history](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/api/ai-services/interaction-export/aiinteractionhistory-getallenterpriseinteractions).
+
+---
+
+## Section 8: Estimate before you spend
+
+Everything above tells you what you already spent. These tell you what you're about to.
+
+That ordering matters more than it used to. Agents and Cowork bill on consumption, so the first question in the room is "what will this cost," and no usage report can answer it until after you've spent the money. These are the tools that answer it in advance.
+
+### The three that actually exist
+
+| Tool | What it estimates | Type |
+| --- | --- | --- |
+| **[Copilot Credit Estimator](https://microsoft.github.io/copilot-studio-estimator/)** | Monthly Copilot Credit volume for an agent, based on agent type, traffic, orchestration model, knowledge sources, and tool use. Covers Copilot Studio custom agents (B2E and B2C) plus the Dynamics 365 Sales, Service, Finance, and Supply Chain agents. Exports a PDF you can hand to a stakeholder. | Interactive |
+| **[Customer Cowork Estimator](https://aka.ms/CustomerCoworkEstimator)** | Cowork credit consumption before you commit to usage-based billing. | Excel download |
+| **[Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)** | Azure OpenAI, Microsoft Foundry, and Security Copilot SCUs, since custom agents and Security Copilot bill through Azure. | Interactive |
+
+Docs for the credit estimator: [agent usage estimator](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator).
+
+Three honest caveats on the credit estimator, all from Microsoft's own wording. It models **one agent at a time**, so a portfolio means running it repeatedly. Microsoft's own guidance is to **add a 10 to 20% buffer** on top of whatever it returns. And the tool says outright that it should not be used as a pricing calculator or a definite forecast. Treat the output as a planning range, not a budget line.
+
+### The published rate card
+
+Useful because it lets you sanity-check any estimate by hand. One Copilot Credit is $0.01. Users with a Microsoft Copilot license aren't charged credits for these.
+
+| What the agent does | Copilot Credits |
+| --- | --- |
+| Classic answer | 1 |
+| Generative answer | 2 |
+| Agent action | 5 |
+| Tenant graph grounding, per message | 10 |
+| Agent flow actions, per 100 | 13 |
+| AI tools, basic / standard / premium, per 10 responses | 1 / 15 / 100 |
+| Content processing, per page | 8 |
+| Voice, per minute: classic / GenAI / premium GenAI | 10 / 35 / 75 |
+
+Source: [billing rates and management](https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management). "Messages" became "Copilot Credits" on September 1, 2025, with no change to the rate or pack size.
+
+That tenant graph grounding line is the one to watch. At 10 credits a message, an agent grounded in your tenant costs roughly five times a generative answer, which is how pay-as-you-go bills surprise people.
+
+### Before Cowork works at all
+
+Cowork requires usage-based billing to be enabled before users can access it. That's a setup step, not just a budgeting one.
+
+- [Usage-based billing and Copilot Credits overview](https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-overview-copilot-credits)
+- [Set up cost management, spending policies, and caps](https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-manage-copilot-credits), at admin center > Copilot > Cost Management
+- [Cowork admin governance](https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-admin-governance)
+
+### What doesn't exist, so you can stop looking
+
+Worth saying plainly, because people burn afternoons hunting for these.
+
+**There is no first-party Microsoft Copilot ROI calculator.** Plenty of partner and consultancy calculators claim Microsoft affiliation. None are Microsoft tools. The Forrester Total Economic Impact studies are commissioned research, not calculators, and shouldn't be presented as your own numbers.
+
+**The Azure TCO Calculator is gone.** Its old URL now redirects to a FinOps blog post.
+
+**There's no standalone Agent 365 pricing page.** Agent 365 is real and bundled into Microsoft 365 E7, but the E7 product page is the only pricing reference.
+
+**There's no interactive Power Platform licensing calculator.** You get the monthly PDF licensing guide, the in-product capacity pages, and the credit estimator above.
+
+For how credits actually get attributed, who pays, and how to control spend once you're live, see [Copilot Agent Billing](./copilot%20agent%20billing%2C%20credits%20and%20cost%20attribution.md).
 
 ---
 
