@@ -1,14 +1,14 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.png">
-  <img alt="Copilot Playground. Agents, prompts, and field guides for Microsoft 365 Copilot, Copilot Studio, and Agent 365, by Michael Goad, Copilot Solution Engineer. Six agents, 32 prompts, nine field guides." src="assets/hero-light.png" width="100%">
+  <img alt="Copilot Playground. Agents, prompts, and field guides for Microsoft 365 Copilot, Copilot Studio, and Agent 365, by Michael Goad, Copilot Solution Engineer. Six agents, 32 prompts, ten field guides." src="assets/hero-light.png" width="100%">
 </picture>
 
 # Agents, prompts, and field guides for Microsoft 365 Copilot
 
 I am a Copilot Solution Engineer at Microsoft, and since joining I have been sharing what I learn, build, and break in the open.
 
-This is the whole library: **6 agents**, **32 prompts**, and **9 field guides** covering how to design, deploy, govern, and teach AI across Microsoft 365 Copilot, Copilot Studio, and Agent 365. Everything here is free to copy, adapt, and use.
+This is the whole library: **6 agents**, **32 prompts**, and **10 field guides** covering how to design, deploy, govern, and teach AI across Microsoft 365 Copilot, Copilot Studio, and Agent 365. Everything here is free to copy, adapt, and use.
 
 > [!NOTE]
 > This is a personal community resource. The analysis and opinions are my own and are not an official Microsoft position.
@@ -21,7 +21,7 @@ New to this? Pick the row that sounds like you.
 | --- | --- |
 | Brand new to Copilot | [Getting Started with Copilot](./prompt%20playground/getting%20started%20with%20copilot.md), then [10 Starter Chat Prompts](./prompt%20playground/10%20starter%20copilot%20chat%20prompts.md) |
 | An executive or leader | [The Executive Playbook](./education%20playground/getting%20started%20with%20copilot%20premium%2C%20an%20executive%20playbook.md) |
-| Running IT, security, or compliance | [Copilot Governance](./education%20playground/copilot%20governance%20getting%20started.md), then [Agent Billing](./education%20playground/copilot%20agent%20billing%2C%20credits%20and%20cost%20attribution.md) |
+| Running IT, security, or compliance | [Copilot Governance](./education%20playground/copilot%20governance%20getting%20started.md), then [The Copilot Reporting Map](./education%20playground/the%20copilot%20reporting%20map.md) |
 | Deciding who gets licensed | [Licensing and Deployment](./education%20playground/copilot%20licensing%20and%20deployment%2C%20who%20gets%20what.md) |
 | Ready to build an agent | [Chief of Staff](./agent%20playground/chief%20of%20staff.md) |
 
@@ -31,7 +31,7 @@ New to this? Pick the row that sounds like you.
 | --- | --- | --- |
 | [Agent Playground](#agent-playground) | 6 | Agents I have built, with setup steps and starter prompts |
 | [Prompt Playground](#prompt-playground) | 32 | Prompts and personalizations, ready to copy |
-| [Education Playground](#education-playground) | 9 | Field guides for admins, executives, and practitioners |
+| [Education Playground](#education-playground) | 10 | Field guides for admins, executives, and practitioners |
 
 ---
 
@@ -174,6 +174,7 @@ Field guides for IT admins, executives, and anyone who has to manage, govern, or
 | Guide | What it covers | Extras |
 | --- | --- | --- |
 | [Copilot Governance](./education%20playground/copilot%20governance%20getting%20started.md) | Admin Center, Studio, Power Platform, Purview, and SAM controls | 4 sessions |
+| [The Copilot Reporting Map](./education%20playground/the%20copilot%20reporting%20map.md) | Every report that measures Copilot, across admin center, Copilot Analytics, agents, SharePoint, and Purview | 35 reports, all linked |
 | [Microsoft Agent 365](./education%20playground/microsoft%20agent%20365%20licensing%20architecture%20and%20how%20it%20fits%20into%20your%20ai%20strategy.md) | Licensing, the three-plane model, identity, and observability | Names the doc gaps |
 | [Copilot Chat, HIPAA, and Web Search](https://github.com/heyitsgoad/copilot-chat-hipaa-websearch) | What actually crosses the tenant boundary under your BAA | PDF |
 | [Right-Sizing Cowork](./education%20playground/right-sizing%20cowork%20who%20actually%20needs%20it.md) | Scope the spend by persona instead of by headcount | PDF, PPTX |
