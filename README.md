@@ -1,14 +1,14 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.png">
-  <img alt="Copilot Playground. Agents, prompts, and field guides for Microsoft 365 Copilot, Copilot Studio, and Agent 365, by Michael Goad, Copilot Solution Engineer. Six agents, 32 prompts, ten field guides." src="assets/hero-light.png" width="100%">
+  <img alt="Copilot Playground. Agents, prompts, and field guides for Microsoft 365 Copilot, Copilot Studio, and Agent 365, by Michael Goad, Copilot Solution Engineer. Six agents, 33 prompts, ten field guides." src="assets/hero-light.png" width="100%">
 </picture>
 
 # Agents, prompts, and field guides for Microsoft 365 Copilot
 
 I am a Copilot Solution Engineer at Microsoft, and since joining I have been sharing what I learn, build, and break in the open.
 
-This is the whole library: **6 agents**, **32 prompts**, and **10 field guides** covering how to design, deploy, govern, and teach AI across Microsoft 365 Copilot, Copilot Studio, and Agent 365. Everything here is free to copy, adapt, and use.
+This is the whole library: **6 agents**, **33 prompts**, and **10 field guides** covering how to design, deploy, govern, and teach AI across Microsoft 365 Copilot, Copilot Studio, and Agent 365. Everything here is free to copy, adapt, and use.
 
 > [!NOTE]
 > This is a personal community resource. The analysis and opinions are my own and are not an official Microsoft position.
@@ -30,7 +30,7 @@ New to this? Pick the row that sounds like you.
 | Playground | Count | What it is |
 | --- | --- | --- |
 | [Agent Playground](#agent-playground) | 6 | Agents I have built, with setup steps and starter prompts |
-| [Prompt Playground](#prompt-playground) | 32 | Prompts and personalizations, ready to copy |
+| [Prompt Playground](#prompt-playground) | 33 | Prompts and personalizations, ready to copy |
 | [Education Playground](#education-playground) | 10 | Field guides for admins, executives, and practitioners |
 
 ---
@@ -95,6 +95,7 @@ Favorite prompts and personalizations. Most pages have a Quick Copy block so you
 | [Meeting Notes to Action Table](./prompt%20playground/meeting%20notes%20to%20action%20items.md) | Raw notes into a prioritized action table and executive summary |
 | [Copilot in Outlook Prompt Pack](./prompt%20playground/copilot%20in%20outlook%20prompt%20pack.md) | Inbox triage, thread summaries, drafting, tone control, meeting prep |
 | [Executive Assistant Prompt Pack](./prompt%20playground/executive%20assistant%20prompt%20pack.md) | Inbox triage, time zone scheduling, minutes, contracts, and event logistics for admin professionals |
+| [Copilot for Executive Admins](./prompt%20playground/copilot%20for%20executive%20admins.md) | The four-ingredient prompt method and 25 prompts for agendas, drafts, trip briefs, catch-ups, and delegate mailboxes |
 
 ### Writing and output quality
 
