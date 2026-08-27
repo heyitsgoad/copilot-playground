@@ -37,7 +37,7 @@ Every skill on this page is written as a `SKILL.md` block, which maps straight o
 PowerPoint saves the skill to your OneDrive skills folder for you, so you get the folder either way.
 
 > [!IMPORTANT]
-> The **Instructions** box on this form caps at 1024 characters. Four skills in this pack run longer than that: `apply-brand-template`, `consistency-check`, `customer-ready-pass`, and `qbr-builder`. Add those with Option 2 or Option 3 instead. Neither has a length limit.
+> The **Instructions** box caps at 1024 characters. Every skill in this pack is written to fit. Copy from the `#` heading at the top of the block all the way down to the last line, and paste that whole span into Instructions.
 
 ### Option 2: Upload the skill file
 
@@ -109,30 +109,25 @@ description: "Use when the user asks to apply the brand, make slides on-brand, r
 
 # Apply Brand Template
 
-Reformats the selected slides (or the whole deck if none are selected) to a consistent brand look.
+Reformats selected slides, or the whole deck if none are selected, to a consistent brand look.
 
-## Brand tokens — EDIT THESE to match your brand
-- Title font / size: Arial, 32pt, Bold
-- Body font / size: Arial, 18pt, Regular
-- Primary color (titles/accents): #2563EB
+## Brand tokens, EDIT THESE
+- Title: Segoe UI, 32pt, Bold
+- Body: Segoe UI, 18pt, Regular
+- Primary color for titles and accents: #2563EB
 - Secondary color: #505050
-- Background: White (#FFFFFF)
-- Logo placement: bottom-right, small, on every slide except the title slide
+- Background: #FFFFFF
+- Logo: bottom-right, small, every slide except the title
 
 ## What to do
 1. Set every title to the title font, size, and primary color above.
-2. Set all body text to the body font and size; use the secondary color for sub-text.
-3. Standardize bullet style, cap at 6 bullets per slide and one line per bullet.
-4. Align objects to a consistent grid, even out spacing between elements.
-5. Ensure consistent margins so content doesn't touch slide edges.
-6. Keep all existing content and meaning, only change formatting, never delete substance.
-
-## Output
-The same slides, reformatted. End with a one-line summary of what changed.
-
-## Guardrails
-- Do not invent new content or rewrite the message.
-- If a slide has an intentional full-bleed image or custom layout, leave its layout intact and only fix fonts and colors.
+2. Set body text to the body font and size. Use the secondary color for sub-text.
+3. Standardize bullets. Cap at 6 per slide, one line each.
+4. Align objects to a grid and even out spacing between them.
+5. Keep consistent margins so content never touches a slide edge.
+6. Change formatting only. Keep all content and meaning intact.
+7. Leave intentional full-bleed images and custom layouts alone. Fix only their fonts and colors.
+8. End with a one-line summary of what changed.
 ```
 
 ---
@@ -349,21 +344,18 @@ description: "Use when the user asks to check the deck for inconsistencies — m
 
 Audits the whole deck for visual and textual inconsistencies.
 
-## What to do
-Scan every slide and flag:
-1. Fonts: different typefaces or sizes used for the same element (titles, body).
-2. Colors: off-palette title or accent colors or inconsistent text color.
-3. Capitalization: mixed title case vs. sentence case across titles.
-4. Bullets: inconsistent bullet styles, indent levels, or punctuation (some end in periods, some don't).
-5. Alignment and spacing: objects that break the grid or uneven margins.
+## Scan every slide and flag
+1. Fonts: different typefaces or sizes for the same element.
+2. Colors: off-palette titles or accents, inconsistent text color.
+3. Capitalization: title case mixed with sentence case.
+4. Bullets: inconsistent styles, indent levels, or punctuation.
+5. Alignment: objects off the grid, uneven margins or spacing.
 6. Terminology: the same thing named differently across slides.
 
-## Output
-A slide-by-slide issue list (Slide number, issue, suggested fix). Then ask: "Want me to apply all the fixes?" and only apply on confirmation, or apply directly if the user already asked you to fix.
-
-## Guardrails
-- Report before mass-editing unless the user explicitly said "fix them."
-- Don't change intentional design choices (like a deliberately different section-divider style), note them separately.
+## Then
+- Return a slide-by-slide list: slide number, issue, suggested fix.
+- Ask "Want me to apply all the fixes?" and only act on confirmation. If the user already said fix them, apply directly.
+- Don't change intentional design choices like a different section-divider style. Note those separately.
 ```
 
 ---
@@ -393,7 +385,7 @@ description: "Use when I ask Copilot to standardize, replace, fix, or clean up f
 ```
 
 > [!TIP]
-> This one is written to fit the 1024-character cap on the Add skill form, so you can paste it straight in. Swapping to a different font? Change the two font names in step 2 and the rest still works.
+> Swapping to a different font? Change the two font names in step 2 and the rest still works.
 
 ---
 
@@ -443,19 +435,15 @@ description: "Use when the user wants to make a deck customer-ready or externall
 Prepares an internal deck for safe external sharing.
 
 ## What to do
-1. Remove internal content: delete internal-only speaker notes, hidden slides, DRAFT or INTERNAL watermarks, and back-channel comments.
-2. Scrub sensitive detail: flag anything that looks confidential (internal pricing, roadmap dates under NDA, other parties' names, internal metrics) and ask before removing.
-3. Disclaimer: add a footer or closing slide with a standard disclaimer (EDIT to your approved wording): "For discussion purposes only. Subject to change."
-4. Contact slide: ensure the closing slide has the right presenter contact info.
-5. Final scan: confirm no "TODO", placeholder text, or lorem ipsum remains.
-
-## Output
-A cleaned, share-ready deck plus a list of everything removed or flagged for the user's review.
-
-## Guardrails
-- When unsure whether something is confidential, flag and ask, never assume it's safe to keep.
-- Do not remove substantive relevant content, only internal or sensitive items.
-- Respect any sensitivity labels on the file, note if the file appears classified.
+1. Remove internal-only speaker notes, hidden slides, DRAFT or INTERNAL watermarks, and back-channel comments.
+2. Flag anything confidential, such as internal pricing, NDA roadmap dates, other parties' names, or internal metrics, and ask before removing.
+3. Add a disclaimer footer or closing slide. EDIT to your approved wording: "For discussion purposes only. Subject to change."
+4. Check the closing slide has the right presenter contact info.
+5. Confirm no TODO, placeholder text, or lorem ipsum remains.
+6. When unsure whether something is confidential, ask. Never assume it is safe to keep.
+7. Remove internal or sensitive items only, never substantive content.
+8. Respect sensitivity labels and say so if the file looks classified.
+9. Return the cleaned deck plus a list of everything removed or flagged.
 ```
 
 ---
@@ -474,27 +462,22 @@ description: "Use when the user asks to build or structure a QBR (Quarterly Busi
 
 Structures content into a clean Quarterly Business Review deck.
 
-## What to do
-Build (or reorganize into) this flow:
-1. Title slide: account, quarter, presenter.
+## Build this flow
+1. Title: account, quarter, presenter.
 2. Executive summary: 3 headline outcomes for the quarter.
-3. Wins and progress: what was delivered or achieved, with metrics where available.
-4. Adoption or status: current state vs. targets (usage, seats, milestones).
-5. Pipeline or roadmap: what's next quarter, key initiatives.
+3. Wins and progress: what was delivered, with metrics where available.
+4. Adoption or status: current state against targets such as usage, seats, milestones.
+5. Pipeline or roadmap: next quarter's key initiatives.
 6. Risks and blockers: honest list with owner and mitigation.
 7. Asks and next steps: specific asks plus agreed actions with dates.
 
-## What to do with the content
-- Pull existing deck or pasted content into the right sections, create placeholder bullets where data is missing and mark them "[NEEDS DATA]".
-- Keep each slide to a single message, push detail to speaker notes.
+## Rules
+- Pull existing or pasted content into the right sections. Mark gaps "[NEEDS DATA]".
+- One message per slide. Push detail into speaker notes.
 - Lead with outcomes and value, not activity.
-
-## Output
-A structured QBR deck plus a short list of the "[NEEDS DATA]" placeholders the user must fill in.
-
-## Guardrails
-- Don't fabricate metrics, dates, or commitments, use placeholders instead.
-- Keep risks honest but constructive, always pair a risk with a mitigation.
+- Never fabricate metrics, dates, or commitments. Use placeholders.
+- Always pair a risk with a mitigation.
+- End with the list of "[NEEDS DATA]" placeholders to fill in.
 ```
 
 ---
