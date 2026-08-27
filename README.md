@@ -104,7 +104,7 @@ Favorite prompts and personalizations. Most pages have a Quick Copy block so you
 | [Proofread](./prompt%20playground/proofread%20prompt.md) | Run your writing through a Copilot proofreading pass |
 | [Next Level](./prompt%20playground/level%20up%20prompt.md) | Take any output further and sharpen the final product |
 | [Copywriting Precision and Tone](./prompt%20playground/copywriting%20precision%20and%20tone%20enhancer.md) | Senior-level copy editing that preserves your voice |
-| [Copilot in PowerPoint Skills Pack](./prompt%20playground/copilot%20in%20powerpoint%20skills%20pack.md) | Eleven custom skills, each with a copy-paste SKILL.md |
+| [Copilot in PowerPoint Skills Pack](./prompt%20playground/copilot%20in%20powerpoint%20skills%20pack.md) | Twelve custom skills, each with a copy-paste SKILL.md |
 
 ### Growth and mindset
 

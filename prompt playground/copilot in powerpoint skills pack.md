@@ -2,7 +2,7 @@
 
 ## What This Is
 
-Copilot in PowerPoint lets you save custom skills: reusable instructions you call by name instead of retyping the same request every time. This pack gives you 11 skills for the slide work I do most, from branding and cleanup to summaries, speaker notes, turning a doc into a deck, plain-language rewrites, accessibility, and prepping a deck to go out the door. Drop them in, tweak a couple of placeholders, and start calling them.
+Copilot in PowerPoint lets you save custom skills: reusable instructions you call by name instead of retyping the same request every time. This pack gives you 12 skills for the slide work I do most, from branding and cleanup to summaries, speaker notes, turning a doc into a deck, plain-language rewrites, font standardization, accessibility, and prepping a deck to go out the door. Drop them in, tweak a couple of placeholders, and start calling them.
 
 Each skill is a small folder with a single `SKILL.md` file inside. That is the format Copilot reads: a bit of frontmatter up top (the name and when to use it) and a set of plain instructions below.
 
@@ -13,32 +13,60 @@ Each skill is a small folder with a single `SKILL.md` file inside. That is the f
 
 ## How to Turn This On in PowerPoint
 
-Custom skills live in a special OneDrive folder that Copilot in PowerPoint reads from. You set that folder up once, right from the Copilot pane, then drop these skills in. Here is the whole flow.
+I recorded the whole setup, from switching custom skills on to writing your own:
+
+**Watch: [How to Set Up Copilot Skills in PowerPoint (and Build Your Own)](https://www.youtube.com/watch?v=0CA-k3FtPX0)**
 
 > [!IMPORTANT]
 > You need Copilot in PowerPoint for this. If you don't see Copilot in the app, it isn't part of your Microsoft 365 subscription or your organization hasn't turned it on yet.
 
-### 1. Create your OneDrive skills folder
+There are three ways to get a skill in. Pick the one that matches how you got the skill.
+
+### Option 1: Paste it into the Add skill form
+
+Easiest when you are copying a skill straight off this page. Nothing to download.
 
 1. Open a presentation and open the Copilot pane.
-2. Select the Settings menu, the **...** in the upper-right corner of the pane.
-3. Select **Manage skills**.
-4. Select **Custom skills**.
-5. Select **Create OneDrive folder**. Copilot creates the skills folder in your OneDrive.
-6. Select **Open skills folder** to open it.
+2. Select the **+** in the prompt field, then **Choose skills**.
+3. Scroll to the end of the list and select **Manage skills**.
+4. Select **Add skill**.
+5. Fill in **Title**, **Name**, **Description**, and **Instructions**, then select **Add**.
 
-### 2. Add these skills
+Every skill on this page is written as a `SKILL.md` block, which maps straight onto that form. The `name` in the frontmatter goes in Name, the `description` goes in Description, and everything below the closing `---` is the Instructions. Title is just the friendly display name.
 
-Copy the skill folders from this pack into that OneDrive folder. Keep one folder per skill, each with its `SKILL.md` inside and the folder named to match the `name` in the file. Back in the **Custom skills** dialog, select **Refresh** so Copilot picks them up.
+PowerPoint saves the skill to your OneDrive skills folder for you, so you get the folder either way.
 
-### 3. Use a skill
+### Option 2: Upload the skill file
+
+Easiest when someone hands you a `SKILL.md` or a zipped skill folder.
+
+1. Go to **Manage skills**, then **Add skill**.
+2. Drag and drop the file, or browse for it. You can add several at once.
+3. It saves to OneDrive and shows up in the skill list. Select **Refresh** if it doesn't appear.
+
+> [!NOTE]
+> Zipped skills support text files like `md`, `txt`, `csv`, `json`, `xml`, `html`, `svg`, `py`, and `js`. Images, PDFs, and nested zips aren't supported.
+
+### Option 3: Drop the folders into OneDrive yourself
+
+Best when you are adding a batch at once, like this whole pack.
+
+1. In the Copilot pane, select the Settings menu, the **...** in the upper-right corner.
+2. Select **Manage skills**.
+3. Select **Custom skills**.
+4. Select **Create OneDrive folder**. Copilot creates the skills folder in your OneDrive.
+5. Select **Open skills folder** to open it.
+6. Copy your skill folders in. One folder per skill, each with its `SKILL.md` inside, and the folder name has to match the `name` in the file.
+7. Back in the **Custom skills** dialog, select **Refresh** so Copilot picks them up.
+
+### Use a skill
 
 - Select the **+** menu in the Copilot prompt field, choose **Choose skills**, and pick the one you want.
 - Or call it straight from your prompt with an @mention, like `@executive-summary-slide`.
 - Toggle any skill on or off from **Manage skills**.
 
 > [!NOTE]
-> Added or renamed a skill in OneDrive? Hit **Refresh** in the Custom skills dialog so Copilot sees it. To hide a skill without deleting it, rename its folder so it no longer matches the `name` in its `SKILL.md`. Copilot skips folders that don't match.
+> Added or renamed a skill in OneDrive? Hit **Refresh** in the Custom skills dialog so Copilot sees it. To edit or delete one, use **Edit** or **Delete** under the skill in **Manage skills**. To hide a skill without deleting it, rename its folder so it no longer matches the `name` in its `SKILL.md`. Copilot skips folders that don't match.
 
 > [!TIP]
 > Want the official walkthrough with screenshots of each step? See [Copilot in PowerPoint skills](https://support.microsoft.com/en-us/powerpoint/copilot/copilot-in-powerpoint-skills) on Microsoft Support. Format spec: [Agent Skills specification](https://agentskills.io/specification).
@@ -57,6 +85,7 @@ Copy the skill folders from this pack into that OneDrive folder. Keep one folder
 | **de-jargon** | Rewrite slides in plain language |
 | **tighten-copy** | Shorten bullets and cut filler |
 | **consistency-check** | Audit fonts, colors, caps, and spacing |
+| **standardize-powerpoint-fonts** | Swap every font to Segoe UI, then refit the text |
 | **accessibility-pass** | Alt text, contrast, font size, reading order |
 | **customer-ready-pass** | Strip internal content and prep a deck to share |
 | **qbr-builder** | Structure content into a QBR flow |
@@ -333,6 +362,46 @@ A slide-by-slide issue list (Slide number, issue, suggested fix). Then ask: "Wan
 - Report before mass-editing unless the user explicitly said "fix them."
 - Don't change intentional design choices (like a deliberately different section-divider style), note them separately.
 ```
+
+---
+
+### standardize-powerpoint-fonts
+
+Font Swap + Fit Check. Takes a deck that picked up four different fonts on its way through six people and puts the whole thing on Segoe UI, then goes back through and makes sure nothing overflowed, shrank, or went loose in its box.
+
+```markdown
+---
+name: "standardize-powerpoint-fonts"
+description: "Use when I ask Copilot to standardize, replace, fix, or clean up fonts across the current PowerPoint presentation. Change editable slide text to Segoe UI and adjust font sizes so text keeps its prior visual scale and fits its existing container."
+---
+
+# Standardize PowerPoint Fonts
+
+## What to do
+1. Update the theme font scheme so new slides inherit Segoe UI.
+2. Replace explicit font overrides across slides, layouts, slide masters, and speaker notes:
+   - Calibri, Georgia, Arial, and Aptos → Segoe UI
+   - Calibri Light → Segoe UI Light
+   - Preserve symbol fonts such as Wingdings
+3. Leave East Asian and complex-script font slots empty so PowerPoint can use the correct language fallback.
+4. Preserve bold, italic, color, alignment, bullets, spacing, capitalization, and text hierarchy.
+5. Check every editable text element after the swap. Distinguish overflow from text that now looks undersized or loose within its container.
+6. Review text below 10 pt. Increase body text gradually when space allows. Keep intentional footer, citation, legal, and page-number text small.
+7. Recheck wrapping, clipping, overflow, collisions, and hierarchy after resizing. Keep text inside its existing container and avoid moving objects unless needed to restore fit.
+8. Ignore intentional decorative overlaps, including background circles, accent bars, and other design elements behind text.
+9. Report any objects that could not be updated, including text embedded in images.
+
+## Output
+The same deck in Segoe UI, plus a short report: what got swapped, what got resized, and anything that could not be updated.
+
+## Guardrails
+- Change fonts and sizes only. Don't rewrite, cut, or reorder any content.
+- Text baked into images, screenshots, and flattened charts can't be changed. Flag it instead of trying.
+- If resizing would break the layout, leave the text where it is and note it rather than forcing the fit.
+```
+
+> [!TIP]
+> Swapping to something other than Segoe UI? Change the two font names in step 2 and the rest of the skill works the same.
 
 ---
 
