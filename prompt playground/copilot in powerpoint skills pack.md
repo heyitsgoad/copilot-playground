@@ -85,7 +85,7 @@ Best when you are adding a batch at once, like this whole pack.
 | **de-jargon** | Rewrite slides in plain language |
 | **tighten-copy** | Shorten bullets and cut filler |
 | **consistency-check** | Audit fonts, colors, caps, and spacing |
-| **standardize-powerpoint-fonts** | Swap every font to Segoe UI, then refit the text |
+| **fix-fonts** | Swap every font to Segoe UI, then refit the text |
 | **accessibility-pass** | Alt text, contrast, font size, reading order |
 | **customer-ready-pass** | Strip internal content and prep a deck to share |
 | **qbr-builder** | Structure content into a QBR flow |
@@ -365,17 +365,17 @@ A slide-by-slide issue list (Slide number, issue, suggested fix). Then ask: "Wan
 
 ---
 
-### standardize-powerpoint-fonts
+### fix-fonts
 
 Font Swap + Fit Check. Takes a deck that picked up four different fonts on its way through six people and puts the whole thing on Segoe UI, then goes back through and makes sure nothing overflowed, shrank, or went loose in its box.
 
 ```markdown
 ---
-name: "standardize-powerpoint-fonts"
+name: "fix-fonts"
 description: "Use when I ask Copilot to standardize, replace, fix, or clean up fonts across the current PowerPoint presentation. Change editable slide text to Segoe UI and adjust font sizes so text keeps its prior visual scale and fits its existing container."
 ---
 
-# Standardize PowerPoint Fonts
+# Fix Fonts
 
 ## What to do
 1. Update the theme font scheme so new slides inherit Segoe UI.
