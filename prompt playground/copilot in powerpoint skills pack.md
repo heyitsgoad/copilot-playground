@@ -36,6 +36,9 @@ Every skill on this page is written as a `SKILL.md` block, which maps straight o
 
 PowerPoint saves the skill to your OneDrive skills folder for you, so you get the folder either way.
 
+> [!IMPORTANT]
+> The **Instructions** box on this form caps at 1024 characters. Four skills in this pack run longer than that: `apply-brand-template`, `consistency-check`, `customer-ready-pass`, and `qbr-builder`. Add those with Option 2 or Option 3 instead. Neither has a length limit.
+
 ### Option 2: Upload the skill file
 
 Easiest when someone hands you a `SKILL.md` or a zipped skill folder.
@@ -377,31 +380,20 @@ description: "Use when I ask Copilot to standardize, replace, fix, or clean up f
 
 # Fix Fonts
 
-## What to do
-1. Update the theme font scheme so new slides inherit Segoe UI.
-2. Replace explicit font overrides across slides, layouts, slide masters, and speaker notes:
-   - Calibri, Georgia, Arial, and Aptos → Segoe UI
-   - Calibri Light → Segoe UI Light
-   - Preserve symbol fonts such as Wingdings
-3. Leave East Asian and complex-script font slots empty so PowerPoint can use the correct language fallback.
-4. Preserve bold, italic, color, alignment, bullets, spacing, capitalization, and text hierarchy.
-5. Check every editable text element after the swap. Distinguish overflow from text that now looks undersized or loose within its container.
-6. Review text below 10 pt. Increase body text gradually when space allows. Keep intentional footer, citation, legal, and page-number text small.
-7. Recheck wrapping, clipping, overflow, collisions, and hierarchy after resizing. Keep text inside its existing container and avoid moving objects unless needed to restore fit.
-8. Ignore intentional decorative overlaps, including background circles, accent bars, and other design elements behind text.
-9. Report any objects that could not be updated, including text embedded in images.
-
-## Output
-The same deck in Segoe UI, plus a short report: what got swapped, what got resized, and anything that could not be updated.
-
-## Guardrails
-- Change fonts and sizes only. Don't rewrite, cut, or reorder any content.
-- Text baked into images, screenshots, and flattened charts can't be changed. Flag it instead of trying.
-- If resizing would break the layout, leave the text where it is and note it rather than forcing the fit.
+1. Set the theme font scheme to Segoe UI so new slides inherit it.
+2. Replace overrides on slides, layouts, masters, and notes: Calibri, Georgia, Arial, Aptos to Segoe UI. Calibri Light to Segoe UI Light. Keep symbol fonts like Wingdings.
+3. Leave East Asian and complex-script slots empty for language fallback.
+4. Keep bold, italic, color, alignment, bullets, spacing, caps, and hierarchy.
+5. Check every text element. Tell overflow apart from text that looks undersized or loose in its box.
+6. Grow body text under 10pt where space allows. Leave footers, citations, legal, and page numbers small.
+7. Recheck wrapping, clipping, overflow, and collisions. Keep text in its container and move objects only to restore fit.
+8. Ignore decorative overlaps like circles or accent bars behind text.
+9. Change fonts and sizes only. Never rewrite or cut content.
+10. Report what changed and anything you could not update, like text inside images.
 ```
 
 > [!TIP]
-> Swapping to something other than Segoe UI? Change the two font names in step 2 and the rest of the skill works the same.
+> This one is written to fit the 1024-character cap on the Add skill form, so you can paste it straight in. Swapping to a different font? Change the two font names in step 2 and the rest still works.
 
 ---
 
